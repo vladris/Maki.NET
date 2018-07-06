@@ -7,10 +7,10 @@ namespace Maki
     /// </summary>
     /// <typeparam name="T1">Represents the variant's first type.</typeparam>
     /// <typeparam name="T2">Represents the variant's second type.</typeparam>
-	public class Variant<T1, T2>
-	{
+    public class Variant<T1, T2>
+    {
         private readonly IVariantHolder variant;
-		
+
         /// <summary>
         /// Gets the 0-based index of the type inhabiting the variant.
         /// </summary>
@@ -46,63 +46,63 @@ namespace Maki
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
-		/// (<typeparamref name="T1"/>).
+        /// (<typeparamref name="T1"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2> Make1(T1 item) => new Variant<T1, T2>(VariantHolder<T1>.T1(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T1"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2>(T1 item) => new Variant<T1, T2>(item);
+        public static implicit operator Variant<T1, T2>(T1 item) => new Variant<T1, T2>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T1"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T1"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T1"/></exception>
-		public static explicit operator T1(Variant<T1, T2> variant) => ((VariantHolder<T1>)variant.variant).Item;
+        public static explicit operator T1(Variant<T1, T2> variant) => ((VariantHolder<T1>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the second type
-		/// (<typeparamref name="T2"/>).
+        /// (<typeparamref name="T2"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2> Make2(T2 item) => new Variant<T1, T2>(VariantHolder<T2>.T2(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T2"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2>(T2 item) => new Variant<T1, T2>(item);
+        public static implicit operator Variant<T1, T2>(T2 item) => new Variant<T1, T2>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T2"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T2"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T2"/></exception>
-		public static explicit operator T2(Variant<T1, T2> variant) => ((VariantHolder<T2>)variant.variant).Item;
+        public static explicit operator T2(Variant<T1, T2> variant) => ((VariantHolder<T2>)variant.variant).Item;
 
-	}
+    }
     /// <summary>
     /// Represents a 3-type discriminate union.
     /// </summary>
     /// <typeparam name="T1">Represents the variant's first type.</typeparam>
     /// <typeparam name="T2">Represents the variant's second type.</typeparam>
     /// <typeparam name="T3">Represents the variant's third type.</typeparam>
-	public class Variant<T1, T2, T3>
-	{
+    public class Variant<T1, T2, T3>
+    {
         private readonly IVariantHolder variant;
-		
+
         /// <summary>
         /// Gets the 0-based index of the type inhabiting the variant.
         /// </summary>
@@ -144,77 +144,77 @@ namespace Maki
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
-		/// (<typeparamref name="T1"/>).
+        /// (<typeparamref name="T1"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3> Make1(T1 item) => new Variant<T1, T2, T3>(VariantHolder<T1>.T1(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T1"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3>(T1 item) => new Variant<T1, T2, T3>(item);
+        public static implicit operator Variant<T1, T2, T3>(T1 item) => new Variant<T1, T2, T3>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T1"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T1"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T1"/></exception>
-		public static explicit operator T1(Variant<T1, T2, T3> variant) => ((VariantHolder<T1>)variant.variant).Item;
+        public static explicit operator T1(Variant<T1, T2, T3> variant) => ((VariantHolder<T1>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the second type
-		/// (<typeparamref name="T2"/>).
+        /// (<typeparamref name="T2"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3> Make2(T2 item) => new Variant<T1, T2, T3>(VariantHolder<T2>.T2(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T2"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3>(T2 item) => new Variant<T1, T2, T3>(item);
+        public static implicit operator Variant<T1, T2, T3>(T2 item) => new Variant<T1, T2, T3>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T2"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T2"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T2"/></exception>
-		public static explicit operator T2(Variant<T1, T2, T3> variant) => ((VariantHolder<T2>)variant.variant).Item;
+        public static explicit operator T2(Variant<T1, T2, T3> variant) => ((VariantHolder<T2>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the third type
-		/// (<typeparamref name="T3"/>).
+        /// (<typeparamref name="T3"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3> Make3(T3 item) => new Variant<T1, T2, T3>(VariantHolder<T3>.T3(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T3"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3>(T3 item) => new Variant<T1, T2, T3>(item);
+        public static implicit operator Variant<T1, T2, T3>(T3 item) => new Variant<T1, T2, T3>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T3"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T3"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T3"/></exception>
-		public static explicit operator T3(Variant<T1, T2, T3> variant) => ((VariantHolder<T3>)variant.variant).Item;
+        public static explicit operator T3(Variant<T1, T2, T3> variant) => ((VariantHolder<T3>)variant.variant).Item;
 
-	}
+    }
     /// <summary>
     /// Represents a 4-type discriminate union.
     /// </summary>
@@ -222,10 +222,10 @@ namespace Maki
     /// <typeparam name="T2">Represents the variant's second type.</typeparam>
     /// <typeparam name="T3">Represents the variant's third type.</typeparam>
     /// <typeparam name="T4">Represents the variant's fourth type.</typeparam>
-	public class Variant<T1, T2, T3, T4>
-	{
+    public class Variant<T1, T2, T3, T4>
+    {
         private readonly IVariantHolder variant;
-		
+
         /// <summary>
         /// Gets the 0-based index of the type inhabiting the variant.
         /// </summary>
@@ -273,101 +273,101 @@ namespace Maki
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
-		/// (<typeparamref name="T1"/>).
+        /// (<typeparamref name="T1"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4> Make1(T1 item) => new Variant<T1, T2, T3, T4>(VariantHolder<T1>.T1(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T1"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4>(T1 item) => new Variant<T1, T2, T3, T4>(item);
+        public static implicit operator Variant<T1, T2, T3, T4>(T1 item) => new Variant<T1, T2, T3, T4>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T1"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T1"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T1"/></exception>
-		public static explicit operator T1(Variant<T1, T2, T3, T4> variant) => ((VariantHolder<T1>)variant.variant).Item;
+        public static explicit operator T1(Variant<T1, T2, T3, T4> variant) => ((VariantHolder<T1>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the second type
-		/// (<typeparamref name="T2"/>).
+        /// (<typeparamref name="T2"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4> Make2(T2 item) => new Variant<T1, T2, T3, T4>(VariantHolder<T2>.T2(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T2"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4>(T2 item) => new Variant<T1, T2, T3, T4>(item);
+        public static implicit operator Variant<T1, T2, T3, T4>(T2 item) => new Variant<T1, T2, T3, T4>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T2"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T2"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T2"/></exception>
-		public static explicit operator T2(Variant<T1, T2, T3, T4> variant) => ((VariantHolder<T2>)variant.variant).Item;
+        public static explicit operator T2(Variant<T1, T2, T3, T4> variant) => ((VariantHolder<T2>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the third type
-		/// (<typeparamref name="T3"/>).
+        /// (<typeparamref name="T3"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4> Make3(T3 item) => new Variant<T1, T2, T3, T4>(VariantHolder<T3>.T3(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T3"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4>(T3 item) => new Variant<T1, T2, T3, T4>(item);
+        public static implicit operator Variant<T1, T2, T3, T4>(T3 item) => new Variant<T1, T2, T3, T4>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T3"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T3"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T3"/></exception>
-		public static explicit operator T3(Variant<T1, T2, T3, T4> variant) => ((VariantHolder<T3>)variant.variant).Item;
+        public static explicit operator T3(Variant<T1, T2, T3, T4> variant) => ((VariantHolder<T3>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fourth type
-		/// (<typeparamref name="T4"/>).
+        /// (<typeparamref name="T4"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4> Make4(T4 item) => new Variant<T1, T2, T3, T4>(VariantHolder<T4>.T4(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T4"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4>(T4 item) => new Variant<T1, T2, T3, T4>(item);
+        public static implicit operator Variant<T1, T2, T3, T4>(T4 item) => new Variant<T1, T2, T3, T4>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T4"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T4"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T4"/></exception>
-		public static explicit operator T4(Variant<T1, T2, T3, T4> variant) => ((VariantHolder<T4>)variant.variant).Item;
+        public static explicit operator T4(Variant<T1, T2, T3, T4> variant) => ((VariantHolder<T4>)variant.variant).Item;
 
-	}
+    }
     /// <summary>
     /// Represents a 5-type discriminate union.
     /// </summary>
@@ -376,10 +376,10 @@ namespace Maki
     /// <typeparam name="T3">Represents the variant's third type.</typeparam>
     /// <typeparam name="T4">Represents the variant's fourth type.</typeparam>
     /// <typeparam name="T5">Represents the variant's fifth type.</typeparam>
-	public class Variant<T1, T2, T3, T4, T5>
-	{
+    public class Variant<T1, T2, T3, T4, T5>
+    {
         private readonly IVariantHolder variant;
-		
+
         /// <summary>
         /// Gets the 0-based index of the type inhabiting the variant.
         /// </summary>
@@ -433,125 +433,125 @@ namespace Maki
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
-		/// (<typeparamref name="T1"/>).
+        /// (<typeparamref name="T1"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5> Make1(T1 item) => new Variant<T1, T2, T3, T4, T5>(VariantHolder<T1>.T1(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T1"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5>(T1 item) => new Variant<T1, T2, T3, T4, T5>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5>(T1 item) => new Variant<T1, T2, T3, T4, T5>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T1"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T1"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T1"/></exception>
-		public static explicit operator T1(Variant<T1, T2, T3, T4, T5> variant) => ((VariantHolder<T1>)variant.variant).Item;
+        public static explicit operator T1(Variant<T1, T2, T3, T4, T5> variant) => ((VariantHolder<T1>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the second type
-		/// (<typeparamref name="T2"/>).
+        /// (<typeparamref name="T2"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5> Make2(T2 item) => new Variant<T1, T2, T3, T4, T5>(VariantHolder<T2>.T2(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T2"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5>(T2 item) => new Variant<T1, T2, T3, T4, T5>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5>(T2 item) => new Variant<T1, T2, T3, T4, T5>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T2"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T2"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T2"/></exception>
-		public static explicit operator T2(Variant<T1, T2, T3, T4, T5> variant) => ((VariantHolder<T2>)variant.variant).Item;
+        public static explicit operator T2(Variant<T1, T2, T3, T4, T5> variant) => ((VariantHolder<T2>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the third type
-		/// (<typeparamref name="T3"/>).
+        /// (<typeparamref name="T3"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5> Make3(T3 item) => new Variant<T1, T2, T3, T4, T5>(VariantHolder<T3>.T3(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T3"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5>(T3 item) => new Variant<T1, T2, T3, T4, T5>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5>(T3 item) => new Variant<T1, T2, T3, T4, T5>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T3"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T3"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T3"/></exception>
-		public static explicit operator T3(Variant<T1, T2, T3, T4, T5> variant) => ((VariantHolder<T3>)variant.variant).Item;
+        public static explicit operator T3(Variant<T1, T2, T3, T4, T5> variant) => ((VariantHolder<T3>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fourth type
-		/// (<typeparamref name="T4"/>).
+        /// (<typeparamref name="T4"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5> Make4(T4 item) => new Variant<T1, T2, T3, T4, T5>(VariantHolder<T4>.T4(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T4"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5>(T4 item) => new Variant<T1, T2, T3, T4, T5>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5>(T4 item) => new Variant<T1, T2, T3, T4, T5>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T4"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T4"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T4"/></exception>
-		public static explicit operator T4(Variant<T1, T2, T3, T4, T5> variant) => ((VariantHolder<T4>)variant.variant).Item;
+        public static explicit operator T4(Variant<T1, T2, T3, T4, T5> variant) => ((VariantHolder<T4>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fifth type
-		/// (<typeparamref name="T5"/>).
+        /// (<typeparamref name="T5"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5> Make5(T5 item) => new Variant<T1, T2, T3, T4, T5>(VariantHolder<T5>.T5(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T5"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5>(T5 item) => new Variant<T1, T2, T3, T4, T5>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5>(T5 item) => new Variant<T1, T2, T3, T4, T5>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T5"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T5"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T5"/></exception>
-		public static explicit operator T5(Variant<T1, T2, T3, T4, T5> variant) => ((VariantHolder<T5>)variant.variant).Item;
+        public static explicit operator T5(Variant<T1, T2, T3, T4, T5> variant) => ((VariantHolder<T5>)variant.variant).Item;
 
-	}
+    }
     /// <summary>
     /// Represents a 6-type discriminate union.
     /// </summary>
@@ -561,10 +561,10 @@ namespace Maki
     /// <typeparam name="T4">Represents the variant's fourth type.</typeparam>
     /// <typeparam name="T5">Represents the variant's fifth type.</typeparam>
     /// <typeparam name="T6">Represents the variant's sixth type.</typeparam>
-	public class Variant<T1, T2, T3, T4, T5, T6>
-	{
+    public class Variant<T1, T2, T3, T4, T5, T6>
+    {
         private readonly IVariantHolder variant;
-		
+
         /// <summary>
         /// Gets the 0-based index of the type inhabiting the variant.
         /// </summary>
@@ -624,149 +624,149 @@ namespace Maki
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
-		/// (<typeparamref name="T1"/>).
+        /// (<typeparamref name="T1"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6> Make1(T1 item) => new Variant<T1, T2, T3, T4, T5, T6>(VariantHolder<T1>.T1(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T1"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6>(T1 item) => new Variant<T1, T2, T3, T4, T5, T6>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6>(T1 item) => new Variant<T1, T2, T3, T4, T5, T6>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T1"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T1"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T1"/></exception>
-		public static explicit operator T1(Variant<T1, T2, T3, T4, T5, T6> variant) => ((VariantHolder<T1>)variant.variant).Item;
+        public static explicit operator T1(Variant<T1, T2, T3, T4, T5, T6> variant) => ((VariantHolder<T1>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the second type
-		/// (<typeparamref name="T2"/>).
+        /// (<typeparamref name="T2"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6> Make2(T2 item) => new Variant<T1, T2, T3, T4, T5, T6>(VariantHolder<T2>.T2(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T2"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6>(T2 item) => new Variant<T1, T2, T3, T4, T5, T6>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6>(T2 item) => new Variant<T1, T2, T3, T4, T5, T6>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T2"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T2"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T2"/></exception>
-		public static explicit operator T2(Variant<T1, T2, T3, T4, T5, T6> variant) => ((VariantHolder<T2>)variant.variant).Item;
+        public static explicit operator T2(Variant<T1, T2, T3, T4, T5, T6> variant) => ((VariantHolder<T2>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the third type
-		/// (<typeparamref name="T3"/>).
+        /// (<typeparamref name="T3"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6> Make3(T3 item) => new Variant<T1, T2, T3, T4, T5, T6>(VariantHolder<T3>.T3(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T3"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6>(T3 item) => new Variant<T1, T2, T3, T4, T5, T6>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6>(T3 item) => new Variant<T1, T2, T3, T4, T5, T6>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T3"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T3"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T3"/></exception>
-		public static explicit operator T3(Variant<T1, T2, T3, T4, T5, T6> variant) => ((VariantHolder<T3>)variant.variant).Item;
+        public static explicit operator T3(Variant<T1, T2, T3, T4, T5, T6> variant) => ((VariantHolder<T3>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fourth type
-		/// (<typeparamref name="T4"/>).
+        /// (<typeparamref name="T4"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6> Make4(T4 item) => new Variant<T1, T2, T3, T4, T5, T6>(VariantHolder<T4>.T4(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T4"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6>(T4 item) => new Variant<T1, T2, T3, T4, T5, T6>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6>(T4 item) => new Variant<T1, T2, T3, T4, T5, T6>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T4"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T4"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T4"/></exception>
-		public static explicit operator T4(Variant<T1, T2, T3, T4, T5, T6> variant) => ((VariantHolder<T4>)variant.variant).Item;
+        public static explicit operator T4(Variant<T1, T2, T3, T4, T5, T6> variant) => ((VariantHolder<T4>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fifth type
-		/// (<typeparamref name="T5"/>).
+        /// (<typeparamref name="T5"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6> Make5(T5 item) => new Variant<T1, T2, T3, T4, T5, T6>(VariantHolder<T5>.T5(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T5"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6>(T5 item) => new Variant<T1, T2, T3, T4, T5, T6>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6>(T5 item) => new Variant<T1, T2, T3, T4, T5, T6>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T5"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T5"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T5"/></exception>
-		public static explicit operator T5(Variant<T1, T2, T3, T4, T5, T6> variant) => ((VariantHolder<T5>)variant.variant).Item;
+        public static explicit operator T5(Variant<T1, T2, T3, T4, T5, T6> variant) => ((VariantHolder<T5>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the sixth type
-		/// (<typeparamref name="T6"/>).
+        /// (<typeparamref name="T6"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6> Make6(T6 item) => new Variant<T1, T2, T3, T4, T5, T6>(VariantHolder<T6>.T6(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T6"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6>(T6 item) => new Variant<T1, T2, T3, T4, T5, T6>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6>(T6 item) => new Variant<T1, T2, T3, T4, T5, T6>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T6"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T6"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T6"/></exception>
-		public static explicit operator T6(Variant<T1, T2, T3, T4, T5, T6> variant) => ((VariantHolder<T6>)variant.variant).Item;
+        public static explicit operator T6(Variant<T1, T2, T3, T4, T5, T6> variant) => ((VariantHolder<T6>)variant.variant).Item;
 
-	}
+    }
     /// <summary>
     /// Represents a 7-type discriminate union.
     /// </summary>
@@ -777,10 +777,10 @@ namespace Maki
     /// <typeparam name="T5">Represents the variant's fifth type.</typeparam>
     /// <typeparam name="T6">Represents the variant's sixth type.</typeparam>
     /// <typeparam name="T7">Represents the variant's seventh type.</typeparam>
-	public class Variant<T1, T2, T3, T4, T5, T6, T7>
-	{
+    public class Variant<T1, T2, T3, T4, T5, T6, T7>
+    {
         private readonly IVariantHolder variant;
-		
+
         /// <summary>
         /// Gets the 0-based index of the type inhabiting the variant.
         /// </summary>
@@ -846,173 +846,173 @@ namespace Maki
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
-		/// (<typeparamref name="T1"/>).
+        /// (<typeparamref name="T1"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6, T7> Make1(T1 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(VariantHolder<T1>.T1(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T1"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7>(T1 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7>(T1 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T1"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T1"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T1"/></exception>
-		public static explicit operator T1(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => ((VariantHolder<T1>)variant.variant).Item;
+        public static explicit operator T1(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => ((VariantHolder<T1>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the second type
-		/// (<typeparamref name="T2"/>).
+        /// (<typeparamref name="T2"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6, T7> Make2(T2 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(VariantHolder<T2>.T2(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T2"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7>(T2 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7>(T2 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T2"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T2"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T2"/></exception>
-		public static explicit operator T2(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => ((VariantHolder<T2>)variant.variant).Item;
+        public static explicit operator T2(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => ((VariantHolder<T2>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the third type
-		/// (<typeparamref name="T3"/>).
+        /// (<typeparamref name="T3"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6, T7> Make3(T3 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(VariantHolder<T3>.T3(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T3"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7>(T3 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7>(T3 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T3"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T3"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T3"/></exception>
-		public static explicit operator T3(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => ((VariantHolder<T3>)variant.variant).Item;
+        public static explicit operator T3(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => ((VariantHolder<T3>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fourth type
-		/// (<typeparamref name="T4"/>).
+        /// (<typeparamref name="T4"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6, T7> Make4(T4 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(VariantHolder<T4>.T4(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T4"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7>(T4 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7>(T4 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T4"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T4"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T4"/></exception>
-		public static explicit operator T4(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => ((VariantHolder<T4>)variant.variant).Item;
+        public static explicit operator T4(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => ((VariantHolder<T4>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fifth type
-		/// (<typeparamref name="T5"/>).
+        /// (<typeparamref name="T5"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6, T7> Make5(T5 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(VariantHolder<T5>.T5(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T5"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7>(T5 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7>(T5 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T5"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T5"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T5"/></exception>
-		public static explicit operator T5(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => ((VariantHolder<T5>)variant.variant).Item;
+        public static explicit operator T5(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => ((VariantHolder<T5>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the sixth type
-		/// (<typeparamref name="T6"/>).
+        /// (<typeparamref name="T6"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6, T7> Make6(T6 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(VariantHolder<T6>.T6(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T6"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7>(T6 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7>(T6 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T6"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T6"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T6"/></exception>
-		public static explicit operator T6(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => ((VariantHolder<T6>)variant.variant).Item;
+        public static explicit operator T6(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => ((VariantHolder<T6>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the seventh type
-		/// (<typeparamref name="T7"/>).
+        /// (<typeparamref name="T7"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6, T7> Make7(T7 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(VariantHolder<T7>.T7(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T7"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7>(T7 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7>(T7 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T7"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T7"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T7"/></exception>
-		public static explicit operator T7(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => ((VariantHolder<T7>)variant.variant).Item;
+        public static explicit operator T7(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => ((VariantHolder<T7>)variant.variant).Item;
 
-	}
+    }
     /// <summary>
     /// Represents a 8-type discriminate union.
     /// </summary>
@@ -1024,10 +1024,10 @@ namespace Maki
     /// <typeparam name="T6">Represents the variant's sixth type.</typeparam>
     /// <typeparam name="T7">Represents the variant's seventh type.</typeparam>
     /// <typeparam name="T8">Represents the variant's eighth type.</typeparam>
-	public class Variant<T1, T2, T3, T4, T5, T6, T7, T8>
-	{
+    public class Variant<T1, T2, T3, T4, T5, T6, T7, T8>
+    {
         private readonly IVariantHolder variant;
-		
+
         /// <summary>
         /// Gets the 0-based index of the type inhabiting the variant.
         /// </summary>
@@ -1099,195 +1099,195 @@ namespace Maki
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
-		/// (<typeparamref name="T1"/>).
+        /// (<typeparamref name="T1"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make1(T1 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(VariantHolder<T1>.T1(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T1"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7, T8>(T1 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7, T8>(T1 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T1"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T1"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T1"/></exception>
-		public static explicit operator T1(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => ((VariantHolder<T1>)variant.variant).Item;
+        public static explicit operator T1(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => ((VariantHolder<T1>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the second type
-		/// (<typeparamref name="T2"/>).
+        /// (<typeparamref name="T2"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make2(T2 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(VariantHolder<T2>.T2(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T2"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7, T8>(T2 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7, T8>(T2 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T2"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T2"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T2"/></exception>
-		public static explicit operator T2(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => ((VariantHolder<T2>)variant.variant).Item;
+        public static explicit operator T2(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => ((VariantHolder<T2>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the third type
-		/// (<typeparamref name="T3"/>).
+        /// (<typeparamref name="T3"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make3(T3 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(VariantHolder<T3>.T3(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T3"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7, T8>(T3 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7, T8>(T3 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T3"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T3"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T3"/></exception>
-		public static explicit operator T3(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => ((VariantHolder<T3>)variant.variant).Item;
+        public static explicit operator T3(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => ((VariantHolder<T3>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fourth type
-		/// (<typeparamref name="T4"/>).
+        /// (<typeparamref name="T4"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make4(T4 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(VariantHolder<T4>.T4(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T4"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7, T8>(T4 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7, T8>(T4 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T4"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T4"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T4"/></exception>
-		public static explicit operator T4(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => ((VariantHolder<T4>)variant.variant).Item;
+        public static explicit operator T4(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => ((VariantHolder<T4>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fifth type
-		/// (<typeparamref name="T5"/>).
+        /// (<typeparamref name="T5"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make5(T5 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(VariantHolder<T5>.T5(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T5"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7, T8>(T5 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7, T8>(T5 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T5"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T5"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T5"/></exception>
-		public static explicit operator T5(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => ((VariantHolder<T5>)variant.variant).Item;
+        public static explicit operator T5(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => ((VariantHolder<T5>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the sixth type
-		/// (<typeparamref name="T6"/>).
+        /// (<typeparamref name="T6"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make6(T6 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(VariantHolder<T6>.T6(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T6"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7, T8>(T6 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7, T8>(T6 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T6"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T6"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T6"/></exception>
-		public static explicit operator T6(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => ((VariantHolder<T6>)variant.variant).Item;
+        public static explicit operator T6(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => ((VariantHolder<T6>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the seventh type
-		/// (<typeparamref name="T7"/>).
+        /// (<typeparamref name="T7"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make7(T7 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(VariantHolder<T7>.T7(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T7"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7, T8>(T7 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7, T8>(T7 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T7"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T7"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T7"/></exception>
-		public static explicit operator T7(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => ((VariantHolder<T7>)variant.variant).Item;
+        public static explicit operator T7(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => ((VariantHolder<T7>)variant.variant).Item;
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the eighth type
-		/// (<typeparamref name="T8"/>).
+        /// (<typeparamref name="T8"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make8(T8 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(VariantHolder<T8>.T8(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T8"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7, T8>(T8 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(item);
+        public static implicit operator Variant<T1, T2, T3, T4, T5, T6, T7, T8>(T8 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T8"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T8"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T8"/></exception>
-		public static explicit operator T8(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => ((VariantHolder<T8>)variant.variant).Item;
+        public static explicit operator T8(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => ((VariantHolder<T8>)variant.variant).Item;
 
-	}
+    }
 }

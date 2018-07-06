@@ -5,8 +5,6 @@
 <#@ import namespace="System.Collections.Generic" #>
 <#@ output extension=".cs" #>
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 <#
 Func<int, string, IEnumerable<string>> RangeWithPrefix = (rangeTo, prefix) => Enumerable.Range(1, rangeTo).Select(i => prefix + i);
@@ -16,9 +14,9 @@ var Ordinals = new string[] { "", "first", "second", "third", "fourth", "fifth",
 #>
 namespace Maki
 {
-	/// <summary>
-	/// Extensions for Variant.
-	/// </summary>
+    /// <summary>
+    /// Extensions for Variant.
+    /// </summary>
     public static class VariantExtensions
     {
 <# 
@@ -27,7 +25,7 @@ namespace Maki
 #>
         /// <summary>
         /// Maps the function matching the item inhabiting the variant. Returns a new variant containing the
-		/// result of the function.
+        /// result of the function.
         /// </summary>
 <#
 		for (int i = 1; i <= type; i++)
@@ -102,7 +100,7 @@ namespace Maki
 		}
 #>
         /// <returns>Result of the applied function.</returns>
-		public static U Apply<<#= JoinWithPrefix(type, "T") #>, U>(
+        public static U Apply<<#= JoinWithPrefix(type, "T") #>, U>(
             this Variant<<#= JoinWithPrefix(type, "T") #>> variant,
 <#
 		for (int i = 1; i <= type; i++)
@@ -147,7 +145,7 @@ namespace Maki
 <#
 		}
 #>
-		public static void Apply<<#= JoinWithPrefix(type, "T") #>>(
+        public static void Apply<<#= JoinWithPrefix(type, "T") #>>(
             this Variant<<#= JoinWithPrefix(type, "T") #>> variant,
 <#
 		for (int i = 1; i <= type; i++)
@@ -175,5 +173,5 @@ namespace Maki
 <#
 	}
 #>
-	}
+    }
 }

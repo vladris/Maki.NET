@@ -29,10 +29,10 @@ for (int types = 2; types <= 8; types++)
 <#
 	}
 #>
-	public class <#= type #>
-	{
+    public class <#= type #>
+    {
         private readonly IVariantHolder variant;
-		
+
         /// <summary>
         /// Gets the 0-based index of the type inhabiting the variant.
         /// </summary>
@@ -73,32 +73,32 @@ for (int types = 2; types <= 8; types++)
 #>
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the <#= Ordinals[i] #> type
-		/// (<typeparamref name="T<#= i #>"/>).
+        /// (<typeparamref name="T<#= i #>"/>).
         /// </summary>
         /// <param name="item">Item to place in the variant.</param>
         /// <returns>New Variant instance.</returns>
-		/// <remarks>Use this method when the variant contains multiple instances of the same type. This
-		/// allows explicit placing of the item.</remarks>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
         public static <#= type #> Make<#= i #>(T<#= i #> item) => new <#= type #>(VariantHolder<T<#= i #>>.T<#= i #>(item));
 
-	    /// <summary>
+        /// <summary>
         /// Implicitly casts from <typeparamref name="T<#= i #>"/> to variant. Creates a new Variant
-		/// inhabited by the given item.
+        /// inhabited by the given item.
         /// </summary>
         /// <param name="item">Item to store in the variant.</param>
-		public static implicit operator <#= type #>(T<#= i #> item) => new <#= type #>(item);
+        public static implicit operator <#= type #>(T<#= i #> item) => new <#= type #>(item);
 
-	    /// <summary>
+        /// <summary>
         /// Explicitly casts from variant to <typeparamref name="T<#= i #>"/>.
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T<#= i #>"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T<#= i #>"/></exception>
-		public static explicit operator T<#= i #>(<#= type #> variant) => ((VariantHolder<T<#= i #>>)variant.variant).Item;
+        public static explicit operator T<#= i #>(<#= type #> variant) => ((VariantHolder<T<#= i #>>)variant.variant).Item;
 
 <#
 	}
 #>
-	}
+    }
 <#
 }
 #>

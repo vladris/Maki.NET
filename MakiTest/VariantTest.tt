@@ -13,13 +13,13 @@ using System;
 #>
 namespace MakiTest
 {
-	class T1 { }
+    class T1 { }
 
 <# 
 	for (int i = 2; i <= 8; i++)
 	{
 #>
-	class T<#= i #> { }
+    class T<#= i #> { }
 
     [TestClass]
     public class Variant<#= i #>Test
@@ -30,32 +30,32 @@ namespace MakiTest
 #>
         [TestMethod]
         public void Variant<#= i #>TestMake<#= j #>()
-		{
-			var variant = Variant<<#= String.Join(", ", Enumerable.Range(1, i).Select(_ => "int")) #>>.Make<#= j #>(42);
+        {
+            var variant = Variant<<#= String.Join(", ", Enumerable.Range(1, i).Select(_ => "int")) #>>.Make<#= j #>(42);
 
-			Assert.AreEqual(<#= j - 1 #>, variant.Index);
-			Assert.AreEqual(42, variant.Get<int>());
-		}
+            Assert.AreEqual(<#= j - 1 #>, variant.Index);
+            Assert.AreEqual(42, variant.Get<int>());
+        }
 
         [TestMethod]
         public void Variant<#= i #>TestAssignT<#= j #>()
         {
-			var item = new T<#= j #>();
-			Variant<<#= TypeList(i) #>> variant = item;
+            var item = new T<#= j #>();
+            Variant<<#= TypeList(i) #>> variant = item;
 
-			Assert.AreEqual(<#= j - 1 #>, variant.Index);
-			Assert.IsTrue(variant.Is<T<#= j #>>());
-			Assert.AreEqual(item, variant.Get<T<#= j #>>());
-			Assert.AreEqual(item, (T<#= j #>)variant);
+            Assert.AreEqual(<#= j - 1 #>, variant.Index);
+            Assert.IsTrue(variant.Is<T<#= j #>>());
+            Assert.AreEqual(item, variant.Get<T<#= j #>>());
+            Assert.AreEqual(item, (T<#= j #>)variant);
 
 <#
 	for (int k = 1; k <= i; k++)
 	{
 		if (k == j) continue;
 #>
-			Assert.IsFalse(variant.Is<T<#= k #>>());
-			Assert.ThrowsException<InvalidCastException>(() => { variant.Get<T<#= k #>>(); });
-			Assert.ThrowsException<InvalidCastException>(() => { var _ = (T<#= k #>)variant; });
+            Assert.IsFalse(variant.Is<T<#= k #>>());
+            Assert.ThrowsException<InvalidCastException>(() => { variant.Get<T<#= k #>>(); });
+            Assert.ThrowsException<InvalidCastException>(() => { var _ = (T<#= k #>)variant; });
 <#
 	}
 #>
@@ -64,7 +64,7 @@ namespace MakiTest
 <#
 	}
 #>
-	}
+    }
 <#
 	}
 #>
