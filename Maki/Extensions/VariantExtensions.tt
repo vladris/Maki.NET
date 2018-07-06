@@ -1,0 +1,179 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+<#
+Func<int, string, IEnumerable<string>> RangeWithPrefix = (rangeTo, prefix) => Enumerable.Range(1, rangeTo).Select(i => prefix + i);
+Func<int, string, string> JoinWithPrefix = (rangeTo, prefix) => String.Join(", ", RangeWithPrefix(rangeTo, prefix));
+
+var Ordinals = new string[] { "", "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth" };
+#>
+namespace Maki
+{
+	/// <summary>
+	/// Extensions for Variant.
+	/// </summary>
+    public static class VariantExtensions
+    {
+<# 
+	for (int type = 2; type <= 8; type++)
+	{
+#>
+        /// <summary>
+        /// Maps the function matching the item inhabiting the variant. Returns a new variant containing the
+		/// result of the function.
+        /// </summary>
+<#
+		for (int i = 1; i <= type; i++)
+		{
+#>
+        /// <typeparam name="T<#= i #>">The <#= Ordinals[i] #> type of the variant.</typeparam>
+<#
+		}
+#>
+<#
+		for (int i = 1; i <= type; i++)
+		{
+#>
+        /// <typeparam name="U<#= i #>">The <#= Ordinals[i] #> type of the returned variant.</typeparam>
+<#
+		}
+#>
+        /// <param name="variant">This variant.</param>
+<#
+		for (int i = 1; i <= type; i++)
+		{
+#>
+        /// <param name="func<#= i #>">The <#= Ordinals[i] #> function.</param>
+<#
+		}
+#>
+        /// <returns>New variant containing the result of the applied function.</returns>
+        public static Variant<<#= JoinWithPrefix(type, "U") #>> Map<<#= JoinWithPrefix(type, "T") #>, <#= JoinWithPrefix(type, "U") #>>(
+            this Variant<<#= JoinWithPrefix(type, "T") #>> variant,
+<#
+		for (int i = 1; i <= type; i++)
+		{
+#>
+            Func<T<#= i #>, U<#= i #>> func<#= i #><#= i != type ? "," : ")" #>
+<#
+		}
+#>
+        {
+            switch (variant.Index)
+            {
+<#
+		for (int i = 1; i <= type; i++)
+		{
+#>
+                case <#= i - 1 #>: return func<#= i #>(variant.Get<T<#= i #>>());
+<#
+		}
+#>
+                default: throw new InvalidOperationException();
+            }
+        }
+
+        /// <summary>
+        /// Applies the function matching the item inhabiting the variant. Returns the result of the function.
+        /// </summary>
+<#
+		for (int i = 1; i <= type; i++)
+		{
+#>
+        /// <typeparam name="T<#= i #>">The <#= Ordinals[i] #> type of the variant.</typeparam>
+<#
+		}
+#>
+        /// <typeparam name="U">The return type of the functions.</typeparam>
+        /// <param name="variant">This variant.</param>
+<#
+		for (int i = 1; i <= type; i++)
+		{
+#>
+        /// <param name="func<#= i #>">The <#= Ordinals[i] #> function.</param>
+<#
+		}
+#>
+        /// <returns>Result of the applied function.</returns>
+		public static U Apply<<#= JoinWithPrefix(type, "T") #>, U>(
+            this Variant<<#= JoinWithPrefix(type, "T") #>> variant,
+<#
+		for (int i = 1; i <= type; i++)
+		{
+#>
+            Func<T<#= i #>, U> func<#= i #><#= i != type ? "," : ")" #>
+<#
+		}
+#>
+        {
+            switch (variant.Index)
+            {
+<#
+		for (int i = 1; i <= type; i++)
+		{
+#>
+                case <#= i - 1 #>: return func<#= i #>(variant.Get<T<#= i #>>());
+<#
+		}
+#>
+                default: throw new InvalidOperationException();
+            }
+        }
+
+        /// <summary>
+        /// Applies the action matching the item inhabiting the variant.
+        /// </summary>
+<#
+		for (int i = 1; i <= type; i++)
+		{
+#>
+        /// <typeparam name="T<#= i #>">The <#= Ordinals[i] #> type of the variant.</typeparam>
+<#
+		}
+#>
+        /// <param name="variant">This variant.</param>
+<#
+		for (int i = 1; i <= type; i++)
+		{
+#>
+        /// <param name="func<#= i #>">The <#= Ordinals[i] #> action.</param>
+<#
+		}
+#>
+		public static void Apply<<#= JoinWithPrefix(type, "T") #>>(
+            this Variant<<#= JoinWithPrefix(type, "T") #>> variant,
+<#
+		for (int i = 1; i <= type; i++)
+		{
+#>
+            Action<T<#= i #>> act<#= i #><#= i != type ? "," : ")" #>
+<#
+		}
+#>
+        {
+            switch (variant.Index)
+            {
+<#
+		for (int i = 1; i <= type; i++)
+		{
+#>
+                case <#= i - 1 #>: act<#= i #>(variant.Get<T<#= i #>>()); return;
+<#
+		}
+#>
+                default: throw new InvalidOperationException();
+            }
+        }
+
+<#
+	}
+#>
+	}
+}
