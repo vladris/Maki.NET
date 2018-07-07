@@ -7,7 +7,7 @@ namespace Maki
     /// </summary>
     /// <typeparam name="T1">Represents the variant's first type.</typeparam>
     /// <typeparam name="T2">Represents the variant's second type.</typeparam>
-    public class Variant<T1, T2>
+    public sealed class Variant<T1, T2>
     {
         private readonly IVariantHolder variant;
 
@@ -99,7 +99,7 @@ namespace Maki
     /// <typeparam name="T1">Represents the variant's first type.</typeparam>
     /// <typeparam name="T2">Represents the variant's second type.</typeparam>
     /// <typeparam name="T3">Represents the variant's third type.</typeparam>
-    public class Variant<T1, T2, T3>
+    public sealed class Variant<T1, T2, T3>
     {
         private readonly IVariantHolder variant;
 
@@ -222,7 +222,7 @@ namespace Maki
     /// <typeparam name="T2">Represents the variant's second type.</typeparam>
     /// <typeparam name="T3">Represents the variant's third type.</typeparam>
     /// <typeparam name="T4">Represents the variant's fourth type.</typeparam>
-    public class Variant<T1, T2, T3, T4>
+    public sealed class Variant<T1, T2, T3, T4>
     {
         private readonly IVariantHolder variant;
 
@@ -376,7 +376,7 @@ namespace Maki
     /// <typeparam name="T3">Represents the variant's third type.</typeparam>
     /// <typeparam name="T4">Represents the variant's fourth type.</typeparam>
     /// <typeparam name="T5">Represents the variant's fifth type.</typeparam>
-    public class Variant<T1, T2, T3, T4, T5>
+    public sealed class Variant<T1, T2, T3, T4, T5>
     {
         private readonly IVariantHolder variant;
 
@@ -561,7 +561,7 @@ namespace Maki
     /// <typeparam name="T4">Represents the variant's fourth type.</typeparam>
     /// <typeparam name="T5">Represents the variant's fifth type.</typeparam>
     /// <typeparam name="T6">Represents the variant's sixth type.</typeparam>
-    public class Variant<T1, T2, T3, T4, T5, T6>
+    public sealed class Variant<T1, T2, T3, T4, T5, T6>
     {
         private readonly IVariantHolder variant;
 
@@ -777,7 +777,7 @@ namespace Maki
     /// <typeparam name="T5">Represents the variant's fifth type.</typeparam>
     /// <typeparam name="T6">Represents the variant's sixth type.</typeparam>
     /// <typeparam name="T7">Represents the variant's seventh type.</typeparam>
-    public class Variant<T1, T2, T3, T4, T5, T6, T7>
+    public sealed class Variant<T1, T2, T3, T4, T5, T6, T7>
     {
         private readonly IVariantHolder variant;
 
@@ -1024,7 +1024,7 @@ namespace Maki
     /// <typeparam name="T6">Represents the variant's sixth type.</typeparam>
     /// <typeparam name="T7">Represents the variant's seventh type.</typeparam>
     /// <typeparam name="T8">Represents the variant's eighth type.</typeparam>
-    public class Variant<T1, T2, T3, T4, T5, T6, T7, T8>
+    public sealed class Variant<T1, T2, T3, T4, T5, T6, T7, T8>
     {
         private readonly IVariantHolder variant;
 

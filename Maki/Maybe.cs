@@ -23,7 +23,7 @@
     /// Represents an optional item of type <typeparamref name="T"/>.
     /// </summary>
     /// <typeparam name="T">Contained item type.</typeparam>
-    public class Maybe<T>
+    public sealed class Maybe<T>
     {
         private Variant<T, Unit> item;
 
@@ -53,7 +53,7 @@
         /// </summary>
         /// <returns>Item held by this Maybe.</returns>
         /// <exception cref="InvalidCastException">Thrown when Maybe does not hold an item.</exception>
-        public T Get() => item.Get<T>();
+        public T Get() => (T)item;
 
         /// <summary>
         /// Creates a new empty Maybe.

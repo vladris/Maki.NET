@@ -29,7 +29,7 @@ for (int types = 2; types <= 8; types++)
 <#
 	}
 #>
-    public class <#= type #>
+    public sealed class <#= type #>
     {
         private readonly IVariantHolder variant;
 
