@@ -3,7 +3,14 @@
     /// <summary>
     /// Represents a unit type.
     /// </summary>
-    public class Unit
+    public sealed class Unit
     {
+        /// <summary>
+        /// Unique instance.
+        /// </summary>
+        public static readonly Unit Value = new Unit();
+
+        private Unit()
+        { }
     }
 }

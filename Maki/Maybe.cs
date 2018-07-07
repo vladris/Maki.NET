@@ -8,7 +8,7 @@
         /// <summary>
         /// Represents an empty Maybe.
         /// </summary>
-        public static Unit Nothing = new Unit();
+        public static Unit Nothing = Unit.Value;
 
         /// <summary>
         /// Creates a Maybe containing the given item.
