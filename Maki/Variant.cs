@@ -1,4 +1,5 @@
 ﻿using Maki.Details;
+using System;
 
 namespace Maki
 {
@@ -27,8 +28,8 @@ namespace Maki
         /// Gets the item inhabiting the variant as a <typeparamref name="T"/>.
         /// </summary>
         /// <typeparam name="T">Should be one of the variant's supplied types.</typeparam>
-        /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
-        public T Get<T>() => variant.Get<T>();
+        /// <exception cref="InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
+        public T Get<T>() => Is<T>() ? ((VariantHolder<T>)variant).Item : throw new InvalidCastException();
 
         private Variant(IVariantHolder item) => variant = item;
 
@@ -119,8 +120,8 @@ namespace Maki
         /// Gets the item inhabiting the variant as a <typeparamref name="T"/>.
         /// </summary>
         /// <typeparam name="T">Should be one of the variant's supplied types.</typeparam>
-        /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
-        public T Get<T>() => variant.Get<T>();
+        /// <exception cref="InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
+        public T Get<T>() => Is<T>() ? ((VariantHolder<T>)variant).Item : throw new InvalidCastException();
 
         private Variant(IVariantHolder item) => variant = item;
 
@@ -242,8 +243,8 @@ namespace Maki
         /// Gets the item inhabiting the variant as a <typeparamref name="T"/>.
         /// </summary>
         /// <typeparam name="T">Should be one of the variant's supplied types.</typeparam>
-        /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
-        public T Get<T>() => variant.Get<T>();
+        /// <exception cref="InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
+        public T Get<T>() => Is<T>() ? ((VariantHolder<T>)variant).Item : throw new InvalidCastException();
 
         private Variant(IVariantHolder item) => variant = item;
 
@@ -396,8 +397,8 @@ namespace Maki
         /// Gets the item inhabiting the variant as a <typeparamref name="T"/>.
         /// </summary>
         /// <typeparam name="T">Should be one of the variant's supplied types.</typeparam>
-        /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
-        public T Get<T>() => variant.Get<T>();
+        /// <exception cref="InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
+        public T Get<T>() => Is<T>() ? ((VariantHolder<T>)variant).Item : throw new InvalidCastException();
 
         private Variant(IVariantHolder item) => variant = item;
 
@@ -581,8 +582,8 @@ namespace Maki
         /// Gets the item inhabiting the variant as a <typeparamref name="T"/>.
         /// </summary>
         /// <typeparam name="T">Should be one of the variant's supplied types.</typeparam>
-        /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
-        public T Get<T>() => variant.Get<T>();
+        /// <exception cref="InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
+        public T Get<T>() => Is<T>() ? ((VariantHolder<T>)variant).Item : throw new InvalidCastException();
 
         private Variant(IVariantHolder item) => variant = item;
 
@@ -797,8 +798,8 @@ namespace Maki
         /// Gets the item inhabiting the variant as a <typeparamref name="T"/>.
         /// </summary>
         /// <typeparam name="T">Should be one of the variant's supplied types.</typeparam>
-        /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
-        public T Get<T>() => variant.Get<T>();
+        /// <exception cref="InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
+        public T Get<T>() => Is<T>() ? ((VariantHolder<T>)variant).Item : throw new InvalidCastException();
 
         private Variant(IVariantHolder item) => variant = item;
 
@@ -1044,8 +1045,8 @@ namespace Maki
         /// Gets the item inhabiting the variant as a <typeparamref name="T"/>.
         /// </summary>
         /// <typeparam name="T">Should be one of the variant's supplied types.</typeparam>
-        /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
-        public T Get<T>() => variant.Get<T>();
+        /// <exception cref="InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
+        public T Get<T>() => Is<T>() ? ((VariantHolder<T>)variant).Item : throw new InvalidCastException();
 
         private Variant(IVariantHolder item) => variant = item;
 

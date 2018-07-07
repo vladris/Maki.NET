@@ -5,7 +5,5 @@
         int Index { get; }
 
         bool Is<T>();
-
-        T Get<T>();
     }
 }
