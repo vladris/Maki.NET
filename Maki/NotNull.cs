@@ -41,5 +41,14 @@ namespace Maki
         /// </summary>
         /// <param name="item">Object to store.</param>
         public static implicit operator NotNull<T>(T item) => new NotNull<T>(item);
+
+        /// <summary>
+        /// Creates a Maybe from the given object which is either Nothing if the
+        /// object is null or NotNull if the object is not null.
+        /// </summary>
+        /// <param name="value">Object to store.</param>
+        /// <returns>NotNull if object is not null, Nothing otherwise.</returns>
+        public static Maybe<NotNull<T>> MakeMaybe(T value) 
+            => value == null ? Maybe.Nothing : Maybe.Just(new NotNull<T>(value));
     }
 }

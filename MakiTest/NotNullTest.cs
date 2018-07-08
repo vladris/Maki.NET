@@ -45,5 +45,20 @@ namespace MakiTest
                 notNull = null;
             });
         }
+
+        [TestMethod]
+        public void NotNullMakeMaybeNothing()
+        {
+            var maybe = NotNull<string>.MakeMaybe(null);
+            Assert.IsFalse(maybe.HasValue);
+        }
+
+        [TestMethod]
+        public void NotNullMakeMaybeJust()
+        {
+            var maybe = NotNull<string>.MakeMaybe("Foo");
+            Assert.IsTrue(maybe.HasValue);
+            Assert.AreEqual("Foo", maybe.Get().Item);
+        }
     }
 }
