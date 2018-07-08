@@ -6,7 +6,11 @@ namespace MakiTest
 {
     class T1 { }
 
+    class DerivedFromT1 : T1 { }
+
     class T2 { }
+
+    class DerivedFromT2 : T2 { }
 
     [TestClass]
     public class Variant2Test
@@ -18,6 +22,16 @@ namespace MakiTest
 
             Assert.AreEqual(0, variant.Index);
             Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant2TestPolymorphism1()
+        {
+            var item = new DerivedFromT1();
+            Variant<T1, T2> variant = item;
+
+            Assert.IsTrue(variant.Is<T1>());
+            Assert.AreEqual(item, variant.Get<T1>());
         }
 
         [TestMethod]
@@ -46,6 +60,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant2TestPolymorphism2()
+        {
+            var item = new DerivedFromT2();
+            Variant<T1, T2> variant = item;
+
+            Assert.IsTrue(variant.Is<T2>());
+            Assert.AreEqual(item, variant.Get<T2>());
+        }
+
+        [TestMethod]
         public void Variant2TestAssignT2()
         {
             var item = new T2();
@@ -64,6 +88,8 @@ namespace MakiTest
     }
     class T3 { }
 
+    class DerivedFromT3 : T3 { }
+
     [TestClass]
     public class Variant3Test
     {
@@ -74,6 +100,16 @@ namespace MakiTest
 
             Assert.AreEqual(0, variant.Index);
             Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant3TestPolymorphism1()
+        {
+            var item = new DerivedFromT1();
+            Variant<T1, T2, T3> variant = item;
+
+            Assert.IsTrue(variant.Is<T1>());
+            Assert.AreEqual(item, variant.Get<T1>());
         }
 
         [TestMethod]
@@ -105,6 +141,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant3TestPolymorphism2()
+        {
+            var item = new DerivedFromT2();
+            Variant<T1, T2, T3> variant = item;
+
+            Assert.IsTrue(variant.Is<T2>());
+            Assert.AreEqual(item, variant.Get<T2>());
+        }
+
+        [TestMethod]
         public void Variant3TestAssignT2()
         {
             var item = new T2();
@@ -133,6 +179,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant3TestPolymorphism3()
+        {
+            var item = new DerivedFromT3();
+            Variant<T1, T2, T3> variant = item;
+
+            Assert.IsTrue(variant.Is<T3>());
+            Assert.AreEqual(item, variant.Get<T3>());
+        }
+
+        [TestMethod]
         public void Variant3TestAssignT3()
         {
             var item = new T3();
@@ -154,6 +210,8 @@ namespace MakiTest
     }
     class T4 { }
 
+    class DerivedFromT4 : T4 { }
+
     [TestClass]
     public class Variant4Test
     {
@@ -164,6 +222,16 @@ namespace MakiTest
 
             Assert.AreEqual(0, variant.Index);
             Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant4TestPolymorphism1()
+        {
+            var item = new DerivedFromT1();
+            Variant<T1, T2, T3, T4> variant = item;
+
+            Assert.IsTrue(variant.Is<T1>());
+            Assert.AreEqual(item, variant.Get<T1>());
         }
 
         [TestMethod]
@@ -198,6 +266,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant4TestPolymorphism2()
+        {
+            var item = new DerivedFromT2();
+            Variant<T1, T2, T3, T4> variant = item;
+
+            Assert.IsTrue(variant.Is<T2>());
+            Assert.AreEqual(item, variant.Get<T2>());
+        }
+
+        [TestMethod]
         public void Variant4TestAssignT2()
         {
             var item = new T2();
@@ -226,6 +304,16 @@ namespace MakiTest
 
             Assert.AreEqual(2, variant.Index);
             Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant4TestPolymorphism3()
+        {
+            var item = new DerivedFromT3();
+            Variant<T1, T2, T3, T4> variant = item;
+
+            Assert.IsTrue(variant.Is<T3>());
+            Assert.AreEqual(item, variant.Get<T3>());
         }
 
         [TestMethod]
@@ -260,6 +348,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant4TestPolymorphism4()
+        {
+            var item = new DerivedFromT4();
+            Variant<T1, T2, T3, T4> variant = item;
+
+            Assert.IsTrue(variant.Is<T4>());
+            Assert.AreEqual(item, variant.Get<T4>());
+        }
+
+        [TestMethod]
         public void Variant4TestAssignT4()
         {
             var item = new T4();
@@ -284,6 +382,8 @@ namespace MakiTest
     }
     class T5 { }
 
+    class DerivedFromT5 : T5 { }
+
     [TestClass]
     public class Variant5Test
     {
@@ -294,6 +394,16 @@ namespace MakiTest
 
             Assert.AreEqual(0, variant.Index);
             Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant5TestPolymorphism1()
+        {
+            var item = new DerivedFromT1();
+            Variant<T1, T2, T3, T4, T5> variant = item;
+
+            Assert.IsTrue(variant.Is<T1>());
+            Assert.AreEqual(item, variant.Get<T1>());
         }
 
         [TestMethod]
@@ -331,6 +441,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant5TestPolymorphism2()
+        {
+            var item = new DerivedFromT2();
+            Variant<T1, T2, T3, T4, T5> variant = item;
+
+            Assert.IsTrue(variant.Is<T2>());
+            Assert.AreEqual(item, variant.Get<T2>());
+        }
+
+        [TestMethod]
         public void Variant5TestAssignT2()
         {
             var item = new T2();
@@ -362,6 +482,16 @@ namespace MakiTest
 
             Assert.AreEqual(2, variant.Index);
             Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant5TestPolymorphism3()
+        {
+            var item = new DerivedFromT3();
+            Variant<T1, T2, T3, T4, T5> variant = item;
+
+            Assert.IsTrue(variant.Is<T3>());
+            Assert.AreEqual(item, variant.Get<T3>());
         }
 
         [TestMethod]
@@ -399,6 +529,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant5TestPolymorphism4()
+        {
+            var item = new DerivedFromT4();
+            Variant<T1, T2, T3, T4, T5> variant = item;
+
+            Assert.IsTrue(variant.Is<T4>());
+            Assert.AreEqual(item, variant.Get<T4>());
+        }
+
+        [TestMethod]
         public void Variant5TestAssignT4()
         {
             var item = new T4();
@@ -433,6 +573,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant5TestPolymorphism5()
+        {
+            var item = new DerivedFromT5();
+            Variant<T1, T2, T3, T4, T5> variant = item;
+
+            Assert.IsTrue(variant.Is<T5>());
+            Assert.AreEqual(item, variant.Get<T5>());
+        }
+
+        [TestMethod]
         public void Variant5TestAssignT5()
         {
             var item = new T5();
@@ -460,6 +610,8 @@ namespace MakiTest
     }
     class T6 { }
 
+    class DerivedFromT6 : T6 { }
+
     [TestClass]
     public class Variant6Test
     {
@@ -470,6 +622,16 @@ namespace MakiTest
 
             Assert.AreEqual(0, variant.Index);
             Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant6TestPolymorphism1()
+        {
+            var item = new DerivedFromT1();
+            Variant<T1, T2, T3, T4, T5, T6> variant = item;
+
+            Assert.IsTrue(variant.Is<T1>());
+            Assert.AreEqual(item, variant.Get<T1>());
         }
 
         [TestMethod]
@@ -510,6 +672,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant6TestPolymorphism2()
+        {
+            var item = new DerivedFromT2();
+            Variant<T1, T2, T3, T4, T5, T6> variant = item;
+
+            Assert.IsTrue(variant.Is<T2>());
+            Assert.AreEqual(item, variant.Get<T2>());
+        }
+
+        [TestMethod]
         public void Variant6TestAssignT2()
         {
             var item = new T2();
@@ -544,6 +716,16 @@ namespace MakiTest
 
             Assert.AreEqual(2, variant.Index);
             Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant6TestPolymorphism3()
+        {
+            var item = new DerivedFromT3();
+            Variant<T1, T2, T3, T4, T5, T6> variant = item;
+
+            Assert.IsTrue(variant.Is<T3>());
+            Assert.AreEqual(item, variant.Get<T3>());
         }
 
         [TestMethod]
@@ -584,6 +766,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant6TestPolymorphism4()
+        {
+            var item = new DerivedFromT4();
+            Variant<T1, T2, T3, T4, T5, T6> variant = item;
+
+            Assert.IsTrue(variant.Is<T4>());
+            Assert.AreEqual(item, variant.Get<T4>());
+        }
+
+        [TestMethod]
         public void Variant6TestAssignT4()
         {
             var item = new T4();
@@ -618,6 +810,16 @@ namespace MakiTest
 
             Assert.AreEqual(4, variant.Index);
             Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant6TestPolymorphism5()
+        {
+            var item = new DerivedFromT5();
+            Variant<T1, T2, T3, T4, T5, T6> variant = item;
+
+            Assert.IsTrue(variant.Is<T5>());
+            Assert.AreEqual(item, variant.Get<T5>());
         }
 
         [TestMethod]
@@ -658,6 +860,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant6TestPolymorphism6()
+        {
+            var item = new DerivedFromT6();
+            Variant<T1, T2, T3, T4, T5, T6> variant = item;
+
+            Assert.IsTrue(variant.Is<T6>());
+            Assert.AreEqual(item, variant.Get<T6>());
+        }
+
+        [TestMethod]
         public void Variant6TestAssignT6()
         {
             var item = new T6();
@@ -688,6 +900,8 @@ namespace MakiTest
     }
     class T7 { }
 
+    class DerivedFromT7 : T7 { }
+
     [TestClass]
     public class Variant7Test
     {
@@ -698,6 +912,16 @@ namespace MakiTest
 
             Assert.AreEqual(0, variant.Index);
             Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant7TestPolymorphism1()
+        {
+            var item = new DerivedFromT1();
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant = item;
+
+            Assert.IsTrue(variant.Is<T1>());
+            Assert.AreEqual(item, variant.Get<T1>());
         }
 
         [TestMethod]
@@ -741,6 +965,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant7TestPolymorphism2()
+        {
+            var item = new DerivedFromT2();
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant = item;
+
+            Assert.IsTrue(variant.Is<T2>());
+            Assert.AreEqual(item, variant.Get<T2>());
+        }
+
+        [TestMethod]
         public void Variant7TestAssignT2()
         {
             var item = new T2();
@@ -778,6 +1012,16 @@ namespace MakiTest
 
             Assert.AreEqual(2, variant.Index);
             Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant7TestPolymorphism3()
+        {
+            var item = new DerivedFromT3();
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant = item;
+
+            Assert.IsTrue(variant.Is<T3>());
+            Assert.AreEqual(item, variant.Get<T3>());
         }
 
         [TestMethod]
@@ -821,6 +1065,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant7TestPolymorphism4()
+        {
+            var item = new DerivedFromT4();
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant = item;
+
+            Assert.IsTrue(variant.Is<T4>());
+            Assert.AreEqual(item, variant.Get<T4>());
+        }
+
+        [TestMethod]
         public void Variant7TestAssignT4()
         {
             var item = new T4();
@@ -858,6 +1112,16 @@ namespace MakiTest
 
             Assert.AreEqual(4, variant.Index);
             Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant7TestPolymorphism5()
+        {
+            var item = new DerivedFromT5();
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant = item;
+
+            Assert.IsTrue(variant.Is<T5>());
+            Assert.AreEqual(item, variant.Get<T5>());
         }
 
         [TestMethod]
@@ -901,6 +1165,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant7TestPolymorphism6()
+        {
+            var item = new DerivedFromT6();
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant = item;
+
+            Assert.IsTrue(variant.Is<T6>());
+            Assert.AreEqual(item, variant.Get<T6>());
+        }
+
+        [TestMethod]
         public void Variant7TestAssignT6()
         {
             var item = new T6();
@@ -941,6 +1215,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant7TestPolymorphism7()
+        {
+            var item = new DerivedFromT7();
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant = item;
+
+            Assert.IsTrue(variant.Is<T7>());
+            Assert.AreEqual(item, variant.Get<T7>());
+        }
+
+        [TestMethod]
         public void Variant7TestAssignT7()
         {
             var item = new T7();
@@ -974,6 +1258,8 @@ namespace MakiTest
     }
     class T8 { }
 
+    class DerivedFromT8 : T8 { }
+
     [TestClass]
     public class Variant8Test
     {
@@ -984,6 +1270,16 @@ namespace MakiTest
 
             Assert.AreEqual(0, variant.Index);
             Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant8TestPolymorphism1()
+        {
+            var item = new DerivedFromT1();
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant = item;
+
+            Assert.IsTrue(variant.Is<T1>());
+            Assert.AreEqual(item, variant.Get<T1>());
         }
 
         [TestMethod]
@@ -1030,6 +1326,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant8TestPolymorphism2()
+        {
+            var item = new DerivedFromT2();
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant = item;
+
+            Assert.IsTrue(variant.Is<T2>());
+            Assert.AreEqual(item, variant.Get<T2>());
+        }
+
+        [TestMethod]
         public void Variant8TestAssignT2()
         {
             var item = new T2();
@@ -1070,6 +1376,16 @@ namespace MakiTest
 
             Assert.AreEqual(2, variant.Index);
             Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant8TestPolymorphism3()
+        {
+            var item = new DerivedFromT3();
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant = item;
+
+            Assert.IsTrue(variant.Is<T3>());
+            Assert.AreEqual(item, variant.Get<T3>());
         }
 
         [TestMethod]
@@ -1116,6 +1432,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant8TestPolymorphism4()
+        {
+            var item = new DerivedFromT4();
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant = item;
+
+            Assert.IsTrue(variant.Is<T4>());
+            Assert.AreEqual(item, variant.Get<T4>());
+        }
+
+        [TestMethod]
         public void Variant8TestAssignT4()
         {
             var item = new T4();
@@ -1156,6 +1482,16 @@ namespace MakiTest
 
             Assert.AreEqual(4, variant.Index);
             Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant8TestPolymorphism5()
+        {
+            var item = new DerivedFromT5();
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant = item;
+
+            Assert.IsTrue(variant.Is<T5>());
+            Assert.AreEqual(item, variant.Get<T5>());
         }
 
         [TestMethod]
@@ -1202,6 +1538,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant8TestPolymorphism6()
+        {
+            var item = new DerivedFromT6();
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant = item;
+
+            Assert.IsTrue(variant.Is<T6>());
+            Assert.AreEqual(item, variant.Get<T6>());
+        }
+
+        [TestMethod]
         public void Variant8TestAssignT6()
         {
             var item = new T6();
@@ -1245,6 +1591,16 @@ namespace MakiTest
         }
 
         [TestMethod]
+        public void Variant8TestPolymorphism7()
+        {
+            var item = new DerivedFromT7();
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant = item;
+
+            Assert.IsTrue(variant.Is<T7>());
+            Assert.AreEqual(item, variant.Get<T7>());
+        }
+
+        [TestMethod]
         public void Variant8TestAssignT7()
         {
             var item = new T7();
@@ -1285,6 +1641,16 @@ namespace MakiTest
 
             Assert.AreEqual(7, variant.Index);
             Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant8TestPolymorphism8()
+        {
+            var item = new DerivedFromT8();
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant = item;
+
+            Assert.IsTrue(variant.Is<T8>());
+            Assert.AreEqual(item, variant.Get<T8>());
         }
 
         [TestMethod]

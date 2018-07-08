@@ -15,11 +15,15 @@ namespace MakiTest
 {
     class T1 { }
 
+    class DerivedFromT1 : T1 { }
+
 <# 
 	for (int i = 2; i <= 8; i++)
 	{
 #>
     class T<#= i #> { }
+
+    class DerivedFromT<#= i #> : T<#= i #> { }
 
     [TestClass]
     public class Variant<#= i #>Test
@@ -35,6 +39,16 @@ namespace MakiTest
 
             Assert.AreEqual(<#= j - 1 #>, variant.Index);
             Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant<#= i #>TestPolymorphism<#= j #>()
+        {
+            var item = new DerivedFromT<#= j #>();
+            Variant<<#= TypeList(i) #>> variant = item;
+
+            Assert.IsTrue(variant.Is<T<#= j #>>());
+            Assert.AreEqual(item, variant.Get<T<#= j #>>());
         }
 
         [TestMethod]
