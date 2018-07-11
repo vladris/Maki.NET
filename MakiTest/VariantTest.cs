@@ -66,6 +66,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -119,6 +121,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
     }
@@ -183,6 +187,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -239,6 +245,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -295,6 +303,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
     }
@@ -362,6 +372,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -421,6 +433,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -480,6 +494,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -539,6 +555,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
     }
@@ -609,6 +627,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -671,6 +691,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -733,6 +755,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -795,6 +819,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -857,6 +883,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
     }
@@ -930,6 +958,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -995,6 +1025,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -1060,6 +1092,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -1125,6 +1159,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -1190,6 +1226,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -1255,6 +1293,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
     }
@@ -1331,6 +1371,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -1399,6 +1441,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -1467,6 +1511,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -1535,6 +1581,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -1603,6 +1651,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -1671,6 +1721,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -1739,6 +1791,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
     }
@@ -1818,6 +1872,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -1889,6 +1945,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -1960,6 +2018,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -2031,6 +2091,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -2102,6 +2164,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -2173,6 +2237,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -2244,6 +2310,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
         [TestMethod]
@@ -2315,6 +2383,8 @@ namespace MakiTest
 			
 			Assert.IsFalse(item2.Equals(variant2));
 			Assert.IsTrue(item2.Equals((T2)variant2));
+
+			Assert.IsFalse(item1.Equals(null));
 		}
 
     }

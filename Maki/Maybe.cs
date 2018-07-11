@@ -79,6 +79,11 @@
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns>True if the objects are equal.</returns>
-        public override bool Equals(object obj) => HasValue ? obj.Equals(Get()) : obj.Equals(Unit.Value);
+        public override bool Equals(object obj)
+        {
+            if (obj == null) return false;
+
+            return HasValue ? obj.Equals(Get()) : obj.Equals(Unit.Value);
+        }
     }
 }

@@ -57,6 +57,6 @@ namespace Maki
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns>True if the objects are equal.</returns>
-        public override bool Equals(object obj) => obj.Equals(Item);
+        public override bool Equals(object obj) => obj?.Equals(Item) ?? false;
     }
 }

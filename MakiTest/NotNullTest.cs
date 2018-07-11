@@ -70,6 +70,8 @@ namespace MakiTest
             Assert.IsTrue(Maybe.Just("test").Equals(new NotNull<string>("test")));
 
             Assert.IsTrue("test".Equals(new NotNull<string>("test")));
+
+            Assert.IsFalse(new NotNull<T1>(new T1()).Equals(null));
         }
     }
 }

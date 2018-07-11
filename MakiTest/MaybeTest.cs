@@ -52,6 +52,8 @@ namespace MakiTest
 
             Assert.IsFalse("test".Equals(Maybe.Just("test")));
             Assert.IsTrue("test".Equals((string)Maybe.Just("test")));
+
+            Assert.IsFalse(Maybe.Just("test").Equals(null));
         }
     }
 }
