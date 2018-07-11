@@ -62,7 +62,7 @@ namespace Maki
         /// <summary>
         /// Returns the hash code for this instance.
         /// </summary>
-        /// <returns>Hash code</returns>
+        /// <returns>Hash code.</returns>
         public override int GetHashCode() => Item.GetHashCode();
     }
 }

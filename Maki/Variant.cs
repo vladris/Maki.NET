@@ -72,6 +72,22 @@ namespace Maki
         }
 
         /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code.</returns>
+        public override int GetHashCode()
+        {
+            switch (Index)
+            {
+            case 0: return ((VariantHolder<T1>)variant).Item.GetHashCode();
+            case 1: return ((VariantHolder<T2>)variant).Item.GetHashCode();
+            }
+
+            Debug.Fail("Not reached");
+            return base.GetHashCode(); 
+        }
+
+        /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
         /// (<typeparamref name="T1"/>).
         /// </summary>
@@ -194,6 +210,23 @@ namespace Maki
 
             Debug.Fail("Not reached");
             return false; 
+        }
+
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code.</returns>
+        public override int GetHashCode()
+        {
+            switch (Index)
+            {
+            case 0: return ((VariantHolder<T1>)variant).Item.GetHashCode();
+            case 1: return ((VariantHolder<T2>)variant).Item.GetHashCode();
+            case 2: return ((VariantHolder<T3>)variant).Item.GetHashCode();
+            }
+
+            Debug.Fail("Not reached");
+            return base.GetHashCode(); 
         }
 
         /// <summary>
@@ -352,6 +385,24 @@ namespace Maki
 
             Debug.Fail("Not reached");
             return false; 
+        }
+
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code.</returns>
+        public override int GetHashCode()
+        {
+            switch (Index)
+            {
+            case 0: return ((VariantHolder<T1>)variant).Item.GetHashCode();
+            case 1: return ((VariantHolder<T2>)variant).Item.GetHashCode();
+            case 2: return ((VariantHolder<T3>)variant).Item.GetHashCode();
+            case 3: return ((VariantHolder<T4>)variant).Item.GetHashCode();
+            }
+
+            Debug.Fail("Not reached");
+            return base.GetHashCode(); 
         }
 
         /// <summary>
@@ -543,6 +594,25 @@ namespace Maki
 
             Debug.Fail("Not reached");
             return false; 
+        }
+
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code.</returns>
+        public override int GetHashCode()
+        {
+            switch (Index)
+            {
+            case 0: return ((VariantHolder<T1>)variant).Item.GetHashCode();
+            case 1: return ((VariantHolder<T2>)variant).Item.GetHashCode();
+            case 2: return ((VariantHolder<T3>)variant).Item.GetHashCode();
+            case 3: return ((VariantHolder<T4>)variant).Item.GetHashCode();
+            case 4: return ((VariantHolder<T5>)variant).Item.GetHashCode();
+            }
+
+            Debug.Fail("Not reached");
+            return base.GetHashCode(); 
         }
 
         /// <summary>
@@ -767,6 +837,26 @@ namespace Maki
 
             Debug.Fail("Not reached");
             return false; 
+        }
+
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code.</returns>
+        public override int GetHashCode()
+        {
+            switch (Index)
+            {
+            case 0: return ((VariantHolder<T1>)variant).Item.GetHashCode();
+            case 1: return ((VariantHolder<T2>)variant).Item.GetHashCode();
+            case 2: return ((VariantHolder<T3>)variant).Item.GetHashCode();
+            case 3: return ((VariantHolder<T4>)variant).Item.GetHashCode();
+            case 4: return ((VariantHolder<T5>)variant).Item.GetHashCode();
+            case 5: return ((VariantHolder<T6>)variant).Item.GetHashCode();
+            }
+
+            Debug.Fail("Not reached");
+            return base.GetHashCode(); 
         }
 
         /// <summary>
@@ -1024,6 +1114,27 @@ namespace Maki
 
             Debug.Fail("Not reached");
             return false; 
+        }
+
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code.</returns>
+        public override int GetHashCode()
+        {
+            switch (Index)
+            {
+            case 0: return ((VariantHolder<T1>)variant).Item.GetHashCode();
+            case 1: return ((VariantHolder<T2>)variant).Item.GetHashCode();
+            case 2: return ((VariantHolder<T3>)variant).Item.GetHashCode();
+            case 3: return ((VariantHolder<T4>)variant).Item.GetHashCode();
+            case 4: return ((VariantHolder<T5>)variant).Item.GetHashCode();
+            case 5: return ((VariantHolder<T6>)variant).Item.GetHashCode();
+            case 6: return ((VariantHolder<T7>)variant).Item.GetHashCode();
+            }
+
+            Debug.Fail("Not reached");
+            return base.GetHashCode(); 
         }
 
         /// <summary>
@@ -1314,6 +1425,28 @@ namespace Maki
 
             Debug.Fail("Not reached");
             return false; 
+        }
+
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code.</returns>
+        public override int GetHashCode()
+        {
+            switch (Index)
+            {
+            case 0: return ((VariantHolder<T1>)variant).Item.GetHashCode();
+            case 1: return ((VariantHolder<T2>)variant).Item.GetHashCode();
+            case 2: return ((VariantHolder<T3>)variant).Item.GetHashCode();
+            case 3: return ((VariantHolder<T4>)variant).Item.GetHashCode();
+            case 4: return ((VariantHolder<T5>)variant).Item.GetHashCode();
+            case 5: return ((VariantHolder<T6>)variant).Item.GetHashCode();
+            case 6: return ((VariantHolder<T7>)variant).Item.GetHashCode();
+            case 7: return ((VariantHolder<T8>)variant).Item.GetHashCode();
+            }
+
+            Debug.Fail("Not reached");
+            return base.GetHashCode(); 
         }
 
         /// <summary>

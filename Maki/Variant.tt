@@ -99,6 +99,28 @@ for (int types = 2; types <= 8; types++)
             return false; 
         }
 
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code.</returns>
+        public override int GetHashCode()
+        {
+            switch (Index)
+            {
+<#
+	for (int i = 1; i <= types; i++)
+	{
+#>
+            case <#= i - 1#>: return ((VariantHolder<T<#= i #>>)variant).Item.GetHashCode();
+<#
+	}
+#>
+            }
+
+            Debug.Fail("Not reached");
+            return base.GetHashCode(); 
+        }
+
 <#
 	for (int i = 1; i <= types; i++)
 	{

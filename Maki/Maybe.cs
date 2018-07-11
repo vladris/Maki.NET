@@ -93,5 +93,16 @@ namespace Maki
 
             return other.HasValue && item.Equals(other.item);
         }
+
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code.</returns>
+        public override int GetHashCode()
+        {
+            if (!HasValue) return base.GetHashCode();
+
+            return item.GetHashCode();
+        }
     }
 }
