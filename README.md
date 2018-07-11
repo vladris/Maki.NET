@@ -10,7 +10,7 @@ Experimental C# type library providing ``NotNull`` container, ``Maybe`` monad, d
 
 ### Variant
 
-``Variant<...>`` represents a discriminate union type of up to 8 types. Unlike using a base type and inheritance, a ``Variant`` represents a closed set of types.
+``Variant<...>`` represents a discriminate union type of up to 8 types. Unlike using a base type and inheritance, a ``Variant`` represents a closed set of types and no relationship between them is needed.
 
 ```c#
 Variant<string, int, double> variant = "Hello World!";
