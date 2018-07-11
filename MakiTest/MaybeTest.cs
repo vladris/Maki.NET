@@ -46,11 +46,13 @@ namespace MakiTest
         {
             Assert.IsFalse(Maybe.Just(new T1()).Equals(Maybe.Just(new T1())));
             Assert.IsTrue(Maybe.Just("test").Equals(Maybe.Just("test")));
+
             Assert.IsFalse(Maybe.Just(new T1()).Equals(Maybe<T1>.Nothing));
             Assert.IsFalse(Maybe<T1>.Nothing.Equals(Maybe.Just(new T1())));
             Assert.IsTrue(Maybe<T1>.Nothing.Equals(Maybe<T1>.Nothing));
 
             Assert.IsFalse("test".Equals(Maybe.Just("test")));
+            Assert.IsFalse(Maybe.Just("test").Equals("test"));
             Assert.IsTrue("test".Equals((string)Maybe.Just("test")));
 
             Assert.IsFalse(Maybe.Just("test").Equals(null));

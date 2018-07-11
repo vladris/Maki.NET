@@ -69,7 +69,6 @@ for (int types = 2; types <= 8; types++)
 <#
 	}
 #>
-
         /// <summary>
         /// Determines whether the specified object is equal to the current object.
         /// </summary>
@@ -79,13 +78,18 @@ for (int types = 2; types <= 8; types++)
         {
             if (obj == null) return false;
 
+            if (!(obj is <#= type #>)) return base.Equals(obj);
+
+            var other = (<#= type #>)obj;
+
             switch (Index)
             {
 <#
 	for (int i = 1; i <= types; i++)
 	{
 #>
-            case <#= i - 1#>: return obj.Equals(((VariantHolder<T<#= i #>>)variant).Item);
+            case <#= i - 1#>:
+                return other.Is<T<#= i #>>() && ((VariantHolder<T<#= i #>>)variant).Item.Equals(((VariantHolder<T<#= i #>>)other.variant).Item);
 <#
 	}
 #>

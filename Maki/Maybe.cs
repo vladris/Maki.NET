@@ -1,4 +1,6 @@
-﻿namespace Maki
+﻿using System;
+
+namespace Maki
 {
     /// <summary>
     /// Provides static utilities for Maybe.
@@ -83,7 +85,13 @@
         {
             if (obj == null) return false;
 
-            return HasValue ? obj.Equals(Get()) : obj.Equals(Unit.Value);
+            if (!(obj is Maybe<T>)) return false;
+
+            var other = (Maybe<T>)obj;
+
+            if (!HasValue) return !other.HasValue;
+
+            return other.HasValue && item.Equals(other.item);
         }
     }
 }

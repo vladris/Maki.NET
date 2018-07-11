@@ -66,12 +66,16 @@ namespace MakiTest
         {
             Assert.IsFalse(new NotNull<T1>(new T1()).Equals(new NotNull<T1>(new T1())));
             Assert.IsTrue(new NotNull<string>("test").Equals(new NotNull<string>("test")));
-            Assert.IsTrue(new NotNull<string>("test").Equals(Maybe.Just("test")));
-            Assert.IsTrue(Maybe.Just("test").Equals(new NotNull<string>("test")));
 
             Assert.IsTrue("test".Equals(new NotNull<string>("test")));
 
             Assert.IsFalse(new NotNull<T1>(new T1()).Equals(null));
+        }
+
+        [TestMethod]
+        public void NotNullOperatorEqualsTest()
+        {
+            Assert.IsTrue(new NotNull<string>("test") == new NotNull<string>("test"));
         }
     }
 }

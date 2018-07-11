@@ -75,26 +75,30 @@ namespace MakiTest
 #>
         }
 
-		[TestMethod]
-		public void Variant<#= i #>EqualsTest<#= j #>()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant<#= i #>EqualsTest<#= j #>()
+        {
+            var item1 = new T1();
+            var item2 = new T<#= j #>();
 
-			Variant<<#= TypeList(i) #>> variant11 = item1;
-			Variant<<#= TypeList(i) #>> variant12 = item1;
-			Variant<<#= TypeList(i) #>> variant2 = item2;
+            Variant<<#= TypeList(i) #>> variant11 = item1;
+            Variant<<#= TypeList(i) #>> variant12 = item1;
+            Variant<<#= TypeList(i) #>> variant21 = item2;
+            Variant<<#= TypeList(i) #>> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T<#= j #>)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
 <#
 	}
 #>

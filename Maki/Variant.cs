@@ -46,7 +46,6 @@ namespace Maki
         /// <param name="item">Item of type <typeparamref name="T2"/>.</param>
         public Variant(T2 item) => variant = VariantHolder<T2>.T2(item);
 
-
         /// <summary>
         /// Determines whether the specified object is equal to the current object.
         /// </summary>
@@ -56,10 +55,16 @@ namespace Maki
         {
             if (obj == null) return false;
 
+            if (!(obj is Variant<T1, T2>)) return base.Equals(obj);
+
+            var other = (Variant<T1, T2>)obj;
+
             switch (Index)
             {
-            case 0: return obj.Equals(((VariantHolder<T1>)variant).Item);
-            case 1: return obj.Equals(((VariantHolder<T2>)variant).Item);
+            case 0:
+                return other.Is<T1>() && ((VariantHolder<T1>)variant).Item.Equals(((VariantHolder<T1>)other.variant).Item);
+            case 1:
+                return other.Is<T2>() && ((VariantHolder<T2>)variant).Item.Equals(((VariantHolder<T2>)other.variant).Item);
             }
 
             Debug.Fail("Not reached");
@@ -164,7 +169,6 @@ namespace Maki
         /// <param name="item">Item of type <typeparamref name="T3"/>.</param>
         public Variant(T3 item) => variant = VariantHolder<T3>.T3(item);
 
-
         /// <summary>
         /// Determines whether the specified object is equal to the current object.
         /// </summary>
@@ -174,11 +178,18 @@ namespace Maki
         {
             if (obj == null) return false;
 
+            if (!(obj is Variant<T1, T2, T3>)) return base.Equals(obj);
+
+            var other = (Variant<T1, T2, T3>)obj;
+
             switch (Index)
             {
-            case 0: return obj.Equals(((VariantHolder<T1>)variant).Item);
-            case 1: return obj.Equals(((VariantHolder<T2>)variant).Item);
-            case 2: return obj.Equals(((VariantHolder<T3>)variant).Item);
+            case 0:
+                return other.Is<T1>() && ((VariantHolder<T1>)variant).Item.Equals(((VariantHolder<T1>)other.variant).Item);
+            case 1:
+                return other.Is<T2>() && ((VariantHolder<T2>)variant).Item.Equals(((VariantHolder<T2>)other.variant).Item);
+            case 2:
+                return other.Is<T3>() && ((VariantHolder<T3>)variant).Item.Equals(((VariantHolder<T3>)other.variant).Item);
             }
 
             Debug.Fail("Not reached");
@@ -314,7 +325,6 @@ namespace Maki
         /// <param name="item">Item of type <typeparamref name="T4"/>.</param>
         public Variant(T4 item) => variant = VariantHolder<T4>.T4(item);
 
-
         /// <summary>
         /// Determines whether the specified object is equal to the current object.
         /// </summary>
@@ -324,12 +334,20 @@ namespace Maki
         {
             if (obj == null) return false;
 
+            if (!(obj is Variant<T1, T2, T3, T4>)) return base.Equals(obj);
+
+            var other = (Variant<T1, T2, T3, T4>)obj;
+
             switch (Index)
             {
-            case 0: return obj.Equals(((VariantHolder<T1>)variant).Item);
-            case 1: return obj.Equals(((VariantHolder<T2>)variant).Item);
-            case 2: return obj.Equals(((VariantHolder<T3>)variant).Item);
-            case 3: return obj.Equals(((VariantHolder<T4>)variant).Item);
+            case 0:
+                return other.Is<T1>() && ((VariantHolder<T1>)variant).Item.Equals(((VariantHolder<T1>)other.variant).Item);
+            case 1:
+                return other.Is<T2>() && ((VariantHolder<T2>)variant).Item.Equals(((VariantHolder<T2>)other.variant).Item);
+            case 2:
+                return other.Is<T3>() && ((VariantHolder<T3>)variant).Item.Equals(((VariantHolder<T3>)other.variant).Item);
+            case 3:
+                return other.Is<T4>() && ((VariantHolder<T4>)variant).Item.Equals(((VariantHolder<T4>)other.variant).Item);
             }
 
             Debug.Fail("Not reached");
@@ -496,7 +514,6 @@ namespace Maki
         /// <param name="item">Item of type <typeparamref name="T5"/>.</param>
         public Variant(T5 item) => variant = VariantHolder<T5>.T5(item);
 
-
         /// <summary>
         /// Determines whether the specified object is equal to the current object.
         /// </summary>
@@ -506,13 +523,22 @@ namespace Maki
         {
             if (obj == null) return false;
 
+            if (!(obj is Variant<T1, T2, T3, T4, T5>)) return base.Equals(obj);
+
+            var other = (Variant<T1, T2, T3, T4, T5>)obj;
+
             switch (Index)
             {
-            case 0: return obj.Equals(((VariantHolder<T1>)variant).Item);
-            case 1: return obj.Equals(((VariantHolder<T2>)variant).Item);
-            case 2: return obj.Equals(((VariantHolder<T3>)variant).Item);
-            case 3: return obj.Equals(((VariantHolder<T4>)variant).Item);
-            case 4: return obj.Equals(((VariantHolder<T5>)variant).Item);
+            case 0:
+                return other.Is<T1>() && ((VariantHolder<T1>)variant).Item.Equals(((VariantHolder<T1>)other.variant).Item);
+            case 1:
+                return other.Is<T2>() && ((VariantHolder<T2>)variant).Item.Equals(((VariantHolder<T2>)other.variant).Item);
+            case 2:
+                return other.Is<T3>() && ((VariantHolder<T3>)variant).Item.Equals(((VariantHolder<T3>)other.variant).Item);
+            case 3:
+                return other.Is<T4>() && ((VariantHolder<T4>)variant).Item.Equals(((VariantHolder<T4>)other.variant).Item);
+            case 4:
+                return other.Is<T5>() && ((VariantHolder<T5>)variant).Item.Equals(((VariantHolder<T5>)other.variant).Item);
             }
 
             Debug.Fail("Not reached");
@@ -710,7 +736,6 @@ namespace Maki
         /// <param name="item">Item of type <typeparamref name="T6"/>.</param>
         public Variant(T6 item) => variant = VariantHolder<T6>.T6(item);
 
-
         /// <summary>
         /// Determines whether the specified object is equal to the current object.
         /// </summary>
@@ -720,14 +745,24 @@ namespace Maki
         {
             if (obj == null) return false;
 
+            if (!(obj is Variant<T1, T2, T3, T4, T5, T6>)) return base.Equals(obj);
+
+            var other = (Variant<T1, T2, T3, T4, T5, T6>)obj;
+
             switch (Index)
             {
-            case 0: return obj.Equals(((VariantHolder<T1>)variant).Item);
-            case 1: return obj.Equals(((VariantHolder<T2>)variant).Item);
-            case 2: return obj.Equals(((VariantHolder<T3>)variant).Item);
-            case 3: return obj.Equals(((VariantHolder<T4>)variant).Item);
-            case 4: return obj.Equals(((VariantHolder<T5>)variant).Item);
-            case 5: return obj.Equals(((VariantHolder<T6>)variant).Item);
+            case 0:
+                return other.Is<T1>() && ((VariantHolder<T1>)variant).Item.Equals(((VariantHolder<T1>)other.variant).Item);
+            case 1:
+                return other.Is<T2>() && ((VariantHolder<T2>)variant).Item.Equals(((VariantHolder<T2>)other.variant).Item);
+            case 2:
+                return other.Is<T3>() && ((VariantHolder<T3>)variant).Item.Equals(((VariantHolder<T3>)other.variant).Item);
+            case 3:
+                return other.Is<T4>() && ((VariantHolder<T4>)variant).Item.Equals(((VariantHolder<T4>)other.variant).Item);
+            case 4:
+                return other.Is<T5>() && ((VariantHolder<T5>)variant).Item.Equals(((VariantHolder<T5>)other.variant).Item);
+            case 5:
+                return other.Is<T6>() && ((VariantHolder<T6>)variant).Item.Equals(((VariantHolder<T6>)other.variant).Item);
             }
 
             Debug.Fail("Not reached");
@@ -956,7 +991,6 @@ namespace Maki
         /// <param name="item">Item of type <typeparamref name="T7"/>.</param>
         public Variant(T7 item) => variant = VariantHolder<T7>.T7(item);
 
-
         /// <summary>
         /// Determines whether the specified object is equal to the current object.
         /// </summary>
@@ -966,15 +1000,26 @@ namespace Maki
         {
             if (obj == null) return false;
 
+            if (!(obj is Variant<T1, T2, T3, T4, T5, T6, T7>)) return base.Equals(obj);
+
+            var other = (Variant<T1, T2, T3, T4, T5, T6, T7>)obj;
+
             switch (Index)
             {
-            case 0: return obj.Equals(((VariantHolder<T1>)variant).Item);
-            case 1: return obj.Equals(((VariantHolder<T2>)variant).Item);
-            case 2: return obj.Equals(((VariantHolder<T3>)variant).Item);
-            case 3: return obj.Equals(((VariantHolder<T4>)variant).Item);
-            case 4: return obj.Equals(((VariantHolder<T5>)variant).Item);
-            case 5: return obj.Equals(((VariantHolder<T6>)variant).Item);
-            case 6: return obj.Equals(((VariantHolder<T7>)variant).Item);
+            case 0:
+                return other.Is<T1>() && ((VariantHolder<T1>)variant).Item.Equals(((VariantHolder<T1>)other.variant).Item);
+            case 1:
+                return other.Is<T2>() && ((VariantHolder<T2>)variant).Item.Equals(((VariantHolder<T2>)other.variant).Item);
+            case 2:
+                return other.Is<T3>() && ((VariantHolder<T3>)variant).Item.Equals(((VariantHolder<T3>)other.variant).Item);
+            case 3:
+                return other.Is<T4>() && ((VariantHolder<T4>)variant).Item.Equals(((VariantHolder<T4>)other.variant).Item);
+            case 4:
+                return other.Is<T5>() && ((VariantHolder<T5>)variant).Item.Equals(((VariantHolder<T5>)other.variant).Item);
+            case 5:
+                return other.Is<T6>() && ((VariantHolder<T6>)variant).Item.Equals(((VariantHolder<T6>)other.variant).Item);
+            case 6:
+                return other.Is<T7>() && ((VariantHolder<T7>)variant).Item.Equals(((VariantHolder<T7>)other.variant).Item);
             }
 
             Debug.Fail("Not reached");
@@ -1234,7 +1279,6 @@ namespace Maki
         /// <param name="item">Item of type <typeparamref name="T8"/>.</param>
         public Variant(T8 item) => variant = VariantHolder<T8>.T8(item);
 
-
         /// <summary>
         /// Determines whether the specified object is equal to the current object.
         /// </summary>
@@ -1244,16 +1288,28 @@ namespace Maki
         {
             if (obj == null) return false;
 
+            if (!(obj is Variant<T1, T2, T3, T4, T5, T6, T7, T8>)) return base.Equals(obj);
+
+            var other = (Variant<T1, T2, T3, T4, T5, T6, T7, T8>)obj;
+
             switch (Index)
             {
-            case 0: return obj.Equals(((VariantHolder<T1>)variant).Item);
-            case 1: return obj.Equals(((VariantHolder<T2>)variant).Item);
-            case 2: return obj.Equals(((VariantHolder<T3>)variant).Item);
-            case 3: return obj.Equals(((VariantHolder<T4>)variant).Item);
-            case 4: return obj.Equals(((VariantHolder<T5>)variant).Item);
-            case 5: return obj.Equals(((VariantHolder<T6>)variant).Item);
-            case 6: return obj.Equals(((VariantHolder<T7>)variant).Item);
-            case 7: return obj.Equals(((VariantHolder<T8>)variant).Item);
+            case 0:
+                return other.Is<T1>() && ((VariantHolder<T1>)variant).Item.Equals(((VariantHolder<T1>)other.variant).Item);
+            case 1:
+                return other.Is<T2>() && ((VariantHolder<T2>)variant).Item.Equals(((VariantHolder<T2>)other.variant).Item);
+            case 2:
+                return other.Is<T3>() && ((VariantHolder<T3>)variant).Item.Equals(((VariantHolder<T3>)other.variant).Item);
+            case 3:
+                return other.Is<T4>() && ((VariantHolder<T4>)variant).Item.Equals(((VariantHolder<T4>)other.variant).Item);
+            case 4:
+                return other.Is<T5>() && ((VariantHolder<T5>)variant).Item.Equals(((VariantHolder<T5>)other.variant).Item);
+            case 5:
+                return other.Is<T6>() && ((VariantHolder<T6>)variant).Item.Equals(((VariantHolder<T6>)other.variant).Item);
+            case 6:
+                return other.Is<T7>() && ((VariantHolder<T7>)variant).Item.Equals(((VariantHolder<T7>)other.variant).Item);
+            case 7:
+                return other.Is<T8>() && ((VariantHolder<T8>)variant).Item.Equals(((VariantHolder<T8>)other.variant).Item);
             }
 
             Debug.Fail("Not reached");

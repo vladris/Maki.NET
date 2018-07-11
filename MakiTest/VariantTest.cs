@@ -50,26 +50,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T2)variant; });
         }
 
-		[TestMethod]
-		public void Variant2EqualsTest1()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant2EqualsTest1()
+        {
+            var item1 = new T1();
+            var item2 = new T1();
 
-			Variant<T1, T2> variant11 = item1;
-			Variant<T1, T2> variant12 = item1;
-			Variant<T1, T2> variant2 = item2;
+            Variant<T1, T2> variant11 = item1;
+            Variant<T1, T2> variant12 = item1;
+            Variant<T1, T2> variant21 = item2;
+            Variant<T1, T2> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T1)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant2TestMake2()
         {
@@ -105,26 +109,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T1)variant; });
         }
 
-		[TestMethod]
-		public void Variant2EqualsTest2()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant2EqualsTest2()
+        {
+            var item1 = new T1();
+            var item2 = new T2();
 
-			Variant<T1, T2> variant11 = item1;
-			Variant<T1, T2> variant12 = item1;
-			Variant<T1, T2> variant2 = item2;
+            Variant<T1, T2> variant11 = item1;
+            Variant<T1, T2> variant12 = item1;
+            Variant<T1, T2> variant21 = item2;
+            Variant<T1, T2> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T2)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
     }
     class T3 { }
 
@@ -171,26 +179,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T3)variant; });
         }
 
-		[TestMethod]
-		public void Variant3EqualsTest1()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant3EqualsTest1()
+        {
+            var item1 = new T1();
+            var item2 = new T1();
 
-			Variant<T1, T2, T3> variant11 = item1;
-			Variant<T1, T2, T3> variant12 = item1;
-			Variant<T1, T2, T3> variant2 = item2;
+            Variant<T1, T2, T3> variant11 = item1;
+            Variant<T1, T2, T3> variant12 = item1;
+            Variant<T1, T2, T3> variant21 = item2;
+            Variant<T1, T2, T3> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T1)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant3TestMake2()
         {
@@ -229,26 +241,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T3)variant; });
         }
 
-		[TestMethod]
-		public void Variant3EqualsTest2()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant3EqualsTest2()
+        {
+            var item1 = new T1();
+            var item2 = new T2();
 
-			Variant<T1, T2, T3> variant11 = item1;
-			Variant<T1, T2, T3> variant12 = item1;
-			Variant<T1, T2, T3> variant2 = item2;
+            Variant<T1, T2, T3> variant11 = item1;
+            Variant<T1, T2, T3> variant12 = item1;
+            Variant<T1, T2, T3> variant21 = item2;
+            Variant<T1, T2, T3> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T2)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant3TestMake3()
         {
@@ -287,26 +303,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T2)variant; });
         }
 
-		[TestMethod]
-		public void Variant3EqualsTest3()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant3EqualsTest3()
+        {
+            var item1 = new T1();
+            var item2 = new T3();
 
-			Variant<T1, T2, T3> variant11 = item1;
-			Variant<T1, T2, T3> variant12 = item1;
-			Variant<T1, T2, T3> variant2 = item2;
+            Variant<T1, T2, T3> variant11 = item1;
+            Variant<T1, T2, T3> variant12 = item1;
+            Variant<T1, T2, T3> variant21 = item2;
+            Variant<T1, T2, T3> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T3)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
     }
     class T4 { }
 
@@ -356,26 +376,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T4)variant; });
         }
 
-		[TestMethod]
-		public void Variant4EqualsTest1()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant4EqualsTest1()
+        {
+            var item1 = new T1();
+            var item2 = new T1();
 
-			Variant<T1, T2, T3, T4> variant11 = item1;
-			Variant<T1, T2, T3, T4> variant12 = item1;
-			Variant<T1, T2, T3, T4> variant2 = item2;
+            Variant<T1, T2, T3, T4> variant11 = item1;
+            Variant<T1, T2, T3, T4> variant12 = item1;
+            Variant<T1, T2, T3, T4> variant21 = item2;
+            Variant<T1, T2, T3, T4> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T1)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant4TestMake2()
         {
@@ -417,26 +441,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T4)variant; });
         }
 
-		[TestMethod]
-		public void Variant4EqualsTest2()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant4EqualsTest2()
+        {
+            var item1 = new T1();
+            var item2 = new T2();
 
-			Variant<T1, T2, T3, T4> variant11 = item1;
-			Variant<T1, T2, T3, T4> variant12 = item1;
-			Variant<T1, T2, T3, T4> variant2 = item2;
+            Variant<T1, T2, T3, T4> variant11 = item1;
+            Variant<T1, T2, T3, T4> variant12 = item1;
+            Variant<T1, T2, T3, T4> variant21 = item2;
+            Variant<T1, T2, T3, T4> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T2)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant4TestMake3()
         {
@@ -478,26 +506,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T4)variant; });
         }
 
-		[TestMethod]
-		public void Variant4EqualsTest3()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant4EqualsTest3()
+        {
+            var item1 = new T1();
+            var item2 = new T3();
 
-			Variant<T1, T2, T3, T4> variant11 = item1;
-			Variant<T1, T2, T3, T4> variant12 = item1;
-			Variant<T1, T2, T3, T4> variant2 = item2;
+            Variant<T1, T2, T3, T4> variant11 = item1;
+            Variant<T1, T2, T3, T4> variant12 = item1;
+            Variant<T1, T2, T3, T4> variant21 = item2;
+            Variant<T1, T2, T3, T4> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T3)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant4TestMake4()
         {
@@ -539,26 +571,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T3)variant; });
         }
 
-		[TestMethod]
-		public void Variant4EqualsTest4()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant4EqualsTest4()
+        {
+            var item1 = new T1();
+            var item2 = new T4();
 
-			Variant<T1, T2, T3, T4> variant11 = item1;
-			Variant<T1, T2, T3, T4> variant12 = item1;
-			Variant<T1, T2, T3, T4> variant2 = item2;
+            Variant<T1, T2, T3, T4> variant11 = item1;
+            Variant<T1, T2, T3, T4> variant12 = item1;
+            Variant<T1, T2, T3, T4> variant21 = item2;
+            Variant<T1, T2, T3, T4> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T4)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
     }
     class T5 { }
 
@@ -611,26 +647,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T5)variant; });
         }
 
-		[TestMethod]
-		public void Variant5EqualsTest1()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant5EqualsTest1()
+        {
+            var item1 = new T1();
+            var item2 = new T1();
 
-			Variant<T1, T2, T3, T4, T5> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T1)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant5TestMake2()
         {
@@ -675,26 +715,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T5)variant; });
         }
 
-		[TestMethod]
-		public void Variant5EqualsTest2()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant5EqualsTest2()
+        {
+            var item1 = new T1();
+            var item2 = new T2();
 
-			Variant<T1, T2, T3, T4, T5> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T2)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant5TestMake3()
         {
@@ -739,26 +783,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T5)variant; });
         }
 
-		[TestMethod]
-		public void Variant5EqualsTest3()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant5EqualsTest3()
+        {
+            var item1 = new T1();
+            var item2 = new T3();
 
-			Variant<T1, T2, T3, T4, T5> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T3)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant5TestMake4()
         {
@@ -803,26 +851,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T5)variant; });
         }
 
-		[TestMethod]
-		public void Variant5EqualsTest4()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant5EqualsTest4()
+        {
+            var item1 = new T1();
+            var item2 = new T4();
 
-			Variant<T1, T2, T3, T4, T5> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T4)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant5TestMake5()
         {
@@ -867,26 +919,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T4)variant; });
         }
 
-		[TestMethod]
-		public void Variant5EqualsTest5()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant5EqualsTest5()
+        {
+            var item1 = new T1();
+            var item2 = new T5();
 
-			Variant<T1, T2, T3, T4, T5> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T5)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
     }
     class T6 { }
 
@@ -942,26 +998,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T6)variant; });
         }
 
-		[TestMethod]
-		public void Variant6EqualsTest1()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant6EqualsTest1()
+        {
+            var item1 = new T1();
+            var item2 = new T1();
 
-			Variant<T1, T2, T3, T4, T5, T6> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T1)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant6TestMake2()
         {
@@ -1009,26 +1069,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T6)variant; });
         }
 
-		[TestMethod]
-		public void Variant6EqualsTest2()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant6EqualsTest2()
+        {
+            var item1 = new T1();
+            var item2 = new T2();
 
-			Variant<T1, T2, T3, T4, T5, T6> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T2)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant6TestMake3()
         {
@@ -1076,26 +1140,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T6)variant; });
         }
 
-		[TestMethod]
-		public void Variant6EqualsTest3()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant6EqualsTest3()
+        {
+            var item1 = new T1();
+            var item2 = new T3();
 
-			Variant<T1, T2, T3, T4, T5, T6> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T3)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant6TestMake4()
         {
@@ -1143,26 +1211,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T6)variant; });
         }
 
-		[TestMethod]
-		public void Variant6EqualsTest4()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant6EqualsTest4()
+        {
+            var item1 = new T1();
+            var item2 = new T4();
 
-			Variant<T1, T2, T3, T4, T5, T6> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T4)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant6TestMake5()
         {
@@ -1210,26 +1282,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T6)variant; });
         }
 
-		[TestMethod]
-		public void Variant6EqualsTest5()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant6EqualsTest5()
+        {
+            var item1 = new T1();
+            var item2 = new T5();
 
-			Variant<T1, T2, T3, T4, T5, T6> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T5)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant6TestMake6()
         {
@@ -1277,26 +1353,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T5)variant; });
         }
 
-		[TestMethod]
-		public void Variant6EqualsTest6()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant6EqualsTest6()
+        {
+            var item1 = new T1();
+            var item2 = new T6();
 
-			Variant<T1, T2, T3, T4, T5, T6> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T6)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
     }
     class T7 { }
 
@@ -1355,26 +1435,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T7)variant; });
         }
 
-		[TestMethod]
-		public void Variant7EqualsTest1()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant7EqualsTest1()
+        {
+            var item1 = new T1();
+            var item2 = new T1();
 
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T1)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant7TestMake2()
         {
@@ -1425,26 +1509,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T7)variant; });
         }
 
-		[TestMethod]
-		public void Variant7EqualsTest2()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant7EqualsTest2()
+        {
+            var item1 = new T1();
+            var item2 = new T2();
 
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T2)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant7TestMake3()
         {
@@ -1495,26 +1583,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T7)variant; });
         }
 
-		[TestMethod]
-		public void Variant7EqualsTest3()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant7EqualsTest3()
+        {
+            var item1 = new T1();
+            var item2 = new T3();
 
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T3)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant7TestMake4()
         {
@@ -1565,26 +1657,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T7)variant; });
         }
 
-		[TestMethod]
-		public void Variant7EqualsTest4()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant7EqualsTest4()
+        {
+            var item1 = new T1();
+            var item2 = new T4();
 
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T4)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant7TestMake5()
         {
@@ -1635,26 +1731,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T7)variant; });
         }
 
-		[TestMethod]
-		public void Variant7EqualsTest5()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant7EqualsTest5()
+        {
+            var item1 = new T1();
+            var item2 = new T5();
 
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T5)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant7TestMake6()
         {
@@ -1705,26 +1805,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T7)variant; });
         }
 
-		[TestMethod]
-		public void Variant7EqualsTest6()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant7EqualsTest6()
+        {
+            var item1 = new T1();
+            var item2 = new T6();
 
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T6)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant7TestMake7()
         {
@@ -1775,26 +1879,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T6)variant; });
         }
 
-		[TestMethod]
-		public void Variant7EqualsTest7()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant7EqualsTest7()
+        {
+            var item1 = new T1();
+            var item2 = new T7();
 
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T7)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
     }
     class T8 { }
 
@@ -1856,26 +1964,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T8)variant; });
         }
 
-		[TestMethod]
-		public void Variant8EqualsTest1()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant8EqualsTest1()
+        {
+            var item1 = new T1();
+            var item2 = new T1();
 
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T1)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant8TestMake2()
         {
@@ -1929,26 +2041,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T8)variant; });
         }
 
-		[TestMethod]
-		public void Variant8EqualsTest2()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant8EqualsTest2()
+        {
+            var item1 = new T1();
+            var item2 = new T2();
 
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T2)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant8TestMake3()
         {
@@ -2002,26 +2118,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T8)variant; });
         }
 
-		[TestMethod]
-		public void Variant8EqualsTest3()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant8EqualsTest3()
+        {
+            var item1 = new T1();
+            var item2 = new T3();
 
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T3)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant8TestMake4()
         {
@@ -2075,26 +2195,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T8)variant; });
         }
 
-		[TestMethod]
-		public void Variant8EqualsTest4()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant8EqualsTest4()
+        {
+            var item1 = new T1();
+            var item2 = new T4();
 
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T4)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant8TestMake5()
         {
@@ -2148,26 +2272,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T8)variant; });
         }
 
-		[TestMethod]
-		public void Variant8EqualsTest5()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant8EqualsTest5()
+        {
+            var item1 = new T1();
+            var item2 = new T5();
 
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T5)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant8TestMake6()
         {
@@ -2221,26 +2349,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T8)variant; });
         }
 
-		[TestMethod]
-		public void Variant8EqualsTest6()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant8EqualsTest6()
+        {
+            var item1 = new T1();
+            var item2 = new T6();
 
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T6)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant8TestMake7()
         {
@@ -2294,26 +2426,30 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T8)variant; });
         }
 
-		[TestMethod]
-		public void Variant8EqualsTest7()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant8EqualsTest7()
+        {
+            var item1 = new T1();
+            var item2 = new T7();
 
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T7)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
         [TestMethod]
         public void Variant8TestMake8()
         {
@@ -2367,25 +2503,29 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T7)variant; });
         }
 
-		[TestMethod]
-		public void Variant8EqualsTest8()
-		{
-			var item1 = new T1();
-			var item2 = new T2();
+        [TestMethod]
+        public void Variant8EqualsTest8()
+        {
+            var item1 = new T1();
+            var item2 = new T8();
 
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant11 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant12 = item1;
-			Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant2 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant11 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant12 = item1;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant21 = item2;
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant22 = item2;
 
-			Assert.IsTrue(variant11.Equals(variant12));
-			Assert.IsFalse(variant11.Equals(variant2));
-			Assert.IsTrue(variant11.Equals(item1));
-			
-			Assert.IsFalse(item2.Equals(variant2));
-			Assert.IsTrue(item2.Equals((T2)variant2));
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
 
-			Assert.IsFalse(item1.Equals(null));
-		}
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
 
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T8)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
     }
 }

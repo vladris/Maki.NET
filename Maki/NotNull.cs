@@ -58,5 +58,11 @@ namespace Maki
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns>True if the objects are equal.</returns>
         public override bool Equals(object obj) => obj?.Equals(Item) ?? false;
+
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode() => Item.GetHashCode();
     }
 }
