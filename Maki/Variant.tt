@@ -6,6 +6,7 @@
 <#@ output extension=".cs" #>
 using Maki.Details;
 using System;
+using System.Diagnostics;
 
 namespace Maki
 {
@@ -68,6 +69,31 @@ for (int types = 2; types <= 8; types++)
 <#
 	}
 #>
+
+
+        /// <summary>
+        /// Determines whether the specified object is equal to the current object.
+        /// </summary>
+        /// <param name="obj">The object to compare with the current object.</param>
+        /// <returns>True if the objects are equal.</returns>
+        public override bool Equals(object obj)
+		{
+			switch (Index)
+			{
+<#
+	for (int i = 1; i <= types; i++)
+	{
+#>
+			case <#= i - 1#>: return obj.Equals(((VariantHolder<T<#= i #>>)variant).Item);
+<#
+	}
+#>
+			}
+
+            Debug.Fail("Not reached");
+			return false; 
+		}
+
 <#
 	for (int i = 1; i <= types; i++)
 	{

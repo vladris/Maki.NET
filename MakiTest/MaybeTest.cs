@@ -40,5 +40,18 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => { maybe.Get(); });
             Assert.ThrowsException<InvalidCastException>(() => { var _ = (T1)maybe; });
         }
+
+        [TestMethod]
+        public void MaybeEqualsTest()
+        {
+            Assert.IsFalse(Maybe.Just(new T1()).Equals(Maybe.Just(new T1())));
+            Assert.IsTrue(Maybe.Just("test").Equals(Maybe.Just("test")));
+            Assert.IsFalse(Maybe.Just(new T1()).Equals(Maybe<T1>.Nothing));
+            Assert.IsFalse(Maybe<T1>.Nothing.Equals(Maybe.Just(new T1())));
+            Assert.IsTrue(Maybe<T1>.Nothing.Equals(Maybe<T1>.Nothing));
+
+            Assert.IsFalse("test".Equals(Maybe.Just("test")));
+            Assert.IsTrue("test".Equals((string)Maybe.Just("test")));
+        }
     }
 }

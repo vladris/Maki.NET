@@ -50,5 +50,13 @@ namespace Maki
         /// <returns>NotNull if object is not null, Nothing otherwise.</returns>
         public static Maybe<NotNull<T>> MakeMaybe(T value) 
             => value == null ? Maybe.Nothing : Maybe.Just(new NotNull<T>(value));
+
+
+        /// <summary>
+        /// Determines whether the specified object is equal to the current object.
+        /// </summary>
+        /// <param name="obj">The object to compare with the current object.</param>
+        /// <returns>True if the objects are equal.</returns>
+        public override bool Equals(object obj) => obj.Equals(Item);
     }
 }

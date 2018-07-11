@@ -60,5 +60,16 @@ namespace MakiTest
             Assert.IsTrue(maybe.HasValue);
             Assert.AreEqual("Foo", maybe.Get().Item);
         }
+
+        [TestMethod]
+        public void NotNullEqualsTest()
+        {
+            Assert.IsFalse(new NotNull<T1>(new T1()).Equals(new NotNull<T1>(new T1())));
+            Assert.IsTrue(new NotNull<string>("test").Equals(new NotNull<string>("test")));
+            Assert.IsTrue(new NotNull<string>("test").Equals(Maybe.Just("test")));
+            Assert.IsTrue(Maybe.Just("test").Equals(new NotNull<string>("test")));
+
+            Assert.IsTrue("test".Equals(new NotNull<string>("test")));
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Maki.Details;
 using System;
+using System.Diagnostics;
 
 namespace Maki
 {
@@ -44,6 +45,25 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T2"/>.</param>
         public Variant(T2 item) => variant = VariantHolder<T2>.T2(item);
+
+
+
+        /// <summary>
+        /// Determines whether the specified object is equal to the current object.
+        /// </summary>
+        /// <param name="obj">The object to compare with the current object.</param>
+        /// <returns>True if the objects are equal.</returns>
+        public override bool Equals(object obj)
+		{
+			switch (Index)
+			{
+			case 0: return obj.Equals(((VariantHolder<T1>)variant).Item);
+			case 1: return obj.Equals(((VariantHolder<T2>)variant).Item);
+			}
+
+            Debug.Fail("Not reached");
+			return false; 
+		}
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
@@ -142,6 +162,26 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T3"/>.</param>
         public Variant(T3 item) => variant = VariantHolder<T3>.T3(item);
+
+
+
+        /// <summary>
+        /// Determines whether the specified object is equal to the current object.
+        /// </summary>
+        /// <param name="obj">The object to compare with the current object.</param>
+        /// <returns>True if the objects are equal.</returns>
+        public override bool Equals(object obj)
+		{
+			switch (Index)
+			{
+			case 0: return obj.Equals(((VariantHolder<T1>)variant).Item);
+			case 1: return obj.Equals(((VariantHolder<T2>)variant).Item);
+			case 2: return obj.Equals(((VariantHolder<T3>)variant).Item);
+			}
+
+            Debug.Fail("Not reached");
+			return false; 
+		}
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
@@ -271,6 +311,27 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T4"/>.</param>
         public Variant(T4 item) => variant = VariantHolder<T4>.T4(item);
+
+
+
+        /// <summary>
+        /// Determines whether the specified object is equal to the current object.
+        /// </summary>
+        /// <param name="obj">The object to compare with the current object.</param>
+        /// <returns>True if the objects are equal.</returns>
+        public override bool Equals(object obj)
+		{
+			switch (Index)
+			{
+			case 0: return obj.Equals(((VariantHolder<T1>)variant).Item);
+			case 1: return obj.Equals(((VariantHolder<T2>)variant).Item);
+			case 2: return obj.Equals(((VariantHolder<T3>)variant).Item);
+			case 3: return obj.Equals(((VariantHolder<T4>)variant).Item);
+			}
+
+            Debug.Fail("Not reached");
+			return false; 
+		}
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
@@ -431,6 +492,28 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T5"/>.</param>
         public Variant(T5 item) => variant = VariantHolder<T5>.T5(item);
+
+
+
+        /// <summary>
+        /// Determines whether the specified object is equal to the current object.
+        /// </summary>
+        /// <param name="obj">The object to compare with the current object.</param>
+        /// <returns>True if the objects are equal.</returns>
+        public override bool Equals(object obj)
+		{
+			switch (Index)
+			{
+			case 0: return obj.Equals(((VariantHolder<T1>)variant).Item);
+			case 1: return obj.Equals(((VariantHolder<T2>)variant).Item);
+			case 2: return obj.Equals(((VariantHolder<T3>)variant).Item);
+			case 3: return obj.Equals(((VariantHolder<T4>)variant).Item);
+			case 4: return obj.Equals(((VariantHolder<T5>)variant).Item);
+			}
+
+            Debug.Fail("Not reached");
+			return false; 
+		}
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
@@ -622,6 +705,29 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T6"/>.</param>
         public Variant(T6 item) => variant = VariantHolder<T6>.T6(item);
+
+
+
+        /// <summary>
+        /// Determines whether the specified object is equal to the current object.
+        /// </summary>
+        /// <param name="obj">The object to compare with the current object.</param>
+        /// <returns>True if the objects are equal.</returns>
+        public override bool Equals(object obj)
+		{
+			switch (Index)
+			{
+			case 0: return obj.Equals(((VariantHolder<T1>)variant).Item);
+			case 1: return obj.Equals(((VariantHolder<T2>)variant).Item);
+			case 2: return obj.Equals(((VariantHolder<T3>)variant).Item);
+			case 3: return obj.Equals(((VariantHolder<T4>)variant).Item);
+			case 4: return obj.Equals(((VariantHolder<T5>)variant).Item);
+			case 5: return obj.Equals(((VariantHolder<T6>)variant).Item);
+			}
+
+            Debug.Fail("Not reached");
+			return false; 
+		}
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
@@ -844,6 +950,30 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T7"/>.</param>
         public Variant(T7 item) => variant = VariantHolder<T7>.T7(item);
+
+
+
+        /// <summary>
+        /// Determines whether the specified object is equal to the current object.
+        /// </summary>
+        /// <param name="obj">The object to compare with the current object.</param>
+        /// <returns>True if the objects are equal.</returns>
+        public override bool Equals(object obj)
+		{
+			switch (Index)
+			{
+			case 0: return obj.Equals(((VariantHolder<T1>)variant).Item);
+			case 1: return obj.Equals(((VariantHolder<T2>)variant).Item);
+			case 2: return obj.Equals(((VariantHolder<T3>)variant).Item);
+			case 3: return obj.Equals(((VariantHolder<T4>)variant).Item);
+			case 4: return obj.Equals(((VariantHolder<T5>)variant).Item);
+			case 5: return obj.Equals(((VariantHolder<T6>)variant).Item);
+			case 6: return obj.Equals(((VariantHolder<T7>)variant).Item);
+			}
+
+            Debug.Fail("Not reached");
+			return false; 
+		}
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
@@ -1097,6 +1227,31 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T8"/>.</param>
         public Variant(T8 item) => variant = VariantHolder<T8>.T8(item);
+
+
+
+        /// <summary>
+        /// Determines whether the specified object is equal to the current object.
+        /// </summary>
+        /// <param name="obj">The object to compare with the current object.</param>
+        /// <returns>True if the objects are equal.</returns>
+        public override bool Equals(object obj)
+		{
+			switch (Index)
+			{
+			case 0: return obj.Equals(((VariantHolder<T1>)variant).Item);
+			case 1: return obj.Equals(((VariantHolder<T2>)variant).Item);
+			case 2: return obj.Equals(((VariantHolder<T3>)variant).Item);
+			case 3: return obj.Equals(((VariantHolder<T4>)variant).Item);
+			case 4: return obj.Equals(((VariantHolder<T5>)variant).Item);
+			case 5: return obj.Equals(((VariantHolder<T6>)variant).Item);
+			case 6: return obj.Equals(((VariantHolder<T7>)variant).Item);
+			case 7: return obj.Equals(((VariantHolder<T8>)variant).Item);
+			}
+
+            Debug.Fail("Not reached");
+			return false; 
+		}
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type

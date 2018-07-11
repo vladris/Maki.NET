@@ -59,27 +59,26 @@
         /// Creates a new empty Maybe.
         /// </summary>
         /// <param name="unit">Unit type, can be Maybe.Nothing.</param>
-        public static implicit operator Maybe<T>(Unit unit)
-        {
-            return new Maybe<T>();
-        }
+        public static implicit operator Maybe<T>(Unit unit) => new Maybe<T>();
 
         /// <summary>
         /// Implicitly casts from the given item to a Maybe holding the item.
         /// </summary>
         /// <param name="item">Item to cast from.</param>
-        public static implicit operator Maybe<T>(T item)
-        {
-            return new Maybe<T>(item);
-        }
+        public static implicit operator Maybe<T>(T item) => new Maybe<T>(item);
+
 
         /// <summary>
         /// Explicitly casts from the given Maybe to the held item type.
         /// </summary>
         /// <param name="maybe">Maybe to cast from.</param>
-        public static explicit operator T(Maybe<T> maybe)
-        {
-            return maybe.item.Get<T>();
-        }
+        public static explicit operator T(Maybe<T> maybe) => maybe.item.Get<T>();
+
+        /// <summary>
+        /// Determines whether the specified object is equal to the current object.
+        /// </summary>
+        /// <param name="obj">The object to compare with the current object.</param>
+        /// <returns>True if the objects are equal.</returns>
+        public override bool Equals(object obj) => HasValue ? obj.Equals(Get()) : obj.Equals(Unit.Value);
     }
 }
