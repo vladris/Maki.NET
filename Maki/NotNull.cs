@@ -5,6 +5,29 @@ using System.Text;
 namespace Maki
 {
     /// <summary>
+    /// Provides static utilities for NotNull.
+    /// </summary>
+    public static class NotNull
+    {
+        /// <summary>
+        /// Creates a new NotNull from the given object.
+        /// </summary>
+        /// <typeparam name="T">Item type.</typeparam>
+        /// <param name="item">Object to store.</param>
+        /// <exception cref="ArgumentNullException">Thrown if the argument is null.</exception>
+        public static NotNull<T> Make<T>(T item) => new NotNull<T>(item);
+
+        /// <summary>
+        /// Creates a Maybe from the given object which is either Nothing if the
+        /// object is null or NotNull if the object is not null.
+        /// </summary>
+        /// <typeparam name="T">Item type.</typeparam>
+        /// <param name="item">Object to store.</param>
+        /// <returns>NotNull if object is not null, Nothing otherwise.</returns>
+        public static Maybe<NotNull<T>> MakeMaybe<T>(T item) => NotNull<T>.MakeMaybe(item);
+    }
+
+    /// <summary>
     /// Represents an object that cannot be null.
     /// </summary>
     /// <typeparam name="T">Type of object.</typeparam>

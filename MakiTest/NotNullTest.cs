@@ -10,7 +10,7 @@ namespace MakiTest
         [TestMethod]
         public void NotNullItemTest()
         {
-            var notNull = new NotNull<string>("Foo");
+            var notNull = NotNull.Make("Foo");
 
             Assert.AreEqual("Foo", notNull.Item);
         }
@@ -56,7 +56,7 @@ namespace MakiTest
         [TestMethod]
         public void NotNullMakeMaybeJust()
         {
-            var maybe = NotNull<string>.MakeMaybe("Foo");
+            var maybe = NotNull.MakeMaybe("Foo");
             Assert.IsTrue(maybe.HasValue);
             Assert.AreEqual("Foo", maybe.Get().Item);
         }
@@ -64,18 +64,18 @@ namespace MakiTest
         [TestMethod]
         public void NotNullEqualsTest()
         {
-            Assert.IsFalse(new NotNull<T1>(new T1()).Equals(new NotNull<T1>(new T1())));
-            Assert.IsTrue(new NotNull<string>("test").Equals(new NotNull<string>("test")));
+            Assert.IsFalse(NotNull.Make(new T1()).Equals(NotNull.Make(new T1())));
+            Assert.IsTrue(NotNull.Make("test").Equals(NotNull.Make("test")));
 
-            Assert.IsTrue("test".Equals(new NotNull<string>("test")));
+            Assert.IsTrue("test".Equals(NotNull.Make("test")));
 
-            Assert.IsFalse(new NotNull<T1>(new T1()).Equals(null));
+            Assert.IsFalse(NotNull.Make(new T1()).Equals(null));
         }
 
         [TestMethod]
         public void NotNullOperatorEqualsTest()
         {
-            Assert.IsTrue(new NotNull<string>("test") == new NotNull<string>("test"));
+            Assert.IsTrue(NotNull.Make("test") == NotNull.Make("test"));
         }
     }
 }
