@@ -5,7 +5,7 @@ using System;
 namespace MakiTest
 {
     [TestClass]
-    public class Eitherest
+    public class EitherTest
     {
         class T1 { }
         class T2 { }

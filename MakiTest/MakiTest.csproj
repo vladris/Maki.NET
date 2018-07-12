@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EitherTest.cs" />
+    <Compile Include="ErrorTest.cs" />
     <Compile Include="Extensions\MaybeExtensionsTest.cs" />
     <Compile Include="Extensions\VariantExtensionsTest.cs">
       <AutoGen>True</AutoGen>
