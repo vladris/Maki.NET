@@ -18,8 +18,8 @@ namespace MakiTest
 
             Assert.IsTrue(either.IsLeft);
             Assert.IsFalse(either.IsRight);
-            Assert.AreEqual(item, either.Left);
-            Assert.ThrowsException<InvalidCastException>(() => either.Right);
+            Assert.AreEqual(item, either.GetLeft());
+            Assert.ThrowsException<InvalidCastException>(() => either.GetRight());
         }
 
         [TestMethod]
@@ -30,8 +30,8 @@ namespace MakiTest
 
             Assert.IsFalse(either.IsLeft);
             Assert.IsTrue(either.IsRight);
-            Assert.ThrowsException<InvalidCastException>(() => either.Left);
-            Assert.AreEqual(item, either.Right);
+            Assert.ThrowsException<InvalidCastException>(() => either.GetLeft());
+            Assert.AreEqual(item, either.GetRight());
         }
 
         [TestMethod]
@@ -42,8 +42,8 @@ namespace MakiTest
 
             Assert.IsTrue(either.IsLeft);
             Assert.IsFalse(either.IsRight);
-            Assert.AreEqual(item, either.Left);
-            Assert.ThrowsException<InvalidCastException>(() => either.Right);
+            Assert.AreEqual(item, either.GetLeft());
+            Assert.ThrowsException<InvalidCastException>(() => either.GetRight());
         }
 
         [TestMethod]
@@ -54,8 +54,8 @@ namespace MakiTest
 
             Assert.IsFalse(either.IsLeft);
             Assert.IsTrue(either.IsRight);
-            Assert.ThrowsException<InvalidCastException>(() => either.Left);
-            Assert.AreEqual(item, either.Right);
+            Assert.ThrowsException<InvalidCastException>(() => either.GetLeft());
+            Assert.AreEqual(item, either.GetRight());
         }
 
         [TestMethod]
@@ -63,12 +63,12 @@ namespace MakiTest
         {
             var item = new T1();
             Either<T1, T2> either = new T2();
-            either.Left = item;
+            either.Set(item);
 
             Assert.IsTrue(either.IsLeft);
             Assert.IsFalse(either.IsRight);
-            Assert.AreEqual(item, either.Left);
-            Assert.ThrowsException<InvalidCastException>(() => either.Right);
+            Assert.AreEqual(item, either.GetLeft());
+            Assert.ThrowsException<InvalidCastException>(() => either.GetRight());
         }
 
         [TestMethod]
@@ -76,12 +76,12 @@ namespace MakiTest
         {
             var item = new T2();
             Either<T1, T2> either = new T1();
-            either.Right = item;
+            either.Set(item);
 
             Assert.IsFalse(either.IsLeft);
             Assert.IsTrue(either.IsRight);
-            Assert.ThrowsException<InvalidCastException>(() => either.Left);
-            Assert.AreEqual(item, either.Right);
+            Assert.ThrowsException<InvalidCastException>(() => either.GetLeft());
+            Assert.AreEqual(item, either.GetRight());
         }
     }
 }

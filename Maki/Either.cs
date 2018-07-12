@@ -23,38 +23,6 @@ namespace Maki
         /// </summary>
         public bool IsRight { get => variant.Index == 1; }
 
-        /// <summary>
-        /// Gets or sets the Left component.
-        /// </summary>
-        /// <exception cref="InvalidCastException">Thrown on get if the inhabiting object is Right.</exception>
-        public TLeft Left
-        {
-            get
-            {
-                return IsLeft ? variant.Get<TLeft>() : throw new InvalidCastException();
-            }
-            set
-            {
-                variant = Variant<TLeft, TRight>.Make1(value);
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the Right component.
-        /// </summary>
-        /// <exception cref="InvalidCastException">Thrown on get if the inhabiting object is Left.</exception>
-        public TRight Right
-        {
-            get
-            {
-                return IsRight ? variant.Get<TRight>() : throw new InvalidCastException();
-            }
-            set
-            {
-                variant = Variant<TLeft, TRight>.Make2(value);
-            }
-        }
-
         private Either(Variant<TLeft, TRight> variant) => this.variant = variant;
 
         /// <summary>
@@ -72,6 +40,46 @@ namespace Maki
         public Either(TRight right)
             : this(Variant<TLeft, TRight>.Make2(right))
         { }
+
+        /// <summary>
+        /// Gets the Left component.
+        /// </summary>
+        /// <exception cref="InvalidCastException">Thrown on get if the inhabiting object is Right.</exception>
+        public TLeft GetLeft() => IsLeft ? variant.Get<TLeft>() : throw new InvalidCastException();
+
+        /// <summary>
+        /// Gets the Right component.
+        /// </summary>
+        /// <exception cref="InvalidCastException">Thrown on get if the inhabiting object is Left.</exception>
+        public TRight GetRight() => IsRight ? variant.Get<TRight>() : throw new InvalidCastException();
+
+        /// <summary>
+        /// Sets the Left component.
+        /// </summary>
+        /// <param name="left">Item to place in Either.</param>
+        public void Set(TLeft left) => SetLeft(left);
+
+        /// <summary>
+        /// Sets the Right component.
+        /// </summary>
+        /// <param name="right">Item to place in Either.</param>
+        public void Set(TRight right) => SetRight(right);
+
+        /// <summary>
+        /// Explicitly sets the Left component.
+        /// </summary>
+        /// <param name="left">Item to place in Either.</param>
+        /// <remarks>Use whent <typeparamref name="TLeft"/> and <typeparamref name="TRight"/> are of 
+        /// the same type.</remarks>
+        public void SetLeft(TLeft left) => variant = Variant<TLeft, TRight>.Make1(left);
+
+        /// <summary>
+        /// Explicitly sets the Right component.
+        /// </summary>
+        /// <param name="right">Item to place in Either.</param>
+        /// <remarks>Use whent <typeparamref name="TLeft"/> and <typeparamref name="TRight"/> are of 
+        /// the same type.</remarks>
+        public void SetRight(TRight right) => variant = Variant<TLeft, TRight>.Make2(right);
 
         /// <summary>
         /// Determines whether the specified object is equal to the current object.
@@ -109,14 +117,14 @@ namespace Maki
         /// </summary>
         /// <param name="either">Either object to cast.</param>
         /// <exception cref="InvalidCastException">Thrown when the inhabiting object of the either is Right.</exception>
-        public static explicit operator TLeft(Either<TLeft, TRight> either) => either.Left;
+        public static explicit operator TLeft(Either<TLeft, TRight> either) => either.GetLeft();
 
         /// <summary>
         /// Explicit cast from Either to <typeparamref name="TRight"/>.
         /// </summary>
         /// <param name="either">Either object to cast.</param>
         /// <exception cref="InvalidCastException">Thrown when the inhabiting object of the either is Left.</exception>
-        public static explicit operator TRight(Either<TLeft, TRight> either) => either.Right;
+        public static explicit operator TRight(Either<TLeft, TRight> either) => either.GetRight();
 
         /// <summary>
         /// Creates a new Either explicitly placing the item in the Left component.
