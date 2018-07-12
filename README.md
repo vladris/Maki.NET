@@ -1,12 +1,14 @@
 # Maki
 
-Experimental C# type library providing ``NotNull`` container, ``Maybe`` monad, discriminate union types (``Variant<...>``, ``Either``) etc.
+Experimental C# type library providing ``NotNull`` container, ``Maybe`` monad, ``Error`` monad, discriminate union types (``Variant<...>``, ``Either``) etc.
 
 ## Samples
 
 * [Variant](#variant)
 * [NotNull](#notnull)
 * [Maybe](#maybe)
+* Either (*TBA*)
+* Error (*TBA*)
 
 ### Variant
 
