@@ -99,6 +99,25 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant<#= i #>PatternMatchTest<#= j #>()
+        {
+            Variant<<#= TypeList(i) #>> variant = new T<#= j #>();
+
+            switch (variant.Get())
+            {
+<#
+	for (int k = 1; k <= i; k++)
+	{
+#>
+            case T<#= k #> _:<# if (k != j) { #> Assert.Fail(); <# } #> break;
+<#
+	}
+#>
+            }
+        }
+
 <#
 	}
 #>

@@ -9,7 +9,9 @@ namespace Maki.Details
         public int Index { get; }
 
         public bool Is<U>() => typeof(U) == typeof(T);
-        
+
+        public dynamic GetDynamic() => Item;
+
         private VariantHolder(T item, int index)
         {
             Item = item;

@@ -29,8 +29,15 @@ namespace Maki
         /// Gets the item inhabiting the variant as a <typeparamref name="T"/>.
         /// </summary>
         /// <typeparam name="T">Should be one of the variant's supplied types.</typeparam>
+        /// <returns>Item inhabiting the variant as the given type <tpyenameref name="T"/>.</returns>
         /// <exception cref="InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
         public T Get<T>() => Is<T>() ? ((VariantHolder<T>)variant).Item : throw new InvalidCastException();
+
+        /// <summary>
+        /// Gets the item inhabiting the variant as a dynamic object.
+        /// </summary>
+        /// <returns>Item inhabiting the variant as a dynamic object.</returns>
+        public dynamic Get() => variant.GetDynamic();
 
         private Variant(IVariantHolder item) => variant = item;
 
@@ -162,8 +169,15 @@ namespace Maki
         /// Gets the item inhabiting the variant as a <typeparamref name="T"/>.
         /// </summary>
         /// <typeparam name="T">Should be one of the variant's supplied types.</typeparam>
+        /// <returns>Item inhabiting the variant as the given type <tpyenameref name="T"/>.</returns>
         /// <exception cref="InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
         public T Get<T>() => Is<T>() ? ((VariantHolder<T>)variant).Item : throw new InvalidCastException();
+
+        /// <summary>
+        /// Gets the item inhabiting the variant as a dynamic object.
+        /// </summary>
+        /// <returns>Item inhabiting the variant as a dynamic object.</returns>
+        public dynamic Get() => variant.GetDynamic();
 
         private Variant(IVariantHolder item) => variant = item;
 
@@ -329,8 +343,15 @@ namespace Maki
         /// Gets the item inhabiting the variant as a <typeparamref name="T"/>.
         /// </summary>
         /// <typeparam name="T">Should be one of the variant's supplied types.</typeparam>
+        /// <returns>Item inhabiting the variant as the given type <tpyenameref name="T"/>.</returns>
         /// <exception cref="InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
         public T Get<T>() => Is<T>() ? ((VariantHolder<T>)variant).Item : throw new InvalidCastException();
+
+        /// <summary>
+        /// Gets the item inhabiting the variant as a dynamic object.
+        /// </summary>
+        /// <returns>Item inhabiting the variant as a dynamic object.</returns>
+        public dynamic Get() => variant.GetDynamic();
 
         private Variant(IVariantHolder item) => variant = item;
 
@@ -530,8 +551,15 @@ namespace Maki
         /// Gets the item inhabiting the variant as a <typeparamref name="T"/>.
         /// </summary>
         /// <typeparam name="T">Should be one of the variant's supplied types.</typeparam>
+        /// <returns>Item inhabiting the variant as the given type <tpyenameref name="T"/>.</returns>
         /// <exception cref="InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
         public T Get<T>() => Is<T>() ? ((VariantHolder<T>)variant).Item : throw new InvalidCastException();
+
+        /// <summary>
+        /// Gets the item inhabiting the variant as a dynamic object.
+        /// </summary>
+        /// <returns>Item inhabiting the variant as a dynamic object.</returns>
+        public dynamic Get() => variant.GetDynamic();
 
         private Variant(IVariantHolder item) => variant = item;
 
@@ -765,8 +793,15 @@ namespace Maki
         /// Gets the item inhabiting the variant as a <typeparamref name="T"/>.
         /// </summary>
         /// <typeparam name="T">Should be one of the variant's supplied types.</typeparam>
+        /// <returns>Item inhabiting the variant as the given type <tpyenameref name="T"/>.</returns>
         /// <exception cref="InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
         public T Get<T>() => Is<T>() ? ((VariantHolder<T>)variant).Item : throw new InvalidCastException();
+
+        /// <summary>
+        /// Gets the item inhabiting the variant as a dynamic object.
+        /// </summary>
+        /// <returns>Item inhabiting the variant as a dynamic object.</returns>
+        public dynamic Get() => variant.GetDynamic();
 
         private Variant(IVariantHolder item) => variant = item;
 
@@ -1034,8 +1069,15 @@ namespace Maki
         /// Gets the item inhabiting the variant as a <typeparamref name="T"/>.
         /// </summary>
         /// <typeparam name="T">Should be one of the variant's supplied types.</typeparam>
+        /// <returns>Item inhabiting the variant as the given type <tpyenameref name="T"/>.</returns>
         /// <exception cref="InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
         public T Get<T>() => Is<T>() ? ((VariantHolder<T>)variant).Item : throw new InvalidCastException();
+
+        /// <summary>
+        /// Gets the item inhabiting the variant as a dynamic object.
+        /// </summary>
+        /// <returns>Item inhabiting the variant as a dynamic object.</returns>
+        public dynamic Get() => variant.GetDynamic();
 
         private Variant(IVariantHolder item) => variant = item;
 
@@ -1337,8 +1379,15 @@ namespace Maki
         /// Gets the item inhabiting the variant as a <typeparamref name="T"/>.
         /// </summary>
         /// <typeparam name="T">Should be one of the variant's supplied types.</typeparam>
+        /// <returns>Item inhabiting the variant as the given type <tpyenameref name="T"/>.</returns>
         /// <exception cref="InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
         public T Get<T>() => Is<T>() ? ((VariantHolder<T>)variant).Item : throw new InvalidCastException();
+
+        /// <summary>
+        /// Gets the item inhabiting the variant as a dynamic object.
+        /// </summary>
+        /// <returns>Item inhabiting the variant as a dynamic object.</returns>
+        public dynamic Get() => variant.GetDynamic();
 
         private Variant(IVariantHolder item) => variant = item;
 

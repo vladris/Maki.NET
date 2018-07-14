@@ -5,5 +5,7 @@
         int Index { get; }
 
         bool Is<T>();
+
+        dynamic GetDynamic();
     }
 }

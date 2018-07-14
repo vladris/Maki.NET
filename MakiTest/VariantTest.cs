@@ -74,6 +74,19 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant2PatternMatchTest1()
+        {
+            Variant<T1, T2> variant = new T1();
+
+            switch (variant.Get())
+            {
+            case T1 _: break;
+            case T2 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant2TestMake2()
         {
@@ -133,6 +146,19 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant2PatternMatchTest2()
+        {
+            Variant<T1, T2> variant = new T2();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: break;
+            }
+        }
+
     }
     class T3 { }
 
@@ -203,6 +229,20 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant3PatternMatchTest1()
+        {
+            Variant<T1, T2, T3> variant = new T1();
+
+            switch (variant.Get())
+            {
+            case T1 _: break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant3TestMake2()
         {
@@ -265,6 +305,20 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant3PatternMatchTest2()
+        {
+            Variant<T1, T2, T3> variant = new T2();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: break;
+            case T3 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant3TestMake3()
         {
@@ -327,6 +381,20 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant3PatternMatchTest3()
+        {
+            Variant<T1, T2, T3> variant = new T3();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: break;
+            }
+        }
+
     }
     class T4 { }
 
@@ -400,6 +468,21 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant4PatternMatchTest1()
+        {
+            Variant<T1, T2, T3, T4> variant = new T1();
+
+            switch (variant.Get())
+            {
+            case T1 _: break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant4TestMake2()
         {
@@ -465,6 +548,21 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant4PatternMatchTest2()
+        {
+            Variant<T1, T2, T3, T4> variant = new T2();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant4TestMake3()
         {
@@ -530,6 +628,21 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant4PatternMatchTest3()
+        {
+            Variant<T1, T2, T3, T4> variant = new T3();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: break;
+            case T4 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant4TestMake4()
         {
@@ -595,6 +708,21 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant4PatternMatchTest4()
+        {
+            Variant<T1, T2, T3, T4> variant = new T4();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: break;
+            }
+        }
+
     }
     class T5 { }
 
@@ -671,6 +799,22 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant5PatternMatchTest1()
+        {
+            Variant<T1, T2, T3, T4, T5> variant = new T1();
+
+            switch (variant.Get())
+            {
+            case T1 _: break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant5TestMake2()
         {
@@ -739,6 +883,22 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant5PatternMatchTest2()
+        {
+            Variant<T1, T2, T3, T4, T5> variant = new T2();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant5TestMake3()
         {
@@ -807,6 +967,22 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant5PatternMatchTest3()
+        {
+            Variant<T1, T2, T3, T4, T5> variant = new T3();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant5TestMake4()
         {
@@ -875,6 +1051,22 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant5PatternMatchTest4()
+        {
+            Variant<T1, T2, T3, T4, T5> variant = new T4();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: break;
+            case T5 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant5TestMake5()
         {
@@ -943,6 +1135,22 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant5PatternMatchTest5()
+        {
+            Variant<T1, T2, T3, T4, T5> variant = new T5();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: break;
+            }
+        }
+
     }
     class T6 { }
 
@@ -1022,6 +1230,23 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant6PatternMatchTest1()
+        {
+            Variant<T1, T2, T3, T4, T5, T6> variant = new T1();
+
+            switch (variant.Get())
+            {
+            case T1 _: break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant6TestMake2()
         {
@@ -1093,6 +1318,23 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant6PatternMatchTest2()
+        {
+            Variant<T1, T2, T3, T4, T5, T6> variant = new T2();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant6TestMake3()
         {
@@ -1164,6 +1406,23 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant6PatternMatchTest3()
+        {
+            Variant<T1, T2, T3, T4, T5, T6> variant = new T3();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant6TestMake4()
         {
@@ -1235,6 +1494,23 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant6PatternMatchTest4()
+        {
+            Variant<T1, T2, T3, T4, T5, T6> variant = new T4();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant6TestMake5()
         {
@@ -1306,6 +1582,23 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant6PatternMatchTest5()
+        {
+            Variant<T1, T2, T3, T4, T5, T6> variant = new T5();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: break;
+            case T6 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant6TestMake6()
         {
@@ -1377,6 +1670,23 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant6PatternMatchTest6()
+        {
+            Variant<T1, T2, T3, T4, T5, T6> variant = new T6();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: break;
+            }
+        }
+
     }
     class T7 { }
 
@@ -1459,6 +1769,24 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant7PatternMatchTest1()
+        {
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant = new T1();
+
+            switch (variant.Get())
+            {
+            case T1 _: break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: Assert.Fail();  break;
+            case T7 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant7TestMake2()
         {
@@ -1533,6 +1861,24 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant7PatternMatchTest2()
+        {
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant = new T2();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: Assert.Fail();  break;
+            case T7 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant7TestMake3()
         {
@@ -1607,6 +1953,24 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant7PatternMatchTest3()
+        {
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant = new T3();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: Assert.Fail();  break;
+            case T7 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant7TestMake4()
         {
@@ -1681,6 +2045,24 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant7PatternMatchTest4()
+        {
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant = new T4();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: Assert.Fail();  break;
+            case T7 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant7TestMake5()
         {
@@ -1755,6 +2137,24 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant7PatternMatchTest5()
+        {
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant = new T5();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: break;
+            case T6 _: Assert.Fail();  break;
+            case T7 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant7TestMake6()
         {
@@ -1829,6 +2229,24 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant7PatternMatchTest6()
+        {
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant = new T6();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: break;
+            case T7 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant7TestMake7()
         {
@@ -1903,6 +2321,24 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant7PatternMatchTest7()
+        {
+            Variant<T1, T2, T3, T4, T5, T6, T7> variant = new T7();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: Assert.Fail();  break;
+            case T7 _: break;
+            }
+        }
+
     }
     class T8 { }
 
@@ -1988,6 +2424,25 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant8PatternMatchTest1()
+        {
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant = new T1();
+
+            switch (variant.Get())
+            {
+            case T1 _: break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: Assert.Fail();  break;
+            case T7 _: Assert.Fail();  break;
+            case T8 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant8TestMake2()
         {
@@ -2065,6 +2520,25 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant8PatternMatchTest2()
+        {
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant = new T2();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: Assert.Fail();  break;
+            case T7 _: Assert.Fail();  break;
+            case T8 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant8TestMake3()
         {
@@ -2142,6 +2616,25 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant8PatternMatchTest3()
+        {
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant = new T3();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: Assert.Fail();  break;
+            case T7 _: Assert.Fail();  break;
+            case T8 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant8TestMake4()
         {
@@ -2219,6 +2712,25 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant8PatternMatchTest4()
+        {
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant = new T4();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: Assert.Fail();  break;
+            case T7 _: Assert.Fail();  break;
+            case T8 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant8TestMake5()
         {
@@ -2296,6 +2808,25 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant8PatternMatchTest5()
+        {
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant = new T5();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: break;
+            case T6 _: Assert.Fail();  break;
+            case T7 _: Assert.Fail();  break;
+            case T8 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant8TestMake6()
         {
@@ -2373,6 +2904,25 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant8PatternMatchTest6()
+        {
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant = new T6();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: break;
+            case T7 _: Assert.Fail();  break;
+            case T8 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant8TestMake7()
         {
@@ -2450,6 +3000,25 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant8PatternMatchTest7()
+        {
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant = new T7();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: Assert.Fail();  break;
+            case T7 _: break;
+            case T8 _: Assert.Fail();  break;
+            }
+        }
+
         [TestMethod]
         public void Variant8TestMake8()
         {
@@ -2527,5 +3096,24 @@ namespace MakiTest
 
             Assert.IsFalse(item1.Equals(null));
         }
+
+        [TestMethod]
+        public void Variant8PatternMatchTest8()
+        {
+            Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant = new T8();
+
+            switch (variant.Get())
+            {
+            case T1 _: Assert.Fail();  break;
+            case T2 _: Assert.Fail();  break;
+            case T3 _: Assert.Fail();  break;
+            case T4 _: Assert.Fail();  break;
+            case T5 _: Assert.Fail();  break;
+            case T6 _: Assert.Fail();  break;
+            case T7 _: Assert.Fail();  break;
+            case T8 _: break;
+            }
+        }
+
     }
 }
