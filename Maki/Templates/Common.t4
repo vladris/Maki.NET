@@ -1,0 +1,9 @@
+﻿<#+
+	IEnumerable<string> RangeWithPrefix(int rangeTo, string prefix)
+		=> Enumerable.Range(1, rangeTo).Select(i => prefix + i);
+
+	string JoinWithPrefix(int rangeTo, string prefix)
+		=> String.Join(", ", RangeWithPrefix(rangeTo, prefix));
+
+	string[] Ordinals = new string[] { "", "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth" };
+#>

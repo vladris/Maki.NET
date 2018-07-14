@@ -3,15 +3,10 @@
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
+<#@ include file="..\Templates\Common.t4" #>
 <#@ output extension=".cs" #>
 using System;
 
-<#
-Func<int, string, IEnumerable<string>> RangeWithPrefix = (rangeTo, prefix) => Enumerable.Range(1, rangeTo).Select(i => prefix + i);
-Func<int, string, string> JoinWithPrefix = (rangeTo, prefix) => String.Join(", ", RangeWithPrefix(rangeTo, prefix));
-
-var Ordinals = new string[] { "", "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth" };
-#>
 namespace Maki
 {
     /// <summary>
