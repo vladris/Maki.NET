@@ -27,37 +27,11 @@ for (int types = 2; types <= 8; types++)
 <#
 	}
 #>
-    public sealed class <#= type #>
+    public sealed class <#= type #> : VariantBase
     {
-        private readonly IVariantHolder variant;
-
-        /// <summary>
-        /// Gets the 0-based index of the type inhabiting the variant.
-        /// </summary>
-        public int Index => variant.Index;
-
-        /// <summary>
-        /// Returns a value that indicates whether the variant is inhabited by an item of type <typeparamref name="T"/>.
-        /// </summary>
-        /// <typeparam name="T">Should be one of the variant's supplied types.</typeparam>
-        /// <returns>True if the variant is inhabited by an item of type <typenameref type="T"/>, false otherwise.</returns>
-        public bool Is<T>() => variant.Is<T>();
-
-        /// <summary>
-        /// Gets the item inhabiting the variant as a <typeparamref name="T"/>.
-        /// </summary>
-        /// <typeparam name="T">Should be one of the variant's supplied types.</typeparam>
-        /// <returns>Item inhabiting the variant as the given type <tpyenameref name="T"/>.</returns>
-        /// <exception cref="InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T"/></exception>
-        public T Get<T>() => Is<T>() ? ((VariantHolder<T>)variant).Item : throw new InvalidCastException();
-
-        /// <summary>
-        /// Gets the item inhabiting the variant as a dynamic object.
-        /// </summary>
-        /// <returns>Item inhabiting the variant as a dynamic object.</returns>
-        public dynamic Get() => variant.GetDynamic();
-
-        private Variant(IVariantHolder item) => variant = item;
+        private Variant(IVariantHolder item)
+            : base(item)
+        {}
 
 <#
 	for (int i = 1; i <= types; i++)
@@ -67,7 +41,9 @@ for (int types = 2; types <= 8; types++)
         /// Creates a new Variant instance from an item of type <typeparamref name="T<#= i #>"/>.
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T<#= i #>"/>.</param>
-        public Variant(T<#= i #> item) => variant = VariantHolder<T<#= i #>>.T<#= i #>(item);
+        public Variant(T<#= i #> item)
+            : base(VariantHolder<T<#= i #>>.T<#= i #>(item))
+        {}
 
 <#
 	}
@@ -79,9 +55,7 @@ for (int types = 2; types <= 8; types++)
         /// <returns>True if the objects are equal.</returns>
         public override bool Equals(object obj)
         {
-            if (obj == null) return false;
-
-            if (!(obj is <#= type #>)) return base.Equals(obj);
+            if (obj == null || !(obj is <#= type #>)) return false;
 
             var other = (<#= type #>)obj;
 
@@ -92,7 +66,7 @@ for (int types = 2; types <= 8; types++)
 	{
 #>
             case <#= i - 1#>:
-                return other.Is<T<#= i #>>() && ((VariantHolder<T<#= i #>>)variant).Item.Equals(((VariantHolder<T<#= i #>>)other.variant).Item);
+                return other.Is<T<#= i #>>() && Get<T<#= i #>>().Equals(other.Get<T<#= i#>>());
 <#
 	}
 #>
@@ -114,7 +88,7 @@ for (int types = 2; types <= 8; types++)
 	for (int i = 1; i <= types; i++)
 	{
 #>
-            case <#= i - 1#>: return ((VariantHolder<T<#= i #>>)variant).Item.GetHashCode();
+            case <#= i - 1#>: return Get<T<#= i #>>().GetHashCode();
 <#
 	}
 #>
@@ -150,7 +124,7 @@ for (int types = 2; types <= 8; types++)
         /// </summary>
         /// <param name="variant">Variant to cast to <typeparamref name="T<#= i #>"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T<#= i #>"/></exception>
-        public static explicit operator T<#= i #>(<#= type #> variant) => ((VariantHolder<T<#= i #>>)variant.variant).Item;
+        public static explicit operator T<#= i #>(<#= type #> variant) => variant.Get<T<#= i #>>();
 
 <#
 	}

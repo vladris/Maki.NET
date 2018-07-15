@@ -6,6 +6,6 @@
 
         bool Is<T>();
 
-        dynamic GetDynamic();
+        object Get();
     }
 }

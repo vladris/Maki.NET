@@ -17,6 +17,9 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>VariantExtensions.cs</LastGenOutput>
     </None>
+    <None Update="Templates\Common.t4">
+      <Generator></Generator>
+    </None>
     <None Update="Variant.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Variant.cs</LastGenOutput>

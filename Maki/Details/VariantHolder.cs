@@ -10,7 +10,7 @@ namespace Maki.Details
 
         public bool Is<U>() => typeof(U) == typeof(T);
 
-        public dynamic GetDynamic() => Item;
+        public object Get() => Item;
 
         private VariantHolder(T item, int index)
         {

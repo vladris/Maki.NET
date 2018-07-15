@@ -49,6 +49,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T<#= j #>>());
             Assert.AreEqual(item, variant.Get<T<#= j #>>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT<#= j #>>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT<#= j #>>());
         }
 
         [TestMethod]

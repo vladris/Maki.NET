@@ -32,6 +32,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T1>());
             Assert.AreEqual(item, variant.Get<T1>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT1>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT1>());
         }
 
         [TestMethod]
@@ -104,6 +110,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T2>());
             Assert.AreEqual(item, variant.Get<T2>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT2>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT2>());
         }
 
         [TestMethod]
@@ -184,6 +196,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T1>());
             Assert.AreEqual(item, variant.Get<T1>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT1>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT1>());
         }
 
         [TestMethod]
@@ -260,6 +278,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T2>());
             Assert.AreEqual(item, variant.Get<T2>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT2>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT2>());
         }
 
         [TestMethod]
@@ -336,6 +360,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T3>());
             Assert.AreEqual(item, variant.Get<T3>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT3>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT3>());
         }
 
         [TestMethod]
@@ -420,6 +450,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T1>());
             Assert.AreEqual(item, variant.Get<T1>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT1>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT1>());
         }
 
         [TestMethod]
@@ -500,6 +536,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T2>());
             Assert.AreEqual(item, variant.Get<T2>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT2>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT2>());
         }
 
         [TestMethod]
@@ -580,6 +622,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T3>());
             Assert.AreEqual(item, variant.Get<T3>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT3>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT3>());
         }
 
         [TestMethod]
@@ -660,6 +708,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T4>());
             Assert.AreEqual(item, variant.Get<T4>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT4>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT4>());
         }
 
         [TestMethod]
@@ -748,6 +802,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T1>());
             Assert.AreEqual(item, variant.Get<T1>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT1>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT1>());
         }
 
         [TestMethod]
@@ -832,6 +892,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T2>());
             Assert.AreEqual(item, variant.Get<T2>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT2>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT2>());
         }
 
         [TestMethod]
@@ -916,6 +982,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T3>());
             Assert.AreEqual(item, variant.Get<T3>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT3>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT3>());
         }
 
         [TestMethod]
@@ -1000,6 +1072,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T4>());
             Assert.AreEqual(item, variant.Get<T4>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT4>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT4>());
         }
 
         [TestMethod]
@@ -1084,6 +1162,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T5>());
             Assert.AreEqual(item, variant.Get<T5>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT5>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT5>());
         }
 
         [TestMethod]
@@ -1176,6 +1260,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T1>());
             Assert.AreEqual(item, variant.Get<T1>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT1>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT1>());
         }
 
         [TestMethod]
@@ -1264,6 +1354,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T2>());
             Assert.AreEqual(item, variant.Get<T2>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT2>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT2>());
         }
 
         [TestMethod]
@@ -1352,6 +1448,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T3>());
             Assert.AreEqual(item, variant.Get<T3>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT3>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT3>());
         }
 
         [TestMethod]
@@ -1440,6 +1542,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T4>());
             Assert.AreEqual(item, variant.Get<T4>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT4>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT4>());
         }
 
         [TestMethod]
@@ -1528,6 +1636,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T5>());
             Assert.AreEqual(item, variant.Get<T5>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT5>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT5>());
         }
 
         [TestMethod]
@@ -1616,6 +1730,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T6>());
             Assert.AreEqual(item, variant.Get<T6>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT6>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT6>());
         }
 
         [TestMethod]
@@ -1712,6 +1832,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T1>());
             Assert.AreEqual(item, variant.Get<T1>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT1>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT1>());
         }
 
         [TestMethod]
@@ -1804,6 +1930,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T2>());
             Assert.AreEqual(item, variant.Get<T2>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT2>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT2>());
         }
 
         [TestMethod]
@@ -1896,6 +2028,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T3>());
             Assert.AreEqual(item, variant.Get<T3>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT3>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT3>());
         }
 
         [TestMethod]
@@ -1988,6 +2126,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T4>());
             Assert.AreEqual(item, variant.Get<T4>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT4>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT4>());
         }
 
         [TestMethod]
@@ -2080,6 +2224,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T5>());
             Assert.AreEqual(item, variant.Get<T5>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT5>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT5>());
         }
 
         [TestMethod]
@@ -2172,6 +2322,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T6>());
             Assert.AreEqual(item, variant.Get<T6>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT6>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT6>());
         }
 
         [TestMethod]
@@ -2264,6 +2420,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T7>());
             Assert.AreEqual(item, variant.Get<T7>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT7>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT7>());
         }
 
         [TestMethod]
@@ -2364,6 +2526,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T1>());
             Assert.AreEqual(item, variant.Get<T1>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT1>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT1>());
         }
 
         [TestMethod]
@@ -2460,6 +2628,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T2>());
             Assert.AreEqual(item, variant.Get<T2>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT2>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT2>());
         }
 
         [TestMethod]
@@ -2556,6 +2730,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T3>());
             Assert.AreEqual(item, variant.Get<T3>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT3>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT3>());
         }
 
         [TestMethod]
@@ -2652,6 +2832,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T4>());
             Assert.AreEqual(item, variant.Get<T4>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT4>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT4>());
         }
 
         [TestMethod]
@@ -2748,6 +2934,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T5>());
             Assert.AreEqual(item, variant.Get<T5>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT5>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT5>());
         }
 
         [TestMethod]
@@ -2844,6 +3036,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T6>());
             Assert.AreEqual(item, variant.Get<T6>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT6>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT6>());
         }
 
         [TestMethod]
@@ -2940,6 +3138,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T7>());
             Assert.AreEqual(item, variant.Get<T7>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT7>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT7>());
         }
 
         [TestMethod]
@@ -3036,6 +3240,12 @@ namespace MakiTest
 
             Assert.IsTrue(variant.Is<T8>());
             Assert.AreEqual(item, variant.Get<T8>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT8>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT8>());
         }
 
         [TestMethod]
