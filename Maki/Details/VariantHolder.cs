@@ -2,7 +2,7 @@
 
 namespace Maki.Details
 {
-    class VariantHolder<T> : IVariantHolder
+    sealed class VariantHolder<T> : IVariantHolder
     {
         public T Item { get; }
 
