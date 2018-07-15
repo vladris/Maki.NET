@@ -14,7 +14,7 @@ namespace Maki.Details
         /// <summary>
         /// Gets the 0-based index of the type inhabiting the variant.
         /// </summary>
-        public int Index { get; private set; }
+        public byte Index { get; private set; }
 
         /// <summary>
         /// Returns a value that indicates whether the variant is inhabited by an item of type <typeparamref name="T"/>.
@@ -37,7 +37,7 @@ namespace Maki.Details
         /// <returns>Item inhabiting the variant as an object.</returns>
         public object Get() => variant.Get();
 
-        internal VariantBase(IVariantHolder item, int index)
+        internal VariantBase(IVariantHolder item, byte index)
         {
             variant = item;
             Index = index;

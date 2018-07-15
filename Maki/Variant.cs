@@ -5,13 +5,91 @@ using System.Diagnostics;
 namespace Maki
 {
     /// <summary>
+    /// Represents a 1-type discriminate union.
+    /// </summary>
+    /// <typeparam name="T1">Represents the variant's first type.</typeparam>
+    public sealed class Variant<T1> : VariantBase
+    {
+        private Variant(IVariantHolder item, byte index)
+            : base(item, index)
+        {}
+
+        /// <summary>
+        /// Creates a new Variant instance from an item of type <typeparamref name="T1"/>.
+        /// </summary>
+        /// <param name="item">Item of type <typeparamref name="T1"/>.</param>
+        public Variant(T1 item)
+            : base(new VariantHolder<T1>(item), 0)
+        {}
+
+        /// <summary>
+        /// Determines whether the specified object is equal to the current object.
+        /// </summary>
+        /// <param name="obj">The object to compare with the current object.</param>
+        /// <returns>True if the objects are equal.</returns>
+        public override bool Equals(object obj)
+        {
+            if (obj == null || !(obj is Variant<T1>)) return false;
+
+            var other = (Variant<T1>)obj;
+
+            switch (Index)
+            {
+            case 0: return other.Index == 0 && Get<T1>().Equals(other.Get<T1>());
+            }
+
+            Debug.Fail("Not reached");
+            return false; 
+        }
+
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code.</returns>
+        public override int GetHashCode()
+        {
+            switch (Index)
+            {
+            case 0: return Get<T1>().GetHashCode();
+            }
+
+            Debug.Fail("Not reached");
+            return base.GetHashCode(); 
+        }
+
+        /// <summary>
+        /// Creates a new Variant explicitly placing the item as the first type
+        /// (<typeparamref name="T1"/>).
+        /// </summary>
+        /// <param name="item">Item to place in the variant.</param>
+        /// <returns>New Variant instance.</returns>
+        /// <remarks>Use this method when the variant contains multiple instances of the same type. This
+        /// allows explicit placing of the item.</remarks>
+        public static Variant<T1> Make1(T1 item) => new Variant<T1>(new VariantHolder<T1>(item), 0);
+
+        /// <summary>
+        /// Implicitly casts from <typeparamref name="T1"/> to variant. Creates a new Variant
+        /// inhabited by the given item.
+        /// </summary>
+        /// <param name="item">Item to store in the variant.</param>
+        public static implicit operator Variant<T1>(T1 item) => new Variant<T1>(item);
+
+        /// <summary>
+        /// Explicitly casts from variant to <typeparamref name="T1"/>.
+        /// </summary>
+        /// <param name="variant">Variant to cast to <typeparamref name="T1"/>.</param>
+        /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T1"/></exception>
+        public static explicit operator T1(Variant<T1> variant) => variant.Get<T1>();
+    }
+
+    /// <summary>
     /// Represents a 2-type discriminate union.
     /// </summary>
     /// <typeparam name="T1">Represents the variant's first type.</typeparam>
     /// <typeparam name="T2">Represents the variant's second type.</typeparam>
     public sealed class Variant<T1, T2> : VariantBase
     {
-        private Variant(IVariantHolder item, int index)
+        private Variant(IVariantHolder item, byte index)
             : base(item, index)
         {}
 
@@ -124,7 +202,7 @@ namespace Maki
     /// <typeparam name="T3">Represents the variant's third type.</typeparam>
     public sealed class Variant<T1, T2, T3> : VariantBase
     {
-        private Variant(IVariantHolder item, int index)
+        private Variant(IVariantHolder item, byte index)
             : base(item, index)
         {}
 
@@ -271,7 +349,7 @@ namespace Maki
     /// <typeparam name="T4">Represents the variant's fourth type.</typeparam>
     public sealed class Variant<T1, T2, T3, T4> : VariantBase
     {
-        private Variant(IVariantHolder item, int index)
+        private Variant(IVariantHolder item, byte index)
             : base(item, index)
         {}
 
@@ -452,7 +530,7 @@ namespace Maki
     /// <typeparam name="T5">Represents the variant's fifth type.</typeparam>
     public sealed class Variant<T1, T2, T3, T4, T5> : VariantBase
     {
-        private Variant(IVariantHolder item, int index)
+        private Variant(IVariantHolder item, byte index)
             : base(item, index)
         {}
 
@@ -667,7 +745,7 @@ namespace Maki
     /// <typeparam name="T6">Represents the variant's sixth type.</typeparam>
     public sealed class Variant<T1, T2, T3, T4, T5, T6> : VariantBase
     {
-        private Variant(IVariantHolder item, int index)
+        private Variant(IVariantHolder item, byte index)
             : base(item, index)
         {}
 
@@ -916,7 +994,7 @@ namespace Maki
     /// <typeparam name="T7">Represents the variant's seventh type.</typeparam>
     public sealed class Variant<T1, T2, T3, T4, T5, T6, T7> : VariantBase
     {
-        private Variant(IVariantHolder item, int index)
+        private Variant(IVariantHolder item, byte index)
             : base(item, index)
         {}
 
@@ -1199,7 +1277,7 @@ namespace Maki
     /// <typeparam name="T8">Represents the variant's eighth type.</typeparam>
     public sealed class Variant<T1, T2, T3, T4, T5, T6, T7, T8> : VariantBase
     {
-        private Variant(IVariantHolder item, int index)
+        private Variant(IVariantHolder item, byte index)
             : base(item, index)
         {}
 

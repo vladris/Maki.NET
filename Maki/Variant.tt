@@ -12,7 +12,7 @@ using System.Diagnostics;
 namespace Maki
 {
 <#
-for (int types = 2; types <= 8; types++)
+for (int types = 1; types <= 8; types++)
 {
     var type = $"Variant<{JoinWithPrefix(types, "T")}>";
 #>
@@ -29,7 +29,7 @@ for (int types = 2; types <= 8; types++)
 #>
     public sealed class <#= type #> : VariantBase
     {
-        private Variant(IVariantHolder item, int index)
+        private Variant(IVariantHolder item, byte index)
             : base(item, index)
         {}
 

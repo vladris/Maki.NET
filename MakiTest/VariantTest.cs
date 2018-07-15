@@ -8,6 +8,84 @@ namespace MakiTest
 
     class DerivedFromT1 : T1 { }
 
+    [TestClass]
+    public class Variant1Test
+    {
+        [TestMethod]
+        public void Variant1TestMake1()
+        {
+            var variant = Variant<int>.Make1(42);
+
+            Assert.AreEqual(0, variant.Index);
+            Assert.AreEqual(42, variant.Get<int>());
+        }
+
+        [TestMethod]
+        public void Variant1TestPolymorphism1()
+        {
+            var item = new DerivedFromT1();
+            Variant<T1> variant = item;
+
+            Assert.IsTrue(variant.Is<T1>());
+            Assert.AreEqual(item, variant.Get<T1>());
+
+            // Should only be able to get on of the variant's generic types
+            Assert.IsFalse(variant.Is<object>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<object>());
+            Assert.IsFalse(variant.Is<DerivedFromT1>());
+            Assert.ThrowsException<InvalidCastException>(() => variant.Get<DerivedFromT1>());
+        }
+
+        [TestMethod]
+        public void Variant1TestAssignT1()
+        {
+            var item = new T1();
+            Variant<T1> variant = item;
+
+            Assert.AreEqual(0, variant.Index);
+            Assert.IsTrue(variant.Is<T1>());
+            Assert.AreEqual(item, variant.Get<T1>());
+            Assert.AreEqual(item, (T1)variant);
+
+        }
+
+        [TestMethod]
+        public void Variant1EqualsTest1()
+        {
+            var item1 = new T1();
+            var item2 = new T1();
+
+            Variant<T1> variant11 = item1;
+            Variant<T1> variant12 = item1;
+            Variant<T1> variant21 = item2;
+            Variant<T1> variant22 = item2;
+
+            Assert.IsTrue(variant11.Equals(variant12));
+            Assert.IsFalse(variant11.Equals(variant21));
+
+            Assert.IsTrue(variant21.Equals(variant22));
+            Assert.IsTrue(variant22.Equals(variant21));
+
+            Assert.IsFalse(variant21.Equals(item2));
+            Assert.IsFalse(item2.Equals(variant21));
+
+            Assert.IsTrue(item2.Equals((T1)variant21));
+
+            Assert.IsFalse(item1.Equals(null));
+        }
+
+        [TestMethod]
+        public void Variant1PatternMatchTest1()
+        {
+            Variant<T1> variant = new T1();
+
+            switch (variant.Get())
+            {
+            case T1 _: break;
+            }
+        }
+
+    }
     class T2 { }
 
     class DerivedFromT2 : T2 { }
