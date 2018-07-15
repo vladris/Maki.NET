@@ -4,7 +4,6 @@ using System.Diagnostics;
 
 namespace Maki
 {
-
     /// <summary>
     /// Represents a 2-type discriminate union.
     /// </summary>
@@ -12,8 +11,8 @@ namespace Maki
     /// <typeparam name="T2">Represents the variant's second type.</typeparam>
     public sealed class Variant<T1, T2> : VariantBase
     {
-        private Variant(IVariantHolder item)
-            : base(item)
+        private Variant(IVariantHolder item, int index)
+            : base(item, index)
         {}
 
         /// <summary>
@@ -21,7 +20,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T1"/>.</param>
         public Variant(T1 item)
-            : base(VariantHolder<T1>.T1(item))
+            : base(new VariantHolder<T1>(item), 0)
         {}
 
         /// <summary>
@@ -29,7 +28,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T2"/>.</param>
         public Variant(T2 item)
-            : base(VariantHolder<T2>.T2(item))
+            : base(new VariantHolder<T2>(item), 1)
         {}
 
         /// <summary>
@@ -77,7 +76,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2> Make1(T1 item) => new Variant<T1, T2>(VariantHolder<T1>.T1(item));
+        public static Variant<T1, T2> Make1(T1 item) => new Variant<T1, T2>(new VariantHolder<T1>(item), 0);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T1"/> to variant. Creates a new Variant
@@ -92,7 +91,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T1"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T1"/></exception>
         public static explicit operator T1(Variant<T1, T2> variant) => variant.Get<T1>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the second type
         /// (<typeparamref name="T2"/>).
@@ -101,7 +99,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2> Make2(T2 item) => new Variant<T1, T2>(VariantHolder<T2>.T2(item));
+        public static Variant<T1, T2> Make2(T2 item) => new Variant<T1, T2>(new VariantHolder<T2>(item), 1);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T2"/> to variant. Creates a new Variant
@@ -116,7 +114,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T2"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T2"/></exception>
         public static explicit operator T2(Variant<T1, T2> variant) => variant.Get<T2>();
-
     }
 
     /// <summary>
@@ -127,8 +124,8 @@ namespace Maki
     /// <typeparam name="T3">Represents the variant's third type.</typeparam>
     public sealed class Variant<T1, T2, T3> : VariantBase
     {
-        private Variant(IVariantHolder item)
-            : base(item)
+        private Variant(IVariantHolder item, int index)
+            : base(item, index)
         {}
 
         /// <summary>
@@ -136,7 +133,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T1"/>.</param>
         public Variant(T1 item)
-            : base(VariantHolder<T1>.T1(item))
+            : base(new VariantHolder<T1>(item), 0)
         {}
 
         /// <summary>
@@ -144,7 +141,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T2"/>.</param>
         public Variant(T2 item)
-            : base(VariantHolder<T2>.T2(item))
+            : base(new VariantHolder<T2>(item), 1)
         {}
 
         /// <summary>
@@ -152,7 +149,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T3"/>.</param>
         public Variant(T3 item)
-            : base(VariantHolder<T3>.T3(item))
+            : base(new VariantHolder<T3>(item), 2)
         {}
 
         /// <summary>
@@ -202,7 +199,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3> Make1(T1 item) => new Variant<T1, T2, T3>(VariantHolder<T1>.T1(item));
+        public static Variant<T1, T2, T3> Make1(T1 item) => new Variant<T1, T2, T3>(new VariantHolder<T1>(item), 0);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T1"/> to variant. Creates a new Variant
@@ -217,7 +214,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T1"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T1"/></exception>
         public static explicit operator T1(Variant<T1, T2, T3> variant) => variant.Get<T1>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the second type
         /// (<typeparamref name="T2"/>).
@@ -226,7 +222,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3> Make2(T2 item) => new Variant<T1, T2, T3>(VariantHolder<T2>.T2(item));
+        public static Variant<T1, T2, T3> Make2(T2 item) => new Variant<T1, T2, T3>(new VariantHolder<T2>(item), 1);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T2"/> to variant. Creates a new Variant
@@ -241,7 +237,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T2"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T2"/></exception>
         public static explicit operator T2(Variant<T1, T2, T3> variant) => variant.Get<T2>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the third type
         /// (<typeparamref name="T3"/>).
@@ -250,7 +245,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3> Make3(T3 item) => new Variant<T1, T2, T3>(VariantHolder<T3>.T3(item));
+        public static Variant<T1, T2, T3> Make3(T3 item) => new Variant<T1, T2, T3>(new VariantHolder<T3>(item), 2);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T3"/> to variant. Creates a new Variant
@@ -265,7 +260,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T3"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T3"/></exception>
         public static explicit operator T3(Variant<T1, T2, T3> variant) => variant.Get<T3>();
-
     }
 
     /// <summary>
@@ -277,8 +271,8 @@ namespace Maki
     /// <typeparam name="T4">Represents the variant's fourth type.</typeparam>
     public sealed class Variant<T1, T2, T3, T4> : VariantBase
     {
-        private Variant(IVariantHolder item)
-            : base(item)
+        private Variant(IVariantHolder item, int index)
+            : base(item, index)
         {}
 
         /// <summary>
@@ -286,7 +280,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T1"/>.</param>
         public Variant(T1 item)
-            : base(VariantHolder<T1>.T1(item))
+            : base(new VariantHolder<T1>(item), 0)
         {}
 
         /// <summary>
@@ -294,7 +288,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T2"/>.</param>
         public Variant(T2 item)
-            : base(VariantHolder<T2>.T2(item))
+            : base(new VariantHolder<T2>(item), 1)
         {}
 
         /// <summary>
@@ -302,7 +296,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T3"/>.</param>
         public Variant(T3 item)
-            : base(VariantHolder<T3>.T3(item))
+            : base(new VariantHolder<T3>(item), 2)
         {}
 
         /// <summary>
@@ -310,7 +304,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T4"/>.</param>
         public Variant(T4 item)
-            : base(VariantHolder<T4>.T4(item))
+            : base(new VariantHolder<T4>(item), 3)
         {}
 
         /// <summary>
@@ -362,7 +356,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4> Make1(T1 item) => new Variant<T1, T2, T3, T4>(VariantHolder<T1>.T1(item));
+        public static Variant<T1, T2, T3, T4> Make1(T1 item) => new Variant<T1, T2, T3, T4>(new VariantHolder<T1>(item), 0);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T1"/> to variant. Creates a new Variant
@@ -377,7 +371,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T1"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T1"/></exception>
         public static explicit operator T1(Variant<T1, T2, T3, T4> variant) => variant.Get<T1>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the second type
         /// (<typeparamref name="T2"/>).
@@ -386,7 +379,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4> Make2(T2 item) => new Variant<T1, T2, T3, T4>(VariantHolder<T2>.T2(item));
+        public static Variant<T1, T2, T3, T4> Make2(T2 item) => new Variant<T1, T2, T3, T4>(new VariantHolder<T2>(item), 1);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T2"/> to variant. Creates a new Variant
@@ -401,7 +394,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T2"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T2"/></exception>
         public static explicit operator T2(Variant<T1, T2, T3, T4> variant) => variant.Get<T2>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the third type
         /// (<typeparamref name="T3"/>).
@@ -410,7 +402,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4> Make3(T3 item) => new Variant<T1, T2, T3, T4>(VariantHolder<T3>.T3(item));
+        public static Variant<T1, T2, T3, T4> Make3(T3 item) => new Variant<T1, T2, T3, T4>(new VariantHolder<T3>(item), 2);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T3"/> to variant. Creates a new Variant
@@ -425,7 +417,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T3"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T3"/></exception>
         public static explicit operator T3(Variant<T1, T2, T3, T4> variant) => variant.Get<T3>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fourth type
         /// (<typeparamref name="T4"/>).
@@ -434,7 +425,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4> Make4(T4 item) => new Variant<T1, T2, T3, T4>(VariantHolder<T4>.T4(item));
+        public static Variant<T1, T2, T3, T4> Make4(T4 item) => new Variant<T1, T2, T3, T4>(new VariantHolder<T4>(item), 3);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T4"/> to variant. Creates a new Variant
@@ -449,7 +440,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T4"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T4"/></exception>
         public static explicit operator T4(Variant<T1, T2, T3, T4> variant) => variant.Get<T4>();
-
     }
 
     /// <summary>
@@ -462,8 +452,8 @@ namespace Maki
     /// <typeparam name="T5">Represents the variant's fifth type.</typeparam>
     public sealed class Variant<T1, T2, T3, T4, T5> : VariantBase
     {
-        private Variant(IVariantHolder item)
-            : base(item)
+        private Variant(IVariantHolder item, int index)
+            : base(item, index)
         {}
 
         /// <summary>
@@ -471,7 +461,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T1"/>.</param>
         public Variant(T1 item)
-            : base(VariantHolder<T1>.T1(item))
+            : base(new VariantHolder<T1>(item), 0)
         {}
 
         /// <summary>
@@ -479,7 +469,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T2"/>.</param>
         public Variant(T2 item)
-            : base(VariantHolder<T2>.T2(item))
+            : base(new VariantHolder<T2>(item), 1)
         {}
 
         /// <summary>
@@ -487,7 +477,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T3"/>.</param>
         public Variant(T3 item)
-            : base(VariantHolder<T3>.T3(item))
+            : base(new VariantHolder<T3>(item), 2)
         {}
 
         /// <summary>
@@ -495,7 +485,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T4"/>.</param>
         public Variant(T4 item)
-            : base(VariantHolder<T4>.T4(item))
+            : base(new VariantHolder<T4>(item), 3)
         {}
 
         /// <summary>
@@ -503,7 +493,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T5"/>.</param>
         public Variant(T5 item)
-            : base(VariantHolder<T5>.T5(item))
+            : base(new VariantHolder<T5>(item), 4)
         {}
 
         /// <summary>
@@ -557,7 +547,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5> Make1(T1 item) => new Variant<T1, T2, T3, T4, T5>(VariantHolder<T1>.T1(item));
+        public static Variant<T1, T2, T3, T4, T5> Make1(T1 item) => new Variant<T1, T2, T3, T4, T5>(new VariantHolder<T1>(item), 0);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T1"/> to variant. Creates a new Variant
@@ -572,7 +562,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T1"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T1"/></exception>
         public static explicit operator T1(Variant<T1, T2, T3, T4, T5> variant) => variant.Get<T1>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the second type
         /// (<typeparamref name="T2"/>).
@@ -581,7 +570,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5> Make2(T2 item) => new Variant<T1, T2, T3, T4, T5>(VariantHolder<T2>.T2(item));
+        public static Variant<T1, T2, T3, T4, T5> Make2(T2 item) => new Variant<T1, T2, T3, T4, T5>(new VariantHolder<T2>(item), 1);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T2"/> to variant. Creates a new Variant
@@ -596,7 +585,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T2"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T2"/></exception>
         public static explicit operator T2(Variant<T1, T2, T3, T4, T5> variant) => variant.Get<T2>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the third type
         /// (<typeparamref name="T3"/>).
@@ -605,7 +593,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5> Make3(T3 item) => new Variant<T1, T2, T3, T4, T5>(VariantHolder<T3>.T3(item));
+        public static Variant<T1, T2, T3, T4, T5> Make3(T3 item) => new Variant<T1, T2, T3, T4, T5>(new VariantHolder<T3>(item), 2);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T3"/> to variant. Creates a new Variant
@@ -620,7 +608,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T3"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T3"/></exception>
         public static explicit operator T3(Variant<T1, T2, T3, T4, T5> variant) => variant.Get<T3>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fourth type
         /// (<typeparamref name="T4"/>).
@@ -629,7 +616,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5> Make4(T4 item) => new Variant<T1, T2, T3, T4, T5>(VariantHolder<T4>.T4(item));
+        public static Variant<T1, T2, T3, T4, T5> Make4(T4 item) => new Variant<T1, T2, T3, T4, T5>(new VariantHolder<T4>(item), 3);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T4"/> to variant. Creates a new Variant
@@ -644,7 +631,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T4"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T4"/></exception>
         public static explicit operator T4(Variant<T1, T2, T3, T4, T5> variant) => variant.Get<T4>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fifth type
         /// (<typeparamref name="T5"/>).
@@ -653,7 +639,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5> Make5(T5 item) => new Variant<T1, T2, T3, T4, T5>(VariantHolder<T5>.T5(item));
+        public static Variant<T1, T2, T3, T4, T5> Make5(T5 item) => new Variant<T1, T2, T3, T4, T5>(new VariantHolder<T5>(item), 4);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T5"/> to variant. Creates a new Variant
@@ -668,7 +654,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T5"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T5"/></exception>
         public static explicit operator T5(Variant<T1, T2, T3, T4, T5> variant) => variant.Get<T5>();
-
     }
 
     /// <summary>
@@ -682,8 +667,8 @@ namespace Maki
     /// <typeparam name="T6">Represents the variant's sixth type.</typeparam>
     public sealed class Variant<T1, T2, T3, T4, T5, T6> : VariantBase
     {
-        private Variant(IVariantHolder item)
-            : base(item)
+        private Variant(IVariantHolder item, int index)
+            : base(item, index)
         {}
 
         /// <summary>
@@ -691,7 +676,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T1"/>.</param>
         public Variant(T1 item)
-            : base(VariantHolder<T1>.T1(item))
+            : base(new VariantHolder<T1>(item), 0)
         {}
 
         /// <summary>
@@ -699,7 +684,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T2"/>.</param>
         public Variant(T2 item)
-            : base(VariantHolder<T2>.T2(item))
+            : base(new VariantHolder<T2>(item), 1)
         {}
 
         /// <summary>
@@ -707,7 +692,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T3"/>.</param>
         public Variant(T3 item)
-            : base(VariantHolder<T3>.T3(item))
+            : base(new VariantHolder<T3>(item), 2)
         {}
 
         /// <summary>
@@ -715,7 +700,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T4"/>.</param>
         public Variant(T4 item)
-            : base(VariantHolder<T4>.T4(item))
+            : base(new VariantHolder<T4>(item), 3)
         {}
 
         /// <summary>
@@ -723,7 +708,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T5"/>.</param>
         public Variant(T5 item)
-            : base(VariantHolder<T5>.T5(item))
+            : base(new VariantHolder<T5>(item), 4)
         {}
 
         /// <summary>
@@ -731,7 +716,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T6"/>.</param>
         public Variant(T6 item)
-            : base(VariantHolder<T6>.T6(item))
+            : base(new VariantHolder<T6>(item), 5)
         {}
 
         /// <summary>
@@ -787,7 +772,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6> Make1(T1 item) => new Variant<T1, T2, T3, T4, T5, T6>(VariantHolder<T1>.T1(item));
+        public static Variant<T1, T2, T3, T4, T5, T6> Make1(T1 item) => new Variant<T1, T2, T3, T4, T5, T6>(new VariantHolder<T1>(item), 0);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T1"/> to variant. Creates a new Variant
@@ -802,7 +787,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T1"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T1"/></exception>
         public static explicit operator T1(Variant<T1, T2, T3, T4, T5, T6> variant) => variant.Get<T1>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the second type
         /// (<typeparamref name="T2"/>).
@@ -811,7 +795,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6> Make2(T2 item) => new Variant<T1, T2, T3, T4, T5, T6>(VariantHolder<T2>.T2(item));
+        public static Variant<T1, T2, T3, T4, T5, T6> Make2(T2 item) => new Variant<T1, T2, T3, T4, T5, T6>(new VariantHolder<T2>(item), 1);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T2"/> to variant. Creates a new Variant
@@ -826,7 +810,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T2"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T2"/></exception>
         public static explicit operator T2(Variant<T1, T2, T3, T4, T5, T6> variant) => variant.Get<T2>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the third type
         /// (<typeparamref name="T3"/>).
@@ -835,7 +818,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6> Make3(T3 item) => new Variant<T1, T2, T3, T4, T5, T6>(VariantHolder<T3>.T3(item));
+        public static Variant<T1, T2, T3, T4, T5, T6> Make3(T3 item) => new Variant<T1, T2, T3, T4, T5, T6>(new VariantHolder<T3>(item), 2);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T3"/> to variant. Creates a new Variant
@@ -850,7 +833,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T3"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T3"/></exception>
         public static explicit operator T3(Variant<T1, T2, T3, T4, T5, T6> variant) => variant.Get<T3>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fourth type
         /// (<typeparamref name="T4"/>).
@@ -859,7 +841,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6> Make4(T4 item) => new Variant<T1, T2, T3, T4, T5, T6>(VariantHolder<T4>.T4(item));
+        public static Variant<T1, T2, T3, T4, T5, T6> Make4(T4 item) => new Variant<T1, T2, T3, T4, T5, T6>(new VariantHolder<T4>(item), 3);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T4"/> to variant. Creates a new Variant
@@ -874,7 +856,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T4"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T4"/></exception>
         public static explicit operator T4(Variant<T1, T2, T3, T4, T5, T6> variant) => variant.Get<T4>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fifth type
         /// (<typeparamref name="T5"/>).
@@ -883,7 +864,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6> Make5(T5 item) => new Variant<T1, T2, T3, T4, T5, T6>(VariantHolder<T5>.T5(item));
+        public static Variant<T1, T2, T3, T4, T5, T6> Make5(T5 item) => new Variant<T1, T2, T3, T4, T5, T6>(new VariantHolder<T5>(item), 4);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T5"/> to variant. Creates a new Variant
@@ -898,7 +879,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T5"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T5"/></exception>
         public static explicit operator T5(Variant<T1, T2, T3, T4, T5, T6> variant) => variant.Get<T5>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the sixth type
         /// (<typeparamref name="T6"/>).
@@ -907,7 +887,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6> Make6(T6 item) => new Variant<T1, T2, T3, T4, T5, T6>(VariantHolder<T6>.T6(item));
+        public static Variant<T1, T2, T3, T4, T5, T6> Make6(T6 item) => new Variant<T1, T2, T3, T4, T5, T6>(new VariantHolder<T6>(item), 5);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T6"/> to variant. Creates a new Variant
@@ -922,7 +902,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T6"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T6"/></exception>
         public static explicit operator T6(Variant<T1, T2, T3, T4, T5, T6> variant) => variant.Get<T6>();
-
     }
 
     /// <summary>
@@ -937,8 +916,8 @@ namespace Maki
     /// <typeparam name="T7">Represents the variant's seventh type.</typeparam>
     public sealed class Variant<T1, T2, T3, T4, T5, T6, T7> : VariantBase
     {
-        private Variant(IVariantHolder item)
-            : base(item)
+        private Variant(IVariantHolder item, int index)
+            : base(item, index)
         {}
 
         /// <summary>
@@ -946,7 +925,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T1"/>.</param>
         public Variant(T1 item)
-            : base(VariantHolder<T1>.T1(item))
+            : base(new VariantHolder<T1>(item), 0)
         {}
 
         /// <summary>
@@ -954,7 +933,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T2"/>.</param>
         public Variant(T2 item)
-            : base(VariantHolder<T2>.T2(item))
+            : base(new VariantHolder<T2>(item), 1)
         {}
 
         /// <summary>
@@ -962,7 +941,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T3"/>.</param>
         public Variant(T3 item)
-            : base(VariantHolder<T3>.T3(item))
+            : base(new VariantHolder<T3>(item), 2)
         {}
 
         /// <summary>
@@ -970,7 +949,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T4"/>.</param>
         public Variant(T4 item)
-            : base(VariantHolder<T4>.T4(item))
+            : base(new VariantHolder<T4>(item), 3)
         {}
 
         /// <summary>
@@ -978,7 +957,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T5"/>.</param>
         public Variant(T5 item)
-            : base(VariantHolder<T5>.T5(item))
+            : base(new VariantHolder<T5>(item), 4)
         {}
 
         /// <summary>
@@ -986,7 +965,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T6"/>.</param>
         public Variant(T6 item)
-            : base(VariantHolder<T6>.T6(item))
+            : base(new VariantHolder<T6>(item), 5)
         {}
 
         /// <summary>
@@ -994,7 +973,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T7"/>.</param>
         public Variant(T7 item)
-            : base(VariantHolder<T7>.T7(item))
+            : base(new VariantHolder<T7>(item), 6)
         {}
 
         /// <summary>
@@ -1052,7 +1031,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6, T7> Make1(T1 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(VariantHolder<T1>.T1(item));
+        public static Variant<T1, T2, T3, T4, T5, T6, T7> Make1(T1 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(new VariantHolder<T1>(item), 0);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T1"/> to variant. Creates a new Variant
@@ -1067,7 +1046,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T1"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T1"/></exception>
         public static explicit operator T1(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => variant.Get<T1>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the second type
         /// (<typeparamref name="T2"/>).
@@ -1076,7 +1054,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6, T7> Make2(T2 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(VariantHolder<T2>.T2(item));
+        public static Variant<T1, T2, T3, T4, T5, T6, T7> Make2(T2 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(new VariantHolder<T2>(item), 1);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T2"/> to variant. Creates a new Variant
@@ -1091,7 +1069,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T2"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T2"/></exception>
         public static explicit operator T2(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => variant.Get<T2>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the third type
         /// (<typeparamref name="T3"/>).
@@ -1100,7 +1077,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6, T7> Make3(T3 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(VariantHolder<T3>.T3(item));
+        public static Variant<T1, T2, T3, T4, T5, T6, T7> Make3(T3 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(new VariantHolder<T3>(item), 2);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T3"/> to variant. Creates a new Variant
@@ -1115,7 +1092,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T3"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T3"/></exception>
         public static explicit operator T3(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => variant.Get<T3>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fourth type
         /// (<typeparamref name="T4"/>).
@@ -1124,7 +1100,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6, T7> Make4(T4 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(VariantHolder<T4>.T4(item));
+        public static Variant<T1, T2, T3, T4, T5, T6, T7> Make4(T4 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(new VariantHolder<T4>(item), 3);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T4"/> to variant. Creates a new Variant
@@ -1139,7 +1115,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T4"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T4"/></exception>
         public static explicit operator T4(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => variant.Get<T4>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fifth type
         /// (<typeparamref name="T5"/>).
@@ -1148,7 +1123,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6, T7> Make5(T5 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(VariantHolder<T5>.T5(item));
+        public static Variant<T1, T2, T3, T4, T5, T6, T7> Make5(T5 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(new VariantHolder<T5>(item), 4);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T5"/> to variant. Creates a new Variant
@@ -1163,7 +1138,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T5"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T5"/></exception>
         public static explicit operator T5(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => variant.Get<T5>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the sixth type
         /// (<typeparamref name="T6"/>).
@@ -1172,7 +1146,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6, T7> Make6(T6 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(VariantHolder<T6>.T6(item));
+        public static Variant<T1, T2, T3, T4, T5, T6, T7> Make6(T6 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(new VariantHolder<T6>(item), 5);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T6"/> to variant. Creates a new Variant
@@ -1187,7 +1161,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T6"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T6"/></exception>
         public static explicit operator T6(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => variant.Get<T6>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the seventh type
         /// (<typeparamref name="T7"/>).
@@ -1196,7 +1169,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6, T7> Make7(T7 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(VariantHolder<T7>.T7(item));
+        public static Variant<T1, T2, T3, T4, T5, T6, T7> Make7(T7 item) => new Variant<T1, T2, T3, T4, T5, T6, T7>(new VariantHolder<T7>(item), 6);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T7"/> to variant. Creates a new Variant
@@ -1211,7 +1184,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T7"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T7"/></exception>
         public static explicit operator T7(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => variant.Get<T7>();
-
     }
 
     /// <summary>
@@ -1227,8 +1199,8 @@ namespace Maki
     /// <typeparam name="T8">Represents the variant's eighth type.</typeparam>
     public sealed class Variant<T1, T2, T3, T4, T5, T6, T7, T8> : VariantBase
     {
-        private Variant(IVariantHolder item)
-            : base(item)
+        private Variant(IVariantHolder item, int index)
+            : base(item, index)
         {}
 
         /// <summary>
@@ -1236,7 +1208,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T1"/>.</param>
         public Variant(T1 item)
-            : base(VariantHolder<T1>.T1(item))
+            : base(new VariantHolder<T1>(item), 0)
         {}
 
         /// <summary>
@@ -1244,7 +1216,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T2"/>.</param>
         public Variant(T2 item)
-            : base(VariantHolder<T2>.T2(item))
+            : base(new VariantHolder<T2>(item), 1)
         {}
 
         /// <summary>
@@ -1252,7 +1224,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T3"/>.</param>
         public Variant(T3 item)
-            : base(VariantHolder<T3>.T3(item))
+            : base(new VariantHolder<T3>(item), 2)
         {}
 
         /// <summary>
@@ -1260,7 +1232,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T4"/>.</param>
         public Variant(T4 item)
-            : base(VariantHolder<T4>.T4(item))
+            : base(new VariantHolder<T4>(item), 3)
         {}
 
         /// <summary>
@@ -1268,7 +1240,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T5"/>.</param>
         public Variant(T5 item)
-            : base(VariantHolder<T5>.T5(item))
+            : base(new VariantHolder<T5>(item), 4)
         {}
 
         /// <summary>
@@ -1276,7 +1248,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T6"/>.</param>
         public Variant(T6 item)
-            : base(VariantHolder<T6>.T6(item))
+            : base(new VariantHolder<T6>(item), 5)
         {}
 
         /// <summary>
@@ -1284,7 +1256,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T7"/>.</param>
         public Variant(T7 item)
-            : base(VariantHolder<T7>.T7(item))
+            : base(new VariantHolder<T7>(item), 6)
         {}
 
         /// <summary>
@@ -1292,7 +1264,7 @@ namespace Maki
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T8"/>.</param>
         public Variant(T8 item)
-            : base(VariantHolder<T8>.T8(item))
+            : base(new VariantHolder<T8>(item), 7)
         {}
 
         /// <summary>
@@ -1352,7 +1324,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make1(T1 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(VariantHolder<T1>.T1(item));
+        public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make1(T1 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(new VariantHolder<T1>(item), 0);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T1"/> to variant. Creates a new Variant
@@ -1367,7 +1339,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T1"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T1"/></exception>
         public static explicit operator T1(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => variant.Get<T1>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the second type
         /// (<typeparamref name="T2"/>).
@@ -1376,7 +1347,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make2(T2 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(VariantHolder<T2>.T2(item));
+        public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make2(T2 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(new VariantHolder<T2>(item), 1);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T2"/> to variant. Creates a new Variant
@@ -1391,7 +1362,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T2"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T2"/></exception>
         public static explicit operator T2(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => variant.Get<T2>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the third type
         /// (<typeparamref name="T3"/>).
@@ -1400,7 +1370,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make3(T3 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(VariantHolder<T3>.T3(item));
+        public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make3(T3 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(new VariantHolder<T3>(item), 2);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T3"/> to variant. Creates a new Variant
@@ -1415,7 +1385,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T3"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T3"/></exception>
         public static explicit operator T3(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => variant.Get<T3>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fourth type
         /// (<typeparamref name="T4"/>).
@@ -1424,7 +1393,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make4(T4 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(VariantHolder<T4>.T4(item));
+        public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make4(T4 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(new VariantHolder<T4>(item), 3);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T4"/> to variant. Creates a new Variant
@@ -1439,7 +1408,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T4"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T4"/></exception>
         public static explicit operator T4(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => variant.Get<T4>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the fifth type
         /// (<typeparamref name="T5"/>).
@@ -1448,7 +1416,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make5(T5 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(VariantHolder<T5>.T5(item));
+        public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make5(T5 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(new VariantHolder<T5>(item), 4);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T5"/> to variant. Creates a new Variant
@@ -1463,7 +1431,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T5"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T5"/></exception>
         public static explicit operator T5(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => variant.Get<T5>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the sixth type
         /// (<typeparamref name="T6"/>).
@@ -1472,7 +1439,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make6(T6 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(VariantHolder<T6>.T6(item));
+        public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make6(T6 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(new VariantHolder<T6>(item), 5);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T6"/> to variant. Creates a new Variant
@@ -1487,7 +1454,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T6"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T6"/></exception>
         public static explicit operator T6(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => variant.Get<T6>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the seventh type
         /// (<typeparamref name="T7"/>).
@@ -1496,7 +1462,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make7(T7 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(VariantHolder<T7>.T7(item));
+        public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make7(T7 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(new VariantHolder<T7>(item), 6);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T7"/> to variant. Creates a new Variant
@@ -1511,7 +1477,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T7"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T7"/></exception>
         public static explicit operator T7(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => variant.Get<T7>();
-
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the eighth type
         /// (<typeparamref name="T8"/>).
@@ -1520,7 +1485,7 @@ namespace Maki
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make8(T8 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(VariantHolder<T8>.T8(item));
+        public static Variant<T1, T2, T3, T4, T5, T6, T7, T8> Make8(T8 item) => new Variant<T1, T2, T3, T4, T5, T6, T7, T8>(new VariantHolder<T8>(item), 7);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T8"/> to variant. Creates a new Variant
@@ -1535,6 +1500,6 @@ namespace Maki
         /// <param name="variant">Variant to cast to <typeparamref name="T8"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T8"/></exception>
         public static explicit operator T8(Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant) => variant.Get<T8>();
-
     }
+
 }

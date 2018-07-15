@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Maki.Details
 {
+    /// <summary>
+    /// Used internally to implement Variant types.
+    /// </summary>
     public abstract class VariantBase
     {
         private readonly IVariantHolder variant;
@@ -11,7 +14,7 @@ namespace Maki.Details
         /// <summary>
         /// Gets the 0-based index of the type inhabiting the variant.
         /// </summary>
-        public int Index => variant.Index;
+        public int Index { get; private set; }
 
         /// <summary>
         /// Returns a value that indicates whether the variant is inhabited by an item of type <typeparamref name="T"/>.
@@ -34,6 +37,10 @@ namespace Maki.Details
         /// <returns>Item inhabiting the variant as an object.</returns>
         public object Get() => variant.Get();
 
-        internal VariantBase(IVariantHolder item) => variant = item;
+        internal VariantBase(IVariantHolder item, int index)
+        {
+            variant = item;
+            Index = index;
+        }
     }
 }

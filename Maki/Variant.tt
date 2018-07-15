@@ -16,7 +16,6 @@ for (int types = 2; types <= 8; types++)
 {
     var type = $"Variant<{JoinWithPrefix(types, "T")}>";
 #>
-
     /// <summary>
     /// Represents a <#= types #>-type discriminate union.
     /// </summary>
@@ -30,8 +29,8 @@ for (int types = 2; types <= 8; types++)
 #>
     public sealed class <#= type #> : VariantBase
     {
-        private Variant(IVariantHolder item)
-            : base(item)
+        private Variant(IVariantHolder item, int index)
+            : base(item, index)
         {}
 
 <#
@@ -43,7 +42,7 @@ for (int types = 2; types <= 8; types++)
         /// </summary>
         /// <param name="item">Item of type <typeparamref name="T<#= i #>"/>.</param>
         public Variant(T<#= i #> item)
-            : base(VariantHolder<T<#= i #>>.T<#= i #>(item))
+            : base(new VariantHolder<T<#= i #>>(item), <#= i - 1 #>)
         {}
 
 <#
@@ -110,7 +109,7 @@ for (int types = 2; types <= 8; types++)
         /// <returns>New Variant instance.</returns>
         /// <remarks>Use this method when the variant contains multiple instances of the same type. This
         /// allows explicit placing of the item.</remarks>
-        public static <#= type #> Make<#= i #>(T<#= i #> item) => new <#= type #>(VariantHolder<T<#= i #>>.T<#= i #>(item));
+        public static <#= type #> Make<#= i #>(T<#= i #> item) => new <#= type #>(new VariantHolder<T<#= i #>>(item), <#= i - 1 #>);
 
         /// <summary>
         /// Implicitly casts from <typeparamref name="T<#= i #>"/> to variant. Creates a new Variant
@@ -125,11 +124,11 @@ for (int types = 2; types <= 8; types++)
         /// <param name="variant">Variant to cast to <typeparamref name="T<#= i #>"/>.</param>
         /// <exception cref="System.InvalidCastException">Thrown if the item inhabiting the variant is not of type <typenameref type="T<#= i #>"/></exception>
         public static explicit operator T<#= i #>(<#= type #> variant) => variant.Get<T<#= i #>>();
-
 <#
 	}
 #>
     }
+
 <#
 }
 #>
