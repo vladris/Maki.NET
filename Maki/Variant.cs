@@ -4,6 +4,7 @@ using System.Diagnostics;
 
 namespace Maki
 {
+
     /// <summary>
     /// Represents a 2-type discriminate union.
     /// </summary>
@@ -44,10 +45,8 @@ namespace Maki
 
             switch (Index)
             {
-            case 0:
-                return other.Is<T1>() && Get<T1>().Equals(other.Get<T1>());
-            case 1:
-                return other.Is<T2>() && Get<T2>().Equals(other.Get<T2>());
+            case 0: return other.Index == 0 && Get<T1>().Equals(other.Get<T1>());
+            case 1: return other.Index == 1 && Get<T2>().Equals(other.Get<T2>());
             }
 
             Debug.Fail("Not reached");
@@ -119,6 +118,7 @@ namespace Maki
         public static explicit operator T2(Variant<T1, T2> variant) => variant.Get<T2>();
 
     }
+
     /// <summary>
     /// Represents a 3-type discriminate union.
     /// </summary>
@@ -168,12 +168,9 @@ namespace Maki
 
             switch (Index)
             {
-            case 0:
-                return other.Is<T1>() && Get<T1>().Equals(other.Get<T1>());
-            case 1:
-                return other.Is<T2>() && Get<T2>().Equals(other.Get<T2>());
-            case 2:
-                return other.Is<T3>() && Get<T3>().Equals(other.Get<T3>());
+            case 0: return other.Index == 0 && Get<T1>().Equals(other.Get<T1>());
+            case 1: return other.Index == 1 && Get<T2>().Equals(other.Get<T2>());
+            case 2: return other.Index == 2 && Get<T3>().Equals(other.Get<T3>());
             }
 
             Debug.Fail("Not reached");
@@ -270,6 +267,7 @@ namespace Maki
         public static explicit operator T3(Variant<T1, T2, T3> variant) => variant.Get<T3>();
 
     }
+
     /// <summary>
     /// Represents a 4-type discriminate union.
     /// </summary>
@@ -328,14 +326,10 @@ namespace Maki
 
             switch (Index)
             {
-            case 0:
-                return other.Is<T1>() && Get<T1>().Equals(other.Get<T1>());
-            case 1:
-                return other.Is<T2>() && Get<T2>().Equals(other.Get<T2>());
-            case 2:
-                return other.Is<T3>() && Get<T3>().Equals(other.Get<T3>());
-            case 3:
-                return other.Is<T4>() && Get<T4>().Equals(other.Get<T4>());
+            case 0: return other.Index == 0 && Get<T1>().Equals(other.Get<T1>());
+            case 1: return other.Index == 1 && Get<T2>().Equals(other.Get<T2>());
+            case 2: return other.Index == 2 && Get<T3>().Equals(other.Get<T3>());
+            case 3: return other.Index == 3 && Get<T4>().Equals(other.Get<T4>());
             }
 
             Debug.Fail("Not reached");
@@ -457,6 +451,7 @@ namespace Maki
         public static explicit operator T4(Variant<T1, T2, T3, T4> variant) => variant.Get<T4>();
 
     }
+
     /// <summary>
     /// Represents a 5-type discriminate union.
     /// </summary>
@@ -524,16 +519,11 @@ namespace Maki
 
             switch (Index)
             {
-            case 0:
-                return other.Is<T1>() && Get<T1>().Equals(other.Get<T1>());
-            case 1:
-                return other.Is<T2>() && Get<T2>().Equals(other.Get<T2>());
-            case 2:
-                return other.Is<T3>() && Get<T3>().Equals(other.Get<T3>());
-            case 3:
-                return other.Is<T4>() && Get<T4>().Equals(other.Get<T4>());
-            case 4:
-                return other.Is<T5>() && Get<T5>().Equals(other.Get<T5>());
+            case 0: return other.Index == 0 && Get<T1>().Equals(other.Get<T1>());
+            case 1: return other.Index == 1 && Get<T2>().Equals(other.Get<T2>());
+            case 2: return other.Index == 2 && Get<T3>().Equals(other.Get<T3>());
+            case 3: return other.Index == 3 && Get<T4>().Equals(other.Get<T4>());
+            case 4: return other.Index == 4 && Get<T5>().Equals(other.Get<T5>());
             }
 
             Debug.Fail("Not reached");
@@ -680,6 +670,7 @@ namespace Maki
         public static explicit operator T5(Variant<T1, T2, T3, T4, T5> variant) => variant.Get<T5>();
 
     }
+
     /// <summary>
     /// Represents a 6-type discriminate union.
     /// </summary>
@@ -756,18 +747,12 @@ namespace Maki
 
             switch (Index)
             {
-            case 0:
-                return other.Is<T1>() && Get<T1>().Equals(other.Get<T1>());
-            case 1:
-                return other.Is<T2>() && Get<T2>().Equals(other.Get<T2>());
-            case 2:
-                return other.Is<T3>() && Get<T3>().Equals(other.Get<T3>());
-            case 3:
-                return other.Is<T4>() && Get<T4>().Equals(other.Get<T4>());
-            case 4:
-                return other.Is<T5>() && Get<T5>().Equals(other.Get<T5>());
-            case 5:
-                return other.Is<T6>() && Get<T6>().Equals(other.Get<T6>());
+            case 0: return other.Index == 0 && Get<T1>().Equals(other.Get<T1>());
+            case 1: return other.Index == 1 && Get<T2>().Equals(other.Get<T2>());
+            case 2: return other.Index == 2 && Get<T3>().Equals(other.Get<T3>());
+            case 3: return other.Index == 3 && Get<T4>().Equals(other.Get<T4>());
+            case 4: return other.Index == 4 && Get<T5>().Equals(other.Get<T5>());
+            case 5: return other.Index == 5 && Get<T6>().Equals(other.Get<T6>());
             }
 
             Debug.Fail("Not reached");
@@ -939,6 +924,7 @@ namespace Maki
         public static explicit operator T6(Variant<T1, T2, T3, T4, T5, T6> variant) => variant.Get<T6>();
 
     }
+
     /// <summary>
     /// Represents a 7-type discriminate union.
     /// </summary>
@@ -1024,20 +1010,13 @@ namespace Maki
 
             switch (Index)
             {
-            case 0:
-                return other.Is<T1>() && Get<T1>().Equals(other.Get<T1>());
-            case 1:
-                return other.Is<T2>() && Get<T2>().Equals(other.Get<T2>());
-            case 2:
-                return other.Is<T3>() && Get<T3>().Equals(other.Get<T3>());
-            case 3:
-                return other.Is<T4>() && Get<T4>().Equals(other.Get<T4>());
-            case 4:
-                return other.Is<T5>() && Get<T5>().Equals(other.Get<T5>());
-            case 5:
-                return other.Is<T6>() && Get<T6>().Equals(other.Get<T6>());
-            case 6:
-                return other.Is<T7>() && Get<T7>().Equals(other.Get<T7>());
+            case 0: return other.Index == 0 && Get<T1>().Equals(other.Get<T1>());
+            case 1: return other.Index == 1 && Get<T2>().Equals(other.Get<T2>());
+            case 2: return other.Index == 2 && Get<T3>().Equals(other.Get<T3>());
+            case 3: return other.Index == 3 && Get<T4>().Equals(other.Get<T4>());
+            case 4: return other.Index == 4 && Get<T5>().Equals(other.Get<T5>());
+            case 5: return other.Index == 5 && Get<T6>().Equals(other.Get<T6>());
+            case 6: return other.Index == 6 && Get<T7>().Equals(other.Get<T7>());
             }
 
             Debug.Fail("Not reached");
@@ -1234,6 +1213,7 @@ namespace Maki
         public static explicit operator T7(Variant<T1, T2, T3, T4, T5, T6, T7> variant) => variant.Get<T7>();
 
     }
+
     /// <summary>
     /// Represents a 8-type discriminate union.
     /// </summary>
@@ -1328,22 +1308,14 @@ namespace Maki
 
             switch (Index)
             {
-            case 0:
-                return other.Is<T1>() && Get<T1>().Equals(other.Get<T1>());
-            case 1:
-                return other.Is<T2>() && Get<T2>().Equals(other.Get<T2>());
-            case 2:
-                return other.Is<T3>() && Get<T3>().Equals(other.Get<T3>());
-            case 3:
-                return other.Is<T4>() && Get<T4>().Equals(other.Get<T4>());
-            case 4:
-                return other.Is<T5>() && Get<T5>().Equals(other.Get<T5>());
-            case 5:
-                return other.Is<T6>() && Get<T6>().Equals(other.Get<T6>());
-            case 6:
-                return other.Is<T7>() && Get<T7>().Equals(other.Get<T7>());
-            case 7:
-                return other.Is<T8>() && Get<T8>().Equals(other.Get<T8>());
+            case 0: return other.Index == 0 && Get<T1>().Equals(other.Get<T1>());
+            case 1: return other.Index == 1 && Get<T2>().Equals(other.Get<T2>());
+            case 2: return other.Index == 2 && Get<T3>().Equals(other.Get<T3>());
+            case 3: return other.Index == 3 && Get<T4>().Equals(other.Get<T4>());
+            case 4: return other.Index == 4 && Get<T5>().Equals(other.Get<T5>());
+            case 5: return other.Index == 5 && Get<T6>().Equals(other.Get<T6>());
+            case 6: return other.Index == 6 && Get<T7>().Equals(other.Get<T7>());
+            case 7: return other.Index == 7 && Get<T8>().Equals(other.Get<T8>());
             }
 
             Debug.Fail("Not reached");

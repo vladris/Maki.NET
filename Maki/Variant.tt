@@ -16,6 +16,7 @@ for (int types = 2; types <= 8; types++)
 {
     var type = $"Variant<{JoinWithPrefix(types, "T")}>";
 #>
+
     /// <summary>
     /// Represents a <#= types #>-type discriminate union.
     /// </summary>
@@ -65,8 +66,7 @@ for (int types = 2; types <= 8; types++)
 	for (int i = 1; i <= types; i++)
 	{
 #>
-            case <#= i - 1#>:
-                return other.Is<T<#= i #>>() && Get<T<#= i #>>().Equals(other.Get<T<#= i#>>());
+            case <#= i - 1#>: return other.Index == <#= i -1 #> && Get<T<#= i #>>().Equals(other.Get<T<#= i#>>());
 <#
 	}
 #>
