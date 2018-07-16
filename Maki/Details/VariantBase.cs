@@ -42,5 +42,25 @@ namespace Maki.Details
             variant = item;
             Index = index;
         }
+
+        /// <summary>
+        /// Determines whether the specified object is equal to the current object.
+        /// </summary>
+        /// <param name="obj">The object to compare with the current object.</param>
+        /// <returns>True if the objects are equal.</returns>
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType()) return false;
+
+            var other = (VariantBase)obj;
+
+            return Index == other.Index && Get().Equals(other.Get());
+        }
+
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code.</returns>
+        public override int GetHashCode() => Get().GetHashCode();
     }
 }

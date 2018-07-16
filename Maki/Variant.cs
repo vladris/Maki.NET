@@ -22,40 +22,6 @@ namespace Maki
             : base(new VariantHolder<T1>(item), 0)
         {}
 
-        /// <summary>
-        /// Determines whether the specified object is equal to the current object.
-        /// </summary>
-        /// <param name="obj">The object to compare with the current object.</param>
-        /// <returns>True if the objects are equal.</returns>
-        public override bool Equals(object obj)
-        {
-            if (obj == null || !(obj is Variant<T1>)) return false;
-
-            var other = (Variant<T1>)obj;
-
-            switch (Index)
-            {
-            case 0: return other.Index == 0 && Get<T1>().Equals(other.Get<T1>());
-            }
-
-            Debug.Fail("Not reached");
-            return false; 
-        }
-
-        /// <summary>
-        /// Returns the hash code for this instance.
-        /// </summary>
-        /// <returns>Hash code.</returns>
-        public override int GetHashCode()
-        {
-            switch (Index)
-            {
-            case 0: return Get<T1>().GetHashCode();
-            }
-
-            Debug.Fail("Not reached");
-            return base.GetHashCode(); 
-        }
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
@@ -109,42 +75,6 @@ namespace Maki
             : base(new VariantHolder<T2>(item), 1)
         {}
 
-        /// <summary>
-        /// Determines whether the specified object is equal to the current object.
-        /// </summary>
-        /// <param name="obj">The object to compare with the current object.</param>
-        /// <returns>True if the objects are equal.</returns>
-        public override bool Equals(object obj)
-        {
-            if (obj == null || !(obj is Variant<T1, T2>)) return false;
-
-            var other = (Variant<T1, T2>)obj;
-
-            switch (Index)
-            {
-            case 0: return other.Index == 0 && Get<T1>().Equals(other.Get<T1>());
-            case 1: return other.Index == 1 && Get<T2>().Equals(other.Get<T2>());
-            }
-
-            Debug.Fail("Not reached");
-            return false; 
-        }
-
-        /// <summary>
-        /// Returns the hash code for this instance.
-        /// </summary>
-        /// <returns>Hash code.</returns>
-        public override int GetHashCode()
-        {
-            switch (Index)
-            {
-            case 0: return Get<T1>().GetHashCode();
-            case 1: return Get<T2>().GetHashCode();
-            }
-
-            Debug.Fail("Not reached");
-            return base.GetHashCode(); 
-        }
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
@@ -230,44 +160,6 @@ namespace Maki
             : base(new VariantHolder<T3>(item), 2)
         {}
 
-        /// <summary>
-        /// Determines whether the specified object is equal to the current object.
-        /// </summary>
-        /// <param name="obj">The object to compare with the current object.</param>
-        /// <returns>True if the objects are equal.</returns>
-        public override bool Equals(object obj)
-        {
-            if (obj == null || !(obj is Variant<T1, T2, T3>)) return false;
-
-            var other = (Variant<T1, T2, T3>)obj;
-
-            switch (Index)
-            {
-            case 0: return other.Index == 0 && Get<T1>().Equals(other.Get<T1>());
-            case 1: return other.Index == 1 && Get<T2>().Equals(other.Get<T2>());
-            case 2: return other.Index == 2 && Get<T3>().Equals(other.Get<T3>());
-            }
-
-            Debug.Fail("Not reached");
-            return false; 
-        }
-
-        /// <summary>
-        /// Returns the hash code for this instance.
-        /// </summary>
-        /// <returns>Hash code.</returns>
-        public override int GetHashCode()
-        {
-            switch (Index)
-            {
-            case 0: return Get<T1>().GetHashCode();
-            case 1: return Get<T2>().GetHashCode();
-            case 2: return Get<T3>().GetHashCode();
-            }
-
-            Debug.Fail("Not reached");
-            return base.GetHashCode(); 
-        }
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
@@ -385,46 +277,6 @@ namespace Maki
             : base(new VariantHolder<T4>(item), 3)
         {}
 
-        /// <summary>
-        /// Determines whether the specified object is equal to the current object.
-        /// </summary>
-        /// <param name="obj">The object to compare with the current object.</param>
-        /// <returns>True if the objects are equal.</returns>
-        public override bool Equals(object obj)
-        {
-            if (obj == null || !(obj is Variant<T1, T2, T3, T4>)) return false;
-
-            var other = (Variant<T1, T2, T3, T4>)obj;
-
-            switch (Index)
-            {
-            case 0: return other.Index == 0 && Get<T1>().Equals(other.Get<T1>());
-            case 1: return other.Index == 1 && Get<T2>().Equals(other.Get<T2>());
-            case 2: return other.Index == 2 && Get<T3>().Equals(other.Get<T3>());
-            case 3: return other.Index == 3 && Get<T4>().Equals(other.Get<T4>());
-            }
-
-            Debug.Fail("Not reached");
-            return false; 
-        }
-
-        /// <summary>
-        /// Returns the hash code for this instance.
-        /// </summary>
-        /// <returns>Hash code.</returns>
-        public override int GetHashCode()
-        {
-            switch (Index)
-            {
-            case 0: return Get<T1>().GetHashCode();
-            case 1: return Get<T2>().GetHashCode();
-            case 2: return Get<T3>().GetHashCode();
-            case 3: return Get<T4>().GetHashCode();
-            }
-
-            Debug.Fail("Not reached");
-            return base.GetHashCode(); 
-        }
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
@@ -574,48 +426,6 @@ namespace Maki
             : base(new VariantHolder<T5>(item), 4)
         {}
 
-        /// <summary>
-        /// Determines whether the specified object is equal to the current object.
-        /// </summary>
-        /// <param name="obj">The object to compare with the current object.</param>
-        /// <returns>True if the objects are equal.</returns>
-        public override bool Equals(object obj)
-        {
-            if (obj == null || !(obj is Variant<T1, T2, T3, T4, T5>)) return false;
-
-            var other = (Variant<T1, T2, T3, T4, T5>)obj;
-
-            switch (Index)
-            {
-            case 0: return other.Index == 0 && Get<T1>().Equals(other.Get<T1>());
-            case 1: return other.Index == 1 && Get<T2>().Equals(other.Get<T2>());
-            case 2: return other.Index == 2 && Get<T3>().Equals(other.Get<T3>());
-            case 3: return other.Index == 3 && Get<T4>().Equals(other.Get<T4>());
-            case 4: return other.Index == 4 && Get<T5>().Equals(other.Get<T5>());
-            }
-
-            Debug.Fail("Not reached");
-            return false; 
-        }
-
-        /// <summary>
-        /// Returns the hash code for this instance.
-        /// </summary>
-        /// <returns>Hash code.</returns>
-        public override int GetHashCode()
-        {
-            switch (Index)
-            {
-            case 0: return Get<T1>().GetHashCode();
-            case 1: return Get<T2>().GetHashCode();
-            case 2: return Get<T3>().GetHashCode();
-            case 3: return Get<T4>().GetHashCode();
-            case 4: return Get<T5>().GetHashCode();
-            }
-
-            Debug.Fail("Not reached");
-            return base.GetHashCode(); 
-        }
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
@@ -797,50 +607,6 @@ namespace Maki
             : base(new VariantHolder<T6>(item), 5)
         {}
 
-        /// <summary>
-        /// Determines whether the specified object is equal to the current object.
-        /// </summary>
-        /// <param name="obj">The object to compare with the current object.</param>
-        /// <returns>True if the objects are equal.</returns>
-        public override bool Equals(object obj)
-        {
-            if (obj == null || !(obj is Variant<T1, T2, T3, T4, T5, T6>)) return false;
-
-            var other = (Variant<T1, T2, T3, T4, T5, T6>)obj;
-
-            switch (Index)
-            {
-            case 0: return other.Index == 0 && Get<T1>().Equals(other.Get<T1>());
-            case 1: return other.Index == 1 && Get<T2>().Equals(other.Get<T2>());
-            case 2: return other.Index == 2 && Get<T3>().Equals(other.Get<T3>());
-            case 3: return other.Index == 3 && Get<T4>().Equals(other.Get<T4>());
-            case 4: return other.Index == 4 && Get<T5>().Equals(other.Get<T5>());
-            case 5: return other.Index == 5 && Get<T6>().Equals(other.Get<T6>());
-            }
-
-            Debug.Fail("Not reached");
-            return false; 
-        }
-
-        /// <summary>
-        /// Returns the hash code for this instance.
-        /// </summary>
-        /// <returns>Hash code.</returns>
-        public override int GetHashCode()
-        {
-            switch (Index)
-            {
-            case 0: return Get<T1>().GetHashCode();
-            case 1: return Get<T2>().GetHashCode();
-            case 2: return Get<T3>().GetHashCode();
-            case 3: return Get<T4>().GetHashCode();
-            case 4: return Get<T5>().GetHashCode();
-            case 5: return Get<T6>().GetHashCode();
-            }
-
-            Debug.Fail("Not reached");
-            return base.GetHashCode(); 
-        }
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
@@ -1054,52 +820,6 @@ namespace Maki
             : base(new VariantHolder<T7>(item), 6)
         {}
 
-        /// <summary>
-        /// Determines whether the specified object is equal to the current object.
-        /// </summary>
-        /// <param name="obj">The object to compare with the current object.</param>
-        /// <returns>True if the objects are equal.</returns>
-        public override bool Equals(object obj)
-        {
-            if (obj == null || !(obj is Variant<T1, T2, T3, T4, T5, T6, T7>)) return false;
-
-            var other = (Variant<T1, T2, T3, T4, T5, T6, T7>)obj;
-
-            switch (Index)
-            {
-            case 0: return other.Index == 0 && Get<T1>().Equals(other.Get<T1>());
-            case 1: return other.Index == 1 && Get<T2>().Equals(other.Get<T2>());
-            case 2: return other.Index == 2 && Get<T3>().Equals(other.Get<T3>());
-            case 3: return other.Index == 3 && Get<T4>().Equals(other.Get<T4>());
-            case 4: return other.Index == 4 && Get<T5>().Equals(other.Get<T5>());
-            case 5: return other.Index == 5 && Get<T6>().Equals(other.Get<T6>());
-            case 6: return other.Index == 6 && Get<T7>().Equals(other.Get<T7>());
-            }
-
-            Debug.Fail("Not reached");
-            return false; 
-        }
-
-        /// <summary>
-        /// Returns the hash code for this instance.
-        /// </summary>
-        /// <returns>Hash code.</returns>
-        public override int GetHashCode()
-        {
-            switch (Index)
-            {
-            case 0: return Get<T1>().GetHashCode();
-            case 1: return Get<T2>().GetHashCode();
-            case 2: return Get<T3>().GetHashCode();
-            case 3: return Get<T4>().GetHashCode();
-            case 4: return Get<T5>().GetHashCode();
-            case 5: return Get<T6>().GetHashCode();
-            case 6: return Get<T7>().GetHashCode();
-            }
-
-            Debug.Fail("Not reached");
-            return base.GetHashCode(); 
-        }
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type
@@ -1345,54 +1065,6 @@ namespace Maki
             : base(new VariantHolder<T8>(item), 7)
         {}
 
-        /// <summary>
-        /// Determines whether the specified object is equal to the current object.
-        /// </summary>
-        /// <param name="obj">The object to compare with the current object.</param>
-        /// <returns>True if the objects are equal.</returns>
-        public override bool Equals(object obj)
-        {
-            if (obj == null || !(obj is Variant<T1, T2, T3, T4, T5, T6, T7, T8>)) return false;
-
-            var other = (Variant<T1, T2, T3, T4, T5, T6, T7, T8>)obj;
-
-            switch (Index)
-            {
-            case 0: return other.Index == 0 && Get<T1>().Equals(other.Get<T1>());
-            case 1: return other.Index == 1 && Get<T2>().Equals(other.Get<T2>());
-            case 2: return other.Index == 2 && Get<T3>().Equals(other.Get<T3>());
-            case 3: return other.Index == 3 && Get<T4>().Equals(other.Get<T4>());
-            case 4: return other.Index == 4 && Get<T5>().Equals(other.Get<T5>());
-            case 5: return other.Index == 5 && Get<T6>().Equals(other.Get<T6>());
-            case 6: return other.Index == 6 && Get<T7>().Equals(other.Get<T7>());
-            case 7: return other.Index == 7 && Get<T8>().Equals(other.Get<T8>());
-            }
-
-            Debug.Fail("Not reached");
-            return false; 
-        }
-
-        /// <summary>
-        /// Returns the hash code for this instance.
-        /// </summary>
-        /// <returns>Hash code.</returns>
-        public override int GetHashCode()
-        {
-            switch (Index)
-            {
-            case 0: return Get<T1>().GetHashCode();
-            case 1: return Get<T2>().GetHashCode();
-            case 2: return Get<T3>().GetHashCode();
-            case 3: return Get<T4>().GetHashCode();
-            case 4: return Get<T5>().GetHashCode();
-            case 5: return Get<T6>().GetHashCode();
-            case 6: return Get<T7>().GetHashCode();
-            case 7: return Get<T8>().GetHashCode();
-            }
-
-            Debug.Fail("Not reached");
-            return base.GetHashCode(); 
-        }
 
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the first type

@@ -48,54 +48,6 @@ for (int types = 1; types <= 8; types++)
 <#
 	}
 #>
-        /// <summary>
-        /// Determines whether the specified object is equal to the current object.
-        /// </summary>
-        /// <param name="obj">The object to compare with the current object.</param>
-        /// <returns>True if the objects are equal.</returns>
-        public override bool Equals(object obj)
-        {
-            if (obj == null || !(obj is <#= type #>)) return false;
-
-            var other = (<#= type #>)obj;
-
-            switch (Index)
-            {
-<#
-	for (int i = 1; i <= types; i++)
-	{
-#>
-            case <#= i - 1#>: return other.Index == <#= i -1 #> && Get<T<#= i #>>().Equals(other.Get<T<#= i#>>());
-<#
-	}
-#>
-            }
-
-            Debug.Fail("Not reached");
-            return false; 
-        }
-
-        /// <summary>
-        /// Returns the hash code for this instance.
-        /// </summary>
-        /// <returns>Hash code.</returns>
-        public override int GetHashCode()
-        {
-            switch (Index)
-            {
-<#
-	for (int i = 1; i <= types; i++)
-	{
-#>
-            case <#= i - 1#>: return Get<T<#= i #>>().GetHashCode();
-<#
-	}
-#>
-            }
-
-            Debug.Fail("Not reached");
-            return base.GetHashCode(); 
-        }
 
 <#
 	for (int i = 1; i <= types; i++)
