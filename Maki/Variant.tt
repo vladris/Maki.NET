@@ -31,7 +31,7 @@ for (int types = 1; types <= 8; types++)
     {
         private Variant(IVariantHolder item, byte index)
             : base(item, index)
-        {}
+        { }
 
 <#
 	for (int i = 1; i <= types; i++)
@@ -43,16 +43,8 @@ for (int types = 1; types <= 8; types++)
         /// <param name="item">Item of type <typeparamref name="T<#= i #>"/>.</param>
         public Variant(T<#= i #> item)
             : base(new VariantHolder<T<#= i #>>(item), <#= i - 1 #>)
-        {}
+        { }
 
-<#
-	}
-#>
-
-<#
-	for (int i = 1; i <= types; i++)
-	{
-#>
         /// <summary>
         /// Creates a new Variant explicitly placing the item as the <#= Ordinals[i] #> type
         /// (<typeparamref name="T<#= i #>"/>).
