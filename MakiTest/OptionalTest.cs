@@ -21,10 +21,10 @@ namespace MakiTest
         }
 
         [TestMethod]
-        public void OptionalTestJustT1()
+        public void OptionalTestMakeT1()
         {
             var item = new T1();
-            Optional<T1> optional = Optional.Just(item);
+            Optional<T1> optional = Optional.Make(item);
 
             Assert.IsTrue(optional.HasValue);
             Assert.AreEqual(item, optional.Get());
@@ -44,18 +44,18 @@ namespace MakiTest
         [TestMethod]
         public void OptionalEqualsTest()
         {
-            Assert.IsFalse(Optional.Just(new T1()).Equals(Optional.Just(new T1())));
-            Assert.IsTrue(Optional.Just("test").Equals(Optional.Just("test")));
+            Assert.IsFalse(Optional.Make(new T1()).Equals(Optional.Make(new T1())));
+            Assert.IsTrue(Optional.Make("test").Equals(Optional.Make("test")));
 
-            Assert.IsFalse(Optional.Just(new T1()).Equals(Optional<T1>.Nothing));
-            Assert.IsFalse(Optional<T1>.Nothing.Equals(Optional.Just(new T1())));
+            Assert.IsFalse(Optional.Make(new T1()).Equals(Optional<T1>.Nothing));
+            Assert.IsFalse(Optional<T1>.Nothing.Equals(Optional.Make(new T1())));
             Assert.IsTrue(Optional<T1>.Nothing.Equals(Optional<T1>.Nothing));
 
-            Assert.IsFalse("test".Equals(Optional.Just("test")));
-            Assert.IsFalse(Optional.Just("test").Equals("test"));
-            Assert.IsTrue("test".Equals((string)Optional.Just("test")));
+            Assert.IsFalse("test".Equals(Optional.Make("test")));
+            Assert.IsFalse(Optional.Make("test").Equals("test"));
+            Assert.IsTrue("test".Equals((string)Optional.Make("test")));
 
-            Assert.IsFalse(Optional.Just("test").Equals(null));
+            Assert.IsFalse(Optional.Make("test").Equals(null));
         }
     }
 }

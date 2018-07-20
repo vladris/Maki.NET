@@ -18,7 +18,7 @@ namespace Maki
         /// <typeparam name="T">Item type.</typeparam>
         /// <param name="item">Item to place in the Optional.</param>
         /// <returns>A new Optional containing an item of <typeparamref name="T"/>.</returns>
-        public static Optional<T> Just<T>(T item) => new Optional<T>(item);
+        public static Optional<T> Make<T>(T item) => new Optional<T>(item);
     }
 
     /// <summary>

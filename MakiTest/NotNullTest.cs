@@ -54,7 +54,7 @@ namespace MakiTest
         }
 
         [TestMethod]
-        public void NotNullMakeOptionalJust()
+        public void NotNullMakeOptionalMake()
         {
             var optional = NotNull.MakeOptional("Foo");
             Assert.IsTrue(optional.HasValue);

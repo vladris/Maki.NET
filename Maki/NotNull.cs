@@ -72,7 +72,7 @@ namespace Maki
         /// <param name="value">Object to store.</param>
         /// <returns>NotNull if object is not null, Nothing otherwise.</returns>
         public static Optional<NotNull<T>> MakeOptional(T value) 
-            => value == null ? Optional.Nothing : Optional.Just(new NotNull<T>(value));
+            => value == null ? Optional.Nothing : Optional.Make(new NotNull<T>(value));
 
 
         /// <summary>

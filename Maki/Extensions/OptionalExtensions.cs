@@ -27,6 +27,6 @@ namespace Maki
         /// <param name="func">Function to map.</param>
         /// <returns>Optional containing the result of the function or Nothing.</returns>
         public static Optional<U> Map<T, U>(this Optional<T> optional, Func<T, U> func)
-            => optional.HasValue ? Optional.Just(func(optional.Get())) : Optional.Nothing;
+            => optional.HasValue ? Optional.Make(func(optional.Get())) : Optional.Nothing;
     }
 }
