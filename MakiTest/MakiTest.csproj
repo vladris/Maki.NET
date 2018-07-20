@@ -50,13 +50,13 @@
   <ItemGroup>
     <Compile Include="EitherTest.cs" />
     <Compile Include="ErrorTest.cs" />
-    <Compile Include="Extensions\MaybeExtensionsTest.cs" />
+    <Compile Include="Extensions\OptionalExtensionsTest.cs" />
     <Compile Include="Extensions\VariantExtensionsTest.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VariantExtensionsTest.tt</DependentUpon>
     </Compile>
-    <Compile Include="MaybeTest.cs" />
+    <Compile Include="OptionalTest.cs" />
     <Compile Include="NotNullTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VariantTest.cs">

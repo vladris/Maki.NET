@@ -47,18 +47,18 @@ namespace MakiTest
         }
 
         [TestMethod]
-        public void NotNullMakeMaybeNothing()
+        public void NotNullMakeOptionalNothing()
         {
-            var maybe = NotNull<string>.MakeMaybe(null);
-            Assert.IsFalse(maybe.HasValue);
+            var optional = NotNull<string>.MakeOptional(null);
+            Assert.IsFalse(optional.HasValue);
         }
 
         [TestMethod]
-        public void NotNullMakeMaybeJust()
+        public void NotNullMakeOptionalJust()
         {
-            var maybe = NotNull.MakeMaybe("Foo");
-            Assert.IsTrue(maybe.HasValue);
-            Assert.AreEqual("Foo", maybe.Get().Item);
+            var optional = NotNull.MakeOptional("Foo");
+            Assert.IsTrue(optional.HasValue);
+            Assert.AreEqual("Foo", optional.Get().Item);
         }
 
         [TestMethod]

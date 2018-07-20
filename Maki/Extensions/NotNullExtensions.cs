@@ -12,7 +12,7 @@ namespace Maki
         /// </summary>
         /// <typeparam name="T">NotNull type.</typeparam>
         /// <typeparam name="U">Function return NotNull type.</typeparam>
-        /// <param name="maybe">This instance.</param>
+        /// <param name="notNull">This instance.</param>
         /// <param name="func">Function to bind.</param>
         /// <returns>NotNull containing the result of the function.</returns>
         public static NotNull<U> Bind<T, U>(this NotNull<T> notNull, Func<T, NotNull<U>> func)
@@ -23,7 +23,7 @@ namespace Maki
         /// </summary>
         /// <typeparam name="T">NotNull type.</typeparam>
         /// <typeparam name="U">Function return type</typeparam>
-        /// <param name="maybe">This instance.</param>
+        /// <param name="notNull">This instance.</param>
         /// <param name="func">Function to map.</param>
         /// <returns>NotNull containing the result of the function.</returns>
         /// <exception cref="ArgumentNullException">Thrown if the function returns null.</exception>

@@ -18,13 +18,13 @@ namespace Maki
         public static NotNull<T> Make<T>(T item) => new NotNull<T>(item);
 
         /// <summary>
-        /// Creates a Maybe from the given object which is either Nothing if the
+        /// Creates an Optional from the given object which is either Nothing if the
         /// object is null or NotNull if the object is not null.
         /// </summary>
         /// <typeparam name="T">Item type.</typeparam>
         /// <param name="item">Object to store.</param>
         /// <returns>NotNull if object is not null, Nothing otherwise.</returns>
-        public static Maybe<NotNull<T>> MakeMaybe<T>(T item) => NotNull<T>.MakeMaybe(item);
+        public static Optional<NotNull<T>> MakeOptional<T>(T item) => NotNull<T>.MakeOptional(item);
     }
 
     /// <summary>
@@ -66,13 +66,13 @@ namespace Maki
         public static implicit operator NotNull<T>(T item) => new NotNull<T>(item);
 
         /// <summary>
-        /// Creates a Maybe from the given object which is either Nothing if the
+        /// Creates an Optional from the given object which is either Nothing if the
         /// object is null or NotNull if the object is not null.
         /// </summary>
         /// <param name="value">Object to store.</param>
         /// <returns>NotNull if object is not null, Nothing otherwise.</returns>
-        public static Maybe<NotNull<T>> MakeMaybe(T value) 
-            => value == null ? Maybe.Nothing : Maybe.Just(new NotNull<T>(value));
+        public static Optional<NotNull<T>> MakeOptional(T value) 
+            => value == null ? Optional.Nothing : Optional.Just(new NotNull<T>(value));
 
 
         /// <summary>
