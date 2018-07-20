@@ -1,12 +1,12 @@
 # Maki
 
-Experimental C# type library providing ``NotNull`` container, ``Maybe`` monad, ``Error`` monad, discriminate union types (``Variant<...>``, ``Either``) etc.
+Experimental C# type library providing ``NotNull`` container, ``Optional`` monad, ``Error`` monad, discriminate union types (``Variant<...>``, ``Either``) etc.
 
 ## Samples
 
 * [Variant](#variant)
 * [NotNull](#notnull)
-* [Maybe](#maybe)
+* [Optional](#optional)
 * Either (*TBA*)
 * Error (*TBA*)
 
@@ -44,21 +44,21 @@ NotNull<object> obj = NotNull.Make(new object());
 // Fearlessly use obj
 ```
 
-### Maybe
+### Optional
 
-``Maybe<T>`` represents a value of type ``T`` or ``Nothing``.
+``Optional<T>`` represents a value of type ``T`` or ``Nothing``.
 
 ```c#
 // Initialize with Nothing
-Maybe<string> str = Maybe.Nothing;
+Optional<string> str = Optional.Nothing;
 
 Assert.IsFalse(str.HasValue);
 
-// Map applies the given function if the Maybe has a value, otherwise propagates Nothing 
+// Map applies the given function if the Optional has a value, otherwise propagates Nothing 
 Assert.IsFalse(str.Map(s => s + "!!!").HasValue);
 
 // Assign value
-str = Maybe.Just("Hello World");
+str = Optional.Make("Hello World");
 
 // Get() returns the value
 Console.WriteLine(str.Get());
