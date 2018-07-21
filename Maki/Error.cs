@@ -3,7 +3,31 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Maki
-{
+{    
+     /// <summary>
+     /// Provides static utilities for Error.
+     /// </summary>
+    public static class Error
+    {
+        /// <summary>
+        /// Creates an Error containing the result of calling the given function.
+        /// </summary>
+        /// <typeparam name="T">Error type.</typeparam>
+        /// <param name="func">Function to call.</param>
+        /// <returns>Error containing either the result of the function or an exception.</returns>
+        public static Error<T> Make<T>(Func<T> func)
+        {
+            try
+            {
+                return func();
+            }
+            catch (Exception e)
+            {
+                return e;
+            }
+        }
+    }
+
     /// <summary>
     /// Error holds either a value of type <typeparamref name="T"/> or an exception.
     /// </summary>
