@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Maki.Extensions
+namespace Maki
 {
     /// <summary>
     /// Extensions for Error.
