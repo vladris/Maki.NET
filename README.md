@@ -7,7 +7,7 @@ Experimental C# type library providing ``NotNull`` container, ``Optional`` monad
 ## Samples
 
 * [Variant](#variant)
-* [Either] (#either) 
+* [Either](#either) 
 * [NotNull](#notnull)
 * [Optional](#optional)
 * Error (*TBA*)
