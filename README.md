@@ -7,9 +7,9 @@ Experimental C# type library providing ``NotNull`` container, ``Optional`` monad
 ## Samples
 
 * [Variant](#variant)
+* [Either] (#either) 
 * [NotNull](#notnull)
 * [Optional](#optional)
-* Either (*TBA*)
 * Error (*TBA*)
 
 ### Variant
@@ -34,6 +34,26 @@ variant.Apply(
     _ => Console.WriteLine("It's a string!"),
     _ => Console.WriteLine("It's an int!"),
     _ => Console.WriteLine("It's a double!"));
+```
+
+### Either
+
+``Either<TLeft, TRight>`` can hold a value of either ``TLeft`` or ``TRight`` type.
+
+```c#
+Either<string, int> either = "Hello World!";
+
+Assert.IsTrue(either.IsLeft);
+Assert.IsFalse(either.IsRight);
+
+Console.WriteLine(either.GetLeft());
+
+either = 42;
+
+Assert.IsFalse(either.IsLeft);
+Assert.IsTrue(either.IsRight);
+
+Console.WriteLine(2 * either.GetRight());
 ```
 
 ### NotNull
