@@ -1,6 +1,6 @@
 # Maki
 
-Experimental C# type library providing ``NotNull`` container, ``Optional`` monad, ``Error`` monad, discriminate union types (``Variant<...>``, ``Either``) etc.
+Experimental C# type library providing discriminate union types ``Variant<...>`` and ``Either``, ``NotNull`` container, ``Optional`` and ``Error`` monads.
 
 [![Build status](https://vladris.visualstudio.com/Maki/_apis/build/status/Maki-.NET%20Desktop-CI)](https://vladris.visualstudio.com/Maki/_build/latest?definitionId=5)
 
@@ -10,7 +10,7 @@ Experimental C# type library providing ``NotNull`` container, ``Optional`` monad
 * [Either](#either) 
 * [NotNull](#notnull)
 * [Optional](#optional)
-* Error (*TBA*)
+* [Error](#error)
 
 ### Variant
 
@@ -88,5 +88,25 @@ Console.WriteLine(str.Get());
 // Prints "Hello World!!!"
 Console.WriteLine(str.Map(s => s + "!!!").Get());
 ```
----
-Currently in early development, use at your own risk.
+
+### Error
+
+``Error<T>`` represents a value of type ``T`` or an ``Exception``. This allows packaging exceptions as part of the return type and handling them at any point in the code. 
+
+```c#
+// Initialize with a function that may throw
+var error = Error.Make(() =>
+    {
+        var random = new Random();
+
+        if (random.Next() == 42)
+            throw new Exception();
+
+        return "Success";
+    });
+
+if (error.HasValue)
+    Console.WriteLine(error.Get());
+else
+    Console.WriteLine($"Exception was thrown: {error.Exception()}");
+```
