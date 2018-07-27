@@ -30,6 +30,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="docfx.json">
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
     <None Update="Extensions\VariantExtensions.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>VariantExtensions.cs</LastGenOutput>

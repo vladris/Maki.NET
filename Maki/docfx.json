@@ -1,0 +1,18 @@
+﻿{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [ "Maki.csproj" ],
+          "exclude": [ "**/bin/**", "**/obj/**" ],
+          "src": "."
+        }
+      ],
+      "dest": "obj/docfx/api/dotnet",
+      "shouldSkipMarkup": true,
+      "properties": {
+        "TargetFramework": "netstandard2.0"
+      }
+    }
+  ]
+}
