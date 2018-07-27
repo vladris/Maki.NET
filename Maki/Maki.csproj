@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Vlad Riscutia</Authors>
+    <Company />
+    <Product />
+    <Description>A .NET type library providing discriminate union types Variant&lt;...&gt; and Either, NotNull container, Optional and Error monads.</Description>
+    <PackageLicenseUrl>https://github.com/vladris/Maki/blob/master/LICENSE</PackageLicenseUrl>
+    <Copyright>2018 Vlad Riscutia</Copyright>
+    <PackageProjectUrl>https://vladris.com/Maki/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/vladris/Maki/</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -14,6 +23,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Variant.tt</DependentUpon>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="docfx.console" Version="2.36.2" />
   </ItemGroup>
 
   <ItemGroup>
