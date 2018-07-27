@@ -1,6 +1,6 @@
 # Maki
 
-Experimental C# type library providing discriminate union types ``Variant<...>`` and ``Either``, ``NotNull`` container, ``Optional`` and ``Error`` monads.
+A .NET type library providing discriminate union types ``Variant<...>`` and ``Either``, ``NotNull`` container, ``Optional`` and ``Error`` monads.
 
 [![Build status](https://vladris.visualstudio.com/Maki/_apis/build/status/Maki-.NET%20Desktop-CI)](https://vladris.visualstudio.com/Maki/_build/latest?definitionId=5)
 
