@@ -61,8 +61,8 @@ namespace Maki
         /// <typeparam name="T1">The first type of the variant.</typeparam>
         /// <typeparam name="T2">The second type of the variant.</typeparam>
         /// <param name="variant">This variant.</param>
-        /// <param name="func1">The first action.</param>
-        /// <param name="func2">The second action.</param>
+        /// <param name="act1">The first action.</param>
+        /// <param name="act2">The second action.</param>
         public static void Apply<T1, T2>(
             this Variant<T1, T2> variant,
             Action<T1> act1,
@@ -140,9 +140,9 @@ namespace Maki
         /// <typeparam name="T2">The second type of the variant.</typeparam>
         /// <typeparam name="T3">The third type of the variant.</typeparam>
         /// <param name="variant">This variant.</param>
-        /// <param name="func1">The first action.</param>
-        /// <param name="func2">The second action.</param>
-        /// <param name="func3">The third action.</param>
+        /// <param name="act1">The first action.</param>
+        /// <param name="act2">The second action.</param>
+        /// <param name="act3">The third action.</param>
         public static void Apply<T1, T2, T3>(
             this Variant<T1, T2, T3> variant,
             Action<T1> act1,
@@ -232,10 +232,10 @@ namespace Maki
         /// <typeparam name="T3">The third type of the variant.</typeparam>
         /// <typeparam name="T4">The fourth type of the variant.</typeparam>
         /// <param name="variant">This variant.</param>
-        /// <param name="func1">The first action.</param>
-        /// <param name="func2">The second action.</param>
-        /// <param name="func3">The third action.</param>
-        /// <param name="func4">The fourth action.</param>
+        /// <param name="act1">The first action.</param>
+        /// <param name="act2">The second action.</param>
+        /// <param name="act3">The third action.</param>
+        /// <param name="act4">The fourth action.</param>
         public static void Apply<T1, T2, T3, T4>(
             this Variant<T1, T2, T3, T4> variant,
             Action<T1> act1,
@@ -337,11 +337,11 @@ namespace Maki
         /// <typeparam name="T4">The fourth type of the variant.</typeparam>
         /// <typeparam name="T5">The fifth type of the variant.</typeparam>
         /// <param name="variant">This variant.</param>
-        /// <param name="func1">The first action.</param>
-        /// <param name="func2">The second action.</param>
-        /// <param name="func3">The third action.</param>
-        /// <param name="func4">The fourth action.</param>
-        /// <param name="func5">The fifth action.</param>
+        /// <param name="act1">The first action.</param>
+        /// <param name="act2">The second action.</param>
+        /// <param name="act3">The third action.</param>
+        /// <param name="act4">The fourth action.</param>
+        /// <param name="act5">The fifth action.</param>
         public static void Apply<T1, T2, T3, T4, T5>(
             this Variant<T1, T2, T3, T4, T5> variant,
             Action<T1> act1,
@@ -455,12 +455,12 @@ namespace Maki
         /// <typeparam name="T5">The fifth type of the variant.</typeparam>
         /// <typeparam name="T6">The sixth type of the variant.</typeparam>
         /// <param name="variant">This variant.</param>
-        /// <param name="func1">The first action.</param>
-        /// <param name="func2">The second action.</param>
-        /// <param name="func3">The third action.</param>
-        /// <param name="func4">The fourth action.</param>
-        /// <param name="func5">The fifth action.</param>
-        /// <param name="func6">The sixth action.</param>
+        /// <param name="act1">The first action.</param>
+        /// <param name="act2">The second action.</param>
+        /// <param name="act3">The third action.</param>
+        /// <param name="act4">The fourth action.</param>
+        /// <param name="act5">The fifth action.</param>
+        /// <param name="act6">The sixth action.</param>
         public static void Apply<T1, T2, T3, T4, T5, T6>(
             this Variant<T1, T2, T3, T4, T5, T6> variant,
             Action<T1> act1,
@@ -586,13 +586,13 @@ namespace Maki
         /// <typeparam name="T6">The sixth type of the variant.</typeparam>
         /// <typeparam name="T7">The seventh type of the variant.</typeparam>
         /// <param name="variant">This variant.</param>
-        /// <param name="func1">The first action.</param>
-        /// <param name="func2">The second action.</param>
-        /// <param name="func3">The third action.</param>
-        /// <param name="func4">The fourth action.</param>
-        /// <param name="func5">The fifth action.</param>
-        /// <param name="func6">The sixth action.</param>
-        /// <param name="func7">The seventh action.</param>
+        /// <param name="act1">The first action.</param>
+        /// <param name="act2">The second action.</param>
+        /// <param name="act3">The third action.</param>
+        /// <param name="act4">The fourth action.</param>
+        /// <param name="act5">The fifth action.</param>
+        /// <param name="act6">The sixth action.</param>
+        /// <param name="act7">The seventh action.</param>
         public static void Apply<T1, T2, T3, T4, T5, T6, T7>(
             this Variant<T1, T2, T3, T4, T5, T6, T7> variant,
             Action<T1> act1,
@@ -730,14 +730,14 @@ namespace Maki
         /// <typeparam name="T7">The seventh type of the variant.</typeparam>
         /// <typeparam name="T8">The eighth type of the variant.</typeparam>
         /// <param name="variant">This variant.</param>
-        /// <param name="func1">The first action.</param>
-        /// <param name="func2">The second action.</param>
-        /// <param name="func3">The third action.</param>
-        /// <param name="func4">The fourth action.</param>
-        /// <param name="func5">The fifth action.</param>
-        /// <param name="func6">The sixth action.</param>
-        /// <param name="func7">The seventh action.</param>
-        /// <param name="func8">The eighth action.</param>
+        /// <param name="act1">The first action.</param>
+        /// <param name="act2">The second action.</param>
+        /// <param name="act3">The third action.</param>
+        /// <param name="act4">The fourth action.</param>
+        /// <param name="act5">The fifth action.</param>
+        /// <param name="act6">The sixth action.</param>
+        /// <param name="act7">The seventh action.</param>
+        /// <param name="act8">The eighth action.</param>
         public static void Apply<T1, T2, T3, T4, T5, T6, T7, T8>(
             this Variant<T1, T2, T3, T4, T5, T6, T7, T8> variant,
             Action<T1> act1,

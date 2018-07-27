@@ -136,7 +136,7 @@ namespace Maki
 		for (int i = 1; i <= type; i++)
 		{
 #>
-        /// <param name="func<#= i #>">The <#= Ordinals[i] #> action.</param>
+        /// <param name="act<#= i #>">The <#= Ordinals[i] #> action.</param>
 <#
 		}
 #>
