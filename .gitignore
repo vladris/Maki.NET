@@ -262,3 +262,6 @@ __pycache__/
 
 # DocFX log
 **/log.txt
+
+# Website submodule
+website/
