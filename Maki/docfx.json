@@ -8,11 +8,28 @@
           "src": "."
         }
       ],
-      "dest": "obj/docfx/api/dotnet",
+      "dest": "obj/api",
       "shouldSkipMarkup": true,
       "properties": {
         "TargetFramework": "netstandard2.0"
       }
     }
-  ]
+  ],
+  "build": {
+    "content": [
+      {
+        "files": ["**/*.yml"],
+        "src": "obj/api",
+        "dest": "api"
+      },
+      {
+        "files": ["*.yml"]
+      }
+    ],
+    "globalMetadata": {
+      "_appTitle": "Maki",
+      "_enableSearch": true
+    },
+    "dest": "../website/docs"
+  }
 }
