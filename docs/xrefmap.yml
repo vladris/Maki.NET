@@ -1,0 +1,3170 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Maki
+  name: Maki
+  href: api/Maki.html
+  commentId: N:Maki
+  fullName: Maki
+  nameWithType: Maki
+- uid: Maki.Details
+  name: Maki.Details
+  href: api/Maki.Details.html
+  commentId: N:Maki.Details
+  fullName: Maki.Details
+  nameWithType: Maki.Details
+- uid: Maki.Details.VariantBase
+  name: VariantBase
+  href: api/Maki.Details.VariantBase.html
+  commentId: T:Maki.Details.VariantBase
+  fullName: Maki.Details.VariantBase
+  nameWithType: VariantBase
+- uid: Maki.Details.VariantBase.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Maki.Details.VariantBase.html#Maki_Details_VariantBase_Equals_System_Object_
+  commentId: M:Maki.Details.VariantBase.Equals(System.Object)
+  fullName: Maki.Details.VariantBase.Equals(System.Object)
+  nameWithType: VariantBase.Equals(Object)
+- uid: Maki.Details.VariantBase.Equals*
+  name: Equals
+  href: api/Maki.Details.VariantBase.html#Maki_Details_VariantBase_Equals_
+  commentId: Overload:Maki.Details.VariantBase.Equals
+  isSpec: "True"
+  fullName: Maki.Details.VariantBase.Equals
+  nameWithType: VariantBase.Equals
+- uid: Maki.Details.VariantBase.Get
+  name: Get()
+  href: api/Maki.Details.VariantBase.html#Maki_Details_VariantBase_Get
+  commentId: M:Maki.Details.VariantBase.Get
+  fullName: Maki.Details.VariantBase.Get()
+  nameWithType: VariantBase.Get()
+- uid: Maki.Details.VariantBase.Get*
+  name: Get
+  href: api/Maki.Details.VariantBase.html#Maki_Details_VariantBase_Get_
+  commentId: Overload:Maki.Details.VariantBase.Get
+  isSpec: "True"
+  fullName: Maki.Details.VariantBase.Get
+  nameWithType: VariantBase.Get
+- uid: Maki.Details.VariantBase.Get``1
+  name: Get<T>()
+  href: api/Maki.Details.VariantBase.html#Maki_Details_VariantBase_Get__1
+  commentId: M:Maki.Details.VariantBase.Get``1
+  name.vb: Get(Of T)()
+  fullName: Maki.Details.VariantBase.Get<T>()
+  fullName.vb: Maki.Details.VariantBase.Get(Of T)()
+  nameWithType: VariantBase.Get<T>()
+  nameWithType.vb: VariantBase.Get(Of T)()
+- uid: Maki.Details.VariantBase.GetHashCode
+  name: GetHashCode()
+  href: api/Maki.Details.VariantBase.html#Maki_Details_VariantBase_GetHashCode
+  commentId: M:Maki.Details.VariantBase.GetHashCode
+  fullName: Maki.Details.VariantBase.GetHashCode()
+  nameWithType: VariantBase.GetHashCode()
+- uid: Maki.Details.VariantBase.GetHashCode*
+  name: GetHashCode
+  href: api/Maki.Details.VariantBase.html#Maki_Details_VariantBase_GetHashCode_
+  commentId: Overload:Maki.Details.VariantBase.GetHashCode
+  isSpec: "True"
+  fullName: Maki.Details.VariantBase.GetHashCode
+  nameWithType: VariantBase.GetHashCode
+- uid: Maki.Details.VariantBase.Index
+  name: Index
+  href: api/Maki.Details.VariantBase.html#Maki_Details_VariantBase_Index
+  commentId: P:Maki.Details.VariantBase.Index
+  fullName: Maki.Details.VariantBase.Index
+  nameWithType: VariantBase.Index
+- uid: Maki.Details.VariantBase.Index*
+  name: Index
+  href: api/Maki.Details.VariantBase.html#Maki_Details_VariantBase_Index_
+  commentId: Overload:Maki.Details.VariantBase.Index
+  isSpec: "True"
+  fullName: Maki.Details.VariantBase.Index
+  nameWithType: VariantBase.Index
+- uid: Maki.Details.VariantBase.Is*
+  name: Is
+  href: api/Maki.Details.VariantBase.html#Maki_Details_VariantBase_Is_
+  commentId: Overload:Maki.Details.VariantBase.Is
+  isSpec: "True"
+  fullName: Maki.Details.VariantBase.Is
+  nameWithType: VariantBase.Is
+- uid: Maki.Details.VariantBase.Is``1
+  name: Is<T>()
+  href: api/Maki.Details.VariantBase.html#Maki_Details_VariantBase_Is__1
+  commentId: M:Maki.Details.VariantBase.Is``1
+  name.vb: Is(Of T)()
+  fullName: Maki.Details.VariantBase.Is<T>()
+  fullName.vb: Maki.Details.VariantBase.Is(Of T)()
+  nameWithType: VariantBase.Is<T>()
+  nameWithType.vb: VariantBase.Is(Of T)()
+- uid: Maki.Either`2
+  name: Either<TLeft, TRight>
+  href: api/Maki.Either-2.html
+  commentId: T:Maki.Either`2
+  name.vb: Either(Of TLeft, TRight)
+  fullName: Maki.Either<TLeft, TRight>
+  fullName.vb: Maki.Either(Of TLeft, TRight)
+  nameWithType: Either<TLeft, TRight>
+  nameWithType.vb: Either(Of TLeft, TRight)
+- uid: Maki.Either`2.#ctor(`0)
+  name: Either(TLeft)
+  href: api/Maki.Either-2.html#Maki_Either_2__ctor__0_
+  commentId: M:Maki.Either`2.#ctor(`0)
+  fullName: Maki.Either<TLeft, TRight>.Either(TLeft)
+  fullName.vb: Maki.Either(Of TLeft, TRight).Either(TLeft)
+  nameWithType: Either<TLeft, TRight>.Either(TLeft)
+  nameWithType.vb: Either(Of TLeft, TRight).Either(TLeft)
+- uid: Maki.Either`2.#ctor(`1)
+  name: Either(TRight)
+  href: api/Maki.Either-2.html#Maki_Either_2__ctor__1_
+  commentId: M:Maki.Either`2.#ctor(`1)
+  fullName: Maki.Either<TLeft, TRight>.Either(TRight)
+  fullName.vb: Maki.Either(Of TLeft, TRight).Either(TRight)
+  nameWithType: Either<TLeft, TRight>.Either(TRight)
+  nameWithType.vb: Either(Of TLeft, TRight).Either(TRight)
+- uid: Maki.Either`2.#ctor*
+  name: Either
+  href: api/Maki.Either-2.html#Maki_Either_2__ctor_
+  commentId: Overload:Maki.Either`2.#ctor
+  isSpec: "True"
+  fullName: Maki.Either<TLeft, TRight>.Either
+  fullName.vb: Maki.Either(Of TLeft, TRight).Either
+  nameWithType: Either<TLeft, TRight>.Either
+  nameWithType.vb: Either(Of TLeft, TRight).Either
+- uid: Maki.Either`2.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Maki.Either-2.html#Maki_Either_2_Equals_System_Object_
+  commentId: M:Maki.Either`2.Equals(System.Object)
+  fullName: Maki.Either<TLeft, TRight>.Equals(System.Object)
+  fullName.vb: Maki.Either(Of TLeft, TRight).Equals(System.Object)
+  nameWithType: Either<TLeft, TRight>.Equals(Object)
+  nameWithType.vb: Either(Of TLeft, TRight).Equals(Object)
+- uid: Maki.Either`2.Equals*
+  name: Equals
+  href: api/Maki.Either-2.html#Maki_Either_2_Equals_
+  commentId: Overload:Maki.Either`2.Equals
+  isSpec: "True"
+  fullName: Maki.Either<TLeft, TRight>.Equals
+  fullName.vb: Maki.Either(Of TLeft, TRight).Equals
+  nameWithType: Either<TLeft, TRight>.Equals
+  nameWithType.vb: Either(Of TLeft, TRight).Equals
+- uid: Maki.Either`2.GetHashCode
+  name: GetHashCode()
+  href: api/Maki.Either-2.html#Maki_Either_2_GetHashCode
+  commentId: M:Maki.Either`2.GetHashCode
+  fullName: Maki.Either<TLeft, TRight>.GetHashCode()
+  fullName.vb: Maki.Either(Of TLeft, TRight).GetHashCode()
+  nameWithType: Either<TLeft, TRight>.GetHashCode()
+  nameWithType.vb: Either(Of TLeft, TRight).GetHashCode()
+- uid: Maki.Either`2.GetHashCode*
+  name: GetHashCode
+  href: api/Maki.Either-2.html#Maki_Either_2_GetHashCode_
+  commentId: Overload:Maki.Either`2.GetHashCode
+  isSpec: "True"
+  fullName: Maki.Either<TLeft, TRight>.GetHashCode
+  fullName.vb: Maki.Either(Of TLeft, TRight).GetHashCode
+  nameWithType: Either<TLeft, TRight>.GetHashCode
+  nameWithType.vb: Either(Of TLeft, TRight).GetHashCode
+- uid: Maki.Either`2.GetLeft
+  name: GetLeft()
+  href: api/Maki.Either-2.html#Maki_Either_2_GetLeft
+  commentId: M:Maki.Either`2.GetLeft
+  fullName: Maki.Either<TLeft, TRight>.GetLeft()
+  fullName.vb: Maki.Either(Of TLeft, TRight).GetLeft()
+  nameWithType: Either<TLeft, TRight>.GetLeft()
+  nameWithType.vb: Either(Of TLeft, TRight).GetLeft()
+- uid: Maki.Either`2.GetLeft*
+  name: GetLeft
+  href: api/Maki.Either-2.html#Maki_Either_2_GetLeft_
+  commentId: Overload:Maki.Either`2.GetLeft
+  isSpec: "True"
+  fullName: Maki.Either<TLeft, TRight>.GetLeft
+  fullName.vb: Maki.Either(Of TLeft, TRight).GetLeft
+  nameWithType: Either<TLeft, TRight>.GetLeft
+  nameWithType.vb: Either(Of TLeft, TRight).GetLeft
+- uid: Maki.Either`2.GetRight
+  name: GetRight()
+  href: api/Maki.Either-2.html#Maki_Either_2_GetRight
+  commentId: M:Maki.Either`2.GetRight
+  fullName: Maki.Either<TLeft, TRight>.GetRight()
+  fullName.vb: Maki.Either(Of TLeft, TRight).GetRight()
+  nameWithType: Either<TLeft, TRight>.GetRight()
+  nameWithType.vb: Either(Of TLeft, TRight).GetRight()
+- uid: Maki.Either`2.GetRight*
+  name: GetRight
+  href: api/Maki.Either-2.html#Maki_Either_2_GetRight_
+  commentId: Overload:Maki.Either`2.GetRight
+  isSpec: "True"
+  fullName: Maki.Either<TLeft, TRight>.GetRight
+  fullName.vb: Maki.Either(Of TLeft, TRight).GetRight
+  nameWithType: Either<TLeft, TRight>.GetRight
+  nameWithType.vb: Either(Of TLeft, TRight).GetRight
+- uid: Maki.Either`2.IsLeft
+  name: IsLeft
+  href: api/Maki.Either-2.html#Maki_Either_2_IsLeft
+  commentId: P:Maki.Either`2.IsLeft
+  fullName: Maki.Either<TLeft, TRight>.IsLeft
+  fullName.vb: Maki.Either(Of TLeft, TRight).IsLeft
+  nameWithType: Either<TLeft, TRight>.IsLeft
+  nameWithType.vb: Either(Of TLeft, TRight).IsLeft
+- uid: Maki.Either`2.IsLeft*
+  name: IsLeft
+  href: api/Maki.Either-2.html#Maki_Either_2_IsLeft_
+  commentId: Overload:Maki.Either`2.IsLeft
+  isSpec: "True"
+  fullName: Maki.Either<TLeft, TRight>.IsLeft
+  fullName.vb: Maki.Either(Of TLeft, TRight).IsLeft
+  nameWithType: Either<TLeft, TRight>.IsLeft
+  nameWithType.vb: Either(Of TLeft, TRight).IsLeft
+- uid: Maki.Either`2.IsRight
+  name: IsRight
+  href: api/Maki.Either-2.html#Maki_Either_2_IsRight
+  commentId: P:Maki.Either`2.IsRight
+  fullName: Maki.Either<TLeft, TRight>.IsRight
+  fullName.vb: Maki.Either(Of TLeft, TRight).IsRight
+  nameWithType: Either<TLeft, TRight>.IsRight
+  nameWithType.vb: Either(Of TLeft, TRight).IsRight
+- uid: Maki.Either`2.IsRight*
+  name: IsRight
+  href: api/Maki.Either-2.html#Maki_Either_2_IsRight_
+  commentId: Overload:Maki.Either`2.IsRight
+  isSpec: "True"
+  fullName: Maki.Either<TLeft, TRight>.IsRight
+  fullName.vb: Maki.Either(Of TLeft, TRight).IsRight
+  nameWithType: Either<TLeft, TRight>.IsRight
+  nameWithType.vb: Either(Of TLeft, TRight).IsRight
+- uid: Maki.Either`2.MakeLeft(`0)
+  name: MakeLeft(TLeft)
+  href: api/Maki.Either-2.html#Maki_Either_2_MakeLeft__0_
+  commentId: M:Maki.Either`2.MakeLeft(`0)
+  fullName: Maki.Either<TLeft, TRight>.MakeLeft(TLeft)
+  fullName.vb: Maki.Either(Of TLeft, TRight).MakeLeft(TLeft)
+  nameWithType: Either<TLeft, TRight>.MakeLeft(TLeft)
+  nameWithType.vb: Either(Of TLeft, TRight).MakeLeft(TLeft)
+- uid: Maki.Either`2.MakeLeft*
+  name: MakeLeft
+  href: api/Maki.Either-2.html#Maki_Either_2_MakeLeft_
+  commentId: Overload:Maki.Either`2.MakeLeft
+  isSpec: "True"
+  fullName: Maki.Either<TLeft, TRight>.MakeLeft
+  fullName.vb: Maki.Either(Of TLeft, TRight).MakeLeft
+  nameWithType: Either<TLeft, TRight>.MakeLeft
+  nameWithType.vb: Either(Of TLeft, TRight).MakeLeft
+- uid: Maki.Either`2.MakeRight(`1)
+  name: MakeRight(TRight)
+  href: api/Maki.Either-2.html#Maki_Either_2_MakeRight__1_
+  commentId: M:Maki.Either`2.MakeRight(`1)
+  fullName: Maki.Either<TLeft, TRight>.MakeRight(TRight)
+  fullName.vb: Maki.Either(Of TLeft, TRight).MakeRight(TRight)
+  nameWithType: Either<TLeft, TRight>.MakeRight(TRight)
+  nameWithType.vb: Either(Of TLeft, TRight).MakeRight(TRight)
+- uid: Maki.Either`2.MakeRight*
+  name: MakeRight
+  href: api/Maki.Either-2.html#Maki_Either_2_MakeRight_
+  commentId: Overload:Maki.Either`2.MakeRight
+  isSpec: "True"
+  fullName: Maki.Either<TLeft, TRight>.MakeRight
+  fullName.vb: Maki.Either(Of TLeft, TRight).MakeRight
+  nameWithType: Either<TLeft, TRight>.MakeRight
+  nameWithType.vb: Either(Of TLeft, TRight).MakeRight
+- uid: Maki.Either`2.op_Explicit(Maki.Either{`0,`1})~`0
+  name: Explicit(Either<TLeft, TRight> to TLeft)
+  href: api/Maki.Either-2.html#Maki_Either_2_op_Explicit_Maki_Either__0__1____0
+  commentId: M:Maki.Either`2.op_Explicit(Maki.Either{`0,`1})~`0
+  name.vb: Narrowing(Either(Of TLeft, TRight) to TLeft)
+  fullName: Maki.Either<TLeft, TRight>.Explicit(Maki.Either<TLeft, TRight> to TLeft)
+  fullName.vb: Maki.Either(Of TLeft, TRight).Narrowing(Maki.Either(Of TLeft, TRight) to TLeft)
+  nameWithType: Either<TLeft, TRight>.Explicit(Either<TLeft, TRight> to TLeft)
+  nameWithType.vb: Either(Of TLeft, TRight).Narrowing(Either(Of TLeft, TRight) to TLeft)
+- uid: Maki.Either`2.op_Explicit(Maki.Either{`0,`1})~`1
+  name: Explicit(Either<TLeft, TRight> to TRight)
+  href: api/Maki.Either-2.html#Maki_Either_2_op_Explicit_Maki_Either__0__1____1
+  commentId: M:Maki.Either`2.op_Explicit(Maki.Either{`0,`1})~`1
+  name.vb: Narrowing(Either(Of TLeft, TRight) to TRight)
+  fullName: Maki.Either<TLeft, TRight>.Explicit(Maki.Either<TLeft, TRight> to TRight)
+  fullName.vb: Maki.Either(Of TLeft, TRight).Narrowing(Maki.Either(Of TLeft, TRight) to TRight)
+  nameWithType: Either<TLeft, TRight>.Explicit(Either<TLeft, TRight> to TRight)
+  nameWithType.vb: Either(Of TLeft, TRight).Narrowing(Either(Of TLeft, TRight) to TRight)
+- uid: Maki.Either`2.op_Explicit*
+  name: Explicit
+  href: api/Maki.Either-2.html#Maki_Either_2_op_Explicit_
+  commentId: Overload:Maki.Either`2.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Maki.Either<TLeft, TRight>.Explicit
+  fullName.vb: Maki.Either(Of TLeft, TRight).Narrowing
+  nameWithType: Either<TLeft, TRight>.Explicit
+  nameWithType.vb: Either(Of TLeft, TRight).Narrowing
+- uid: Maki.Either`2.op_Implicit(`0)~Maki.Either{`0,`1}
+  name: Implicit(TLeft to Either<TLeft, TRight>)
+  href: api/Maki.Either-2.html#Maki_Either_2_op_Implicit__0__Maki_Either__0__1_
+  commentId: M:Maki.Either`2.op_Implicit(`0)~Maki.Either{`0,`1}
+  name.vb: Widening(TLeft to Either(Of TLeft, TRight))
+  fullName: Maki.Either<TLeft, TRight>.Implicit(TLeft to Maki.Either<TLeft, TRight>)
+  fullName.vb: Maki.Either(Of TLeft, TRight).Widening(TLeft to Maki.Either(Of TLeft, TRight))
+  nameWithType: Either<TLeft, TRight>.Implicit(TLeft to Either<TLeft, TRight>)
+  nameWithType.vb: Either(Of TLeft, TRight).Widening(TLeft to Either(Of TLeft, TRight))
+- uid: Maki.Either`2.op_Implicit(`1)~Maki.Either{`0,`1}
+  name: Implicit(TRight to Either<TLeft, TRight>)
+  href: api/Maki.Either-2.html#Maki_Either_2_op_Implicit__1__Maki_Either__0__1_
+  commentId: M:Maki.Either`2.op_Implicit(`1)~Maki.Either{`0,`1}
+  name.vb: Widening(TRight to Either(Of TLeft, TRight))
+  fullName: Maki.Either<TLeft, TRight>.Implicit(TRight to Maki.Either<TLeft, TRight>)
+  fullName.vb: Maki.Either(Of TLeft, TRight).Widening(TRight to Maki.Either(Of TLeft, TRight))
+  nameWithType: Either<TLeft, TRight>.Implicit(TRight to Either<TLeft, TRight>)
+  nameWithType.vb: Either(Of TLeft, TRight).Widening(TRight to Either(Of TLeft, TRight))
+- uid: Maki.Either`2.op_Implicit*
+  name: Implicit
+  href: api/Maki.Either-2.html#Maki_Either_2_op_Implicit_
+  commentId: Overload:Maki.Either`2.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Maki.Either<TLeft, TRight>.Implicit
+  fullName.vb: Maki.Either(Of TLeft, TRight).Widening
+  nameWithType: Either<TLeft, TRight>.Implicit
+  nameWithType.vb: Either(Of TLeft, TRight).Widening
+- uid: Maki.Either`2.Set(`0)
+  name: Set(TLeft)
+  href: api/Maki.Either-2.html#Maki_Either_2_Set__0_
+  commentId: M:Maki.Either`2.Set(`0)
+  fullName: Maki.Either<TLeft, TRight>.Set(TLeft)
+  fullName.vb: Maki.Either(Of TLeft, TRight).Set(TLeft)
+  nameWithType: Either<TLeft, TRight>.Set(TLeft)
+  nameWithType.vb: Either(Of TLeft, TRight).Set(TLeft)
+- uid: Maki.Either`2.Set(`1)
+  name: Set(TRight)
+  href: api/Maki.Either-2.html#Maki_Either_2_Set__1_
+  commentId: M:Maki.Either`2.Set(`1)
+  fullName: Maki.Either<TLeft, TRight>.Set(TRight)
+  fullName.vb: Maki.Either(Of TLeft, TRight).Set(TRight)
+  nameWithType: Either<TLeft, TRight>.Set(TRight)
+  nameWithType.vb: Either(Of TLeft, TRight).Set(TRight)
+- uid: Maki.Either`2.Set*
+  name: Set
+  href: api/Maki.Either-2.html#Maki_Either_2_Set_
+  commentId: Overload:Maki.Either`2.Set
+  isSpec: "True"
+  fullName: Maki.Either<TLeft, TRight>.Set
+  fullName.vb: Maki.Either(Of TLeft, TRight).Set
+  nameWithType: Either<TLeft, TRight>.Set
+  nameWithType.vb: Either(Of TLeft, TRight).Set
+- uid: Maki.Either`2.SetLeft(`0)
+  name: SetLeft(TLeft)
+  href: api/Maki.Either-2.html#Maki_Either_2_SetLeft__0_
+  commentId: M:Maki.Either`2.SetLeft(`0)
+  fullName: Maki.Either<TLeft, TRight>.SetLeft(TLeft)
+  fullName.vb: Maki.Either(Of TLeft, TRight).SetLeft(TLeft)
+  nameWithType: Either<TLeft, TRight>.SetLeft(TLeft)
+  nameWithType.vb: Either(Of TLeft, TRight).SetLeft(TLeft)
+- uid: Maki.Either`2.SetLeft*
+  name: SetLeft
+  href: api/Maki.Either-2.html#Maki_Either_2_SetLeft_
+  commentId: Overload:Maki.Either`2.SetLeft
+  isSpec: "True"
+  fullName: Maki.Either<TLeft, TRight>.SetLeft
+  fullName.vb: Maki.Either(Of TLeft, TRight).SetLeft
+  nameWithType: Either<TLeft, TRight>.SetLeft
+  nameWithType.vb: Either(Of TLeft, TRight).SetLeft
+- uid: Maki.Either`2.SetRight(`1)
+  name: SetRight(TRight)
+  href: api/Maki.Either-2.html#Maki_Either_2_SetRight__1_
+  commentId: M:Maki.Either`2.SetRight(`1)
+  fullName: Maki.Either<TLeft, TRight>.SetRight(TRight)
+  fullName.vb: Maki.Either(Of TLeft, TRight).SetRight(TRight)
+  nameWithType: Either<TLeft, TRight>.SetRight(TRight)
+  nameWithType.vb: Either(Of TLeft, TRight).SetRight(TRight)
+- uid: Maki.Either`2.SetRight*
+  name: SetRight
+  href: api/Maki.Either-2.html#Maki_Either_2_SetRight_
+  commentId: Overload:Maki.Either`2.SetRight
+  isSpec: "True"
+  fullName: Maki.Either<TLeft, TRight>.SetRight
+  fullName.vb: Maki.Either(Of TLeft, TRight).SetRight
+  nameWithType: Either<TLeft, TRight>.SetRight
+  nameWithType.vb: Either(Of TLeft, TRight).SetRight
+- uid: Maki.Error
+  name: Error
+  href: api/Maki.Error.html
+  commentId: T:Maki.Error
+  fullName: Maki.Error
+  nameWithType: Error
+- uid: Maki.Error.Make*
+  name: Make
+  href: api/Maki.Error.html#Maki_Error_Make_
+  commentId: Overload:Maki.Error.Make
+  isSpec: "True"
+  fullName: Maki.Error.Make
+  nameWithType: Error.Make
+- uid: Maki.Error.Make``1(System.Func{``0})
+  name: Make<T>(Func<T>)
+  href: api/Maki.Error.html#Maki_Error_Make__1_System_Func___0__
+  commentId: M:Maki.Error.Make``1(System.Func{``0})
+  name.vb: Make(Of T)(Func(Of T))
+  fullName: Maki.Error.Make<T>(System.Func<T>)
+  fullName.vb: Maki.Error.Make(Of T)(System.Func(Of T))
+  nameWithType: Error.Make<T>(Func<T>)
+  nameWithType.vb: Error.Make(Of T)(Func(Of T))
+- uid: Maki.Error.MakeException*
+  name: MakeException
+  href: api/Maki.Error.html#Maki_Error_MakeException_
+  commentId: Overload:Maki.Error.MakeException
+  isSpec: "True"
+  fullName: Maki.Error.MakeException
+  nameWithType: Error.MakeException
+- uid: Maki.Error.MakeException``1(System.Exception)
+  name: MakeException<T>(Exception)
+  href: api/Maki.Error.html#Maki_Error_MakeException__1_System_Exception_
+  commentId: M:Maki.Error.MakeException``1(System.Exception)
+  name.vb: MakeException(Of T)(Exception)
+  fullName: Maki.Error.MakeException<T>(System.Exception)
+  fullName.vb: Maki.Error.MakeException(Of T)(System.Exception)
+  nameWithType: Error.MakeException<T>(Exception)
+  nameWithType.vb: Error.MakeException(Of T)(Exception)
+- uid: Maki.Error.MakeValue*
+  name: MakeValue
+  href: api/Maki.Error.html#Maki_Error_MakeValue_
+  commentId: Overload:Maki.Error.MakeValue
+  isSpec: "True"
+  fullName: Maki.Error.MakeValue
+  nameWithType: Error.MakeValue
+- uid: Maki.Error.MakeValue``1(``0)
+  name: MakeValue<T>(T)
+  href: api/Maki.Error.html#Maki_Error_MakeValue__1___0_
+  commentId: M:Maki.Error.MakeValue``1(``0)
+  name.vb: MakeValue(Of T)(T)
+  fullName: Maki.Error.MakeValue<T>(T)
+  fullName.vb: Maki.Error.MakeValue(Of T)(T)
+  nameWithType: Error.MakeValue<T>(T)
+  nameWithType.vb: Error.MakeValue(Of T)(T)
+- uid: Maki.Error`1
+  name: Error<T>
+  href: api/Maki.Error-1.html
+  commentId: T:Maki.Error`1
+  name.vb: Error(Of T)
+  fullName: Maki.Error<T>
+  fullName.vb: Maki.Error(Of T)
+  nameWithType: Error<T>
+  nameWithType.vb: Error(Of T)
+- uid: Maki.Error`1.#ctor(`0)
+  name: Error(T)
+  href: api/Maki.Error-1.html#Maki_Error_1__ctor__0_
+  commentId: M:Maki.Error`1.#ctor(`0)
+  fullName: Maki.Error<T>.Error(T)
+  fullName.vb: Maki.Error(Of T).Error(T)
+  nameWithType: Error<T>.Error(T)
+  nameWithType.vb: Error(Of T).Error(T)
+- uid: Maki.Error`1.#ctor(System.Exception)
+  name: Error(Exception)
+  href: api/Maki.Error-1.html#Maki_Error_1__ctor_System_Exception_
+  commentId: M:Maki.Error`1.#ctor(System.Exception)
+  fullName: Maki.Error<T>.Error(System.Exception)
+  fullName.vb: Maki.Error(Of T).Error(System.Exception)
+  nameWithType: Error<T>.Error(Exception)
+  nameWithType.vb: Error(Of T).Error(Exception)
+- uid: Maki.Error`1.#ctor*
+  name: Error
+  href: api/Maki.Error-1.html#Maki_Error_1__ctor_
+  commentId: Overload:Maki.Error`1.#ctor
+  isSpec: "True"
+  fullName: Maki.Error<T>.Error
+  fullName.vb: Maki.Error(Of T).Error
+  nameWithType: Error<T>.Error
+  nameWithType.vb: Error(Of T).Error
+- uid: Maki.Error`1.Exception
+  name: Exception()
+  href: api/Maki.Error-1.html#Maki_Error_1_Exception
+  commentId: M:Maki.Error`1.Exception
+  fullName: Maki.Error<T>.Exception()
+  fullName.vb: Maki.Error(Of T).Exception()
+  nameWithType: Error<T>.Exception()
+  nameWithType.vb: Error(Of T).Exception()
+- uid: Maki.Error`1.Exception*
+  name: Exception
+  href: api/Maki.Error-1.html#Maki_Error_1_Exception_
+  commentId: Overload:Maki.Error`1.Exception
+  isSpec: "True"
+  fullName: Maki.Error<T>.Exception
+  fullName.vb: Maki.Error(Of T).Exception
+  nameWithType: Error<T>.Exception
+  nameWithType.vb: Error(Of T).Exception
+- uid: Maki.Error`1.Get
+  name: Get()
+  href: api/Maki.Error-1.html#Maki_Error_1_Get
+  commentId: M:Maki.Error`1.Get
+  fullName: Maki.Error<T>.Get()
+  fullName.vb: Maki.Error(Of T).Get()
+  nameWithType: Error<T>.Get()
+  nameWithType.vb: Error(Of T).Get()
+- uid: Maki.Error`1.Get*
+  name: Get
+  href: api/Maki.Error-1.html#Maki_Error_1_Get_
+  commentId: Overload:Maki.Error`1.Get
+  isSpec: "True"
+  fullName: Maki.Error<T>.Get
+  fullName.vb: Maki.Error(Of T).Get
+  nameWithType: Error<T>.Get
+  nameWithType.vb: Error(Of T).Get
+- uid: Maki.Error`1.HasValue
+  name: HasValue
+  href: api/Maki.Error-1.html#Maki_Error_1_HasValue
+  commentId: P:Maki.Error`1.HasValue
+  fullName: Maki.Error<T>.HasValue
+  fullName.vb: Maki.Error(Of T).HasValue
+  nameWithType: Error<T>.HasValue
+  nameWithType.vb: Error(Of T).HasValue
+- uid: Maki.Error`1.HasValue*
+  name: HasValue
+  href: api/Maki.Error-1.html#Maki_Error_1_HasValue_
+  commentId: Overload:Maki.Error`1.HasValue
+  isSpec: "True"
+  fullName: Maki.Error<T>.HasValue
+  fullName.vb: Maki.Error(Of T).HasValue
+  nameWithType: Error<T>.HasValue
+  nameWithType.vb: Error(Of T).HasValue
+- uid: Maki.Error`1.IsError
+  name: IsError
+  href: api/Maki.Error-1.html#Maki_Error_1_IsError
+  commentId: P:Maki.Error`1.IsError
+  fullName: Maki.Error<T>.IsError
+  fullName.vb: Maki.Error(Of T).IsError
+  nameWithType: Error<T>.IsError
+  nameWithType.vb: Error(Of T).IsError
+- uid: Maki.Error`1.IsError*
+  name: IsError
+  href: api/Maki.Error-1.html#Maki_Error_1_IsError_
+  commentId: Overload:Maki.Error`1.IsError
+  isSpec: "True"
+  fullName: Maki.Error<T>.IsError
+  fullName.vb: Maki.Error(Of T).IsError
+  nameWithType: Error<T>.IsError
+  nameWithType.vb: Error(Of T).IsError
+- uid: Maki.Error`1.MakeException(System.Exception)
+  name: MakeException(Exception)
+  href: api/Maki.Error-1.html#Maki_Error_1_MakeException_System_Exception_
+  commentId: M:Maki.Error`1.MakeException(System.Exception)
+  fullName: Maki.Error<T>.MakeException(System.Exception)
+  fullName.vb: Maki.Error(Of T).MakeException(System.Exception)
+  nameWithType: Error<T>.MakeException(Exception)
+  nameWithType.vb: Error(Of T).MakeException(Exception)
+- uid: Maki.Error`1.MakeException*
+  name: MakeException
+  href: api/Maki.Error-1.html#Maki_Error_1_MakeException_
+  commentId: Overload:Maki.Error`1.MakeException
+  isSpec: "True"
+  fullName: Maki.Error<T>.MakeException
+  fullName.vb: Maki.Error(Of T).MakeException
+  nameWithType: Error<T>.MakeException
+  nameWithType.vb: Error(Of T).MakeException
+- uid: Maki.Error`1.MakeValue(`0)
+  name: MakeValue(T)
+  href: api/Maki.Error-1.html#Maki_Error_1_MakeValue__0_
+  commentId: M:Maki.Error`1.MakeValue(`0)
+  fullName: Maki.Error<T>.MakeValue(T)
+  fullName.vb: Maki.Error(Of T).MakeValue(T)
+  nameWithType: Error<T>.MakeValue(T)
+  nameWithType.vb: Error(Of T).MakeValue(T)
+- uid: Maki.Error`1.MakeValue*
+  name: MakeValue
+  href: api/Maki.Error-1.html#Maki_Error_1_MakeValue_
+  commentId: Overload:Maki.Error`1.MakeValue
+  isSpec: "True"
+  fullName: Maki.Error<T>.MakeValue
+  fullName.vb: Maki.Error(Of T).MakeValue
+  nameWithType: Error<T>.MakeValue
+  nameWithType.vb: Error(Of T).MakeValue
+- uid: Maki.Error`1.op_Explicit(Maki.Error{`0})~`0
+  name: Explicit(Error<T> to T)
+  href: api/Maki.Error-1.html#Maki_Error_1_op_Explicit_Maki_Error__0____0
+  commentId: M:Maki.Error`1.op_Explicit(Maki.Error{`0})~`0
+  name.vb: Narrowing(Error(Of T) to T)
+  fullName: Maki.Error<T>.Explicit(Maki.Error<T> to T)
+  fullName.vb: Maki.Error(Of T).Narrowing(Maki.Error(Of T) to T)
+  nameWithType: Error<T>.Explicit(Error<T> to T)
+  nameWithType.vb: Error(Of T).Narrowing(Error(Of T) to T)
+- uid: Maki.Error`1.op_Explicit(Maki.Error{`0})~System.Exception
+  name: Explicit(Error<T> to Exception)
+  href: api/Maki.Error-1.html#Maki_Error_1_op_Explicit_Maki_Error__0___System_Exception
+  commentId: M:Maki.Error`1.op_Explicit(Maki.Error{`0})~System.Exception
+  name.vb: Narrowing(Error(Of T) to Exception)
+  fullName: Maki.Error<T>.Explicit(Maki.Error<T> to System.Exception)
+  fullName.vb: Maki.Error(Of T).Narrowing(Maki.Error(Of T) to System.Exception)
+  nameWithType: Error<T>.Explicit(Error<T> to Exception)
+  nameWithType.vb: Error(Of T).Narrowing(Error(Of T) to Exception)
+- uid: Maki.Error`1.op_Explicit*
+  name: Explicit
+  href: api/Maki.Error-1.html#Maki_Error_1_op_Explicit_
+  commentId: Overload:Maki.Error`1.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Maki.Error<T>.Explicit
+  fullName.vb: Maki.Error(Of T).Narrowing
+  nameWithType: Error<T>.Explicit
+  nameWithType.vb: Error(Of T).Narrowing
+- uid: Maki.Error`1.op_Implicit(`0)~Maki.Error{`0}
+  name: Implicit(T to Error<T>)
+  href: api/Maki.Error-1.html#Maki_Error_1_op_Implicit__0__Maki_Error__0_
+  commentId: M:Maki.Error`1.op_Implicit(`0)~Maki.Error{`0}
+  name.vb: Widening(T to Error(Of T))
+  fullName: Maki.Error<T>.Implicit(T to Maki.Error<T>)
+  fullName.vb: Maki.Error(Of T).Widening(T to Maki.Error(Of T))
+  nameWithType: Error<T>.Implicit(T to Error<T>)
+  nameWithType.vb: Error(Of T).Widening(T to Error(Of T))
+- uid: Maki.Error`1.op_Implicit(System.Exception)~Maki.Error{`0}
+  name: Implicit(Exception to Error<T>)
+  href: api/Maki.Error-1.html#Maki_Error_1_op_Implicit_System_Exception__Maki_Error__0_
+  commentId: M:Maki.Error`1.op_Implicit(System.Exception)~Maki.Error{`0}
+  name.vb: Widening(Exception to Error(Of T))
+  fullName: Maki.Error<T>.Implicit(System.Exception to Maki.Error<T>)
+  fullName.vb: Maki.Error(Of T).Widening(System.Exception to Maki.Error(Of T))
+  nameWithType: Error<T>.Implicit(Exception to Error<T>)
+  nameWithType.vb: Error(Of T).Widening(Exception to Error(Of T))
+- uid: Maki.Error`1.op_Implicit*
+  name: Implicit
+  href: api/Maki.Error-1.html#Maki_Error_1_op_Implicit_
+  commentId: Overload:Maki.Error`1.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Maki.Error<T>.Implicit
+  fullName.vb: Maki.Error(Of T).Widening
+  nameWithType: Error<T>.Implicit
+  nameWithType.vb: Error(Of T).Widening
+- uid: Maki.ErrorExtensions
+  name: ErrorExtensions
+  href: api/Maki.ErrorExtensions.html
+  commentId: T:Maki.ErrorExtensions
+  fullName: Maki.ErrorExtensions
+  nameWithType: ErrorExtensions
+- uid: Maki.ErrorExtensions.Bind*
+  name: Bind
+  href: api/Maki.ErrorExtensions.html#Maki_ErrorExtensions_Bind_
+  commentId: Overload:Maki.ErrorExtensions.Bind
+  isSpec: "True"
+  fullName: Maki.ErrorExtensions.Bind
+  nameWithType: ErrorExtensions.Bind
+- uid: Maki.ErrorExtensions.Bind``2(Maki.Error{``0},System.Func{``0,Maki.Error{``1}})
+  name: Bind<T, U>(Error<T>, Func<T, Error<U>>)
+  href: api/Maki.ErrorExtensions.html#Maki_ErrorExtensions_Bind__2_Maki_Error___0__System_Func___0_Maki_Error___1___
+  commentId: M:Maki.ErrorExtensions.Bind``2(Maki.Error{``0},System.Func{``0,Maki.Error{``1}})
+  name.vb: Bind(Of T, U)(Error(Of T), Func(Of T, Error(Of U)))
+  fullName: Maki.ErrorExtensions.Bind<T, U>(Maki.Error<T>, System.Func<T, Maki.Error<U>>)
+  fullName.vb: Maki.ErrorExtensions.Bind(Of T, U)(Maki.Error(Of T), System.Func(Of T, Maki.Error(Of U)))
+  nameWithType: ErrorExtensions.Bind<T, U>(Error<T>, Func<T, Error<U>>)
+  nameWithType.vb: ErrorExtensions.Bind(Of T, U)(Error(Of T), Func(Of T, Error(Of U)))
+- uid: Maki.ErrorExtensions.Map*
+  name: Map
+  href: api/Maki.ErrorExtensions.html#Maki_ErrorExtensions_Map_
+  commentId: Overload:Maki.ErrorExtensions.Map
+  isSpec: "True"
+  fullName: Maki.ErrorExtensions.Map
+  nameWithType: ErrorExtensions.Map
+- uid: Maki.ErrorExtensions.Map``2(Maki.Error{``0},System.Func{``0,``1})
+  name: Map<T, U>(Error<T>, Func<T, U>)
+  href: api/Maki.ErrorExtensions.html#Maki_ErrorExtensions_Map__2_Maki_Error___0__System_Func___0___1__
+  commentId: M:Maki.ErrorExtensions.Map``2(Maki.Error{``0},System.Func{``0,``1})
+  name.vb: Map(Of T, U)(Error(Of T), Func(Of T, U))
+  fullName: Maki.ErrorExtensions.Map<T, U>(Maki.Error<T>, System.Func<T, U>)
+  fullName.vb: Maki.ErrorExtensions.Map(Of T, U)(Maki.Error(Of T), System.Func(Of T, U))
+  nameWithType: ErrorExtensions.Map<T, U>(Error<T>, Func<T, U>)
+  nameWithType.vb: ErrorExtensions.Map(Of T, U)(Error(Of T), Func(Of T, U))
+- uid: Maki.NotNull
+  name: NotNull
+  href: api/Maki.NotNull.html
+  commentId: T:Maki.NotNull
+  fullName: Maki.NotNull
+  nameWithType: NotNull
+- uid: Maki.NotNull.Make*
+  name: Make
+  href: api/Maki.NotNull.html#Maki_NotNull_Make_
+  commentId: Overload:Maki.NotNull.Make
+  isSpec: "True"
+  fullName: Maki.NotNull.Make
+  nameWithType: NotNull.Make
+- uid: Maki.NotNull.Make``1(``0)
+  name: Make<T>(T)
+  href: api/Maki.NotNull.html#Maki_NotNull_Make__1___0_
+  commentId: M:Maki.NotNull.Make``1(``0)
+  name.vb: Make(Of T)(T)
+  fullName: Maki.NotNull.Make<T>(T)
+  fullName.vb: Maki.NotNull.Make(Of T)(T)
+  nameWithType: NotNull.Make<T>(T)
+  nameWithType.vb: NotNull.Make(Of T)(T)
+- uid: Maki.NotNull.MakeOptional*
+  name: MakeOptional
+  href: api/Maki.NotNull.html#Maki_NotNull_MakeOptional_
+  commentId: Overload:Maki.NotNull.MakeOptional
+  isSpec: "True"
+  fullName: Maki.NotNull.MakeOptional
+  nameWithType: NotNull.MakeOptional
+- uid: Maki.NotNull.MakeOptional``1(``0)
+  name: MakeOptional<T>(T)
+  href: api/Maki.NotNull.html#Maki_NotNull_MakeOptional__1___0_
+  commentId: M:Maki.NotNull.MakeOptional``1(``0)
+  name.vb: MakeOptional(Of T)(T)
+  fullName: Maki.NotNull.MakeOptional<T>(T)
+  fullName.vb: Maki.NotNull.MakeOptional(Of T)(T)
+  nameWithType: NotNull.MakeOptional<T>(T)
+  nameWithType.vb: NotNull.MakeOptional(Of T)(T)
+- uid: Maki.NotNull`1
+  name: NotNull<T>
+  href: api/Maki.NotNull-1.html
+  commentId: T:Maki.NotNull`1
+  name.vb: NotNull(Of T)
+  fullName: Maki.NotNull<T>
+  fullName.vb: Maki.NotNull(Of T)
+  nameWithType: NotNull<T>
+  nameWithType.vb: NotNull(Of T)
+- uid: Maki.NotNull`1.#ctor(`0)
+  name: NotNull(T)
+  href: api/Maki.NotNull-1.html#Maki_NotNull_1__ctor__0_
+  commentId: M:Maki.NotNull`1.#ctor(`0)
+  fullName: Maki.NotNull<T>.NotNull(T)
+  fullName.vb: Maki.NotNull(Of T).NotNull(T)
+  nameWithType: NotNull<T>.NotNull(T)
+  nameWithType.vb: NotNull(Of T).NotNull(T)
+- uid: Maki.NotNull`1.#ctor*
+  name: NotNull
+  href: api/Maki.NotNull-1.html#Maki_NotNull_1__ctor_
+  commentId: Overload:Maki.NotNull`1.#ctor
+  isSpec: "True"
+  fullName: Maki.NotNull<T>.NotNull
+  fullName.vb: Maki.NotNull(Of T).NotNull
+  nameWithType: NotNull<T>.NotNull
+  nameWithType.vb: NotNull(Of T).NotNull
+- uid: Maki.NotNull`1.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Maki.NotNull-1.html#Maki_NotNull_1_Equals_System_Object_
+  commentId: M:Maki.NotNull`1.Equals(System.Object)
+  fullName: Maki.NotNull<T>.Equals(System.Object)
+  fullName.vb: Maki.NotNull(Of T).Equals(System.Object)
+  nameWithType: NotNull<T>.Equals(Object)
+  nameWithType.vb: NotNull(Of T).Equals(Object)
+- uid: Maki.NotNull`1.Equals*
+  name: Equals
+  href: api/Maki.NotNull-1.html#Maki_NotNull_1_Equals_
+  commentId: Overload:Maki.NotNull`1.Equals
+  isSpec: "True"
+  fullName: Maki.NotNull<T>.Equals
+  fullName.vb: Maki.NotNull(Of T).Equals
+  nameWithType: NotNull<T>.Equals
+  nameWithType.vb: NotNull(Of T).Equals
+- uid: Maki.NotNull`1.GetHashCode
+  name: GetHashCode()
+  href: api/Maki.NotNull-1.html#Maki_NotNull_1_GetHashCode
+  commentId: M:Maki.NotNull`1.GetHashCode
+  fullName: Maki.NotNull<T>.GetHashCode()
+  fullName.vb: Maki.NotNull(Of T).GetHashCode()
+  nameWithType: NotNull<T>.GetHashCode()
+  nameWithType.vb: NotNull(Of T).GetHashCode()
+- uid: Maki.NotNull`1.GetHashCode*
+  name: GetHashCode
+  href: api/Maki.NotNull-1.html#Maki_NotNull_1_GetHashCode_
+  commentId: Overload:Maki.NotNull`1.GetHashCode
+  isSpec: "True"
+  fullName: Maki.NotNull<T>.GetHashCode
+  fullName.vb: Maki.NotNull(Of T).GetHashCode
+  nameWithType: NotNull<T>.GetHashCode
+  nameWithType.vb: NotNull(Of T).GetHashCode
+- uid: Maki.NotNull`1.Item
+  name: Item
+  href: api/Maki.NotNull-1.html#Maki_NotNull_1_Item
+  commentId: P:Maki.NotNull`1.Item
+  fullName: Maki.NotNull<T>.Item
+  fullName.vb: Maki.NotNull(Of T).Item
+  nameWithType: NotNull<T>.Item
+  nameWithType.vb: NotNull(Of T).Item
+- uid: Maki.NotNull`1.Item*
+  name: Item
+  href: api/Maki.NotNull-1.html#Maki_NotNull_1_Item_
+  commentId: Overload:Maki.NotNull`1.Item
+  isSpec: "True"
+  fullName: Maki.NotNull<T>.Item
+  fullName.vb: Maki.NotNull(Of T).Item
+  nameWithType: NotNull<T>.Item
+  nameWithType.vb: NotNull(Of T).Item
+- uid: Maki.NotNull`1.MakeOptional(`0)
+  name: MakeOptional(T)
+  href: api/Maki.NotNull-1.html#Maki_NotNull_1_MakeOptional__0_
+  commentId: M:Maki.NotNull`1.MakeOptional(`0)
+  fullName: Maki.NotNull<T>.MakeOptional(T)
+  fullName.vb: Maki.NotNull(Of T).MakeOptional(T)
+  nameWithType: NotNull<T>.MakeOptional(T)
+  nameWithType.vb: NotNull(Of T).MakeOptional(T)
+- uid: Maki.NotNull`1.MakeOptional*
+  name: MakeOptional
+  href: api/Maki.NotNull-1.html#Maki_NotNull_1_MakeOptional_
+  commentId: Overload:Maki.NotNull`1.MakeOptional
+  isSpec: "True"
+  fullName: Maki.NotNull<T>.MakeOptional
+  fullName.vb: Maki.NotNull(Of T).MakeOptional
+  nameWithType: NotNull<T>.MakeOptional
+  nameWithType.vb: NotNull(Of T).MakeOptional
+- uid: Maki.NotNull`1.op_Implicit(`0)~Maki.NotNull{`0}
+  name: Implicit(T to NotNull<T>)
+  href: api/Maki.NotNull-1.html#Maki_NotNull_1_op_Implicit__0__Maki_NotNull__0_
+  commentId: M:Maki.NotNull`1.op_Implicit(`0)~Maki.NotNull{`0}
+  name.vb: Widening(T to NotNull(Of T))
+  fullName: Maki.NotNull<T>.Implicit(T to Maki.NotNull<T>)
+  fullName.vb: Maki.NotNull(Of T).Widening(T to Maki.NotNull(Of T))
+  nameWithType: NotNull<T>.Implicit(T to NotNull<T>)
+  nameWithType.vb: NotNull(Of T).Widening(T to NotNull(Of T))
+- uid: Maki.NotNull`1.op_Implicit(Maki.NotNull{`0})~`0
+  name: Implicit(NotNull<T> to T)
+  href: api/Maki.NotNull-1.html#Maki_NotNull_1_op_Implicit_Maki_NotNull__0____0
+  commentId: M:Maki.NotNull`1.op_Implicit(Maki.NotNull{`0})~`0
+  name.vb: Widening(NotNull(Of T) to T)
+  fullName: Maki.NotNull<T>.Implicit(Maki.NotNull<T> to T)
+  fullName.vb: Maki.NotNull(Of T).Widening(Maki.NotNull(Of T) to T)
+  nameWithType: NotNull<T>.Implicit(NotNull<T> to T)
+  nameWithType.vb: NotNull(Of T).Widening(NotNull(Of T) to T)
+- uid: Maki.NotNull`1.op_Implicit*
+  name: Implicit
+  href: api/Maki.NotNull-1.html#Maki_NotNull_1_op_Implicit_
+  commentId: Overload:Maki.NotNull`1.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Maki.NotNull<T>.Implicit
+  fullName.vb: Maki.NotNull(Of T).Widening
+  nameWithType: NotNull<T>.Implicit
+  nameWithType.vb: NotNull(Of T).Widening
+- uid: Maki.NotNullExtensions
+  name: NotNullExtensions
+  href: api/Maki.NotNullExtensions.html
+  commentId: T:Maki.NotNullExtensions
+  fullName: Maki.NotNullExtensions
+  nameWithType: NotNullExtensions
+- uid: Maki.NotNullExtensions.Bind*
+  name: Bind
+  href: api/Maki.NotNullExtensions.html#Maki_NotNullExtensions_Bind_
+  commentId: Overload:Maki.NotNullExtensions.Bind
+  isSpec: "True"
+  fullName: Maki.NotNullExtensions.Bind
+  nameWithType: NotNullExtensions.Bind
+- uid: Maki.NotNullExtensions.Bind``2(Maki.NotNull{``0},System.Func{``0,Maki.NotNull{``1}})
+  name: Bind<T, U>(NotNull<T>, Func<T, NotNull<U>>)
+  href: api/Maki.NotNullExtensions.html#Maki_NotNullExtensions_Bind__2_Maki_NotNull___0__System_Func___0_Maki_NotNull___1___
+  commentId: M:Maki.NotNullExtensions.Bind``2(Maki.NotNull{``0},System.Func{``0,Maki.NotNull{``1}})
+  name.vb: Bind(Of T, U)(NotNull(Of T), Func(Of T, NotNull(Of U)))
+  fullName: Maki.NotNullExtensions.Bind<T, U>(Maki.NotNull<T>, System.Func<T, Maki.NotNull<U>>)
+  fullName.vb: Maki.NotNullExtensions.Bind(Of T, U)(Maki.NotNull(Of T), System.Func(Of T, Maki.NotNull(Of U)))
+  nameWithType: NotNullExtensions.Bind<T, U>(NotNull<T>, Func<T, NotNull<U>>)
+  nameWithType.vb: NotNullExtensions.Bind(Of T, U)(NotNull(Of T), Func(Of T, NotNull(Of U)))
+- uid: Maki.NotNullExtensions.Map*
+  name: Map
+  href: api/Maki.NotNullExtensions.html#Maki_NotNullExtensions_Map_
+  commentId: Overload:Maki.NotNullExtensions.Map
+  isSpec: "True"
+  fullName: Maki.NotNullExtensions.Map
+  nameWithType: NotNullExtensions.Map
+- uid: Maki.NotNullExtensions.Map``2(Maki.NotNull{``0},System.Func{``0,``1})
+  name: Map<T, U>(NotNull<T>, Func<T, U>)
+  href: api/Maki.NotNullExtensions.html#Maki_NotNullExtensions_Map__2_Maki_NotNull___0__System_Func___0___1__
+  commentId: M:Maki.NotNullExtensions.Map``2(Maki.NotNull{``0},System.Func{``0,``1})
+  name.vb: Map(Of T, U)(NotNull(Of T), Func(Of T, U))
+  fullName: Maki.NotNullExtensions.Map<T, U>(Maki.NotNull<T>, System.Func<T, U>)
+  fullName.vb: Maki.NotNullExtensions.Map(Of T, U)(Maki.NotNull(Of T), System.Func(Of T, U))
+  nameWithType: NotNullExtensions.Map<T, U>(NotNull<T>, Func<T, U>)
+  nameWithType.vb: NotNullExtensions.Map(Of T, U)(NotNull(Of T), Func(Of T, U))
+- uid: Maki.Optional
+  name: Optional
+  href: api/Maki.Optional.html
+  commentId: T:Maki.Optional
+  fullName: Maki.Optional
+  nameWithType: Optional
+- uid: Maki.Optional.Make*
+  name: Make
+  href: api/Maki.Optional.html#Maki_Optional_Make_
+  commentId: Overload:Maki.Optional.Make
+  isSpec: "True"
+  fullName: Maki.Optional.Make
+  nameWithType: Optional.Make
+- uid: Maki.Optional.Make``1(``0)
+  name: Make<T>(T)
+  href: api/Maki.Optional.html#Maki_Optional_Make__1___0_
+  commentId: M:Maki.Optional.Make``1(``0)
+  name.vb: Make(Of T)(T)
+  fullName: Maki.Optional.Make<T>(T)
+  fullName.vb: Maki.Optional.Make(Of T)(T)
+  nameWithType: Optional.Make<T>(T)
+  nameWithType.vb: Optional.Make(Of T)(T)
+- uid: Maki.Optional.Nothing
+  name: Nothing
+  href: api/Maki.Optional.html#Maki_Optional_Nothing
+  commentId: F:Maki.Optional.Nothing
+  fullName: Maki.Optional.Nothing
+  nameWithType: Optional.Nothing
+- uid: Maki.Optional`1
+  name: Optional<T>
+  href: api/Maki.Optional-1.html
+  commentId: T:Maki.Optional`1
+  name.vb: Optional(Of T)
+  fullName: Maki.Optional<T>
+  fullName.vb: Maki.Optional(Of T)
+  nameWithType: Optional<T>
+  nameWithType.vb: Optional(Of T)
+- uid: Maki.Optional`1.#ctor
+  name: Optional()
+  href: api/Maki.Optional-1.html#Maki_Optional_1__ctor
+  commentId: M:Maki.Optional`1.#ctor
+  fullName: Maki.Optional<T>.Optional()
+  fullName.vb: Maki.Optional(Of T).Optional()
+  nameWithType: Optional<T>.Optional()
+  nameWithType.vb: Optional(Of T).Optional()
+- uid: Maki.Optional`1.#ctor(`0)
+  name: Optional(T)
+  href: api/Maki.Optional-1.html#Maki_Optional_1__ctor__0_
+  commentId: M:Maki.Optional`1.#ctor(`0)
+  fullName: Maki.Optional<T>.Optional(T)
+  fullName.vb: Maki.Optional(Of T).Optional(T)
+  nameWithType: Optional<T>.Optional(T)
+  nameWithType.vb: Optional(Of T).Optional(T)
+- uid: Maki.Optional`1.#ctor*
+  name: Optional
+  href: api/Maki.Optional-1.html#Maki_Optional_1__ctor_
+  commentId: Overload:Maki.Optional`1.#ctor
+  isSpec: "True"
+  fullName: Maki.Optional<T>.Optional
+  fullName.vb: Maki.Optional(Of T).Optional
+  nameWithType: Optional<T>.Optional
+  nameWithType.vb: Optional(Of T).Optional
+- uid: Maki.Optional`1.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Maki.Optional-1.html#Maki_Optional_1_Equals_System_Object_
+  commentId: M:Maki.Optional`1.Equals(System.Object)
+  fullName: Maki.Optional<T>.Equals(System.Object)
+  fullName.vb: Maki.Optional(Of T).Equals(System.Object)
+  nameWithType: Optional<T>.Equals(Object)
+  nameWithType.vb: Optional(Of T).Equals(Object)
+- uid: Maki.Optional`1.Equals*
+  name: Equals
+  href: api/Maki.Optional-1.html#Maki_Optional_1_Equals_
+  commentId: Overload:Maki.Optional`1.Equals
+  isSpec: "True"
+  fullName: Maki.Optional<T>.Equals
+  fullName.vb: Maki.Optional(Of T).Equals
+  nameWithType: Optional<T>.Equals
+  nameWithType.vb: Optional(Of T).Equals
+- uid: Maki.Optional`1.Get
+  name: Get()
+  href: api/Maki.Optional-1.html#Maki_Optional_1_Get
+  commentId: M:Maki.Optional`1.Get
+  fullName: Maki.Optional<T>.Get()
+  fullName.vb: Maki.Optional(Of T).Get()
+  nameWithType: Optional<T>.Get()
+  nameWithType.vb: Optional(Of T).Get()
+- uid: Maki.Optional`1.Get*
+  name: Get
+  href: api/Maki.Optional-1.html#Maki_Optional_1_Get_
+  commentId: Overload:Maki.Optional`1.Get
+  isSpec: "True"
+  fullName: Maki.Optional<T>.Get
+  fullName.vb: Maki.Optional(Of T).Get
+  nameWithType: Optional<T>.Get
+  nameWithType.vb: Optional(Of T).Get
+- uid: Maki.Optional`1.GetHashCode
+  name: GetHashCode()
+  href: api/Maki.Optional-1.html#Maki_Optional_1_GetHashCode
+  commentId: M:Maki.Optional`1.GetHashCode
+  fullName: Maki.Optional<T>.GetHashCode()
+  fullName.vb: Maki.Optional(Of T).GetHashCode()
+  nameWithType: Optional<T>.GetHashCode()
+  nameWithType.vb: Optional(Of T).GetHashCode()
+- uid: Maki.Optional`1.GetHashCode*
+  name: GetHashCode
+  href: api/Maki.Optional-1.html#Maki_Optional_1_GetHashCode_
+  commentId: Overload:Maki.Optional`1.GetHashCode
+  isSpec: "True"
+  fullName: Maki.Optional<T>.GetHashCode
+  fullName.vb: Maki.Optional(Of T).GetHashCode
+  nameWithType: Optional<T>.GetHashCode
+  nameWithType.vb: Optional(Of T).GetHashCode
+- uid: Maki.Optional`1.HasValue
+  name: HasValue
+  href: api/Maki.Optional-1.html#Maki_Optional_1_HasValue
+  commentId: P:Maki.Optional`1.HasValue
+  fullName: Maki.Optional<T>.HasValue
+  fullName.vb: Maki.Optional(Of T).HasValue
+  nameWithType: Optional<T>.HasValue
+  nameWithType.vb: Optional(Of T).HasValue
+- uid: Maki.Optional`1.HasValue*
+  name: HasValue
+  href: api/Maki.Optional-1.html#Maki_Optional_1_HasValue_
+  commentId: Overload:Maki.Optional`1.HasValue
+  isSpec: "True"
+  fullName: Maki.Optional<T>.HasValue
+  fullName.vb: Maki.Optional(Of T).HasValue
+  nameWithType: Optional<T>.HasValue
+  nameWithType.vb: Optional(Of T).HasValue
+- uid: Maki.Optional`1.Nothing
+  name: Nothing
+  href: api/Maki.Optional-1.html#Maki_Optional_1_Nothing
+  commentId: P:Maki.Optional`1.Nothing
+  fullName: Maki.Optional<T>.Nothing
+  fullName.vb: Maki.Optional(Of T).Nothing
+  nameWithType: Optional<T>.Nothing
+  nameWithType.vb: Optional(Of T).Nothing
+- uid: Maki.Optional`1.Nothing*
+  name: Nothing
+  href: api/Maki.Optional-1.html#Maki_Optional_1_Nothing_
+  commentId: Overload:Maki.Optional`1.Nothing
+  isSpec: "True"
+  fullName: Maki.Optional<T>.Nothing
+  fullName.vb: Maki.Optional(Of T).Nothing
+  nameWithType: Optional<T>.Nothing
+  nameWithType.vb: Optional(Of T).Nothing
+- uid: Maki.Optional`1.op_Explicit(Maki.Optional{`0})~`0
+  name: Explicit(Optional<T> to T)
+  href: api/Maki.Optional-1.html#Maki_Optional_1_op_Explicit_Maki_Optional__0____0
+  commentId: M:Maki.Optional`1.op_Explicit(Maki.Optional{`0})~`0
+  name.vb: Narrowing(Optional(Of T) to T)
+  fullName: Maki.Optional<T>.Explicit(Maki.Optional<T> to T)
+  fullName.vb: Maki.Optional(Of T).Narrowing(Maki.Optional(Of T) to T)
+  nameWithType: Optional<T>.Explicit(Optional<T> to T)
+  nameWithType.vb: Optional(Of T).Narrowing(Optional(Of T) to T)
+- uid: Maki.Optional`1.op_Explicit*
+  name: Explicit
+  href: api/Maki.Optional-1.html#Maki_Optional_1_op_Explicit_
+  commentId: Overload:Maki.Optional`1.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Maki.Optional<T>.Explicit
+  fullName.vb: Maki.Optional(Of T).Narrowing
+  nameWithType: Optional<T>.Explicit
+  nameWithType.vb: Optional(Of T).Narrowing
+- uid: Maki.Optional`1.op_Implicit(`0)~Maki.Optional{`0}
+  name: Implicit(T to Optional<T>)
+  href: api/Maki.Optional-1.html#Maki_Optional_1_op_Implicit__0__Maki_Optional__0_
+  commentId: M:Maki.Optional`1.op_Implicit(`0)~Maki.Optional{`0}
+  name.vb: Widening(T to Optional(Of T))
+  fullName: Maki.Optional<T>.Implicit(T to Maki.Optional<T>)
+  fullName.vb: Maki.Optional(Of T).Widening(T to Maki.Optional(Of T))
+  nameWithType: Optional<T>.Implicit(T to Optional<T>)
+  nameWithType.vb: Optional(Of T).Widening(T to Optional(Of T))
+- uid: Maki.Optional`1.op_Implicit(Maki.Unit)~Maki.Optional{`0}
+  name: Implicit(Unit to Optional<T>)
+  href: api/Maki.Optional-1.html#Maki_Optional_1_op_Implicit_Maki_Unit__Maki_Optional__0_
+  commentId: M:Maki.Optional`1.op_Implicit(Maki.Unit)~Maki.Optional{`0}
+  name.vb: Widening(Unit to Optional(Of T))
+  fullName: Maki.Optional<T>.Implicit(Maki.Unit to Maki.Optional<T>)
+  fullName.vb: Maki.Optional(Of T).Widening(Maki.Unit to Maki.Optional(Of T))
+  nameWithType: Optional<T>.Implicit(Unit to Optional<T>)
+  nameWithType.vb: Optional(Of T).Widening(Unit to Optional(Of T))
+- uid: Maki.Optional`1.op_Implicit*
+  name: Implicit
+  href: api/Maki.Optional-1.html#Maki_Optional_1_op_Implicit_
+  commentId: Overload:Maki.Optional`1.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Maki.Optional<T>.Implicit
+  fullName.vb: Maki.Optional(Of T).Widening
+  nameWithType: Optional<T>.Implicit
+  nameWithType.vb: Optional(Of T).Widening
+- uid: Maki.OptionalExtensions
+  name: OptionalExtensions
+  href: api/Maki.OptionalExtensions.html
+  commentId: T:Maki.OptionalExtensions
+  fullName: Maki.OptionalExtensions
+  nameWithType: OptionalExtensions
+- uid: Maki.OptionalExtensions.Bind*
+  name: Bind
+  href: api/Maki.OptionalExtensions.html#Maki_OptionalExtensions_Bind_
+  commentId: Overload:Maki.OptionalExtensions.Bind
+  isSpec: "True"
+  fullName: Maki.OptionalExtensions.Bind
+  nameWithType: OptionalExtensions.Bind
+- uid: Maki.OptionalExtensions.Bind``2(Maki.Optional{``0},System.Func{``0,Maki.Optional{``1}})
+  name: Bind<T, U>(Optional<T>, Func<T, Optional<U>>)
+  href: api/Maki.OptionalExtensions.html#Maki_OptionalExtensions_Bind__2_Maki_Optional___0__System_Func___0_Maki_Optional___1___
+  commentId: M:Maki.OptionalExtensions.Bind``2(Maki.Optional{``0},System.Func{``0,Maki.Optional{``1}})
+  name.vb: Bind(Of T, U)(Optional(Of T), Func(Of T, Optional(Of U)))
+  fullName: Maki.OptionalExtensions.Bind<T, U>(Maki.Optional<T>, System.Func<T, Maki.Optional<U>>)
+  fullName.vb: Maki.OptionalExtensions.Bind(Of T, U)(Maki.Optional(Of T), System.Func(Of T, Maki.Optional(Of U)))
+  nameWithType: OptionalExtensions.Bind<T, U>(Optional<T>, Func<T, Optional<U>>)
+  nameWithType.vb: OptionalExtensions.Bind(Of T, U)(Optional(Of T), Func(Of T, Optional(Of U)))
+- uid: Maki.OptionalExtensions.Map*
+  name: Map
+  href: api/Maki.OptionalExtensions.html#Maki_OptionalExtensions_Map_
+  commentId: Overload:Maki.OptionalExtensions.Map
+  isSpec: "True"
+  fullName: Maki.OptionalExtensions.Map
+  nameWithType: OptionalExtensions.Map
+- uid: Maki.OptionalExtensions.Map``2(Maki.Optional{``0},System.Func{``0,``1})
+  name: Map<T, U>(Optional<T>, Func<T, U>)
+  href: api/Maki.OptionalExtensions.html#Maki_OptionalExtensions_Map__2_Maki_Optional___0__System_Func___0___1__
+  commentId: M:Maki.OptionalExtensions.Map``2(Maki.Optional{``0},System.Func{``0,``1})
+  name.vb: Map(Of T, U)(Optional(Of T), Func(Of T, U))
+  fullName: Maki.OptionalExtensions.Map<T, U>(Maki.Optional<T>, System.Func<T, U>)
+  fullName.vb: Maki.OptionalExtensions.Map(Of T, U)(Maki.Optional(Of T), System.Func(Of T, U))
+  nameWithType: OptionalExtensions.Map<T, U>(Optional<T>, Func<T, U>)
+  nameWithType.vb: OptionalExtensions.Map(Of T, U)(Optional(Of T), Func(Of T, U))
+- uid: Maki.Unit
+  name: Unit
+  href: api/Maki.Unit.html
+  commentId: T:Maki.Unit
+  fullName: Maki.Unit
+  nameWithType: Unit
+- uid: Maki.Unit.Value
+  name: Value
+  href: api/Maki.Unit.html#Maki_Unit_Value
+  commentId: F:Maki.Unit.Value
+  fullName: Maki.Unit.Value
+  nameWithType: Unit.Value
+- uid: Maki.Variant`1
+  name: Variant<T1>
+  href: api/Maki.Variant-1.html
+  commentId: T:Maki.Variant`1
+  name.vb: Variant(Of T1)
+  fullName: Maki.Variant<T1>
+  fullName.vb: Maki.Variant(Of T1)
+  nameWithType: Variant<T1>
+  nameWithType.vb: Variant(Of T1)
+- uid: Maki.Variant`1.#ctor(`0)
+  name: Variant(T1)
+  href: api/Maki.Variant-1.html#Maki_Variant_1__ctor__0_
+  commentId: M:Maki.Variant`1.#ctor(`0)
+  fullName: Maki.Variant<T1>.Variant(T1)
+  fullName.vb: Maki.Variant(Of T1).Variant(T1)
+  nameWithType: Variant<T1>.Variant(T1)
+  nameWithType.vb: Variant(Of T1).Variant(T1)
+- uid: Maki.Variant`1.#ctor*
+  name: Variant
+  href: api/Maki.Variant-1.html#Maki_Variant_1__ctor_
+  commentId: Overload:Maki.Variant`1.#ctor
+  isSpec: "True"
+  fullName: Maki.Variant<T1>.Variant
+  fullName.vb: Maki.Variant(Of T1).Variant
+  nameWithType: Variant<T1>.Variant
+  nameWithType.vb: Variant(Of T1).Variant
+- uid: Maki.Variant`1.Make1(`0)
+  name: Make1(T1)
+  href: api/Maki.Variant-1.html#Maki_Variant_1_Make1__0_
+  commentId: M:Maki.Variant`1.Make1(`0)
+  fullName: Maki.Variant<T1>.Make1(T1)
+  fullName.vb: Maki.Variant(Of T1).Make1(T1)
+  nameWithType: Variant<T1>.Make1(T1)
+  nameWithType.vb: Variant(Of T1).Make1(T1)
+- uid: Maki.Variant`1.Make1*
+  name: Make1
+  href: api/Maki.Variant-1.html#Maki_Variant_1_Make1_
+  commentId: Overload:Maki.Variant`1.Make1
+  isSpec: "True"
+  fullName: Maki.Variant<T1>.Make1
+  fullName.vb: Maki.Variant(Of T1).Make1
+  nameWithType: Variant<T1>.Make1
+  nameWithType.vb: Variant(Of T1).Make1
+- uid: Maki.Variant`1.op_Explicit(Maki.Variant{`0})~`0
+  name: Explicit(Variant<T1> to T1)
+  href: api/Maki.Variant-1.html#Maki_Variant_1_op_Explicit_Maki_Variant__0____0
+  commentId: M:Maki.Variant`1.op_Explicit(Maki.Variant{`0})~`0
+  name.vb: Narrowing(Variant(Of T1) to T1)
+  fullName: Maki.Variant<T1>.Explicit(Maki.Variant<T1> to T1)
+  fullName.vb: Maki.Variant(Of T1).Narrowing(Maki.Variant(Of T1) to T1)
+  nameWithType: Variant<T1>.Explicit(Variant<T1> to T1)
+  nameWithType.vb: Variant(Of T1).Narrowing(Variant(Of T1) to T1)
+- uid: Maki.Variant`1.op_Explicit*
+  name: Explicit
+  href: api/Maki.Variant-1.html#Maki_Variant_1_op_Explicit_
+  commentId: Overload:Maki.Variant`1.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Maki.Variant<T1>.Explicit
+  fullName.vb: Maki.Variant(Of T1).Narrowing
+  nameWithType: Variant<T1>.Explicit
+  nameWithType.vb: Variant(Of T1).Narrowing
+- uid: Maki.Variant`1.op_Implicit(`0)~Maki.Variant{`0}
+  name: Implicit(T1 to Variant<T1>)
+  href: api/Maki.Variant-1.html#Maki_Variant_1_op_Implicit__0__Maki_Variant__0_
+  commentId: M:Maki.Variant`1.op_Implicit(`0)~Maki.Variant{`0}
+  name.vb: Widening(T1 to Variant(Of T1))
+  fullName: Maki.Variant<T1>.Implicit(T1 to Maki.Variant<T1>)
+  fullName.vb: Maki.Variant(Of T1).Widening(T1 to Maki.Variant(Of T1))
+  nameWithType: Variant<T1>.Implicit(T1 to Variant<T1>)
+  nameWithType.vb: Variant(Of T1).Widening(T1 to Variant(Of T1))
+- uid: Maki.Variant`1.op_Implicit*
+  name: Implicit
+  href: api/Maki.Variant-1.html#Maki_Variant_1_op_Implicit_
+  commentId: Overload:Maki.Variant`1.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Maki.Variant<T1>.Implicit
+  fullName.vb: Maki.Variant(Of T1).Widening
+  nameWithType: Variant<T1>.Implicit
+  nameWithType.vb: Variant(Of T1).Widening
+- uid: Maki.Variant`2
+  name: Variant<T1, T2>
+  href: api/Maki.Variant-2.html
+  commentId: T:Maki.Variant`2
+  name.vb: Variant(Of T1, T2)
+  fullName: Maki.Variant<T1, T2>
+  fullName.vb: Maki.Variant(Of T1, T2)
+  nameWithType: Variant<T1, T2>
+  nameWithType.vb: Variant(Of T1, T2)
+- uid: Maki.Variant`2.#ctor(`0)
+  name: Variant(T1)
+  href: api/Maki.Variant-2.html#Maki_Variant_2__ctor__0_
+  commentId: M:Maki.Variant`2.#ctor(`0)
+  fullName: Maki.Variant<T1, T2>.Variant(T1)
+  fullName.vb: Maki.Variant(Of T1, T2).Variant(T1)
+  nameWithType: Variant<T1, T2>.Variant(T1)
+  nameWithType.vb: Variant(Of T1, T2).Variant(T1)
+- uid: Maki.Variant`2.#ctor(`1)
+  name: Variant(T2)
+  href: api/Maki.Variant-2.html#Maki_Variant_2__ctor__1_
+  commentId: M:Maki.Variant`2.#ctor(`1)
+  fullName: Maki.Variant<T1, T2>.Variant(T2)
+  fullName.vb: Maki.Variant(Of T1, T2).Variant(T2)
+  nameWithType: Variant<T1, T2>.Variant(T2)
+  nameWithType.vb: Variant(Of T1, T2).Variant(T2)
+- uid: Maki.Variant`2.#ctor*
+  name: Variant
+  href: api/Maki.Variant-2.html#Maki_Variant_2__ctor_
+  commentId: Overload:Maki.Variant`2.#ctor
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2>.Variant
+  fullName.vb: Maki.Variant(Of T1, T2).Variant
+  nameWithType: Variant<T1, T2>.Variant
+  nameWithType.vb: Variant(Of T1, T2).Variant
+- uid: Maki.Variant`2.Make1(`0)
+  name: Make1(T1)
+  href: api/Maki.Variant-2.html#Maki_Variant_2_Make1__0_
+  commentId: M:Maki.Variant`2.Make1(`0)
+  fullName: Maki.Variant<T1, T2>.Make1(T1)
+  fullName.vb: Maki.Variant(Of T1, T2).Make1(T1)
+  nameWithType: Variant<T1, T2>.Make1(T1)
+  nameWithType.vb: Variant(Of T1, T2).Make1(T1)
+- uid: Maki.Variant`2.Make1*
+  name: Make1
+  href: api/Maki.Variant-2.html#Maki_Variant_2_Make1_
+  commentId: Overload:Maki.Variant`2.Make1
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2>.Make1
+  fullName.vb: Maki.Variant(Of T1, T2).Make1
+  nameWithType: Variant<T1, T2>.Make1
+  nameWithType.vb: Variant(Of T1, T2).Make1
+- uid: Maki.Variant`2.Make2(`1)
+  name: Make2(T2)
+  href: api/Maki.Variant-2.html#Maki_Variant_2_Make2__1_
+  commentId: M:Maki.Variant`2.Make2(`1)
+  fullName: Maki.Variant<T1, T2>.Make2(T2)
+  fullName.vb: Maki.Variant(Of T1, T2).Make2(T2)
+  nameWithType: Variant<T1, T2>.Make2(T2)
+  nameWithType.vb: Variant(Of T1, T2).Make2(T2)
+- uid: Maki.Variant`2.Make2*
+  name: Make2
+  href: api/Maki.Variant-2.html#Maki_Variant_2_Make2_
+  commentId: Overload:Maki.Variant`2.Make2
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2>.Make2
+  fullName.vb: Maki.Variant(Of T1, T2).Make2
+  nameWithType: Variant<T1, T2>.Make2
+  nameWithType.vb: Variant(Of T1, T2).Make2
+- uid: Maki.Variant`2.op_Explicit(Maki.Variant{`0,`1})~`0
+  name: Explicit(Variant<T1, T2> to T1)
+  href: api/Maki.Variant-2.html#Maki_Variant_2_op_Explicit_Maki_Variant__0__1____0
+  commentId: M:Maki.Variant`2.op_Explicit(Maki.Variant{`0,`1})~`0
+  name.vb: Narrowing(Variant(Of T1, T2) to T1)
+  fullName: Maki.Variant<T1, T2>.Explicit(Maki.Variant<T1, T2> to T1)
+  fullName.vb: Maki.Variant(Of T1, T2).Narrowing(Maki.Variant(Of T1, T2) to T1)
+  nameWithType: Variant<T1, T2>.Explicit(Variant<T1, T2> to T1)
+  nameWithType.vb: Variant(Of T1, T2).Narrowing(Variant(Of T1, T2) to T1)
+- uid: Maki.Variant`2.op_Explicit(Maki.Variant{`0,`1})~`1
+  name: Explicit(Variant<T1, T2> to T2)
+  href: api/Maki.Variant-2.html#Maki_Variant_2_op_Explicit_Maki_Variant__0__1____1
+  commentId: M:Maki.Variant`2.op_Explicit(Maki.Variant{`0,`1})~`1
+  name.vb: Narrowing(Variant(Of T1, T2) to T2)
+  fullName: Maki.Variant<T1, T2>.Explicit(Maki.Variant<T1, T2> to T2)
+  fullName.vb: Maki.Variant(Of T1, T2).Narrowing(Maki.Variant(Of T1, T2) to T2)
+  nameWithType: Variant<T1, T2>.Explicit(Variant<T1, T2> to T2)
+  nameWithType.vb: Variant(Of T1, T2).Narrowing(Variant(Of T1, T2) to T2)
+- uid: Maki.Variant`2.op_Explicit*
+  name: Explicit
+  href: api/Maki.Variant-2.html#Maki_Variant_2_op_Explicit_
+  commentId: Overload:Maki.Variant`2.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Maki.Variant<T1, T2>.Explicit
+  fullName.vb: Maki.Variant(Of T1, T2).Narrowing
+  nameWithType: Variant<T1, T2>.Explicit
+  nameWithType.vb: Variant(Of T1, T2).Narrowing
+- uid: Maki.Variant`2.op_Implicit(`0)~Maki.Variant{`0,`1}
+  name: Implicit(T1 to Variant<T1, T2>)
+  href: api/Maki.Variant-2.html#Maki_Variant_2_op_Implicit__0__Maki_Variant__0__1_
+  commentId: M:Maki.Variant`2.op_Implicit(`0)~Maki.Variant{`0,`1}
+  name.vb: Widening(T1 to Variant(Of T1, T2))
+  fullName: Maki.Variant<T1, T2>.Implicit(T1 to Maki.Variant<T1, T2>)
+  fullName.vb: Maki.Variant(Of T1, T2).Widening(T1 to Maki.Variant(Of T1, T2))
+  nameWithType: Variant<T1, T2>.Implicit(T1 to Variant<T1, T2>)
+  nameWithType.vb: Variant(Of T1, T2).Widening(T1 to Variant(Of T1, T2))
+- uid: Maki.Variant`2.op_Implicit(`1)~Maki.Variant{`0,`1}
+  name: Implicit(T2 to Variant<T1, T2>)
+  href: api/Maki.Variant-2.html#Maki_Variant_2_op_Implicit__1__Maki_Variant__0__1_
+  commentId: M:Maki.Variant`2.op_Implicit(`1)~Maki.Variant{`0,`1}
+  name.vb: Widening(T2 to Variant(Of T1, T2))
+  fullName: Maki.Variant<T1, T2>.Implicit(T2 to Maki.Variant<T1, T2>)
+  fullName.vb: Maki.Variant(Of T1, T2).Widening(T2 to Maki.Variant(Of T1, T2))
+  nameWithType: Variant<T1, T2>.Implicit(T2 to Variant<T1, T2>)
+  nameWithType.vb: Variant(Of T1, T2).Widening(T2 to Variant(Of T1, T2))
+- uid: Maki.Variant`2.op_Implicit*
+  name: Implicit
+  href: api/Maki.Variant-2.html#Maki_Variant_2_op_Implicit_
+  commentId: Overload:Maki.Variant`2.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Maki.Variant<T1, T2>.Implicit
+  fullName.vb: Maki.Variant(Of T1, T2).Widening
+  nameWithType: Variant<T1, T2>.Implicit
+  nameWithType.vb: Variant(Of T1, T2).Widening
+- uid: Maki.Variant`3
+  name: Variant<T1, T2, T3>
+  href: api/Maki.Variant-3.html
+  commentId: T:Maki.Variant`3
+  name.vb: Variant(Of T1, T2, T3)
+  fullName: Maki.Variant<T1, T2, T3>
+  fullName.vb: Maki.Variant(Of T1, T2, T3)
+  nameWithType: Variant<T1, T2, T3>
+  nameWithType.vb: Variant(Of T1, T2, T3)
+- uid: Maki.Variant`3.#ctor(`0)
+  name: Variant(T1)
+  href: api/Maki.Variant-3.html#Maki_Variant_3__ctor__0_
+  commentId: M:Maki.Variant`3.#ctor(`0)
+  fullName: Maki.Variant<T1, T2, T3>.Variant(T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Variant(T1)
+  nameWithType: Variant<T1, T2, T3>.Variant(T1)
+  nameWithType.vb: Variant(Of T1, T2, T3).Variant(T1)
+- uid: Maki.Variant`3.#ctor(`1)
+  name: Variant(T2)
+  href: api/Maki.Variant-3.html#Maki_Variant_3__ctor__1_
+  commentId: M:Maki.Variant`3.#ctor(`1)
+  fullName: Maki.Variant<T1, T2, T3>.Variant(T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Variant(T2)
+  nameWithType: Variant<T1, T2, T3>.Variant(T2)
+  nameWithType.vb: Variant(Of T1, T2, T3).Variant(T2)
+- uid: Maki.Variant`3.#ctor(`2)
+  name: Variant(T3)
+  href: api/Maki.Variant-3.html#Maki_Variant_3__ctor__2_
+  commentId: M:Maki.Variant`3.#ctor(`2)
+  fullName: Maki.Variant<T1, T2, T3>.Variant(T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Variant(T3)
+  nameWithType: Variant<T1, T2, T3>.Variant(T3)
+  nameWithType.vb: Variant(Of T1, T2, T3).Variant(T3)
+- uid: Maki.Variant`3.#ctor*
+  name: Variant
+  href: api/Maki.Variant-3.html#Maki_Variant_3__ctor_
+  commentId: Overload:Maki.Variant`3.#ctor
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3>.Variant
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Variant
+  nameWithType: Variant<T1, T2, T3>.Variant
+  nameWithType.vb: Variant(Of T1, T2, T3).Variant
+- uid: Maki.Variant`3.Make1(`0)
+  name: Make1(T1)
+  href: api/Maki.Variant-3.html#Maki_Variant_3_Make1__0_
+  commentId: M:Maki.Variant`3.Make1(`0)
+  fullName: Maki.Variant<T1, T2, T3>.Make1(T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Make1(T1)
+  nameWithType: Variant<T1, T2, T3>.Make1(T1)
+  nameWithType.vb: Variant(Of T1, T2, T3).Make1(T1)
+- uid: Maki.Variant`3.Make1*
+  name: Make1
+  href: api/Maki.Variant-3.html#Maki_Variant_3_Make1_
+  commentId: Overload:Maki.Variant`3.Make1
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3>.Make1
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Make1
+  nameWithType: Variant<T1, T2, T3>.Make1
+  nameWithType.vb: Variant(Of T1, T2, T3).Make1
+- uid: Maki.Variant`3.Make2(`1)
+  name: Make2(T2)
+  href: api/Maki.Variant-3.html#Maki_Variant_3_Make2__1_
+  commentId: M:Maki.Variant`3.Make2(`1)
+  fullName: Maki.Variant<T1, T2, T3>.Make2(T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Make2(T2)
+  nameWithType: Variant<T1, T2, T3>.Make2(T2)
+  nameWithType.vb: Variant(Of T1, T2, T3).Make2(T2)
+- uid: Maki.Variant`3.Make2*
+  name: Make2
+  href: api/Maki.Variant-3.html#Maki_Variant_3_Make2_
+  commentId: Overload:Maki.Variant`3.Make2
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3>.Make2
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Make2
+  nameWithType: Variant<T1, T2, T3>.Make2
+  nameWithType.vb: Variant(Of T1, T2, T3).Make2
+- uid: Maki.Variant`3.Make3(`2)
+  name: Make3(T3)
+  href: api/Maki.Variant-3.html#Maki_Variant_3_Make3__2_
+  commentId: M:Maki.Variant`3.Make3(`2)
+  fullName: Maki.Variant<T1, T2, T3>.Make3(T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Make3(T3)
+  nameWithType: Variant<T1, T2, T3>.Make3(T3)
+  nameWithType.vb: Variant(Of T1, T2, T3).Make3(T3)
+- uid: Maki.Variant`3.Make3*
+  name: Make3
+  href: api/Maki.Variant-3.html#Maki_Variant_3_Make3_
+  commentId: Overload:Maki.Variant`3.Make3
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3>.Make3
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Make3
+  nameWithType: Variant<T1, T2, T3>.Make3
+  nameWithType.vb: Variant(Of T1, T2, T3).Make3
+- uid: Maki.Variant`3.op_Explicit(Maki.Variant{`0,`1,`2})~`0
+  name: Explicit(Variant<T1, T2, T3> to T1)
+  href: api/Maki.Variant-3.html#Maki_Variant_3_op_Explicit_Maki_Variant__0__1__2____0
+  commentId: M:Maki.Variant`3.op_Explicit(Maki.Variant{`0,`1,`2})~`0
+  name.vb: Narrowing(Variant(Of T1, T2, T3) to T1)
+  fullName: Maki.Variant<T1, T2, T3>.Explicit(Maki.Variant<T1, T2, T3> to T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Narrowing(Maki.Variant(Of T1, T2, T3) to T1)
+  nameWithType: Variant<T1, T2, T3>.Explicit(Variant<T1, T2, T3> to T1)
+  nameWithType.vb: Variant(Of T1, T2, T3).Narrowing(Variant(Of T1, T2, T3) to T1)
+- uid: Maki.Variant`3.op_Explicit(Maki.Variant{`0,`1,`2})~`1
+  name: Explicit(Variant<T1, T2, T3> to T2)
+  href: api/Maki.Variant-3.html#Maki_Variant_3_op_Explicit_Maki_Variant__0__1__2____1
+  commentId: M:Maki.Variant`3.op_Explicit(Maki.Variant{`0,`1,`2})~`1
+  name.vb: Narrowing(Variant(Of T1, T2, T3) to T2)
+  fullName: Maki.Variant<T1, T2, T3>.Explicit(Maki.Variant<T1, T2, T3> to T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Narrowing(Maki.Variant(Of T1, T2, T3) to T2)
+  nameWithType: Variant<T1, T2, T3>.Explicit(Variant<T1, T2, T3> to T2)
+  nameWithType.vb: Variant(Of T1, T2, T3).Narrowing(Variant(Of T1, T2, T3) to T2)
+- uid: Maki.Variant`3.op_Explicit(Maki.Variant{`0,`1,`2})~`2
+  name: Explicit(Variant<T1, T2, T3> to T3)
+  href: api/Maki.Variant-3.html#Maki_Variant_3_op_Explicit_Maki_Variant__0__1__2____2
+  commentId: M:Maki.Variant`3.op_Explicit(Maki.Variant{`0,`1,`2})~`2
+  name.vb: Narrowing(Variant(Of T1, T2, T3) to T3)
+  fullName: Maki.Variant<T1, T2, T3>.Explicit(Maki.Variant<T1, T2, T3> to T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Narrowing(Maki.Variant(Of T1, T2, T3) to T3)
+  nameWithType: Variant<T1, T2, T3>.Explicit(Variant<T1, T2, T3> to T3)
+  nameWithType.vb: Variant(Of T1, T2, T3).Narrowing(Variant(Of T1, T2, T3) to T3)
+- uid: Maki.Variant`3.op_Explicit*
+  name: Explicit
+  href: api/Maki.Variant-3.html#Maki_Variant_3_op_Explicit_
+  commentId: Overload:Maki.Variant`3.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Maki.Variant<T1, T2, T3>.Explicit
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Narrowing
+  nameWithType: Variant<T1, T2, T3>.Explicit
+  nameWithType.vb: Variant(Of T1, T2, T3).Narrowing
+- uid: Maki.Variant`3.op_Implicit(`0)~Maki.Variant{`0,`1,`2}
+  name: Implicit(T1 to Variant<T1, T2, T3>)
+  href: api/Maki.Variant-3.html#Maki_Variant_3_op_Implicit__0__Maki_Variant__0__1__2_
+  commentId: M:Maki.Variant`3.op_Implicit(`0)~Maki.Variant{`0,`1,`2}
+  name.vb: Widening(T1 to Variant(Of T1, T2, T3))
+  fullName: Maki.Variant<T1, T2, T3>.Implicit(T1 to Maki.Variant<T1, T2, T3>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Widening(T1 to Maki.Variant(Of T1, T2, T3))
+  nameWithType: Variant<T1, T2, T3>.Implicit(T1 to Variant<T1, T2, T3>)
+  nameWithType.vb: Variant(Of T1, T2, T3).Widening(T1 to Variant(Of T1, T2, T3))
+- uid: Maki.Variant`3.op_Implicit(`1)~Maki.Variant{`0,`1,`2}
+  name: Implicit(T2 to Variant<T1, T2, T3>)
+  href: api/Maki.Variant-3.html#Maki_Variant_3_op_Implicit__1__Maki_Variant__0__1__2_
+  commentId: M:Maki.Variant`3.op_Implicit(`1)~Maki.Variant{`0,`1,`2}
+  name.vb: Widening(T2 to Variant(Of T1, T2, T3))
+  fullName: Maki.Variant<T1, T2, T3>.Implicit(T2 to Maki.Variant<T1, T2, T3>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Widening(T2 to Maki.Variant(Of T1, T2, T3))
+  nameWithType: Variant<T1, T2, T3>.Implicit(T2 to Variant<T1, T2, T3>)
+  nameWithType.vb: Variant(Of T1, T2, T3).Widening(T2 to Variant(Of T1, T2, T3))
+- uid: Maki.Variant`3.op_Implicit(`2)~Maki.Variant{`0,`1,`2}
+  name: Implicit(T3 to Variant<T1, T2, T3>)
+  href: api/Maki.Variant-3.html#Maki_Variant_3_op_Implicit__2__Maki_Variant__0__1__2_
+  commentId: M:Maki.Variant`3.op_Implicit(`2)~Maki.Variant{`0,`1,`2}
+  name.vb: Widening(T3 to Variant(Of T1, T2, T3))
+  fullName: Maki.Variant<T1, T2, T3>.Implicit(T3 to Maki.Variant<T1, T2, T3>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Widening(T3 to Maki.Variant(Of T1, T2, T3))
+  nameWithType: Variant<T1, T2, T3>.Implicit(T3 to Variant<T1, T2, T3>)
+  nameWithType.vb: Variant(Of T1, T2, T3).Widening(T3 to Variant(Of T1, T2, T3))
+- uid: Maki.Variant`3.op_Implicit*
+  name: Implicit
+  href: api/Maki.Variant-3.html#Maki_Variant_3_op_Implicit_
+  commentId: Overload:Maki.Variant`3.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Maki.Variant<T1, T2, T3>.Implicit
+  fullName.vb: Maki.Variant(Of T1, T2, T3).Widening
+  nameWithType: Variant<T1, T2, T3>.Implicit
+  nameWithType.vb: Variant(Of T1, T2, T3).Widening
+- uid: Maki.Variant`4
+  name: Variant<T1, T2, T3, T4>
+  href: api/Maki.Variant-4.html
+  commentId: T:Maki.Variant`4
+  name.vb: Variant(Of T1, T2, T3, T4)
+  fullName: Maki.Variant<T1, T2, T3, T4>
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4)
+  nameWithType: Variant<T1, T2, T3, T4>
+  nameWithType.vb: Variant(Of T1, T2, T3, T4)
+- uid: Maki.Variant`4.#ctor(`0)
+  name: Variant(T1)
+  href: api/Maki.Variant-4.html#Maki_Variant_4__ctor__0_
+  commentId: M:Maki.Variant`4.#ctor(`0)
+  fullName: Maki.Variant<T1, T2, T3, T4>.Variant(T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Variant(T1)
+  nameWithType: Variant<T1, T2, T3, T4>.Variant(T1)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Variant(T1)
+- uid: Maki.Variant`4.#ctor(`1)
+  name: Variant(T2)
+  href: api/Maki.Variant-4.html#Maki_Variant_4__ctor__1_
+  commentId: M:Maki.Variant`4.#ctor(`1)
+  fullName: Maki.Variant<T1, T2, T3, T4>.Variant(T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Variant(T2)
+  nameWithType: Variant<T1, T2, T3, T4>.Variant(T2)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Variant(T2)
+- uid: Maki.Variant`4.#ctor(`2)
+  name: Variant(T3)
+  href: api/Maki.Variant-4.html#Maki_Variant_4__ctor__2_
+  commentId: M:Maki.Variant`4.#ctor(`2)
+  fullName: Maki.Variant<T1, T2, T3, T4>.Variant(T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Variant(T3)
+  nameWithType: Variant<T1, T2, T3, T4>.Variant(T3)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Variant(T3)
+- uid: Maki.Variant`4.#ctor(`3)
+  name: Variant(T4)
+  href: api/Maki.Variant-4.html#Maki_Variant_4__ctor__3_
+  commentId: M:Maki.Variant`4.#ctor(`3)
+  fullName: Maki.Variant<T1, T2, T3, T4>.Variant(T4)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Variant(T4)
+  nameWithType: Variant<T1, T2, T3, T4>.Variant(T4)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Variant(T4)
+- uid: Maki.Variant`4.#ctor*
+  name: Variant
+  href: api/Maki.Variant-4.html#Maki_Variant_4__ctor_
+  commentId: Overload:Maki.Variant`4.#ctor
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4>.Variant
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Variant
+  nameWithType: Variant<T1, T2, T3, T4>.Variant
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Variant
+- uid: Maki.Variant`4.Make1(`0)
+  name: Make1(T1)
+  href: api/Maki.Variant-4.html#Maki_Variant_4_Make1__0_
+  commentId: M:Maki.Variant`4.Make1(`0)
+  fullName: Maki.Variant<T1, T2, T3, T4>.Make1(T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Make1(T1)
+  nameWithType: Variant<T1, T2, T3, T4>.Make1(T1)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Make1(T1)
+- uid: Maki.Variant`4.Make1*
+  name: Make1
+  href: api/Maki.Variant-4.html#Maki_Variant_4_Make1_
+  commentId: Overload:Maki.Variant`4.Make1
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4>.Make1
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Make1
+  nameWithType: Variant<T1, T2, T3, T4>.Make1
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Make1
+- uid: Maki.Variant`4.Make2(`1)
+  name: Make2(T2)
+  href: api/Maki.Variant-4.html#Maki_Variant_4_Make2__1_
+  commentId: M:Maki.Variant`4.Make2(`1)
+  fullName: Maki.Variant<T1, T2, T3, T4>.Make2(T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Make2(T2)
+  nameWithType: Variant<T1, T2, T3, T4>.Make2(T2)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Make2(T2)
+- uid: Maki.Variant`4.Make2*
+  name: Make2
+  href: api/Maki.Variant-4.html#Maki_Variant_4_Make2_
+  commentId: Overload:Maki.Variant`4.Make2
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4>.Make2
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Make2
+  nameWithType: Variant<T1, T2, T3, T4>.Make2
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Make2
+- uid: Maki.Variant`4.Make3(`2)
+  name: Make3(T3)
+  href: api/Maki.Variant-4.html#Maki_Variant_4_Make3__2_
+  commentId: M:Maki.Variant`4.Make3(`2)
+  fullName: Maki.Variant<T1, T2, T3, T4>.Make3(T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Make3(T3)
+  nameWithType: Variant<T1, T2, T3, T4>.Make3(T3)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Make3(T3)
+- uid: Maki.Variant`4.Make3*
+  name: Make3
+  href: api/Maki.Variant-4.html#Maki_Variant_4_Make3_
+  commentId: Overload:Maki.Variant`4.Make3
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4>.Make3
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Make3
+  nameWithType: Variant<T1, T2, T3, T4>.Make3
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Make3
+- uid: Maki.Variant`4.Make4(`3)
+  name: Make4(T4)
+  href: api/Maki.Variant-4.html#Maki_Variant_4_Make4__3_
+  commentId: M:Maki.Variant`4.Make4(`3)
+  fullName: Maki.Variant<T1, T2, T3, T4>.Make4(T4)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Make4(T4)
+  nameWithType: Variant<T1, T2, T3, T4>.Make4(T4)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Make4(T4)
+- uid: Maki.Variant`4.Make4*
+  name: Make4
+  href: api/Maki.Variant-4.html#Maki_Variant_4_Make4_
+  commentId: Overload:Maki.Variant`4.Make4
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4>.Make4
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Make4
+  nameWithType: Variant<T1, T2, T3, T4>.Make4
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Make4
+- uid: Maki.Variant`4.op_Explicit(Maki.Variant{`0,`1,`2,`3})~`0
+  name: Explicit(Variant<T1, T2, T3, T4> to T1)
+  href: api/Maki.Variant-4.html#Maki_Variant_4_op_Explicit_Maki_Variant__0__1__2__3____0
+  commentId: M:Maki.Variant`4.op_Explicit(Maki.Variant{`0,`1,`2,`3})~`0
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4) to T1)
+  fullName: Maki.Variant<T1, T2, T3, T4>.Explicit(Maki.Variant<T1, T2, T3, T4> to T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Narrowing(Maki.Variant(Of T1, T2, T3, T4) to T1)
+  nameWithType: Variant<T1, T2, T3, T4>.Explicit(Variant<T1, T2, T3, T4> to T1)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Narrowing(Variant(Of T1, T2, T3, T4) to T1)
+- uid: Maki.Variant`4.op_Explicit(Maki.Variant{`0,`1,`2,`3})~`1
+  name: Explicit(Variant<T1, T2, T3, T4> to T2)
+  href: api/Maki.Variant-4.html#Maki_Variant_4_op_Explicit_Maki_Variant__0__1__2__3____1
+  commentId: M:Maki.Variant`4.op_Explicit(Maki.Variant{`0,`1,`2,`3})~`1
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4) to T2)
+  fullName: Maki.Variant<T1, T2, T3, T4>.Explicit(Maki.Variant<T1, T2, T3, T4> to T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Narrowing(Maki.Variant(Of T1, T2, T3, T4) to T2)
+  nameWithType: Variant<T1, T2, T3, T4>.Explicit(Variant<T1, T2, T3, T4> to T2)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Narrowing(Variant(Of T1, T2, T3, T4) to T2)
+- uid: Maki.Variant`4.op_Explicit(Maki.Variant{`0,`1,`2,`3})~`2
+  name: Explicit(Variant<T1, T2, T3, T4> to T3)
+  href: api/Maki.Variant-4.html#Maki_Variant_4_op_Explicit_Maki_Variant__0__1__2__3____2
+  commentId: M:Maki.Variant`4.op_Explicit(Maki.Variant{`0,`1,`2,`3})~`2
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4) to T3)
+  fullName: Maki.Variant<T1, T2, T3, T4>.Explicit(Maki.Variant<T1, T2, T3, T4> to T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Narrowing(Maki.Variant(Of T1, T2, T3, T4) to T3)
+  nameWithType: Variant<T1, T2, T3, T4>.Explicit(Variant<T1, T2, T3, T4> to T3)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Narrowing(Variant(Of T1, T2, T3, T4) to T3)
+- uid: Maki.Variant`4.op_Explicit(Maki.Variant{`0,`1,`2,`3})~`3
+  name: Explicit(Variant<T1, T2, T3, T4> to T4)
+  href: api/Maki.Variant-4.html#Maki_Variant_4_op_Explicit_Maki_Variant__0__1__2__3____3
+  commentId: M:Maki.Variant`4.op_Explicit(Maki.Variant{`0,`1,`2,`3})~`3
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4) to T4)
+  fullName: Maki.Variant<T1, T2, T3, T4>.Explicit(Maki.Variant<T1, T2, T3, T4> to T4)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Narrowing(Maki.Variant(Of T1, T2, T3, T4) to T4)
+  nameWithType: Variant<T1, T2, T3, T4>.Explicit(Variant<T1, T2, T3, T4> to T4)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Narrowing(Variant(Of T1, T2, T3, T4) to T4)
+- uid: Maki.Variant`4.op_Explicit*
+  name: Explicit
+  href: api/Maki.Variant-4.html#Maki_Variant_4_op_Explicit_
+  commentId: Overload:Maki.Variant`4.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Maki.Variant<T1, T2, T3, T4>.Explicit
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Narrowing
+  nameWithType: Variant<T1, T2, T3, T4>.Explicit
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Narrowing
+- uid: Maki.Variant`4.op_Implicit(`0)~Maki.Variant{`0,`1,`2,`3}
+  name: Implicit(T1 to Variant<T1, T2, T3, T4>)
+  href: api/Maki.Variant-4.html#Maki_Variant_4_op_Implicit__0__Maki_Variant__0__1__2__3_
+  commentId: M:Maki.Variant`4.op_Implicit(`0)~Maki.Variant{`0,`1,`2,`3}
+  name.vb: Widening(T1 to Variant(Of T1, T2, T3, T4))
+  fullName: Maki.Variant<T1, T2, T3, T4>.Implicit(T1 to Maki.Variant<T1, T2, T3, T4>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Widening(T1 to Maki.Variant(Of T1, T2, T3, T4))
+  nameWithType: Variant<T1, T2, T3, T4>.Implicit(T1 to Variant<T1, T2, T3, T4>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Widening(T1 to Variant(Of T1, T2, T3, T4))
+- uid: Maki.Variant`4.op_Implicit(`1)~Maki.Variant{`0,`1,`2,`3}
+  name: Implicit(T2 to Variant<T1, T2, T3, T4>)
+  href: api/Maki.Variant-4.html#Maki_Variant_4_op_Implicit__1__Maki_Variant__0__1__2__3_
+  commentId: M:Maki.Variant`4.op_Implicit(`1)~Maki.Variant{`0,`1,`2,`3}
+  name.vb: Widening(T2 to Variant(Of T1, T2, T3, T4))
+  fullName: Maki.Variant<T1, T2, T3, T4>.Implicit(T2 to Maki.Variant<T1, T2, T3, T4>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Widening(T2 to Maki.Variant(Of T1, T2, T3, T4))
+  nameWithType: Variant<T1, T2, T3, T4>.Implicit(T2 to Variant<T1, T2, T3, T4>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Widening(T2 to Variant(Of T1, T2, T3, T4))
+- uid: Maki.Variant`4.op_Implicit(`2)~Maki.Variant{`0,`1,`2,`3}
+  name: Implicit(T3 to Variant<T1, T2, T3, T4>)
+  href: api/Maki.Variant-4.html#Maki_Variant_4_op_Implicit__2__Maki_Variant__0__1__2__3_
+  commentId: M:Maki.Variant`4.op_Implicit(`2)~Maki.Variant{`0,`1,`2,`3}
+  name.vb: Widening(T3 to Variant(Of T1, T2, T3, T4))
+  fullName: Maki.Variant<T1, T2, T3, T4>.Implicit(T3 to Maki.Variant<T1, T2, T3, T4>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Widening(T3 to Maki.Variant(Of T1, T2, T3, T4))
+  nameWithType: Variant<T1, T2, T3, T4>.Implicit(T3 to Variant<T1, T2, T3, T4>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Widening(T3 to Variant(Of T1, T2, T3, T4))
+- uid: Maki.Variant`4.op_Implicit(`3)~Maki.Variant{`0,`1,`2,`3}
+  name: Implicit(T4 to Variant<T1, T2, T3, T4>)
+  href: api/Maki.Variant-4.html#Maki_Variant_4_op_Implicit__3__Maki_Variant__0__1__2__3_
+  commentId: M:Maki.Variant`4.op_Implicit(`3)~Maki.Variant{`0,`1,`2,`3}
+  name.vb: Widening(T4 to Variant(Of T1, T2, T3, T4))
+  fullName: Maki.Variant<T1, T2, T3, T4>.Implicit(T4 to Maki.Variant<T1, T2, T3, T4>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Widening(T4 to Maki.Variant(Of T1, T2, T3, T4))
+  nameWithType: Variant<T1, T2, T3, T4>.Implicit(T4 to Variant<T1, T2, T3, T4>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Widening(T4 to Variant(Of T1, T2, T3, T4))
+- uid: Maki.Variant`4.op_Implicit*
+  name: Implicit
+  href: api/Maki.Variant-4.html#Maki_Variant_4_op_Implicit_
+  commentId: Overload:Maki.Variant`4.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Maki.Variant<T1, T2, T3, T4>.Implicit
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4).Widening
+  nameWithType: Variant<T1, T2, T3, T4>.Implicit
+  nameWithType.vb: Variant(Of T1, T2, T3, T4).Widening
+- uid: Maki.Variant`5
+  name: Variant<T1, T2, T3, T4, T5>
+  href: api/Maki.Variant-5.html
+  commentId: T:Maki.Variant`5
+  name.vb: Variant(Of T1, T2, T3, T4, T5)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5)
+  nameWithType: Variant<T1, T2, T3, T4, T5>
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5)
+- uid: Maki.Variant`5.#ctor(`0)
+  name: Variant(T1)
+  href: api/Maki.Variant-5.html#Maki_Variant_5__ctor__0_
+  commentId: M:Maki.Variant`5.#ctor(`0)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Variant(T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Variant(T1)
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Variant(T1)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Variant(T1)
+- uid: Maki.Variant`5.#ctor(`1)
+  name: Variant(T2)
+  href: api/Maki.Variant-5.html#Maki_Variant_5__ctor__1_
+  commentId: M:Maki.Variant`5.#ctor(`1)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Variant(T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Variant(T2)
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Variant(T2)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Variant(T2)
+- uid: Maki.Variant`5.#ctor(`2)
+  name: Variant(T3)
+  href: api/Maki.Variant-5.html#Maki_Variant_5__ctor__2_
+  commentId: M:Maki.Variant`5.#ctor(`2)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Variant(T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Variant(T3)
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Variant(T3)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Variant(T3)
+- uid: Maki.Variant`5.#ctor(`3)
+  name: Variant(T4)
+  href: api/Maki.Variant-5.html#Maki_Variant_5__ctor__3_
+  commentId: M:Maki.Variant`5.#ctor(`3)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Variant(T4)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Variant(T4)
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Variant(T4)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Variant(T4)
+- uid: Maki.Variant`5.#ctor(`4)
+  name: Variant(T5)
+  href: api/Maki.Variant-5.html#Maki_Variant_5__ctor__4_
+  commentId: M:Maki.Variant`5.#ctor(`4)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Variant(T5)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Variant(T5)
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Variant(T5)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Variant(T5)
+- uid: Maki.Variant`5.#ctor*
+  name: Variant
+  href: api/Maki.Variant-5.html#Maki_Variant_5__ctor_
+  commentId: Overload:Maki.Variant`5.#ctor
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Variant
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Variant
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Variant
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Variant
+- uid: Maki.Variant`5.Make1(`0)
+  name: Make1(T1)
+  href: api/Maki.Variant-5.html#Maki_Variant_5_Make1__0_
+  commentId: M:Maki.Variant`5.Make1(`0)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Make1(T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Make1(T1)
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Make1(T1)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Make1(T1)
+- uid: Maki.Variant`5.Make1*
+  name: Make1
+  href: api/Maki.Variant-5.html#Maki_Variant_5_Make1_
+  commentId: Overload:Maki.Variant`5.Make1
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Make1
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Make1
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Make1
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Make1
+- uid: Maki.Variant`5.Make2(`1)
+  name: Make2(T2)
+  href: api/Maki.Variant-5.html#Maki_Variant_5_Make2__1_
+  commentId: M:Maki.Variant`5.Make2(`1)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Make2(T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Make2(T2)
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Make2(T2)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Make2(T2)
+- uid: Maki.Variant`5.Make2*
+  name: Make2
+  href: api/Maki.Variant-5.html#Maki_Variant_5_Make2_
+  commentId: Overload:Maki.Variant`5.Make2
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Make2
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Make2
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Make2
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Make2
+- uid: Maki.Variant`5.Make3(`2)
+  name: Make3(T3)
+  href: api/Maki.Variant-5.html#Maki_Variant_5_Make3__2_
+  commentId: M:Maki.Variant`5.Make3(`2)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Make3(T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Make3(T3)
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Make3(T3)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Make3(T3)
+- uid: Maki.Variant`5.Make3*
+  name: Make3
+  href: api/Maki.Variant-5.html#Maki_Variant_5_Make3_
+  commentId: Overload:Maki.Variant`5.Make3
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Make3
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Make3
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Make3
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Make3
+- uid: Maki.Variant`5.Make4(`3)
+  name: Make4(T4)
+  href: api/Maki.Variant-5.html#Maki_Variant_5_Make4__3_
+  commentId: M:Maki.Variant`5.Make4(`3)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Make4(T4)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Make4(T4)
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Make4(T4)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Make4(T4)
+- uid: Maki.Variant`5.Make4*
+  name: Make4
+  href: api/Maki.Variant-5.html#Maki_Variant_5_Make4_
+  commentId: Overload:Maki.Variant`5.Make4
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Make4
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Make4
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Make4
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Make4
+- uid: Maki.Variant`5.Make5(`4)
+  name: Make5(T5)
+  href: api/Maki.Variant-5.html#Maki_Variant_5_Make5__4_
+  commentId: M:Maki.Variant`5.Make5(`4)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Make5(T5)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Make5(T5)
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Make5(T5)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Make5(T5)
+- uid: Maki.Variant`5.Make5*
+  name: Make5
+  href: api/Maki.Variant-5.html#Maki_Variant_5_Make5_
+  commentId: Overload:Maki.Variant`5.Make5
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Make5
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Make5
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Make5
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Make5
+- uid: Maki.Variant`5.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4})~`0
+  name: Explicit(Variant<T1, T2, T3, T4, T5> to T1)
+  href: api/Maki.Variant-5.html#Maki_Variant_5_op_Explicit_Maki_Variant__0__1__2__3__4____0
+  commentId: M:Maki.Variant`5.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4})~`0
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5) to T1)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Explicit(Maki.Variant<T1, T2, T3, T4, T5> to T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5) to T1)
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Explicit(Variant<T1, T2, T3, T4, T5> to T1)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Narrowing(Variant(Of T1, T2, T3, T4, T5) to T1)
+- uid: Maki.Variant`5.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4})~`1
+  name: Explicit(Variant<T1, T2, T3, T4, T5> to T2)
+  href: api/Maki.Variant-5.html#Maki_Variant_5_op_Explicit_Maki_Variant__0__1__2__3__4____1
+  commentId: M:Maki.Variant`5.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4})~`1
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5) to T2)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Explicit(Maki.Variant<T1, T2, T3, T4, T5> to T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5) to T2)
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Explicit(Variant<T1, T2, T3, T4, T5> to T2)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Narrowing(Variant(Of T1, T2, T3, T4, T5) to T2)
+- uid: Maki.Variant`5.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4})~`2
+  name: Explicit(Variant<T1, T2, T3, T4, T5> to T3)
+  href: api/Maki.Variant-5.html#Maki_Variant_5_op_Explicit_Maki_Variant__0__1__2__3__4____2
+  commentId: M:Maki.Variant`5.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4})~`2
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5) to T3)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Explicit(Maki.Variant<T1, T2, T3, T4, T5> to T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5) to T3)
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Explicit(Variant<T1, T2, T3, T4, T5> to T3)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Narrowing(Variant(Of T1, T2, T3, T4, T5) to T3)
+- uid: Maki.Variant`5.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4})~`3
+  name: Explicit(Variant<T1, T2, T3, T4, T5> to T4)
+  href: api/Maki.Variant-5.html#Maki_Variant_5_op_Explicit_Maki_Variant__0__1__2__3__4____3
+  commentId: M:Maki.Variant`5.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4})~`3
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5) to T4)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Explicit(Maki.Variant<T1, T2, T3, T4, T5> to T4)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5) to T4)
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Explicit(Variant<T1, T2, T3, T4, T5> to T4)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Narrowing(Variant(Of T1, T2, T3, T4, T5) to T4)
+- uid: Maki.Variant`5.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4})~`4
+  name: Explicit(Variant<T1, T2, T3, T4, T5> to T5)
+  href: api/Maki.Variant-5.html#Maki_Variant_5_op_Explicit_Maki_Variant__0__1__2__3__4____4
+  commentId: M:Maki.Variant`5.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4})~`4
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5) to T5)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Explicit(Maki.Variant<T1, T2, T3, T4, T5> to T5)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5) to T5)
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Explicit(Variant<T1, T2, T3, T4, T5> to T5)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Narrowing(Variant(Of T1, T2, T3, T4, T5) to T5)
+- uid: Maki.Variant`5.op_Explicit*
+  name: Explicit
+  href: api/Maki.Variant-5.html#Maki_Variant_5_op_Explicit_
+  commentId: Overload:Maki.Variant`5.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Explicit
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Narrowing
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Explicit
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Narrowing
+- uid: Maki.Variant`5.op_Implicit(`0)~Maki.Variant{`0,`1,`2,`3,`4}
+  name: Implicit(T1 to Variant<T1, T2, T3, T4, T5>)
+  href: api/Maki.Variant-5.html#Maki_Variant_5_op_Implicit__0__Maki_Variant__0__1__2__3__4_
+  commentId: M:Maki.Variant`5.op_Implicit(`0)~Maki.Variant{`0,`1,`2,`3,`4}
+  name.vb: Widening(T1 to Variant(Of T1, T2, T3, T4, T5))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Implicit(T1 to Maki.Variant<T1, T2, T3, T4, T5>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Widening(T1 to Maki.Variant(Of T1, T2, T3, T4, T5))
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Implicit(T1 to Variant<T1, T2, T3, T4, T5>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Widening(T1 to Variant(Of T1, T2, T3, T4, T5))
+- uid: Maki.Variant`5.op_Implicit(`1)~Maki.Variant{`0,`1,`2,`3,`4}
+  name: Implicit(T2 to Variant<T1, T2, T3, T4, T5>)
+  href: api/Maki.Variant-5.html#Maki_Variant_5_op_Implicit__1__Maki_Variant__0__1__2__3__4_
+  commentId: M:Maki.Variant`5.op_Implicit(`1)~Maki.Variant{`0,`1,`2,`3,`4}
+  name.vb: Widening(T2 to Variant(Of T1, T2, T3, T4, T5))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Implicit(T2 to Maki.Variant<T1, T2, T3, T4, T5>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Widening(T2 to Maki.Variant(Of T1, T2, T3, T4, T5))
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Implicit(T2 to Variant<T1, T2, T3, T4, T5>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Widening(T2 to Variant(Of T1, T2, T3, T4, T5))
+- uid: Maki.Variant`5.op_Implicit(`2)~Maki.Variant{`0,`1,`2,`3,`4}
+  name: Implicit(T3 to Variant<T1, T2, T3, T4, T5>)
+  href: api/Maki.Variant-5.html#Maki_Variant_5_op_Implicit__2__Maki_Variant__0__1__2__3__4_
+  commentId: M:Maki.Variant`5.op_Implicit(`2)~Maki.Variant{`0,`1,`2,`3,`4}
+  name.vb: Widening(T3 to Variant(Of T1, T2, T3, T4, T5))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Implicit(T3 to Maki.Variant<T1, T2, T3, T4, T5>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Widening(T3 to Maki.Variant(Of T1, T2, T3, T4, T5))
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Implicit(T3 to Variant<T1, T2, T3, T4, T5>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Widening(T3 to Variant(Of T1, T2, T3, T4, T5))
+- uid: Maki.Variant`5.op_Implicit(`3)~Maki.Variant{`0,`1,`2,`3,`4}
+  name: Implicit(T4 to Variant<T1, T2, T3, T4, T5>)
+  href: api/Maki.Variant-5.html#Maki_Variant_5_op_Implicit__3__Maki_Variant__0__1__2__3__4_
+  commentId: M:Maki.Variant`5.op_Implicit(`3)~Maki.Variant{`0,`1,`2,`3,`4}
+  name.vb: Widening(T4 to Variant(Of T1, T2, T3, T4, T5))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Implicit(T4 to Maki.Variant<T1, T2, T3, T4, T5>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Widening(T4 to Maki.Variant(Of T1, T2, T3, T4, T5))
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Implicit(T4 to Variant<T1, T2, T3, T4, T5>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Widening(T4 to Variant(Of T1, T2, T3, T4, T5))
+- uid: Maki.Variant`5.op_Implicit(`4)~Maki.Variant{`0,`1,`2,`3,`4}
+  name: Implicit(T5 to Variant<T1, T2, T3, T4, T5>)
+  href: api/Maki.Variant-5.html#Maki_Variant_5_op_Implicit__4__Maki_Variant__0__1__2__3__4_
+  commentId: M:Maki.Variant`5.op_Implicit(`4)~Maki.Variant{`0,`1,`2,`3,`4}
+  name.vb: Widening(T5 to Variant(Of T1, T2, T3, T4, T5))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Implicit(T5 to Maki.Variant<T1, T2, T3, T4, T5>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Widening(T5 to Maki.Variant(Of T1, T2, T3, T4, T5))
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Implicit(T5 to Variant<T1, T2, T3, T4, T5>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Widening(T5 to Variant(Of T1, T2, T3, T4, T5))
+- uid: Maki.Variant`5.op_Implicit*
+  name: Implicit
+  href: api/Maki.Variant-5.html#Maki_Variant_5_op_Implicit_
+  commentId: Overload:Maki.Variant`5.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Maki.Variant<T1, T2, T3, T4, T5>.Implicit
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5).Widening
+  nameWithType: Variant<T1, T2, T3, T4, T5>.Implicit
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5).Widening
+- uid: Maki.Variant`6
+  name: Variant<T1, T2, T3, T4, T5, T6>
+  href: api/Maki.Variant-6.html
+  commentId: T:Maki.Variant`6
+  name.vb: Variant(Of T1, T2, T3, T4, T5, T6)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6)
+- uid: Maki.Variant`6.#ctor(`0)
+  name: Variant(T1)
+  href: api/Maki.Variant-6.html#Maki_Variant_6__ctor__0_
+  commentId: M:Maki.Variant`6.#ctor(`0)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Variant(T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Variant(T1)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Variant(T1)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Variant(T1)
+- uid: Maki.Variant`6.#ctor(`1)
+  name: Variant(T2)
+  href: api/Maki.Variant-6.html#Maki_Variant_6__ctor__1_
+  commentId: M:Maki.Variant`6.#ctor(`1)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Variant(T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Variant(T2)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Variant(T2)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Variant(T2)
+- uid: Maki.Variant`6.#ctor(`2)
+  name: Variant(T3)
+  href: api/Maki.Variant-6.html#Maki_Variant_6__ctor__2_
+  commentId: M:Maki.Variant`6.#ctor(`2)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Variant(T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Variant(T3)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Variant(T3)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Variant(T3)
+- uid: Maki.Variant`6.#ctor(`3)
+  name: Variant(T4)
+  href: api/Maki.Variant-6.html#Maki_Variant_6__ctor__3_
+  commentId: M:Maki.Variant`6.#ctor(`3)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Variant(T4)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Variant(T4)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Variant(T4)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Variant(T4)
+- uid: Maki.Variant`6.#ctor(`4)
+  name: Variant(T5)
+  href: api/Maki.Variant-6.html#Maki_Variant_6__ctor__4_
+  commentId: M:Maki.Variant`6.#ctor(`4)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Variant(T5)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Variant(T5)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Variant(T5)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Variant(T5)
+- uid: Maki.Variant`6.#ctor(`5)
+  name: Variant(T6)
+  href: api/Maki.Variant-6.html#Maki_Variant_6__ctor__5_
+  commentId: M:Maki.Variant`6.#ctor(`5)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Variant(T6)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Variant(T6)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Variant(T6)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Variant(T6)
+- uid: Maki.Variant`6.#ctor*
+  name: Variant
+  href: api/Maki.Variant-6.html#Maki_Variant_6__ctor_
+  commentId: Overload:Maki.Variant`6.#ctor
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Variant
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Variant
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Variant
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Variant
+- uid: Maki.Variant`6.Make1(`0)
+  name: Make1(T1)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_Make1__0_
+  commentId: M:Maki.Variant`6.Make1(`0)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Make1(T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Make1(T1)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Make1(T1)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Make1(T1)
+- uid: Maki.Variant`6.Make1*
+  name: Make1
+  href: api/Maki.Variant-6.html#Maki_Variant_6_Make1_
+  commentId: Overload:Maki.Variant`6.Make1
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Make1
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Make1
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Make1
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Make1
+- uid: Maki.Variant`6.Make2(`1)
+  name: Make2(T2)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_Make2__1_
+  commentId: M:Maki.Variant`6.Make2(`1)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Make2(T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Make2(T2)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Make2(T2)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Make2(T2)
+- uid: Maki.Variant`6.Make2*
+  name: Make2
+  href: api/Maki.Variant-6.html#Maki_Variant_6_Make2_
+  commentId: Overload:Maki.Variant`6.Make2
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Make2
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Make2
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Make2
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Make2
+- uid: Maki.Variant`6.Make3(`2)
+  name: Make3(T3)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_Make3__2_
+  commentId: M:Maki.Variant`6.Make3(`2)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Make3(T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Make3(T3)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Make3(T3)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Make3(T3)
+- uid: Maki.Variant`6.Make3*
+  name: Make3
+  href: api/Maki.Variant-6.html#Maki_Variant_6_Make3_
+  commentId: Overload:Maki.Variant`6.Make3
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Make3
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Make3
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Make3
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Make3
+- uid: Maki.Variant`6.Make4(`3)
+  name: Make4(T4)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_Make4__3_
+  commentId: M:Maki.Variant`6.Make4(`3)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Make4(T4)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Make4(T4)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Make4(T4)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Make4(T4)
+- uid: Maki.Variant`6.Make4*
+  name: Make4
+  href: api/Maki.Variant-6.html#Maki_Variant_6_Make4_
+  commentId: Overload:Maki.Variant`6.Make4
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Make4
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Make4
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Make4
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Make4
+- uid: Maki.Variant`6.Make5(`4)
+  name: Make5(T5)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_Make5__4_
+  commentId: M:Maki.Variant`6.Make5(`4)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Make5(T5)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Make5(T5)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Make5(T5)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Make5(T5)
+- uid: Maki.Variant`6.Make5*
+  name: Make5
+  href: api/Maki.Variant-6.html#Maki_Variant_6_Make5_
+  commentId: Overload:Maki.Variant`6.Make5
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Make5
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Make5
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Make5
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Make5
+- uid: Maki.Variant`6.Make6(`5)
+  name: Make6(T6)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_Make6__5_
+  commentId: M:Maki.Variant`6.Make6(`5)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Make6(T6)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Make6(T6)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Make6(T6)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Make6(T6)
+- uid: Maki.Variant`6.Make6*
+  name: Make6
+  href: api/Maki.Variant-6.html#Maki_Variant_6_Make6_
+  commentId: Overload:Maki.Variant`6.Make6
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Make6
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Make6
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Make6
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Make6
+- uid: Maki.Variant`6.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5})~`0
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6> to T1)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_op_Explicit_Maki_Variant__0__1__2__3__4__5____0
+  commentId: M:Maki.Variant`6.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5})~`0
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6) to T1)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6> to T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6) to T1)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Explicit(Variant<T1, T2, T3, T4, T5, T6> to T1)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6) to T1)
+- uid: Maki.Variant`6.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5})~`1
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6> to T2)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_op_Explicit_Maki_Variant__0__1__2__3__4__5____1
+  commentId: M:Maki.Variant`6.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5})~`1
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6) to T2)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6> to T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6) to T2)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Explicit(Variant<T1, T2, T3, T4, T5, T6> to T2)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6) to T2)
+- uid: Maki.Variant`6.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5})~`2
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6> to T3)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_op_Explicit_Maki_Variant__0__1__2__3__4__5____2
+  commentId: M:Maki.Variant`6.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5})~`2
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6) to T3)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6> to T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6) to T3)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Explicit(Variant<T1, T2, T3, T4, T5, T6> to T3)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6) to T3)
+- uid: Maki.Variant`6.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5})~`3
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6> to T4)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_op_Explicit_Maki_Variant__0__1__2__3__4__5____3
+  commentId: M:Maki.Variant`6.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5})~`3
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6) to T4)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6> to T4)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6) to T4)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Explicit(Variant<T1, T2, T3, T4, T5, T6> to T4)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6) to T4)
+- uid: Maki.Variant`6.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5})~`4
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6> to T5)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_op_Explicit_Maki_Variant__0__1__2__3__4__5____4
+  commentId: M:Maki.Variant`6.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5})~`4
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6) to T5)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6> to T5)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6) to T5)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Explicit(Variant<T1, T2, T3, T4, T5, T6> to T5)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6) to T5)
+- uid: Maki.Variant`6.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5})~`5
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6> to T6)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_op_Explicit_Maki_Variant__0__1__2__3__4__5____5
+  commentId: M:Maki.Variant`6.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5})~`5
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6) to T6)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6> to T6)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6) to T6)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Explicit(Variant<T1, T2, T3, T4, T5, T6> to T6)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6) to T6)
+- uid: Maki.Variant`6.op_Explicit*
+  name: Explicit
+  href: api/Maki.Variant-6.html#Maki_Variant_6_op_Explicit_
+  commentId: Overload:Maki.Variant`6.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Explicit
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Narrowing
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Explicit
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Narrowing
+- uid: Maki.Variant`6.op_Implicit(`0)~Maki.Variant{`0,`1,`2,`3,`4,`5}
+  name: Implicit(T1 to Variant<T1, T2, T3, T4, T5, T6>)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_op_Implicit__0__Maki_Variant__0__1__2__3__4__5_
+  commentId: M:Maki.Variant`6.op_Implicit(`0)~Maki.Variant{`0,`1,`2,`3,`4,`5}
+  name.vb: Widening(T1 to Variant(Of T1, T2, T3, T4, T5, T6))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Implicit(T1 to Maki.Variant<T1, T2, T3, T4, T5, T6>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Widening(T1 to Maki.Variant(Of T1, T2, T3, T4, T5, T6))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Implicit(T1 to Variant<T1, T2, T3, T4, T5, T6>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Widening(T1 to Variant(Of T1, T2, T3, T4, T5, T6))
+- uid: Maki.Variant`6.op_Implicit(`1)~Maki.Variant{`0,`1,`2,`3,`4,`5}
+  name: Implicit(T2 to Variant<T1, T2, T3, T4, T5, T6>)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_op_Implicit__1__Maki_Variant__0__1__2__3__4__5_
+  commentId: M:Maki.Variant`6.op_Implicit(`1)~Maki.Variant{`0,`1,`2,`3,`4,`5}
+  name.vb: Widening(T2 to Variant(Of T1, T2, T3, T4, T5, T6))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Implicit(T2 to Maki.Variant<T1, T2, T3, T4, T5, T6>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Widening(T2 to Maki.Variant(Of T1, T2, T3, T4, T5, T6))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Implicit(T2 to Variant<T1, T2, T3, T4, T5, T6>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Widening(T2 to Variant(Of T1, T2, T3, T4, T5, T6))
+- uid: Maki.Variant`6.op_Implicit(`2)~Maki.Variant{`0,`1,`2,`3,`4,`5}
+  name: Implicit(T3 to Variant<T1, T2, T3, T4, T5, T6>)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_op_Implicit__2__Maki_Variant__0__1__2__3__4__5_
+  commentId: M:Maki.Variant`6.op_Implicit(`2)~Maki.Variant{`0,`1,`2,`3,`4,`5}
+  name.vb: Widening(T3 to Variant(Of T1, T2, T3, T4, T5, T6))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Implicit(T3 to Maki.Variant<T1, T2, T3, T4, T5, T6>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Widening(T3 to Maki.Variant(Of T1, T2, T3, T4, T5, T6))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Implicit(T3 to Variant<T1, T2, T3, T4, T5, T6>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Widening(T3 to Variant(Of T1, T2, T3, T4, T5, T6))
+- uid: Maki.Variant`6.op_Implicit(`3)~Maki.Variant{`0,`1,`2,`3,`4,`5}
+  name: Implicit(T4 to Variant<T1, T2, T3, T4, T5, T6>)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_op_Implicit__3__Maki_Variant__0__1__2__3__4__5_
+  commentId: M:Maki.Variant`6.op_Implicit(`3)~Maki.Variant{`0,`1,`2,`3,`4,`5}
+  name.vb: Widening(T4 to Variant(Of T1, T2, T3, T4, T5, T6))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Implicit(T4 to Maki.Variant<T1, T2, T3, T4, T5, T6>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Widening(T4 to Maki.Variant(Of T1, T2, T3, T4, T5, T6))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Implicit(T4 to Variant<T1, T2, T3, T4, T5, T6>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Widening(T4 to Variant(Of T1, T2, T3, T4, T5, T6))
+- uid: Maki.Variant`6.op_Implicit(`4)~Maki.Variant{`0,`1,`2,`3,`4,`5}
+  name: Implicit(T5 to Variant<T1, T2, T3, T4, T5, T6>)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_op_Implicit__4__Maki_Variant__0__1__2__3__4__5_
+  commentId: M:Maki.Variant`6.op_Implicit(`4)~Maki.Variant{`0,`1,`2,`3,`4,`5}
+  name.vb: Widening(T5 to Variant(Of T1, T2, T3, T4, T5, T6))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Implicit(T5 to Maki.Variant<T1, T2, T3, T4, T5, T6>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Widening(T5 to Maki.Variant(Of T1, T2, T3, T4, T5, T6))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Implicit(T5 to Variant<T1, T2, T3, T4, T5, T6>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Widening(T5 to Variant(Of T1, T2, T3, T4, T5, T6))
+- uid: Maki.Variant`6.op_Implicit(`5)~Maki.Variant{`0,`1,`2,`3,`4,`5}
+  name: Implicit(T6 to Variant<T1, T2, T3, T4, T5, T6>)
+  href: api/Maki.Variant-6.html#Maki_Variant_6_op_Implicit__5__Maki_Variant__0__1__2__3__4__5_
+  commentId: M:Maki.Variant`6.op_Implicit(`5)~Maki.Variant{`0,`1,`2,`3,`4,`5}
+  name.vb: Widening(T6 to Variant(Of T1, T2, T3, T4, T5, T6))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Implicit(T6 to Maki.Variant<T1, T2, T3, T4, T5, T6>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Widening(T6 to Maki.Variant(Of T1, T2, T3, T4, T5, T6))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Implicit(T6 to Variant<T1, T2, T3, T4, T5, T6>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Widening(T6 to Variant(Of T1, T2, T3, T4, T5, T6))
+- uid: Maki.Variant`6.op_Implicit*
+  name: Implicit
+  href: api/Maki.Variant-6.html#Maki_Variant_6_op_Implicit_
+  commentId: Overload:Maki.Variant`6.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6>.Implicit
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6).Widening
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6>.Implicit
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6).Widening
+- uid: Maki.Variant`7
+  name: Variant<T1, T2, T3, T4, T5, T6, T7>
+  href: api/Maki.Variant-7.html
+  commentId: T:Maki.Variant`7
+  name.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7)
+- uid: Maki.Variant`7.#ctor(`0)
+  name: Variant(T1)
+  href: api/Maki.Variant-7.html#Maki_Variant_7__ctor__0_
+  commentId: M:Maki.Variant`7.#ctor(`0)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Variant(T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Variant(T1)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Variant(T1)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Variant(T1)
+- uid: Maki.Variant`7.#ctor(`1)
+  name: Variant(T2)
+  href: api/Maki.Variant-7.html#Maki_Variant_7__ctor__1_
+  commentId: M:Maki.Variant`7.#ctor(`1)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Variant(T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Variant(T2)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Variant(T2)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Variant(T2)
+- uid: Maki.Variant`7.#ctor(`2)
+  name: Variant(T3)
+  href: api/Maki.Variant-7.html#Maki_Variant_7__ctor__2_
+  commentId: M:Maki.Variant`7.#ctor(`2)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Variant(T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Variant(T3)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Variant(T3)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Variant(T3)
+- uid: Maki.Variant`7.#ctor(`3)
+  name: Variant(T4)
+  href: api/Maki.Variant-7.html#Maki_Variant_7__ctor__3_
+  commentId: M:Maki.Variant`7.#ctor(`3)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Variant(T4)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Variant(T4)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Variant(T4)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Variant(T4)
+- uid: Maki.Variant`7.#ctor(`4)
+  name: Variant(T5)
+  href: api/Maki.Variant-7.html#Maki_Variant_7__ctor__4_
+  commentId: M:Maki.Variant`7.#ctor(`4)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Variant(T5)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Variant(T5)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Variant(T5)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Variant(T5)
+- uid: Maki.Variant`7.#ctor(`5)
+  name: Variant(T6)
+  href: api/Maki.Variant-7.html#Maki_Variant_7__ctor__5_
+  commentId: M:Maki.Variant`7.#ctor(`5)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Variant(T6)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Variant(T6)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Variant(T6)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Variant(T6)
+- uid: Maki.Variant`7.#ctor(`6)
+  name: Variant(T7)
+  href: api/Maki.Variant-7.html#Maki_Variant_7__ctor__6_
+  commentId: M:Maki.Variant`7.#ctor(`6)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Variant(T7)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Variant(T7)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Variant(T7)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Variant(T7)
+- uid: Maki.Variant`7.#ctor*
+  name: Variant
+  href: api/Maki.Variant-7.html#Maki_Variant_7__ctor_
+  commentId: Overload:Maki.Variant`7.#ctor
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Variant
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Variant
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Variant
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Variant
+- uid: Maki.Variant`7.Make1(`0)
+  name: Make1(T1)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_Make1__0_
+  commentId: M:Maki.Variant`7.Make1(`0)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Make1(T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Make1(T1)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Make1(T1)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Make1(T1)
+- uid: Maki.Variant`7.Make1*
+  name: Make1
+  href: api/Maki.Variant-7.html#Maki_Variant_7_Make1_
+  commentId: Overload:Maki.Variant`7.Make1
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Make1
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Make1
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Make1
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Make1
+- uid: Maki.Variant`7.Make2(`1)
+  name: Make2(T2)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_Make2__1_
+  commentId: M:Maki.Variant`7.Make2(`1)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Make2(T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Make2(T2)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Make2(T2)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Make2(T2)
+- uid: Maki.Variant`7.Make2*
+  name: Make2
+  href: api/Maki.Variant-7.html#Maki_Variant_7_Make2_
+  commentId: Overload:Maki.Variant`7.Make2
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Make2
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Make2
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Make2
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Make2
+- uid: Maki.Variant`7.Make3(`2)
+  name: Make3(T3)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_Make3__2_
+  commentId: M:Maki.Variant`7.Make3(`2)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Make3(T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Make3(T3)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Make3(T3)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Make3(T3)
+- uid: Maki.Variant`7.Make3*
+  name: Make3
+  href: api/Maki.Variant-7.html#Maki_Variant_7_Make3_
+  commentId: Overload:Maki.Variant`7.Make3
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Make3
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Make3
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Make3
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Make3
+- uid: Maki.Variant`7.Make4(`3)
+  name: Make4(T4)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_Make4__3_
+  commentId: M:Maki.Variant`7.Make4(`3)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Make4(T4)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Make4(T4)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Make4(T4)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Make4(T4)
+- uid: Maki.Variant`7.Make4*
+  name: Make4
+  href: api/Maki.Variant-7.html#Maki_Variant_7_Make4_
+  commentId: Overload:Maki.Variant`7.Make4
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Make4
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Make4
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Make4
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Make4
+- uid: Maki.Variant`7.Make5(`4)
+  name: Make5(T5)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_Make5__4_
+  commentId: M:Maki.Variant`7.Make5(`4)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Make5(T5)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Make5(T5)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Make5(T5)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Make5(T5)
+- uid: Maki.Variant`7.Make5*
+  name: Make5
+  href: api/Maki.Variant-7.html#Maki_Variant_7_Make5_
+  commentId: Overload:Maki.Variant`7.Make5
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Make5
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Make5
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Make5
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Make5
+- uid: Maki.Variant`7.Make6(`5)
+  name: Make6(T6)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_Make6__5_
+  commentId: M:Maki.Variant`7.Make6(`5)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Make6(T6)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Make6(T6)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Make6(T6)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Make6(T6)
+- uid: Maki.Variant`7.Make6*
+  name: Make6
+  href: api/Maki.Variant-7.html#Maki_Variant_7_Make6_
+  commentId: Overload:Maki.Variant`7.Make6
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Make6
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Make6
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Make6
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Make6
+- uid: Maki.Variant`7.Make7(`6)
+  name: Make7(T7)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_Make7__6_
+  commentId: M:Maki.Variant`7.Make7(`6)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Make7(T7)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Make7(T7)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Make7(T7)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Make7(T7)
+- uid: Maki.Variant`7.Make7*
+  name: Make7
+  href: api/Maki.Variant-7.html#Maki_Variant_7_Make7_
+  commentId: Overload:Maki.Variant`7.Make7
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Make7
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Make7
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Make7
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Make7
+- uid: Maki.Variant`7.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6})~`0
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6, T7> to T1)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_op_Explicit_Maki_Variant__0__1__2__3__4__5__6____0
+  commentId: M:Maki.Variant`7.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6})~`0
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7) to T1)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6, T7> to T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7) to T1)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Explicit(Variant<T1, T2, T3, T4, T5, T6, T7> to T1)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7) to T1)
+- uid: Maki.Variant`7.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6})~`1
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6, T7> to T2)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_op_Explicit_Maki_Variant__0__1__2__3__4__5__6____1
+  commentId: M:Maki.Variant`7.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6})~`1
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7) to T2)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6, T7> to T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7) to T2)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Explicit(Variant<T1, T2, T3, T4, T5, T6, T7> to T2)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7) to T2)
+- uid: Maki.Variant`7.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6})~`2
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6, T7> to T3)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_op_Explicit_Maki_Variant__0__1__2__3__4__5__6____2
+  commentId: M:Maki.Variant`7.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6})~`2
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7) to T3)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6, T7> to T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7) to T3)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Explicit(Variant<T1, T2, T3, T4, T5, T6, T7> to T3)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7) to T3)
+- uid: Maki.Variant`7.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6})~`3
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6, T7> to T4)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_op_Explicit_Maki_Variant__0__1__2__3__4__5__6____3
+  commentId: M:Maki.Variant`7.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6})~`3
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7) to T4)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6, T7> to T4)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7) to T4)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Explicit(Variant<T1, T2, T3, T4, T5, T6, T7> to T4)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7) to T4)
+- uid: Maki.Variant`7.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6})~`4
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6, T7> to T5)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_op_Explicit_Maki_Variant__0__1__2__3__4__5__6____4
+  commentId: M:Maki.Variant`7.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6})~`4
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7) to T5)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6, T7> to T5)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7) to T5)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Explicit(Variant<T1, T2, T3, T4, T5, T6, T7> to T5)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7) to T5)
+- uid: Maki.Variant`7.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6})~`5
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6, T7> to T6)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_op_Explicit_Maki_Variant__0__1__2__3__4__5__6____5
+  commentId: M:Maki.Variant`7.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6})~`5
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7) to T6)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6, T7> to T6)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7) to T6)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Explicit(Variant<T1, T2, T3, T4, T5, T6, T7> to T6)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7) to T6)
+- uid: Maki.Variant`7.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6})~`6
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6, T7> to T7)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_op_Explicit_Maki_Variant__0__1__2__3__4__5__6____6
+  commentId: M:Maki.Variant`7.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6})~`6
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7) to T7)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6, T7> to T7)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7) to T7)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Explicit(Variant<T1, T2, T3, T4, T5, T6, T7> to T7)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7) to T7)
+- uid: Maki.Variant`7.op_Explicit*
+  name: Explicit
+  href: api/Maki.Variant-7.html#Maki_Variant_7_op_Explicit_
+  commentId: Overload:Maki.Variant`7.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Explicit
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Narrowing
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Explicit
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Narrowing
+- uid: Maki.Variant`7.op_Implicit(`0)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6}
+  name: Implicit(T1 to Variant<T1, T2, T3, T4, T5, T6, T7>)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_op_Implicit__0__Maki_Variant__0__1__2__3__4__5__6_
+  commentId: M:Maki.Variant`7.op_Implicit(`0)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6}
+  name.vb: Widening(T1 to Variant(Of T1, T2, T3, T4, T5, T6, T7))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Implicit(T1 to Maki.Variant<T1, T2, T3, T4, T5, T6, T7>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Widening(T1 to Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Implicit(T1 to Variant<T1, T2, T3, T4, T5, T6, T7>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Widening(T1 to Variant(Of T1, T2, T3, T4, T5, T6, T7))
+- uid: Maki.Variant`7.op_Implicit(`1)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6}
+  name: Implicit(T2 to Variant<T1, T2, T3, T4, T5, T6, T7>)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_op_Implicit__1__Maki_Variant__0__1__2__3__4__5__6_
+  commentId: M:Maki.Variant`7.op_Implicit(`1)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6}
+  name.vb: Widening(T2 to Variant(Of T1, T2, T3, T4, T5, T6, T7))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Implicit(T2 to Maki.Variant<T1, T2, T3, T4, T5, T6, T7>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Widening(T2 to Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Implicit(T2 to Variant<T1, T2, T3, T4, T5, T6, T7>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Widening(T2 to Variant(Of T1, T2, T3, T4, T5, T6, T7))
+- uid: Maki.Variant`7.op_Implicit(`2)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6}
+  name: Implicit(T3 to Variant<T1, T2, T3, T4, T5, T6, T7>)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_op_Implicit__2__Maki_Variant__0__1__2__3__4__5__6_
+  commentId: M:Maki.Variant`7.op_Implicit(`2)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6}
+  name.vb: Widening(T3 to Variant(Of T1, T2, T3, T4, T5, T6, T7))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Implicit(T3 to Maki.Variant<T1, T2, T3, T4, T5, T6, T7>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Widening(T3 to Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Implicit(T3 to Variant<T1, T2, T3, T4, T5, T6, T7>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Widening(T3 to Variant(Of T1, T2, T3, T4, T5, T6, T7))
+- uid: Maki.Variant`7.op_Implicit(`3)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6}
+  name: Implicit(T4 to Variant<T1, T2, T3, T4, T5, T6, T7>)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_op_Implicit__3__Maki_Variant__0__1__2__3__4__5__6_
+  commentId: M:Maki.Variant`7.op_Implicit(`3)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6}
+  name.vb: Widening(T4 to Variant(Of T1, T2, T3, T4, T5, T6, T7))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Implicit(T4 to Maki.Variant<T1, T2, T3, T4, T5, T6, T7>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Widening(T4 to Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Implicit(T4 to Variant<T1, T2, T3, T4, T5, T6, T7>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Widening(T4 to Variant(Of T1, T2, T3, T4, T5, T6, T7))
+- uid: Maki.Variant`7.op_Implicit(`4)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6}
+  name: Implicit(T5 to Variant<T1, T2, T3, T4, T5, T6, T7>)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_op_Implicit__4__Maki_Variant__0__1__2__3__4__5__6_
+  commentId: M:Maki.Variant`7.op_Implicit(`4)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6}
+  name.vb: Widening(T5 to Variant(Of T1, T2, T3, T4, T5, T6, T7))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Implicit(T5 to Maki.Variant<T1, T2, T3, T4, T5, T6, T7>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Widening(T5 to Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Implicit(T5 to Variant<T1, T2, T3, T4, T5, T6, T7>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Widening(T5 to Variant(Of T1, T2, T3, T4, T5, T6, T7))
+- uid: Maki.Variant`7.op_Implicit(`5)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6}
+  name: Implicit(T6 to Variant<T1, T2, T3, T4, T5, T6, T7>)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_op_Implicit__5__Maki_Variant__0__1__2__3__4__5__6_
+  commentId: M:Maki.Variant`7.op_Implicit(`5)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6}
+  name.vb: Widening(T6 to Variant(Of T1, T2, T3, T4, T5, T6, T7))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Implicit(T6 to Maki.Variant<T1, T2, T3, T4, T5, T6, T7>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Widening(T6 to Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Implicit(T6 to Variant<T1, T2, T3, T4, T5, T6, T7>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Widening(T6 to Variant(Of T1, T2, T3, T4, T5, T6, T7))
+- uid: Maki.Variant`7.op_Implicit(`6)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6}
+  name: Implicit(T7 to Variant<T1, T2, T3, T4, T5, T6, T7>)
+  href: api/Maki.Variant-7.html#Maki_Variant_7_op_Implicit__6__Maki_Variant__0__1__2__3__4__5__6_
+  commentId: M:Maki.Variant`7.op_Implicit(`6)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6}
+  name.vb: Widening(T7 to Variant(Of T1, T2, T3, T4, T5, T6, T7))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Implicit(T7 to Maki.Variant<T1, T2, T3, T4, T5, T6, T7>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Widening(T7 to Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Implicit(T7 to Variant<T1, T2, T3, T4, T5, T6, T7>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Widening(T7 to Variant(Of T1, T2, T3, T4, T5, T6, T7))
+- uid: Maki.Variant`7.op_Implicit*
+  name: Implicit
+  href: api/Maki.Variant-7.html#Maki_Variant_7_op_Implicit_
+  commentId: Overload:Maki.Variant`7.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7>.Implicit
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7).Widening
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7>.Implicit
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7).Widening
+- uid: Maki.Variant`8
+  name: Variant<T1, T2, T3, T4, T5, T6, T7, T8>
+  href: api/Maki.Variant-8.html
+  commentId: T:Maki.Variant`8
+  name.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8)
+- uid: Maki.Variant`8.#ctor(`0)
+  name: Variant(T1)
+  href: api/Maki.Variant-8.html#Maki_Variant_8__ctor__0_
+  commentId: M:Maki.Variant`8.#ctor(`0)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant(T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant(T1)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant(T1)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant(T1)
+- uid: Maki.Variant`8.#ctor(`1)
+  name: Variant(T2)
+  href: api/Maki.Variant-8.html#Maki_Variant_8__ctor__1_
+  commentId: M:Maki.Variant`8.#ctor(`1)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant(T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant(T2)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant(T2)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant(T2)
+- uid: Maki.Variant`8.#ctor(`2)
+  name: Variant(T3)
+  href: api/Maki.Variant-8.html#Maki_Variant_8__ctor__2_
+  commentId: M:Maki.Variant`8.#ctor(`2)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant(T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant(T3)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant(T3)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant(T3)
+- uid: Maki.Variant`8.#ctor(`3)
+  name: Variant(T4)
+  href: api/Maki.Variant-8.html#Maki_Variant_8__ctor__3_
+  commentId: M:Maki.Variant`8.#ctor(`3)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant(T4)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant(T4)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant(T4)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant(T4)
+- uid: Maki.Variant`8.#ctor(`4)
+  name: Variant(T5)
+  href: api/Maki.Variant-8.html#Maki_Variant_8__ctor__4_
+  commentId: M:Maki.Variant`8.#ctor(`4)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant(T5)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant(T5)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant(T5)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant(T5)
+- uid: Maki.Variant`8.#ctor(`5)
+  name: Variant(T6)
+  href: api/Maki.Variant-8.html#Maki_Variant_8__ctor__5_
+  commentId: M:Maki.Variant`8.#ctor(`5)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant(T6)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant(T6)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant(T6)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant(T6)
+- uid: Maki.Variant`8.#ctor(`6)
+  name: Variant(T7)
+  href: api/Maki.Variant-8.html#Maki_Variant_8__ctor__6_
+  commentId: M:Maki.Variant`8.#ctor(`6)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant(T7)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant(T7)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant(T7)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant(T7)
+- uid: Maki.Variant`8.#ctor(`7)
+  name: Variant(T8)
+  href: api/Maki.Variant-8.html#Maki_Variant_8__ctor__7_
+  commentId: M:Maki.Variant`8.#ctor(`7)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant(T8)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant(T8)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant(T8)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant(T8)
+- uid: Maki.Variant`8.#ctor*
+  name: Variant
+  href: api/Maki.Variant-8.html#Maki_Variant_8__ctor_
+  commentId: Overload:Maki.Variant`8.#ctor
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Variant
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Variant
+- uid: Maki.Variant`8.Make1(`0)
+  name: Make1(T1)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_Make1__0_
+  commentId: M:Maki.Variant`8.Make1(`0)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make1(T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make1(T1)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make1(T1)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make1(T1)
+- uid: Maki.Variant`8.Make1*
+  name: Make1
+  href: api/Maki.Variant-8.html#Maki_Variant_8_Make1_
+  commentId: Overload:Maki.Variant`8.Make1
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make1
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make1
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make1
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make1
+- uid: Maki.Variant`8.Make2(`1)
+  name: Make2(T2)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_Make2__1_
+  commentId: M:Maki.Variant`8.Make2(`1)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make2(T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make2(T2)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make2(T2)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make2(T2)
+- uid: Maki.Variant`8.Make2*
+  name: Make2
+  href: api/Maki.Variant-8.html#Maki_Variant_8_Make2_
+  commentId: Overload:Maki.Variant`8.Make2
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make2
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make2
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make2
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make2
+- uid: Maki.Variant`8.Make3(`2)
+  name: Make3(T3)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_Make3__2_
+  commentId: M:Maki.Variant`8.Make3(`2)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make3(T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make3(T3)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make3(T3)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make3(T3)
+- uid: Maki.Variant`8.Make3*
+  name: Make3
+  href: api/Maki.Variant-8.html#Maki_Variant_8_Make3_
+  commentId: Overload:Maki.Variant`8.Make3
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make3
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make3
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make3
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make3
+- uid: Maki.Variant`8.Make4(`3)
+  name: Make4(T4)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_Make4__3_
+  commentId: M:Maki.Variant`8.Make4(`3)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make4(T4)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make4(T4)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make4(T4)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make4(T4)
+- uid: Maki.Variant`8.Make4*
+  name: Make4
+  href: api/Maki.Variant-8.html#Maki_Variant_8_Make4_
+  commentId: Overload:Maki.Variant`8.Make4
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make4
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make4
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make4
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make4
+- uid: Maki.Variant`8.Make5(`4)
+  name: Make5(T5)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_Make5__4_
+  commentId: M:Maki.Variant`8.Make5(`4)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make5(T5)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make5(T5)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make5(T5)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make5(T5)
+- uid: Maki.Variant`8.Make5*
+  name: Make5
+  href: api/Maki.Variant-8.html#Maki_Variant_8_Make5_
+  commentId: Overload:Maki.Variant`8.Make5
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make5
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make5
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make5
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make5
+- uid: Maki.Variant`8.Make6(`5)
+  name: Make6(T6)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_Make6__5_
+  commentId: M:Maki.Variant`8.Make6(`5)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make6(T6)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make6(T6)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make6(T6)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make6(T6)
+- uid: Maki.Variant`8.Make6*
+  name: Make6
+  href: api/Maki.Variant-8.html#Maki_Variant_8_Make6_
+  commentId: Overload:Maki.Variant`8.Make6
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make6
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make6
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make6
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make6
+- uid: Maki.Variant`8.Make7(`6)
+  name: Make7(T7)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_Make7__6_
+  commentId: M:Maki.Variant`8.Make7(`6)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make7(T7)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make7(T7)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make7(T7)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make7(T7)
+- uid: Maki.Variant`8.Make7*
+  name: Make7
+  href: api/Maki.Variant-8.html#Maki_Variant_8_Make7_
+  commentId: Overload:Maki.Variant`8.Make7
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make7
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make7
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make7
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make7
+- uid: Maki.Variant`8.Make8(`7)
+  name: Make8(T8)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_Make8__7_
+  commentId: M:Maki.Variant`8.Make8(`7)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make8(T8)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make8(T8)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make8(T8)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make8(T8)
+- uid: Maki.Variant`8.Make8*
+  name: Make8
+  href: api/Maki.Variant-8.html#Maki_Variant_8_Make8_
+  commentId: Overload:Maki.Variant`8.Make8
+  isSpec: "True"
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make8
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make8
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Make8
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Make8
+- uid: Maki.Variant`8.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7})~`0
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T1)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Explicit_Maki_Variant__0__1__2__3__4__5__6__7____0
+  commentId: M:Maki.Variant`8.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7})~`0
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T1)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T1)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T1)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit(Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T1)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T1)
+- uid: Maki.Variant`8.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7})~`1
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T2)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Explicit_Maki_Variant__0__1__2__3__4__5__6__7____1
+  commentId: M:Maki.Variant`8.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7})~`1
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T2)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T2)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T2)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit(Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T2)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T2)
+- uid: Maki.Variant`8.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7})~`2
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T3)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Explicit_Maki_Variant__0__1__2__3__4__5__6__7____2
+  commentId: M:Maki.Variant`8.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7})~`2
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T3)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T3)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T3)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit(Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T3)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T3)
+- uid: Maki.Variant`8.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7})~`3
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T4)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Explicit_Maki_Variant__0__1__2__3__4__5__6__7____3
+  commentId: M:Maki.Variant`8.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7})~`3
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T4)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T4)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T4)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit(Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T4)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T4)
+- uid: Maki.Variant`8.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7})~`4
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T5)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Explicit_Maki_Variant__0__1__2__3__4__5__6__7____4
+  commentId: M:Maki.Variant`8.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7})~`4
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T5)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T5)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T5)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit(Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T5)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T5)
+- uid: Maki.Variant`8.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7})~`5
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T6)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Explicit_Maki_Variant__0__1__2__3__4__5__6__7____5
+  commentId: M:Maki.Variant`8.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7})~`5
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T6)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T6)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T6)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit(Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T6)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T6)
+- uid: Maki.Variant`8.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7})~`6
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T7)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Explicit_Maki_Variant__0__1__2__3__4__5__6__7____6
+  commentId: M:Maki.Variant`8.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7})~`6
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T7)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T7)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T7)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit(Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T7)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T7)
+- uid: Maki.Variant`8.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7})~`7
+  name: Explicit(Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T8)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Explicit_Maki_Variant__0__1__2__3__4__5__6__7____7
+  commentId: M:Maki.Variant`8.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7})~`7
+  name.vb: Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T8)
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit(Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T8)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T8)
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit(Variant<T1, T2, T3, T4, T5, T6, T7, T8> to T8)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8) to T8)
+- uid: Maki.Variant`8.op_Explicit*
+  name: Explicit
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Explicit_
+  commentId: Overload:Maki.Variant`8.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Explicit
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Narrowing
+- uid: Maki.Variant`8.op_Implicit(`0)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7}
+  name: Implicit(T1 to Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Implicit__0__Maki_Variant__0__1__2__3__4__5__6__7_
+  commentId: M:Maki.Variant`8.op_Implicit(`0)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7}
+  name.vb: Widening(T1 to Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit(T1 to Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening(T1 to Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit(T1 to Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening(T1 to Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+- uid: Maki.Variant`8.op_Implicit(`1)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7}
+  name: Implicit(T2 to Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Implicit__1__Maki_Variant__0__1__2__3__4__5__6__7_
+  commentId: M:Maki.Variant`8.op_Implicit(`1)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7}
+  name.vb: Widening(T2 to Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit(T2 to Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening(T2 to Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit(T2 to Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening(T2 to Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+- uid: Maki.Variant`8.op_Implicit(`2)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7}
+  name: Implicit(T3 to Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Implicit__2__Maki_Variant__0__1__2__3__4__5__6__7_
+  commentId: M:Maki.Variant`8.op_Implicit(`2)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7}
+  name.vb: Widening(T3 to Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit(T3 to Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening(T3 to Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit(T3 to Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening(T3 to Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+- uid: Maki.Variant`8.op_Implicit(`3)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7}
+  name: Implicit(T4 to Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Implicit__3__Maki_Variant__0__1__2__3__4__5__6__7_
+  commentId: M:Maki.Variant`8.op_Implicit(`3)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7}
+  name.vb: Widening(T4 to Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit(T4 to Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening(T4 to Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit(T4 to Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening(T4 to Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+- uid: Maki.Variant`8.op_Implicit(`4)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7}
+  name: Implicit(T5 to Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Implicit__4__Maki_Variant__0__1__2__3__4__5__6__7_
+  commentId: M:Maki.Variant`8.op_Implicit(`4)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7}
+  name.vb: Widening(T5 to Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit(T5 to Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening(T5 to Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit(T5 to Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening(T5 to Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+- uid: Maki.Variant`8.op_Implicit(`5)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7}
+  name: Implicit(T6 to Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Implicit__5__Maki_Variant__0__1__2__3__4__5__6__7_
+  commentId: M:Maki.Variant`8.op_Implicit(`5)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7}
+  name.vb: Widening(T6 to Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit(T6 to Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening(T6 to Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit(T6 to Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening(T6 to Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+- uid: Maki.Variant`8.op_Implicit(`6)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7}
+  name: Implicit(T7 to Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Implicit__6__Maki_Variant__0__1__2__3__4__5__6__7_
+  commentId: M:Maki.Variant`8.op_Implicit(`6)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7}
+  name.vb: Widening(T7 to Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit(T7 to Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening(T7 to Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit(T7 to Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening(T7 to Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+- uid: Maki.Variant`8.op_Implicit(`7)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7}
+  name: Implicit(T8 to Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Implicit__7__Maki_Variant__0__1__2__3__4__5__6__7_
+  commentId: M:Maki.Variant`8.op_Implicit(`7)~Maki.Variant{`0,`1,`2,`3,`4,`5,`6,`7}
+  name.vb: Widening(T8 to Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit(T8 to Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening(T8 to Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit(T8 to Variant<T1, T2, T3, T4, T5, T6, T7, T8>)
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening(T8 to Variant(Of T1, T2, T3, T4, T5, T6, T7, T8))
+- uid: Maki.Variant`8.op_Implicit*
+  name: Implicit
+  href: api/Maki.Variant-8.html#Maki_Variant_8_op_Implicit_
+  commentId: Overload:Maki.Variant`8.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit
+  fullName.vb: Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening
+  nameWithType: Variant<T1, T2, T3, T4, T5, T6, T7, T8>.Implicit
+  nameWithType.vb: Variant(Of T1, T2, T3, T4, T5, T6, T7, T8).Widening
+- uid: Maki.VariantExtensions
+  name: VariantExtensions
+  href: api/Maki.VariantExtensions.html
+  commentId: T:Maki.VariantExtensions
+  fullName: Maki.VariantExtensions
+  nameWithType: VariantExtensions
+- uid: Maki.VariantExtensions.Apply*
+  name: Apply
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Apply_
+  commentId: Overload:Maki.VariantExtensions.Apply
+  isSpec: "True"
+  fullName: Maki.VariantExtensions.Apply
+  nameWithType: VariantExtensions.Apply
+- uid: Maki.VariantExtensions.Apply``2(Maki.Variant{``0,``1},System.Action{``0},System.Action{``1})
+  name: Apply<T1, T2>(Variant<T1, T2>, Action<T1>, Action<T2>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Apply__2_Maki_Variant___0___1__System_Action___0__System_Action___1__
+  commentId: M:Maki.VariantExtensions.Apply``2(Maki.Variant{``0,``1},System.Action{``0},System.Action{``1})
+  name.vb: Apply(Of T1, T2)(Variant(Of T1, T2), Action(Of T1), Action(Of T2))
+  fullName: Maki.VariantExtensions.Apply<T1, T2>(Maki.Variant<T1, T2>, System.Action<T1>, System.Action<T2>)
+  fullName.vb: Maki.VariantExtensions.Apply(Of T1, T2)(Maki.Variant(Of T1, T2), System.Action(Of T1), System.Action(Of T2))
+  nameWithType: VariantExtensions.Apply<T1, T2>(Variant<T1, T2>, Action<T1>, Action<T2>)
+  nameWithType.vb: VariantExtensions.Apply(Of T1, T2)(Variant(Of T1, T2), Action(Of T1), Action(Of T2))
+- uid: Maki.VariantExtensions.Apply``3(Maki.Variant{``0,``1,``2},System.Action{``0},System.Action{``1},System.Action{``2})
+  name: Apply<T1, T2, T3>(Variant<T1, T2, T3>, Action<T1>, Action<T2>, Action<T3>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Apply__3_Maki_Variant___0___1___2__System_Action___0__System_Action___1__System_Action___2__
+  commentId: M:Maki.VariantExtensions.Apply``3(Maki.Variant{``0,``1,``2},System.Action{``0},System.Action{``1},System.Action{``2})
+  name.vb: Apply(Of T1, T2, T3)(Variant(Of T1, T2, T3), Action(Of T1), Action(Of T2), Action(Of T3))
+  fullName: Maki.VariantExtensions.Apply<T1, T2, T3>(Maki.Variant<T1, T2, T3>, System.Action<T1>, System.Action<T2>, System.Action<T3>)
+  fullName.vb: Maki.VariantExtensions.Apply(Of T1, T2, T3)(Maki.Variant(Of T1, T2, T3), System.Action(Of T1), System.Action(Of T2), System.Action(Of T3))
+  nameWithType: VariantExtensions.Apply<T1, T2, T3>(Variant<T1, T2, T3>, Action<T1>, Action<T2>, Action<T3>)
+  nameWithType.vb: VariantExtensions.Apply(Of T1, T2, T3)(Variant(Of T1, T2, T3), Action(Of T1), Action(Of T2), Action(Of T3))
+- uid: Maki.VariantExtensions.Apply``3(Maki.Variant{``0,``1},System.Func{``0,``2},System.Func{``1,``2})
+  name: Apply<T1, T2, U>(Variant<T1, T2>, Func<T1, U>, Func<T2, U>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Apply__3_Maki_Variant___0___1__System_Func___0___2__System_Func___1___2__
+  commentId: M:Maki.VariantExtensions.Apply``3(Maki.Variant{``0,``1},System.Func{``0,``2},System.Func{``1,``2})
+  name.vb: Apply(Of T1, T2, U)(Variant(Of T1, T2), Func(Of T1, U), Func(Of T2, U))
+  fullName: Maki.VariantExtensions.Apply<T1, T2, U>(Maki.Variant<T1, T2>, System.Func<T1, U>, System.Func<T2, U>)
+  fullName.vb: Maki.VariantExtensions.Apply(Of T1, T2, U)(Maki.Variant(Of T1, T2), System.Func(Of T1, U), System.Func(Of T2, U))
+  nameWithType: VariantExtensions.Apply<T1, T2, U>(Variant<T1, T2>, Func<T1, U>, Func<T2, U>)
+  nameWithType.vb: VariantExtensions.Apply(Of T1, T2, U)(Variant(Of T1, T2), Func(Of T1, U), Func(Of T2, U))
+- uid: Maki.VariantExtensions.Apply``4(Maki.Variant{``0,``1,``2,``3},System.Action{``0},System.Action{``1},System.Action{``2},System.Action{``3})
+  name: Apply<T1, T2, T3, T4>(Variant<T1, T2, T3, T4>, Action<T1>, Action<T2>, Action<T3>, Action<T4>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Apply__4_Maki_Variant___0___1___2___3__System_Action___0__System_Action___1__System_Action___2__System_Action___3__
+  commentId: M:Maki.VariantExtensions.Apply``4(Maki.Variant{``0,``1,``2,``3},System.Action{``0},System.Action{``1},System.Action{``2},System.Action{``3})
+  name.vb: Apply(Of T1, T2, T3, T4)(Variant(Of T1, T2, T3, T4), Action(Of T1), Action(Of T2), Action(Of T3), Action(Of T4))
+  fullName: Maki.VariantExtensions.Apply<T1, T2, T3, T4>(Maki.Variant<T1, T2, T3, T4>, System.Action<T1>, System.Action<T2>, System.Action<T3>, System.Action<T4>)
+  fullName.vb: Maki.VariantExtensions.Apply(Of T1, T2, T3, T4)(Maki.Variant(Of T1, T2, T3, T4), System.Action(Of T1), System.Action(Of T2), System.Action(Of T3), System.Action(Of T4))
+  nameWithType: VariantExtensions.Apply<T1, T2, T3, T4>(Variant<T1, T2, T3, T4>, Action<T1>, Action<T2>, Action<T3>, Action<T4>)
+  nameWithType.vb: VariantExtensions.Apply(Of T1, T2, T3, T4)(Variant(Of T1, T2, T3, T4), Action(Of T1), Action(Of T2), Action(Of T3), Action(Of T4))
+- uid: Maki.VariantExtensions.Apply``4(Maki.Variant{``0,``1,``2},System.Func{``0,``3},System.Func{``1,``3},System.Func{``2,``3})
+  name: Apply<T1, T2, T3, U>(Variant<T1, T2, T3>, Func<T1, U>, Func<T2, U>, Func<T3, U>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Apply__4_Maki_Variant___0___1___2__System_Func___0___3__System_Func___1___3__System_Func___2___3__
+  commentId: M:Maki.VariantExtensions.Apply``4(Maki.Variant{``0,``1,``2},System.Func{``0,``3},System.Func{``1,``3},System.Func{``2,``3})
+  name.vb: Apply(Of T1, T2, T3, U)(Variant(Of T1, T2, T3), Func(Of T1, U), Func(Of T2, U), Func(Of T3, U))
+  fullName: Maki.VariantExtensions.Apply<T1, T2, T3, U>(Maki.Variant<T1, T2, T3>, System.Func<T1, U>, System.Func<T2, U>, System.Func<T3, U>)
+  fullName.vb: Maki.VariantExtensions.Apply(Of T1, T2, T3, U)(Maki.Variant(Of T1, T2, T3), System.Func(Of T1, U), System.Func(Of T2, U), System.Func(Of T3, U))
+  nameWithType: VariantExtensions.Apply<T1, T2, T3, U>(Variant<T1, T2, T3>, Func<T1, U>, Func<T2, U>, Func<T3, U>)
+  nameWithType.vb: VariantExtensions.Apply(Of T1, T2, T3, U)(Variant(Of T1, T2, T3), Func(Of T1, U), Func(Of T2, U), Func(Of T3, U))
+- uid: Maki.VariantExtensions.Apply``5(Maki.Variant{``0,``1,``2,``3,``4},System.Action{``0},System.Action{``1},System.Action{``2},System.Action{``3},System.Action{``4})
+  name: Apply<T1, T2, T3, T4, T5>(Variant<T1, T2, T3, T4, T5>, Action<T1>, Action<T2>, Action<T3>, Action<T4>, Action<T5>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Apply__5_Maki_Variant___0___1___2___3___4__System_Action___0__System_Action___1__System_Action___2__System_Action___3__System_Action___4__
+  commentId: M:Maki.VariantExtensions.Apply``5(Maki.Variant{``0,``1,``2,``3,``4},System.Action{``0},System.Action{``1},System.Action{``2},System.Action{``3},System.Action{``4})
+  name.vb: Apply(Of T1, T2, T3, T4, T5)(Variant(Of T1, T2, T3, T4, T5), Action(Of T1), Action(Of T2), Action(Of T3), Action(Of T4), Action(Of T5))
+  fullName: Maki.VariantExtensions.Apply<T1, T2, T3, T4, T5>(Maki.Variant<T1, T2, T3, T4, T5>, System.Action<T1>, System.Action<T2>, System.Action<T3>, System.Action<T4>, System.Action<T5>)
+  fullName.vb: Maki.VariantExtensions.Apply(Of T1, T2, T3, T4, T5)(Maki.Variant(Of T1, T2, T3, T4, T5), System.Action(Of T1), System.Action(Of T2), System.Action(Of T3), System.Action(Of T4), System.Action(Of T5))
+  nameWithType: VariantExtensions.Apply<T1, T2, T3, T4, T5>(Variant<T1, T2, T3, T4, T5>, Action<T1>, Action<T2>, Action<T3>, Action<T4>, Action<T5>)
+  nameWithType.vb: VariantExtensions.Apply(Of T1, T2, T3, T4, T5)(Variant(Of T1, T2, T3, T4, T5), Action(Of T1), Action(Of T2), Action(Of T3), Action(Of T4), Action(Of T5))
+- uid: Maki.VariantExtensions.Apply``5(Maki.Variant{``0,``1,``2,``3},System.Func{``0,``4},System.Func{``1,``4},System.Func{``2,``4},System.Func{``3,``4})
+  name: Apply<T1, T2, T3, T4, U>(Variant<T1, T2, T3, T4>, Func<T1, U>, Func<T2, U>, Func<T3, U>, Func<T4, U>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Apply__5_Maki_Variant___0___1___2___3__System_Func___0___4__System_Func___1___4__System_Func___2___4__System_Func___3___4__
+  commentId: M:Maki.VariantExtensions.Apply``5(Maki.Variant{``0,``1,``2,``3},System.Func{``0,``4},System.Func{``1,``4},System.Func{``2,``4},System.Func{``3,``4})
+  name.vb: Apply(Of T1, T2, T3, T4, U)(Variant(Of T1, T2, T3, T4), Func(Of T1, U), Func(Of T2, U), Func(Of T3, U), Func(Of T4, U))
+  fullName: Maki.VariantExtensions.Apply<T1, T2, T3, T4, U>(Maki.Variant<T1, T2, T3, T4>, System.Func<T1, U>, System.Func<T2, U>, System.Func<T3, U>, System.Func<T4, U>)
+  fullName.vb: Maki.VariantExtensions.Apply(Of T1, T2, T3, T4, U)(Maki.Variant(Of T1, T2, T3, T4), System.Func(Of T1, U), System.Func(Of T2, U), System.Func(Of T3, U), System.Func(Of T4, U))
+  nameWithType: VariantExtensions.Apply<T1, T2, T3, T4, U>(Variant<T1, T2, T3, T4>, Func<T1, U>, Func<T2, U>, Func<T3, U>, Func<T4, U>)
+  nameWithType.vb: VariantExtensions.Apply(Of T1, T2, T3, T4, U)(Variant(Of T1, T2, T3, T4), Func(Of T1, U), Func(Of T2, U), Func(Of T3, U), Func(Of T4, U))
+- uid: Maki.VariantExtensions.Apply``6(Maki.Variant{``0,``1,``2,``3,``4,``5},System.Action{``0},System.Action{``1},System.Action{``2},System.Action{``3},System.Action{``4},System.Action{``5})
+  name: Apply<T1, T2, T3, T4, T5, T6>(Variant<T1, T2, T3, T4, T5, T6>, Action<T1>, Action<T2>, Action<T3>, Action<T4>, Action<T5>, Action<T6>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Apply__6_Maki_Variant___0___1___2___3___4___5__System_Action___0__System_Action___1__System_Action___2__System_Action___3__System_Action___4__System_Action___5__
+  commentId: M:Maki.VariantExtensions.Apply``6(Maki.Variant{``0,``1,``2,``3,``4,``5},System.Action{``0},System.Action{``1},System.Action{``2},System.Action{``3},System.Action{``4},System.Action{``5})
+  name.vb: Apply(Of T1, T2, T3, T4, T5, T6)(Variant(Of T1, T2, T3, T4, T5, T6), Action(Of T1), Action(Of T2), Action(Of T3), Action(Of T4), Action(Of T5), Action(Of T6))
+  fullName: Maki.VariantExtensions.Apply<T1, T2, T3, T4, T5, T6>(Maki.Variant<T1, T2, T3, T4, T5, T6>, System.Action<T1>, System.Action<T2>, System.Action<T3>, System.Action<T4>, System.Action<T5>, System.Action<T6>)
+  fullName.vb: Maki.VariantExtensions.Apply(Of T1, T2, T3, T4, T5, T6)(Maki.Variant(Of T1, T2, T3, T4, T5, T6), System.Action(Of T1), System.Action(Of T2), System.Action(Of T3), System.Action(Of T4), System.Action(Of T5), System.Action(Of T6))
+  nameWithType: VariantExtensions.Apply<T1, T2, T3, T4, T5, T6>(Variant<T1, T2, T3, T4, T5, T6>, Action<T1>, Action<T2>, Action<T3>, Action<T4>, Action<T5>, Action<T6>)
+  nameWithType.vb: VariantExtensions.Apply(Of T1, T2, T3, T4, T5, T6)(Variant(Of T1, T2, T3, T4, T5, T6), Action(Of T1), Action(Of T2), Action(Of T3), Action(Of T4), Action(Of T5), Action(Of T6))
+- uid: Maki.VariantExtensions.Apply``6(Maki.Variant{``0,``1,``2,``3,``4},System.Func{``0,``5},System.Func{``1,``5},System.Func{``2,``5},System.Func{``3,``5},System.Func{``4,``5})
+  name: Apply<T1, T2, T3, T4, T5, U>(Variant<T1, T2, T3, T4, T5>, Func<T1, U>, Func<T2, U>, Func<T3, U>, Func<T4, U>, Func<T5, U>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Apply__6_Maki_Variant___0___1___2___3___4__System_Func___0___5__System_Func___1___5__System_Func___2___5__System_Func___3___5__System_Func___4___5__
+  commentId: M:Maki.VariantExtensions.Apply``6(Maki.Variant{``0,``1,``2,``3,``4},System.Func{``0,``5},System.Func{``1,``5},System.Func{``2,``5},System.Func{``3,``5},System.Func{``4,``5})
+  name.vb: Apply(Of T1, T2, T3, T4, T5, U)(Variant(Of T1, T2, T3, T4, T5), Func(Of T1, U), Func(Of T2, U), Func(Of T3, U), Func(Of T4, U), Func(Of T5, U))
+  fullName: Maki.VariantExtensions.Apply<T1, T2, T3, T4, T5, U>(Maki.Variant<T1, T2, T3, T4, T5>, System.Func<T1, U>, System.Func<T2, U>, System.Func<T3, U>, System.Func<T4, U>, System.Func<T5, U>)
+  fullName.vb: Maki.VariantExtensions.Apply(Of T1, T2, T3, T4, T5, U)(Maki.Variant(Of T1, T2, T3, T4, T5), System.Func(Of T1, U), System.Func(Of T2, U), System.Func(Of T3, U), System.Func(Of T4, U), System.Func(Of T5, U))
+  nameWithType: VariantExtensions.Apply<T1, T2, T3, T4, T5, U>(Variant<T1, T2, T3, T4, T5>, Func<T1, U>, Func<T2, U>, Func<T3, U>, Func<T4, U>, Func<T5, U>)
+  nameWithType.vb: VariantExtensions.Apply(Of T1, T2, T3, T4, T5, U)(Variant(Of T1, T2, T3, T4, T5), Func(Of T1, U), Func(Of T2, U), Func(Of T3, U), Func(Of T4, U), Func(Of T5, U))
+- uid: Maki.VariantExtensions.Apply``7(Maki.Variant{``0,``1,``2,``3,``4,``5,``6},System.Action{``0},System.Action{``1},System.Action{``2},System.Action{``3},System.Action{``4},System.Action{``5},System.Action{``6})
+  name: Apply<T1, T2, T3, T4, T5, T6, T7>(Variant<T1, T2, T3, T4, T5, T6, T7>, Action<T1>, Action<T2>, Action<T3>, Action<T4>, Action<T5>, Action<T6>, Action<T7>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Apply__7_Maki_Variant___0___1___2___3___4___5___6__System_Action___0__System_Action___1__System_Action___2__System_Action___3__System_Action___4__System_Action___5__System_Action___6__
+  commentId: M:Maki.VariantExtensions.Apply``7(Maki.Variant{``0,``1,``2,``3,``4,``5,``6},System.Action{``0},System.Action{``1},System.Action{``2},System.Action{``3},System.Action{``4},System.Action{``5},System.Action{``6})
+  name.vb: Apply(Of T1, T2, T3, T4, T5, T6, T7)(Variant(Of T1, T2, T3, T4, T5, T6, T7), Action(Of T1), Action(Of T2), Action(Of T3), Action(Of T4), Action(Of T5), Action(Of T6), Action(Of T7))
+  fullName: Maki.VariantExtensions.Apply<T1, T2, T3, T4, T5, T6, T7>(Maki.Variant<T1, T2, T3, T4, T5, T6, T7>, System.Action<T1>, System.Action<T2>, System.Action<T3>, System.Action<T4>, System.Action<T5>, System.Action<T6>, System.Action<T7>)
+  fullName.vb: Maki.VariantExtensions.Apply(Of T1, T2, T3, T4, T5, T6, T7)(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7), System.Action(Of T1), System.Action(Of T2), System.Action(Of T3), System.Action(Of T4), System.Action(Of T5), System.Action(Of T6), System.Action(Of T7))
+  nameWithType: VariantExtensions.Apply<T1, T2, T3, T4, T5, T6, T7>(Variant<T1, T2, T3, T4, T5, T6, T7>, Action<T1>, Action<T2>, Action<T3>, Action<T4>, Action<T5>, Action<T6>, Action<T7>)
+  nameWithType.vb: VariantExtensions.Apply(Of T1, T2, T3, T4, T5, T6, T7)(Variant(Of T1, T2, T3, T4, T5, T6, T7), Action(Of T1), Action(Of T2), Action(Of T3), Action(Of T4), Action(Of T5), Action(Of T6), Action(Of T7))
+- uid: Maki.VariantExtensions.Apply``7(Maki.Variant{``0,``1,``2,``3,``4,``5},System.Func{``0,``6},System.Func{``1,``6},System.Func{``2,``6},System.Func{``3,``6},System.Func{``4,``6},System.Func{``5,``6})
+  name: Apply<T1, T2, T3, T4, T5, T6, U>(Variant<T1, T2, T3, T4, T5, T6>, Func<T1, U>, Func<T2, U>, Func<T3, U>, Func<T4, U>, Func<T5, U>, Func<T6, U>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Apply__7_Maki_Variant___0___1___2___3___4___5__System_Func___0___6__System_Func___1___6__System_Func___2___6__System_Func___3___6__System_Func___4___6__System_Func___5___6__
+  commentId: M:Maki.VariantExtensions.Apply``7(Maki.Variant{``0,``1,``2,``3,``4,``5},System.Func{``0,``6},System.Func{``1,``6},System.Func{``2,``6},System.Func{``3,``6},System.Func{``4,``6},System.Func{``5,``6})
+  name.vb: Apply(Of T1, T2, T3, T4, T5, T6, U)(Variant(Of T1, T2, T3, T4, T5, T6), Func(Of T1, U), Func(Of T2, U), Func(Of T3, U), Func(Of T4, U), Func(Of T5, U), Func(Of T6, U))
+  fullName: Maki.VariantExtensions.Apply<T1, T2, T3, T4, T5, T6, U>(Maki.Variant<T1, T2, T3, T4, T5, T6>, System.Func<T1, U>, System.Func<T2, U>, System.Func<T3, U>, System.Func<T4, U>, System.Func<T5, U>, System.Func<T6, U>)
+  fullName.vb: Maki.VariantExtensions.Apply(Of T1, T2, T3, T4, T5, T6, U)(Maki.Variant(Of T1, T2, T3, T4, T5, T6), System.Func(Of T1, U), System.Func(Of T2, U), System.Func(Of T3, U), System.Func(Of T4, U), System.Func(Of T5, U), System.Func(Of T6, U))
+  nameWithType: VariantExtensions.Apply<T1, T2, T3, T4, T5, T6, U>(Variant<T1, T2, T3, T4, T5, T6>, Func<T1, U>, Func<T2, U>, Func<T3, U>, Func<T4, U>, Func<T5, U>, Func<T6, U>)
+  nameWithType.vb: VariantExtensions.Apply(Of T1, T2, T3, T4, T5, T6, U)(Variant(Of T1, T2, T3, T4, T5, T6), Func(Of T1, U), Func(Of T2, U), Func(Of T3, U), Func(Of T4, U), Func(Of T5, U), Func(Of T6, U))
+- uid: Maki.VariantExtensions.Apply``8(Maki.Variant{``0,``1,``2,``3,``4,``5,``6,``7},System.Action{``0},System.Action{``1},System.Action{``2},System.Action{``3},System.Action{``4},System.Action{``5},System.Action{``6},System.Action{``7})
+  name: Apply<T1, T2, T3, T4, T5, T6, T7, T8>(Variant<T1, T2, T3, T4, T5, T6, T7, T8>, Action<T1>, Action<T2>, Action<T3>, Action<T4>, Action<T5>, Action<T6>, Action<T7>, Action<T8>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Apply__8_Maki_Variant___0___1___2___3___4___5___6___7__System_Action___0__System_Action___1__System_Action___2__System_Action___3__System_Action___4__System_Action___5__System_Action___6__System_Action___7__
+  commentId: M:Maki.VariantExtensions.Apply``8(Maki.Variant{``0,``1,``2,``3,``4,``5,``6,``7},System.Action{``0},System.Action{``1},System.Action{``2},System.Action{``3},System.Action{``4},System.Action{``5},System.Action{``6},System.Action{``7})
+  name.vb: Apply(Of T1, T2, T3, T4, T5, T6, T7, T8)(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8), Action(Of T1), Action(Of T2), Action(Of T3), Action(Of T4), Action(Of T5), Action(Of T6), Action(Of T7), Action(Of T8))
+  fullName: Maki.VariantExtensions.Apply<T1, T2, T3, T4, T5, T6, T7, T8>(Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>, System.Action<T1>, System.Action<T2>, System.Action<T3>, System.Action<T4>, System.Action<T5>, System.Action<T6>, System.Action<T7>, System.Action<T8>)
+  fullName.vb: Maki.VariantExtensions.Apply(Of T1, T2, T3, T4, T5, T6, T7, T8)(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8), System.Action(Of T1), System.Action(Of T2), System.Action(Of T3), System.Action(Of T4), System.Action(Of T5), System.Action(Of T6), System.Action(Of T7), System.Action(Of T8))
+  nameWithType: VariantExtensions.Apply<T1, T2, T3, T4, T5, T6, T7, T8>(Variant<T1, T2, T3, T4, T5, T6, T7, T8>, Action<T1>, Action<T2>, Action<T3>, Action<T4>, Action<T5>, Action<T6>, Action<T7>, Action<T8>)
+  nameWithType.vb: VariantExtensions.Apply(Of T1, T2, T3, T4, T5, T6, T7, T8)(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8), Action(Of T1), Action(Of T2), Action(Of T3), Action(Of T4), Action(Of T5), Action(Of T6), Action(Of T7), Action(Of T8))
+- uid: Maki.VariantExtensions.Apply``8(Maki.Variant{``0,``1,``2,``3,``4,``5,``6},System.Func{``0,``7},System.Func{``1,``7},System.Func{``2,``7},System.Func{``3,``7},System.Func{``4,``7},System.Func{``5,``7},System.Func{``6,``7})
+  name: Apply<T1, T2, T3, T4, T5, T6, T7, U>(Variant<T1, T2, T3, T4, T5, T6, T7>, Func<T1, U>, Func<T2, U>, Func<T3, U>, Func<T4, U>, Func<T5, U>, Func<T6, U>, Func<T7, U>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Apply__8_Maki_Variant___0___1___2___3___4___5___6__System_Func___0___7__System_Func___1___7__System_Func___2___7__System_Func___3___7__System_Func___4___7__System_Func___5___7__System_Func___6___7__
+  commentId: M:Maki.VariantExtensions.Apply``8(Maki.Variant{``0,``1,``2,``3,``4,``5,``6},System.Func{``0,``7},System.Func{``1,``7},System.Func{``2,``7},System.Func{``3,``7},System.Func{``4,``7},System.Func{``5,``7},System.Func{``6,``7})
+  name.vb: Apply(Of T1, T2, T3, T4, T5, T6, T7, U)(Variant(Of T1, T2, T3, T4, T5, T6, T7), Func(Of T1, U), Func(Of T2, U), Func(Of T3, U), Func(Of T4, U), Func(Of T5, U), Func(Of T6, U), Func(Of T7, U))
+  fullName: Maki.VariantExtensions.Apply<T1, T2, T3, T4, T5, T6, T7, U>(Maki.Variant<T1, T2, T3, T4, T5, T6, T7>, System.Func<T1, U>, System.Func<T2, U>, System.Func<T3, U>, System.Func<T4, U>, System.Func<T5, U>, System.Func<T6, U>, System.Func<T7, U>)
+  fullName.vb: Maki.VariantExtensions.Apply(Of T1, T2, T3, T4, T5, T6, T7, U)(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7), System.Func(Of T1, U), System.Func(Of T2, U), System.Func(Of T3, U), System.Func(Of T4, U), System.Func(Of T5, U), System.Func(Of T6, U), System.Func(Of T7, U))
+  nameWithType: VariantExtensions.Apply<T1, T2, T3, T4, T5, T6, T7, U>(Variant<T1, T2, T3, T4, T5, T6, T7>, Func<T1, U>, Func<T2, U>, Func<T3, U>, Func<T4, U>, Func<T5, U>, Func<T6, U>, Func<T7, U>)
+  nameWithType.vb: VariantExtensions.Apply(Of T1, T2, T3, T4, T5, T6, T7, U)(Variant(Of T1, T2, T3, T4, T5, T6, T7), Func(Of T1, U), Func(Of T2, U), Func(Of T3, U), Func(Of T4, U), Func(Of T5, U), Func(Of T6, U), Func(Of T7, U))
+- uid: Maki.VariantExtensions.Apply``9(Maki.Variant{``0,``1,``2,``3,``4,``5,``6,``7},System.Func{``0,``8},System.Func{``1,``8},System.Func{``2,``8},System.Func{``3,``8},System.Func{``4,``8},System.Func{``5,``8},System.Func{``6,``8},System.Func{``7,``8})
+  name: Apply<T1, T2, T3, T4, T5, T6, T7, T8, U>(Variant<T1, T2, T3, T4, T5, T6, T7, T8>, Func<T1, U>, Func<T2, U>, Func<T3, U>, Func<T4, U>, Func<T5, U>, Func<T6, U>, Func<T7, U>, Func<T8, U>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Apply__9_Maki_Variant___0___1___2___3___4___5___6___7__System_Func___0___8__System_Func___1___8__System_Func___2___8__System_Func___3___8__System_Func___4___8__System_Func___5___8__System_Func___6___8__System_Func___7___8__
+  commentId: M:Maki.VariantExtensions.Apply``9(Maki.Variant{``0,``1,``2,``3,``4,``5,``6,``7},System.Func{``0,``8},System.Func{``1,``8},System.Func{``2,``8},System.Func{``3,``8},System.Func{``4,``8},System.Func{``5,``8},System.Func{``6,``8},System.Func{``7,``8})
+  name.vb: Apply(Of T1, T2, T3, T4, T5, T6, T7, T8, U)(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8), Func(Of T1, U), Func(Of T2, U), Func(Of T3, U), Func(Of T4, U), Func(Of T5, U), Func(Of T6, U), Func(Of T7, U), Func(Of T8, U))
+  fullName: Maki.VariantExtensions.Apply<T1, T2, T3, T4, T5, T6, T7, T8, U>(Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>, System.Func<T1, U>, System.Func<T2, U>, System.Func<T3, U>, System.Func<T4, U>, System.Func<T5, U>, System.Func<T6, U>, System.Func<T7, U>, System.Func<T8, U>)
+  fullName.vb: Maki.VariantExtensions.Apply(Of T1, T2, T3, T4, T5, T6, T7, T8, U)(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8), System.Func(Of T1, U), System.Func(Of T2, U), System.Func(Of T3, U), System.Func(Of T4, U), System.Func(Of T5, U), System.Func(Of T6, U), System.Func(Of T7, U), System.Func(Of T8, U))
+  nameWithType: VariantExtensions.Apply<T1, T2, T3, T4, T5, T6, T7, T8, U>(Variant<T1, T2, T3, T4, T5, T6, T7, T8>, Func<T1, U>, Func<T2, U>, Func<T3, U>, Func<T4, U>, Func<T5, U>, Func<T6, U>, Func<T7, U>, Func<T8, U>)
+  nameWithType.vb: VariantExtensions.Apply(Of T1, T2, T3, T4, T5, T6, T7, T8, U)(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8), Func(Of T1, U), Func(Of T2, U), Func(Of T3, U), Func(Of T4, U), Func(Of T5, U), Func(Of T6, U), Func(Of T7, U), Func(Of T8, U))
+- uid: Maki.VariantExtensions.Map*
+  name: Map
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Map_
+  commentId: Overload:Maki.VariantExtensions.Map
+  isSpec: "True"
+  fullName: Maki.VariantExtensions.Map
+  nameWithType: VariantExtensions.Map
+- uid: Maki.VariantExtensions.Map``10(Maki.Variant{``0,``1,``2,``3,``4},System.Func{``0,``5},System.Func{``1,``6},System.Func{``2,``7},System.Func{``3,``8},System.Func{``4,``9})
+  name: Map<T1, T2, T3, T4, T5, U1, U2, U3, U4, U5>(Variant<T1, T2, T3, T4, T5>, Func<T1, U1>, Func<T2, U2>, Func<T3, U3>, Func<T4, U4>, Func<T5, U5>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Map__10_Maki_Variant___0___1___2___3___4__System_Func___0___5__System_Func___1___6__System_Func___2___7__System_Func___3___8__System_Func___4___9__
+  commentId: M:Maki.VariantExtensions.Map``10(Maki.Variant{``0,``1,``2,``3,``4},System.Func{``0,``5},System.Func{``1,``6},System.Func{``2,``7},System.Func{``3,``8},System.Func{``4,``9})
+  name.vb: Map(Of T1, T2, T3, T4, T5, U1, U2, U3, U4, U5)(Variant(Of T1, T2, T3, T4, T5), Func(Of T1, U1), Func(Of T2, U2), Func(Of T3, U3), Func(Of T4, U4), Func(Of T5, U5))
+  fullName: Maki.VariantExtensions.Map<T1, T2, T3, T4, T5, U1, U2, U3, U4, U5>(Maki.Variant<T1, T2, T3, T4, T5>, System.Func<T1, U1>, System.Func<T2, U2>, System.Func<T3, U3>, System.Func<T4, U4>, System.Func<T5, U5>)
+  fullName.vb: Maki.VariantExtensions.Map(Of T1, T2, T3, T4, T5, U1, U2, U3, U4, U5)(Maki.Variant(Of T1, T2, T3, T4, T5), System.Func(Of T1, U1), System.Func(Of T2, U2), System.Func(Of T3, U3), System.Func(Of T4, U4), System.Func(Of T5, U5))
+  nameWithType: VariantExtensions.Map<T1, T2, T3, T4, T5, U1, U2, U3, U4, U5>(Variant<T1, T2, T3, T4, T5>, Func<T1, U1>, Func<T2, U2>, Func<T3, U3>, Func<T4, U4>, Func<T5, U5>)
+  nameWithType.vb: VariantExtensions.Map(Of T1, T2, T3, T4, T5, U1, U2, U3, U4, U5)(Variant(Of T1, T2, T3, T4, T5), Func(Of T1, U1), Func(Of T2, U2), Func(Of T3, U3), Func(Of T4, U4), Func(Of T5, U5))
+- uid: Maki.VariantExtensions.Map``12(Maki.Variant{``0,``1,``2,``3,``4,``5},System.Func{``0,``6},System.Func{``1,``7},System.Func{``2,``8},System.Func{``3,``9},System.Func{``4,``10},System.Func{``5,``11})
+  name: Map<T1, T2, T3, T4, T5, T6, U1, U2, U3, U4, U5, U6>(Variant<T1, T2, T3, T4, T5, T6>, Func<T1, U1>, Func<T2, U2>, Func<T3, U3>, Func<T4, U4>, Func<T5, U5>, Func<T6, U6>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Map__12_Maki_Variant___0___1___2___3___4___5__System_Func___0___6__System_Func___1___7__System_Func___2___8__System_Func___3___9__System_Func___4___10__System_Func___5___11__
+  commentId: M:Maki.VariantExtensions.Map``12(Maki.Variant{``0,``1,``2,``3,``4,``5},System.Func{``0,``6},System.Func{``1,``7},System.Func{``2,``8},System.Func{``3,``9},System.Func{``4,``10},System.Func{``5,``11})
+  name.vb: Map(Of T1, T2, T3, T4, T5, T6, U1, U2, U3, U4, U5, U6)(Variant(Of T1, T2, T3, T4, T5, T6), Func(Of T1, U1), Func(Of T2, U2), Func(Of T3, U3), Func(Of T4, U4), Func(Of T5, U5), Func(Of T6, U6))
+  fullName: Maki.VariantExtensions.Map<T1, T2, T3, T4, T5, T6, U1, U2, U3, U4, U5, U6>(Maki.Variant<T1, T2, T3, T4, T5, T6>, System.Func<T1, U1>, System.Func<T2, U2>, System.Func<T3, U3>, System.Func<T4, U4>, System.Func<T5, U5>, System.Func<T6, U6>)
+  fullName.vb: Maki.VariantExtensions.Map(Of T1, T2, T3, T4, T5, T6, U1, U2, U3, U4, U5, U6)(Maki.Variant(Of T1, T2, T3, T4, T5, T6), System.Func(Of T1, U1), System.Func(Of T2, U2), System.Func(Of T3, U3), System.Func(Of T4, U4), System.Func(Of T5, U5), System.Func(Of T6, U6))
+  nameWithType: VariantExtensions.Map<T1, T2, T3, T4, T5, T6, U1, U2, U3, U4, U5, U6>(Variant<T1, T2, T3, T4, T5, T6>, Func<T1, U1>, Func<T2, U2>, Func<T3, U3>, Func<T4, U4>, Func<T5, U5>, Func<T6, U6>)
+  nameWithType.vb: VariantExtensions.Map(Of T1, T2, T3, T4, T5, T6, U1, U2, U3, U4, U5, U6)(Variant(Of T1, T2, T3, T4, T5, T6), Func(Of T1, U1), Func(Of T2, U2), Func(Of T3, U3), Func(Of T4, U4), Func(Of T5, U5), Func(Of T6, U6))
+- uid: Maki.VariantExtensions.Map``14(Maki.Variant{``0,``1,``2,``3,``4,``5,``6},System.Func{``0,``7},System.Func{``1,``8},System.Func{``2,``9},System.Func{``3,``10},System.Func{``4,``11},System.Func{``5,``12},System.Func{``6,``13})
+  name: Map<T1, T2, T3, T4, T5, T6, T7, U1, U2, U3, U4, U5, U6, U7>(Variant<T1, T2, T3, T4, T5, T6, T7>, Func<T1, U1>, Func<T2, U2>, Func<T3, U3>, Func<T4, U4>, Func<T5, U5>, Func<T6, U6>, Func<T7, U7>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Map__14_Maki_Variant___0___1___2___3___4___5___6__System_Func___0___7__System_Func___1___8__System_Func___2___9__System_Func___3___10__System_Func___4___11__System_Func___5___12__System_Func___6___13__
+  commentId: M:Maki.VariantExtensions.Map``14(Maki.Variant{``0,``1,``2,``3,``4,``5,``6},System.Func{``0,``7},System.Func{``1,``8},System.Func{``2,``9},System.Func{``3,``10},System.Func{``4,``11},System.Func{``5,``12},System.Func{``6,``13})
+  name.vb: Map(Of T1, T2, T3, T4, T5, T6, T7, U1, U2, U3, U4, U5, U6, U7)(Variant(Of T1, T2, T3, T4, T5, T6, T7), Func(Of T1, U1), Func(Of T2, U2), Func(Of T3, U3), Func(Of T4, U4), Func(Of T5, U5), Func(Of T6, U6), Func(Of T7, U7))
+  fullName: Maki.VariantExtensions.Map<T1, T2, T3, T4, T5, T6, T7, U1, U2, U3, U4, U5, U6, U7>(Maki.Variant<T1, T2, T3, T4, T5, T6, T7>, System.Func<T1, U1>, System.Func<T2, U2>, System.Func<T3, U3>, System.Func<T4, U4>, System.Func<T5, U5>, System.Func<T6, U6>, System.Func<T7, U7>)
+  fullName.vb: Maki.VariantExtensions.Map(Of T1, T2, T3, T4, T5, T6, T7, U1, U2, U3, U4, U5, U6, U7)(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7), System.Func(Of T1, U1), System.Func(Of T2, U2), System.Func(Of T3, U3), System.Func(Of T4, U4), System.Func(Of T5, U5), System.Func(Of T6, U6), System.Func(Of T7, U7))
+  nameWithType: VariantExtensions.Map<T1, T2, T3, T4, T5, T6, T7, U1, U2, U3, U4, U5, U6, U7>(Variant<T1, T2, T3, T4, T5, T6, T7>, Func<T1, U1>, Func<T2, U2>, Func<T3, U3>, Func<T4, U4>, Func<T5, U5>, Func<T6, U6>, Func<T7, U7>)
+  nameWithType.vb: VariantExtensions.Map(Of T1, T2, T3, T4, T5, T6, T7, U1, U2, U3, U4, U5, U6, U7)(Variant(Of T1, T2, T3, T4, T5, T6, T7), Func(Of T1, U1), Func(Of T2, U2), Func(Of T3, U3), Func(Of T4, U4), Func(Of T5, U5), Func(Of T6, U6), Func(Of T7, U7))
+- uid: Maki.VariantExtensions.Map``16(Maki.Variant{``0,``1,``2,``3,``4,``5,``6,``7},System.Func{``0,``8},System.Func{``1,``9},System.Func{``2,``10},System.Func{``3,``11},System.Func{``4,``12},System.Func{``5,``13},System.Func{``6,``14},System.Func{``7,``15})
+  name: Map<T1, T2, T3, T4, T5, T6, T7, T8, U1, U2, U3, U4, U5, U6, U7, U8>(Variant<T1, T2, T3, T4, T5, T6, T7, T8>, Func<T1, U1>, Func<T2, U2>, Func<T3, U3>, Func<T4, U4>, Func<T5, U5>, Func<T6, U6>, Func<T7, U7>, Func<T8, U8>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Map__16_Maki_Variant___0___1___2___3___4___5___6___7__System_Func___0___8__System_Func___1___9__System_Func___2___10__System_Func___3___11__System_Func___4___12__System_Func___5___13__System_Func___6___14__System_Func___7___15__
+  commentId: M:Maki.VariantExtensions.Map``16(Maki.Variant{``0,``1,``2,``3,``4,``5,``6,``7},System.Func{``0,``8},System.Func{``1,``9},System.Func{``2,``10},System.Func{``3,``11},System.Func{``4,``12},System.Func{``5,``13},System.Func{``6,``14},System.Func{``7,``15})
+  name.vb: Map(Of T1, T2, T3, T4, T5, T6, T7, T8, U1, U2, U3, U4, U5, U6, U7, U8)(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8), Func(Of T1, U1), Func(Of T2, U2), Func(Of T3, U3), Func(Of T4, U4), Func(Of T5, U5), Func(Of T6, U6), Func(Of T7, U7), Func(Of T8, U8))
+  fullName: Maki.VariantExtensions.Map<T1, T2, T3, T4, T5, T6, T7, T8, U1, U2, U3, U4, U5, U6, U7, U8>(Maki.Variant<T1, T2, T3, T4, T5, T6, T7, T8>, System.Func<T1, U1>, System.Func<T2, U2>, System.Func<T3, U3>, System.Func<T4, U4>, System.Func<T5, U5>, System.Func<T6, U6>, System.Func<T7, U7>, System.Func<T8, U8>)
+  fullName.vb: Maki.VariantExtensions.Map(Of T1, T2, T3, T4, T5, T6, T7, T8, U1, U2, U3, U4, U5, U6, U7, U8)(Maki.Variant(Of T1, T2, T3, T4, T5, T6, T7, T8), System.Func(Of T1, U1), System.Func(Of T2, U2), System.Func(Of T3, U3), System.Func(Of T4, U4), System.Func(Of T5, U5), System.Func(Of T6, U6), System.Func(Of T7, U7), System.Func(Of T8, U8))
+  nameWithType: VariantExtensions.Map<T1, T2, T3, T4, T5, T6, T7, T8, U1, U2, U3, U4, U5, U6, U7, U8>(Variant<T1, T2, T3, T4, T5, T6, T7, T8>, Func<T1, U1>, Func<T2, U2>, Func<T3, U3>, Func<T4, U4>, Func<T5, U5>, Func<T6, U6>, Func<T7, U7>, Func<T8, U8>)
+  nameWithType.vb: VariantExtensions.Map(Of T1, T2, T3, T4, T5, T6, T7, T8, U1, U2, U3, U4, U5, U6, U7, U8)(Variant(Of T1, T2, T3, T4, T5, T6, T7, T8), Func(Of T1, U1), Func(Of T2, U2), Func(Of T3, U3), Func(Of T4, U4), Func(Of T5, U5), Func(Of T6, U6), Func(Of T7, U7), Func(Of T8, U8))
+- uid: Maki.VariantExtensions.Map``4(Maki.Variant{``0,``1},System.Func{``0,``2},System.Func{``1,``3})
+  name: Map<T1, T2, U1, U2>(Variant<T1, T2>, Func<T1, U1>, Func<T2, U2>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Map__4_Maki_Variant___0___1__System_Func___0___2__System_Func___1___3__
+  commentId: M:Maki.VariantExtensions.Map``4(Maki.Variant{``0,``1},System.Func{``0,``2},System.Func{``1,``3})
+  name.vb: Map(Of T1, T2, U1, U2)(Variant(Of T1, T2), Func(Of T1, U1), Func(Of T2, U2))
+  fullName: Maki.VariantExtensions.Map<T1, T2, U1, U2>(Maki.Variant<T1, T2>, System.Func<T1, U1>, System.Func<T2, U2>)
+  fullName.vb: Maki.VariantExtensions.Map(Of T1, T2, U1, U2)(Maki.Variant(Of T1, T2), System.Func(Of T1, U1), System.Func(Of T2, U2))
+  nameWithType: VariantExtensions.Map<T1, T2, U1, U2>(Variant<T1, T2>, Func<T1, U1>, Func<T2, U2>)
+  nameWithType.vb: VariantExtensions.Map(Of T1, T2, U1, U2)(Variant(Of T1, T2), Func(Of T1, U1), Func(Of T2, U2))
+- uid: Maki.VariantExtensions.Map``6(Maki.Variant{``0,``1,``2},System.Func{``0,``3},System.Func{``1,``4},System.Func{``2,``5})
+  name: Map<T1, T2, T3, U1, U2, U3>(Variant<T1, T2, T3>, Func<T1, U1>, Func<T2, U2>, Func<T3, U3>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Map__6_Maki_Variant___0___1___2__System_Func___0___3__System_Func___1___4__System_Func___2___5__
+  commentId: M:Maki.VariantExtensions.Map``6(Maki.Variant{``0,``1,``2},System.Func{``0,``3},System.Func{``1,``4},System.Func{``2,``5})
+  name.vb: Map(Of T1, T2, T3, U1, U2, U3)(Variant(Of T1, T2, T3), Func(Of T1, U1), Func(Of T2, U2), Func(Of T3, U3))
+  fullName: Maki.VariantExtensions.Map<T1, T2, T3, U1, U2, U3>(Maki.Variant<T1, T2, T3>, System.Func<T1, U1>, System.Func<T2, U2>, System.Func<T3, U3>)
+  fullName.vb: Maki.VariantExtensions.Map(Of T1, T2, T3, U1, U2, U3)(Maki.Variant(Of T1, T2, T3), System.Func(Of T1, U1), System.Func(Of T2, U2), System.Func(Of T3, U3))
+  nameWithType: VariantExtensions.Map<T1, T2, T3, U1, U2, U3>(Variant<T1, T2, T3>, Func<T1, U1>, Func<T2, U2>, Func<T3, U3>)
+  nameWithType.vb: VariantExtensions.Map(Of T1, T2, T3, U1, U2, U3)(Variant(Of T1, T2, T3), Func(Of T1, U1), Func(Of T2, U2), Func(Of T3, U3))
+- uid: Maki.VariantExtensions.Map``8(Maki.Variant{``0,``1,``2,``3},System.Func{``0,``4},System.Func{``1,``5},System.Func{``2,``6},System.Func{``3,``7})
+  name: Map<T1, T2, T3, T4, U1, U2, U3, U4>(Variant<T1, T2, T3, T4>, Func<T1, U1>, Func<T2, U2>, Func<T3, U3>, Func<T4, U4>)
+  href: api/Maki.VariantExtensions.html#Maki_VariantExtensions_Map__8_Maki_Variant___0___1___2___3__System_Func___0___4__System_Func___1___5__System_Func___2___6__System_Func___3___7__
+  commentId: M:Maki.VariantExtensions.Map``8(Maki.Variant{``0,``1,``2,``3},System.Func{``0,``4},System.Func{``1,``5},System.Func{``2,``6},System.Func{``3,``7})
+  name.vb: Map(Of T1, T2, T3, T4, U1, U2, U3, U4)(Variant(Of T1, T2, T3, T4), Func(Of T1, U1), Func(Of T2, U2), Func(Of T3, U3), Func(Of T4, U4))
+  fullName: Maki.VariantExtensions.Map<T1, T2, T3, T4, U1, U2, U3, U4>(Maki.Variant<T1, T2, T3, T4>, System.Func<T1, U1>, System.Func<T2, U2>, System.Func<T3, U3>, System.Func<T4, U4>)
+  fullName.vb: Maki.VariantExtensions.Map(Of T1, T2, T3, T4, U1, U2, U3, U4)(Maki.Variant(Of T1, T2, T3, T4), System.Func(Of T1, U1), System.Func(Of T2, U2), System.Func(Of T3, U3), System.Func(Of T4, U4))
+  nameWithType: VariantExtensions.Map<T1, T2, T3, T4, U1, U2, U3, U4>(Variant<T1, T2, T3, T4>, Func<T1, U1>, Func<T2, U2>, Func<T3, U3>, Func<T4, U4>)
+  nameWithType.vb: VariantExtensions.Map(Of T1, T2, T3, T4, U1, U2, U3, U4)(Variant(Of T1, T2, T3, T4), Func(Of T1, U1), Func(Of T2, U2), Func(Of T3, U3), Func(Of T4, U4))

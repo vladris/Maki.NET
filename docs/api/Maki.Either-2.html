@@ -1,0 +1,968 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Either&lt;TLeft, TRight&gt;
+   | Maki </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Either&lt;TLeft, TRight&gt;
+   | Maki ">
+    <meta name="generator" content="docfx 2.37.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Maki.Either`2">
+  
+  
+  <h1 id="Maki_Either_2" data-uid="Maki.Either`2" class="text-break">Class Either&lt;TLeft, TRight&gt;
+  </h1>
+  <div class="markdown level0 summary">
+Represents a 2-type discriminate union with Left and Right components.
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Either&lt;TLeft, TRight&gt;</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Maki.html">Maki</a></h6>
+  <h6><strong>Assembly</strong>: Maki.dll</h6>
+  <h5 id="Maki_Either_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Either&lt;TLeft, TRight&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TLeft</span></td>
+        <td>Left type.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TRight</span></td>
+        <td>Right type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2__ctor__0_.md&amp;value=---%0Auid%3A%20Maki.Either%602.%23ctor(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L32">View Source</a>
+  </span>
+  <a id="Maki_Either_2__ctor_" data-uid="Maki.Either`2.#ctor*"></a>
+  <h4 id="Maki_Either_2__ctor__0_" data-uid="Maki.Either`2.#ctor(`0)">Either(TLeft)</h4>
+  <div class="markdown level1 summary">
+Creates a new instance of Either from an item of type <code data-dev-comment-type="typeparamref" class="typeparamref">TLeft</code>.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Either(TLeft left)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TLeft</span></td>
+        <td><span class="parametername">left</span></td>
+        <td>Item of type <code data-dev-comment-type="typeparamref" class="typeparamref">TLeft</code></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2__ctor__1_.md&amp;value=---%0Auid%3A%20Maki.Either%602.%23ctor(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L40">View Source</a>
+  </span>
+  <a id="Maki_Either_2__ctor_" data-uid="Maki.Either`2.#ctor*"></a>
+  <h4 id="Maki_Either_2__ctor__1_" data-uid="Maki.Either`2.#ctor(`1)">Either(TRight)</h4>
+  <div class="markdown level1 summary">
+Creates a new instance of Either from an item of type <code data-dev-comment-type="typeparamref" class="typeparamref">TRight</code>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Either(TRight right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TRight</span></td>
+        <td><span class="parametername">right</span></td>
+        <td>Item of type <code data-dev-comment-type="typeparamref" class="typeparamref">TRight</code></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_IsLeft.md&amp;value=---%0Auid%3A%20Maki.Either%602.IsLeft%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L19">View Source</a>
+  </span>
+  <a id="Maki_Either_2_IsLeft_" data-uid="Maki.Either`2.IsLeft*"></a>
+  <h4 id="Maki_Either_2_IsLeft" data-uid="Maki.Either`2.IsLeft">IsLeft</h4>
+  <div class="markdown level1 summary">
+True if Left is inhabited.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsLeft { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_IsRight.md&amp;value=---%0Auid%3A%20Maki.Either%602.IsRight%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L24">View Source</a>
+  </span>
+  <a id="Maki_Either_2_IsRight_" data-uid="Maki.Either`2.IsRight*"></a>
+  <h4 id="Maki_Either_2_IsRight" data-uid="Maki.Either`2.IsRight">IsRight</h4>
+  <div class="markdown level1 summary">
+True if Right is inhabited.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRight { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Maki.Either%602.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L89">View Source</a>
+  </span>
+  <a id="Maki_Either_2_Equals_" data-uid="Maki.Either`2.Equals*"></a>
+  <h4 id="Maki_Either_2_Equals_System_Object_" data-uid="Maki.Either`2.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary">
+Determines whether the specified object is equal to the current object.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td>The object to compare with the current object.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td>True if the objects are equal.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_GetHashCode.md&amp;value=---%0Auid%3A%20Maki.Either%602.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L98">View Source</a>
+  </span>
+  <a id="Maki_Either_2_GetHashCode_" data-uid="Maki.Either`2.GetHashCode*"></a>
+  <h4 id="Maki_Either_2_GetHashCode" data-uid="Maki.Either`2.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary">
+Returns the hash code for this instance.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td>Hash code.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_GetLeft.md&amp;value=---%0Auid%3A%20Maki.Either%602.GetLeft%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L48">View Source</a>
+  </span>
+  <a id="Maki_Either_2_GetLeft_" data-uid="Maki.Either`2.GetLeft*"></a>
+  <h4 id="Maki_Either_2_GetLeft" data-uid="Maki.Either`2.GetLeft">GetLeft()</h4>
+  <div class="markdown level1 summary">
+Gets the Left component.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TLeft GetLeft()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TLeft</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td>Thrown on get if the inhabiting object is Right.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_GetRight.md&amp;value=---%0Auid%3A%20Maki.Either%602.GetRight%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L54">View Source</a>
+  </span>
+  <a id="Maki_Either_2_GetRight_" data-uid="Maki.Either`2.GetRight*"></a>
+  <h4 id="Maki_Either_2_GetRight" data-uid="Maki.Either`2.GetRight">GetRight()</h4>
+  <div class="markdown level1 summary">
+Gets the Right component.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TRight GetRight()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TRight</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td>Thrown on get if the inhabiting object is Left.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_MakeLeft__0_.md&amp;value=---%0Auid%3A%20Maki.Either%602.MakeLeft(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L135">View Source</a>
+  </span>
+  <a id="Maki_Either_2_MakeLeft_" data-uid="Maki.Either`2.MakeLeft*"></a>
+  <h4 id="Maki_Either_2_MakeLeft__0_" data-uid="Maki.Either`2.MakeLeft(`0)">MakeLeft(TLeft)</h4>
+  <div class="markdown level1 summary">
+Creates a new Either explicitly placing the item in the Left component.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Either&lt;TLeft, TRight&gt; MakeLeft(TLeft item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TLeft</span></td>
+        <td><span class="parametername">item</span></td>
+        <td>Item to place in the Either.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Maki.Either-2.html">Either</a>&lt;TLeft, TRight&gt;</td>
+        <td>Either containing the item.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Maki_Either_2_MakeLeft__0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks">Use this method when both <code data-dev-comment-type="typeparamref" class="typeparamref">TLeft</code> and <code data-dev-comment-type="typeparamref" class="typeparamref">TRight</code> are the same.</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_MakeRight__1_.md&amp;value=---%0Auid%3A%20Maki.Either%602.MakeRight(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L143">View Source</a>
+  </span>
+  <a id="Maki_Either_2_MakeRight_" data-uid="Maki.Either`2.MakeRight*"></a>
+  <h4 id="Maki_Either_2_MakeRight__1_" data-uid="Maki.Either`2.MakeRight(`1)">MakeRight(TRight)</h4>
+  <div class="markdown level1 summary">
+Creates a new Either explicitly placing the item in the Right component.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Either&lt;TLeft, TRight&gt; MakeRight(TRight item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TRight</span></td>
+        <td><span class="parametername">item</span></td>
+        <td>Item to place in the Either.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Maki.Either-2.html">Either</a>&lt;TLeft, TRight&gt;</td>
+        <td>Either containing the item.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Maki_Either_2_MakeRight__1__remarks">Remarks</h5>
+  <div class="markdown level1 remarks">Use this method when both <code data-dev-comment-type="typeparamref" class="typeparamref">TLeft</code> and <code data-dev-comment-type="typeparamref" class="typeparamref">TRight</code> are the same.</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_Set__0_.md&amp;value=---%0Auid%3A%20Maki.Either%602.Set(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L60">View Source</a>
+  </span>
+  <a id="Maki_Either_2_Set_" data-uid="Maki.Either`2.Set*"></a>
+  <h4 id="Maki_Either_2_Set__0_" data-uid="Maki.Either`2.Set(`0)">Set(TLeft)</h4>
+  <div class="markdown level1 summary">
+Sets the Left component.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Set(TLeft left)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TLeft</span></td>
+        <td><span class="parametername">left</span></td>
+        <td>Item to place in Either.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_Set__1_.md&amp;value=---%0Auid%3A%20Maki.Either%602.Set(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L66">View Source</a>
+  </span>
+  <a id="Maki_Either_2_Set_" data-uid="Maki.Either`2.Set*"></a>
+  <h4 id="Maki_Either_2_Set__1_" data-uid="Maki.Either`2.Set(`1)">Set(TRight)</h4>
+  <div class="markdown level1 summary">
+Sets the Right component.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Set(TRight right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TRight</span></td>
+        <td><span class="parametername">right</span></td>
+        <td>Item to place in Either.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_SetLeft__0_.md&amp;value=---%0Auid%3A%20Maki.Either%602.SetLeft(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L74">View Source</a>
+  </span>
+  <a id="Maki_Either_2_SetLeft_" data-uid="Maki.Either`2.SetLeft*"></a>
+  <h4 id="Maki_Either_2_SetLeft__0_" data-uid="Maki.Either`2.SetLeft(`0)">SetLeft(TLeft)</h4>
+  <div class="markdown level1 summary">
+Explicitly sets the Left component.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetLeft(TLeft left)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TLeft</span></td>
+        <td><span class="parametername">left</span></td>
+        <td>Item to place in Either.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Maki_Either_2_SetLeft__0__remarks">Remarks</h5>
+  <div class="markdown level1 remarks">Use whent <code data-dev-comment-type="typeparamref" class="typeparamref">TLeft</code> and <code data-dev-comment-type="typeparamref" class="typeparamref">TRight</code> are of 
+the same type.</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_SetRight__1_.md&amp;value=---%0Auid%3A%20Maki.Either%602.SetRight(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L82">View Source</a>
+  </span>
+  <a id="Maki_Either_2_SetRight_" data-uid="Maki.Either`2.SetRight*"></a>
+  <h4 id="Maki_Either_2_SetRight__1_" data-uid="Maki.Either`2.SetRight(`1)">SetRight(TRight)</h4>
+  <div class="markdown level1 summary">
+Explicitly sets the Right component.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRight(TRight right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TRight</span></td>
+        <td><span class="parametername">right</span></td>
+        <td>Item to place in Either.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Maki_Either_2_SetRight__1__remarks">Remarks</h5>
+  <div class="markdown level1 remarks">Use whent <code data-dev-comment-type="typeparamref" class="typeparamref">TLeft</code> and <code data-dev-comment-type="typeparamref" class="typeparamref">TRight</code> are of 
+the same type.</div>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_op_Explicit_Maki_Either__0__1____0.md&amp;value=---%0Auid%3A%20Maki.Either%602.op_Explicit(Maki.Either%7B%600%2C%601%7D)~%600%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L120">View Source</a>
+  </span>
+  <a id="Maki_Either_2_op_Explicit_" data-uid="Maki.Either`2.op_Explicit*"></a>
+  <h4 id="Maki_Either_2_op_Explicit_Maki_Either__0__1____0" data-uid="Maki.Either`2.op_Explicit(Maki.Either{`0,`1})~`0">Explicit(Either&lt;TLeft, TRight&gt; to TLeft)</h4>
+  <div class="markdown level1 summary">
+Explicit cast from Either to <code data-dev-comment-type="typeparamref" class="typeparamref">TLeft</code>.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator TLeft(Either&lt;TLeft, TRight&gt; either)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Maki.Either-2.html">Either</a>&lt;TLeft, TRight&gt;</td>
+        <td><span class="parametername">either</span></td>
+        <td>Either object to cast.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TLeft</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td>Thrown when the inhabiting object of the either is Right.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_op_Explicit_Maki_Either__0__1____1.md&amp;value=---%0Auid%3A%20Maki.Either%602.op_Explicit(Maki.Either%7B%600%2C%601%7D)~%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L127">View Source</a>
+  </span>
+  <a id="Maki_Either_2_op_Explicit_" data-uid="Maki.Either`2.op_Explicit*"></a>
+  <h4 id="Maki_Either_2_op_Explicit_Maki_Either__0__1____1" data-uid="Maki.Either`2.op_Explicit(Maki.Either{`0,`1})~`1">Explicit(Either&lt;TLeft, TRight&gt; to TRight)</h4>
+  <div class="markdown level1 summary">
+Explicit cast from Either to <code data-dev-comment-type="typeparamref" class="typeparamref">TRight</code>.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator TRight(Either&lt;TLeft, TRight&gt; either)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Maki.Either-2.html">Either</a>&lt;TLeft, TRight&gt;</td>
+        <td><span class="parametername">either</span></td>
+        <td>Either object to cast.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TRight</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td>Thrown when the inhabiting object of the either is Left.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_op_Implicit__0__Maki_Either__0__1_.md&amp;value=---%0Auid%3A%20Maki.Either%602.op_Implicit(%600)~Maki.Either%7B%600%2C%601%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L107">View Source</a>
+  </span>
+  <a id="Maki_Either_2_op_Implicit_" data-uid="Maki.Either`2.op_Implicit*"></a>
+  <h4 id="Maki_Either_2_op_Implicit__0__Maki_Either__0__1_" data-uid="Maki.Either`2.op_Implicit(`0)~Maki.Either{`0,`1}">Implicit(TLeft to Either&lt;TLeft, TRight&gt;)</h4>
+  <div class="markdown level1 summary">
+Implicit cast from <code data-dev-comment-type="typeparamref" class="typeparamref">TLeft</code> item to Either. Creates a new Either.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Either&lt;TLeft, TRight&gt;(TLeft item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TLeft</span></td>
+        <td><span class="parametername">item</span></td>
+        <td>Item to place in Either.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Maki.Either-2.html">Either</a>&lt;TLeft, TRight&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_op_Implicit__1__Maki_Either__0__1_.md&amp;value=---%0Auid%3A%20Maki.Either%602.op_Implicit(%601)~Maki.Either%7B%600%2C%601%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L113">View Source</a>
+  </span>
+  <a id="Maki_Either_2_op_Implicit_" data-uid="Maki.Either`2.op_Implicit*"></a>
+  <h4 id="Maki_Either_2_op_Implicit__1__Maki_Either__0__1_" data-uid="Maki.Either`2.op_Implicit(`1)~Maki.Either{`0,`1}">Implicit(TRight to Either&lt;TLeft, TRight&gt;)</h4>
+  <div class="markdown level1 summary">
+Implicit cast from <code data-dev-comment-type="typeparamref" class="typeparamref">TRight</code> item to Either. Creates a new Either.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Either&lt;TLeft, TRight&gt;(TRight item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TRight</span></td>
+        <td><span class="parametername">item</span></td>
+        <td>Item to place in Either.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Maki.Either-2.html">Either</a>&lt;TLeft, TRight&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2.md&amp;value=---%0Auid%3A%20Maki.Either%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L12" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

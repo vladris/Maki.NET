@@ -1,0 +1,337 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/src/Maki/Maki",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Details.VariantBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Details.VariantBase.html",
+          "hash": "HUE6DwEKSNJQY4MrweZp4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Details.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Details.html",
+          "hash": "M64TOm0Ad7USMQ/wuVrDMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Either-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Either-2.html",
+          "hash": "PZIqpvv7qRdt8HWkmdX3yA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Error-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Error-1.html",
+          "hash": "Qc2mqyHdgGRM/mHsrtz2wg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Error.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Error.html",
+          "hash": "frus6BCpyoG9lkT+ZZBhyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.ErrorExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.ErrorExtensions.html",
+          "hash": "tYzvPmW80VbCkceEmJd8rg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.NotNull-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.NotNull-1.html",
+          "hash": "g6JsBEfwbSpDLPhKeI6ZVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.NotNull.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.NotNull.html",
+          "hash": "f+0YbhqPIsrLiex/0g9W2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.NotNullExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.NotNullExtensions.html",
+          "hash": "bX8pPP8rMNppoUSRdEnL7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Optional-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Optional-1.html",
+          "hash": "2ZPtjvguXKNeL5dHklVjFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Optional.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Optional.html",
+          "hash": "okZWO0aTEdYsIRfy5MBPLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.OptionalExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.OptionalExtensions.html",
+          "hash": "cj32rSJhfJm0vx9BwifxIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Unit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Unit.html",
+          "hash": "Xx4+CQe6ADouV6BDlZhcGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Variant-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Variant-1.html",
+          "hash": "ah1m8E3b3rJvmEcw/nT2KQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Variant-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Variant-2.html",
+          "hash": "4sQ0bFnP5jUnzK9kchF2pA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Variant-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Variant-3.html",
+          "hash": "MIqpbQ7bAehZHejJD+odUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Variant-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Variant-4.html",
+          "hash": "FvuJO4pGfDq5qSqMVmcj8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Variant-5.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Variant-5.html",
+          "hash": "TQ+F6Z+Ah9IyfVMyzu7FAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Variant-6.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Variant-6.html",
+          "hash": "mKf9h8gjX77LntuRKOzr/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Variant-7.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Variant-7.html",
+          "hash": "Vh8pGWbtB563zy1yAaSylQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Variant-8.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Variant-8.html",
+          "hash": "BMjK45Ix3E7HSkU2B+pEMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.VariantExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.VariantExtensions.html",
+          "hash": "VSAXOdN5w2KhwGP15TX9QA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.html",
+          "hash": "e6UbcB26yZUcBdxtJ4txgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "H3dSYXzoqTJPKHZ+0zVdUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
