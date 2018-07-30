@@ -5,10 +5,21 @@ namespace Maki
     /// <summary>
     /// Provides static utilities for Optional.
     /// </summary>
+    /// <example>
+    /// The following example shows how to use the Optional utilities for more expressive optional
+    /// initialization.
+    /// <code>
+    /// Optional&lt;int&gt; optional = Optional.Make(42);
+    /// // equivalent of calling new Optional&lt;int&gt;(42)
+    /// 
+    /// Optional&lt;int&gt; empty = Optional.Nothing;
+    /// // equivalent of calling new Optional&lt;int&gt;()
+    /// </code>
+    /// </example>
     public static class Optional
     {
         /// <summary>
-        /// Represents an empty Optional.
+        /// Represents an empty Optional. Any empty optional stores a reference to this object.
         /// </summary>
         public static Unit Nothing = Unit.Value;
 
@@ -25,6 +36,44 @@ namespace Maki
     /// Represents an optional item of type <typeparamref name="T"/>.
     /// </summary>
     /// <typeparam name="T">Contained item type.</typeparam>
+    /// <example>
+    /// The following example shows how to use an Optional object to represent a value or absence
+    /// of a value.
+    /// <code>
+    /// using System;
+    /// using Maki;
+    /// 
+    /// namespace Samples
+    /// {
+    /// 
+    ///     class Program
+    ///     {
+    ///         // Return a value only if a condition is met, otherwise Nothing
+    ///         static Optional&lt;int&gt; TryGet()
+    ///         {
+    ///             var value = new Random().Next(100);
+    ///             return value &lt; 50 ? Optional.Make(value) : Optional.Nothing;
+    ///         }
+    /// 
+    ///         static void Main(string[] args)
+    ///         {
+    ///             var maybeInt = TryGet();
+    ///
+    ///             // HasValue checks for presence of the value
+    ///             if (maybeInt.HasValue)
+    ///             {
+    ///                 // Get() returns the value from the Optional
+    ///                 Console.WriteLine(maybeInt.Get());
+    ///             }
+    ///             else
+    ///             {
+    ///                 Console.WriteLine("maybeInt is empty");
+    ///             }
+    ///         }
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
     public sealed class Optional<T>
     {
         private Variant<T, Unit> item;
