@@ -7,6 +7,44 @@ namespace Maki
     /// <summary>
     /// Provides static utilities for NotNull.
     /// </summary>
+    /// <example>
+    /// The following example shows how to use NotNull.MakeOptional to convert a potentially null value
+    /// into an Optional that either contains Nothing or a NotNull value.
+    /// <code>
+    /// using System;
+    /// using Maki;
+    /// 
+    /// namespace Samples
+    /// {
+    ///     class Program
+    ///     {
+    ///         // No need to check argument before using it, it can never be null
+    ///         static void UseValue(NotNull&lt;string&gt; value)
+    ///         {
+    ///             Console.WriteLine(value.Item);
+    ///         }
+    /// 
+    ///         static void Main(string[] args)
+    ///         {
+    ///             // An instance that could be null
+    ///             string valueOrNull = null;
+    ///             if (DateTime.Today.DayOfWeek == DayOfWeek.Friday)
+    ///                 valueOrNull = &quot;It's Friday!&quot;;
+    /// 
+    ///             // Converts a potentially null value into an Optional
+    ///             Optional&lt;NotNull&lt;string&gt;&gt; optionalValue = NotNull.MakeOptional(valueOrNull);
+    /// 
+    ///             // Check that the Optional contains a value
+    ///             if (optionalValue.HasValue)
+    ///             {
+    ///                 // Get NonNull from Optional
+    ///                 UseValue(optionalValue.Get());
+    ///             }
+    ///         }
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
     public static class NotNull
     {
         /// <summary>
@@ -31,6 +69,44 @@ namespace Maki
     /// Represents an object that cannot be null.
     /// </summary>
     /// <typeparam name="T">Type of object.</typeparam>
+    /// <example>
+    /// The following example shows how to unpack a potentially null value into a NotNull. Once wrapped
+    /// in a NotNull, code does not need to perform any additional null checks.
+    /// <code>
+    /// using System;
+    /// using Maki;
+    /// 
+    /// namespace Samples
+    /// {
+    ///     class Program
+    ///     {
+    ///         // No need to check argument before using it, it can never be null
+    ///         static void UseValue(NotNull&lt;string&gt; value)
+    ///         {
+    ///             Console.WriteLine(value.Item);
+    ///         }
+    /// 
+    ///         static void Main(string[] args)
+    ///         {
+    ///             // An instance that could be null
+    ///             string valueOrNull = null;
+    ///             if (DateTime.Today.DayOfWeek == DayOfWeek.Friday)
+    ///                 valueOrNull = &quot;It's Friday!&quot;;
+    /// 
+    ///             // Perform a null check before assigning to NotNull&lt;&gt;
+    ///             if (valueOrNull == null)
+    ///                 return;
+    ///             
+    ///             // value is guaranteed to be non-null
+    ///             NotNull&lt;string&gt; value = valueOrNull;
+    ///                 
+    ///             // No need to null check from here on
+    ///             UseValue(value);
+    ///         }
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
     public struct NotNull<T>
     {
         /// <summary>
