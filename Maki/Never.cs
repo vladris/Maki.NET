@@ -13,7 +13,7 @@
     /// 
     /// namespace Samples
     /// {
-    ///     class NeverSample
+    ///     class Program
     ///     {
     ///         // This function never returns
     ///         static Never Fail(string message)
