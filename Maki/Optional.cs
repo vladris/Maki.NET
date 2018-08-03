@@ -19,9 +19,9 @@ namespace Maki
     public static class Optional
     {
         /// <summary>
-        /// Represents an empty Optional. Any empty optional stores a reference to this object.
+        /// Represents an empty Optional. Any empty optional stores a Unit.
         /// </summary>
-        public static Unit Nothing = Unit.Value;
+        public static Unit Nothing = Unit.Singleton;
 
         /// <summary>
         /// Creates an Optional containing the given item.

@@ -3,14 +3,11 @@
     /// <summary>
     /// Represents a unit type.
     /// </summary>
-    public sealed class Unit
+    public enum Unit
     {
         /// <summary>
-        /// Unique instance.
+        /// Unique value.
         /// </summary>
-        public static readonly Unit Value = new Unit();
-
-        private Unit()
-        { }
+        Singleton
     }
 }
