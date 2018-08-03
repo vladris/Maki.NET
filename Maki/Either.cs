@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Maki
 {
@@ -9,6 +7,48 @@ namespace Maki
     /// </summary>
     /// <typeparam name="TLeft">Left type.</typeparam>
     /// <typeparam name="TRight">Right type.</typeparam>
+    /// <example>
+    /// The following example assigns values to and extracts them from an Either&lt;int, string&gt;.
+    /// <code>
+    /// using Maki;
+    /// using System;
+    /// 
+    /// namespace Samples
+    /// {
+    ///     class Program
+    ///     {
+    ///         static void PrintEither(Either&lt;int, string&gt; either)
+    ///         {
+    ///             // If either contains the left type (int)
+    ///             if (either.IsLeft)
+    ///             {
+    ///                 // Output the left (int) value to the console
+    ///                 Console.WriteLine(either.GetLeft());
+    ///             }
+    ///             else // either.IsRight
+    ///             {
+    ///                 // Output the right (string) value to the console
+    ///                 Console.WriteLine(either.GetRight());
+    ///             }
+    ///         }
+    /// 
+    ///         static void Main(string[] args)
+    ///         {
+    ///             // Assign an int
+    ///             Either&lt;int, string&gt; either = 42;
+    /// 
+    ///             // Will print &quot;42&quot;
+    ///             PrintEither(either);
+    /// 
+    ///             either = &quot;Hello world!&quot;;
+    /// 
+    ///             // Will print &quot;Hello world!&quot;
+    ///             PrintEither(either);
+    ///         }
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
     public sealed class Either<TLeft, TRight>
     {
         private Variant<TLeft, TRight> variant;
