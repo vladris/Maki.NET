@@ -73,8 +73,8 @@ namespace Maki
     /// The following example shows how to unpack a potentially null value into a NotNull. Once wrapped
     /// in a NotNull, code does not need to perform any additional null checks.
     /// <code>
-    /// using System;
     /// using Maki;
+    /// using System;
     /// 
     /// namespace Samples
     /// {

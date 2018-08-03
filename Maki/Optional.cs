@@ -40,8 +40,8 @@ namespace Maki
     /// The following example shows how to use an Optional object to represent a value or absence
     /// of a value.
     /// <code>
-    /// using System;
     /// using Maki;
+    /// using System;
     /// 
     /// namespace Samples
     /// {
