@@ -48,6 +48,43 @@ namespace Maki
     /// Error holds either a value of type <typeparamref name="T"/> or an exception.
     /// </summary>
     /// <typeparam name="T">Type of value.</typeparam>
+    /// <example>
+    /// The following example shows how to use Error to store either a value or an exception.
+    /// <code>
+    /// using Maki;
+    /// using System;
+    /// 
+    /// namespace Samples
+    /// {
+    ///     class Program
+    ///     {
+    ///         // Either returns an int or throws an exception
+    ///         static int ReturnValueOrThrow()
+    ///         {
+    ///             var value = new Random().Next(100);
+    ///             return value &lt; 50 ? value : throw new Exception();
+    ///         }
+    /// 
+    ///         static void Main(string[] args)
+    ///         {
+    ///             // Call function, value holds either an int or an exception
+    ///             Error&lt;int&gt; value = Error.Make(ReturnValueOrThrow);
+    /// 
+    ///             if (value.HasValue)
+    ///             {
+    ///                 value = value.Get() * 2;
+    ///                 Console.WriteLine(value.Get());
+    ///             }
+    ///             else // value.IsException
+    ///             {
+    ///                 // Get exception from value, can handle or rethrow
+    ///                 throw value.Exception();
+    ///             }
+    ///         }
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
     public class Error<T>
     {
         private Either<Exception, T> either;
