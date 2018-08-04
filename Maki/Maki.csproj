@@ -6,7 +6,7 @@
     <Authors>Vlad Riscutia</Authors>
     <Company />
     <Product />
-    <Description>A .NET type library providing discriminate union types Variant&lt;...&gt; and Either, NotNull container, Optional and Error monads.</Description>
+    <Description>A .NET type library providing discriminate union types Variant&lt;...&gt; and Either&lt;TLeft, TRight&gt;, a NotNull container, Optional and Error monads, primitive types Unit and Never.</Description>
     <PackageLicenseUrl>https://github.com/vladris/Maki/blob/master/LICENSE</PackageLicenseUrl>
     <Copyright>2018 Vlad Riscutia</Copyright>
     <PackageProjectUrl>https://vladris.com/Maki/</PackageProjectUrl>
