@@ -1,8 +1,12 @@
 # Maki
 
-A .NET type library providing discriminate union types ``Variant<...>`` and ``Either``, ``NotNull`` container, ``Optional`` and ``Error`` monads.
+A .NET type library providing discriminate union types ``Variant<...>`` and ``Either<TLeft, TRight>``, a ``NotNull`` container, ``Optional`` and ``Error`` monads, primitive types ``Unit`` and ``Never``.
 
 [![Build status](https://vladris.visualstudio.com/Maki/_apis/build/status/Maki-.NET%20Desktop-CI)](https://vladris.visualstudio.com/Maki/_build/latest?definitionId=5)
+
+Get it from NuGet (*link TBA*)
+
+[Online documentation](https://vladris.com/Maki/api/Maki.html)
 
 ## Samples
 
@@ -11,6 +15,7 @@ A .NET type library providing discriminate union types ``Variant<...>`` and ``Ei
 * [NotNull](#notnull)
 * [Optional](#optional)
 * [Error](#error)
+* [Never](#never)
 
 ### Variant
 
@@ -109,4 +114,19 @@ if (error.HasValue)
     Console.WriteLine(error.Get());
 else
     Console.WriteLine($"Exception was thrown: {error.Exception()}");
+```
+
+### Never
+
+Using ``Never`` as a return type explicitly shows the function cannot return.
+
+```c#
+public Never LoopsForever()
+{
+    while (true)
+    {
+    }
+}
+
+public Never AlwaysThrows() => throw new Exception();
 ```
