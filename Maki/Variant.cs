@@ -8,6 +8,44 @@ namespace Maki
     /// Represents a 1-type discriminate union.
     /// </summary>
     /// <typeparam name="T1">Represents the variant's first type.</typeparam>
+    /// <example>
+    /// The following example shows how to assign values of different types to a Variant and how to extract
+    /// values from it.
+    /// <code>
+    /// using Maki;
+    /// using System;
+    /// 
+    /// namespace Samples
+    /// {
+    ///     class Program
+    ///     {
+    ///         static void Main(string[] args)
+    ///         {
+    ///             // A variant can hold a value of any of its generic types
+    ///             Variant&lt;int, string, double&gt; variant = 42;
+    /// 
+    ///             // Depending on the type of the value currently inhabiting the variant,
+    ///             // the right Action gets executed
+    ///             variant.Apply(
+    ///                 i =&gt; Console.WriteLine(i * 2),
+    ///                 s =&gt; Console.WriteLine(s + &quot;!&quot;),
+    ///                 d =&gt; Console.WriteLine($&quot;Double: {d}&quot;)
+    ///             );
+    /// 
+    ///             // Can reassign variant with another of its generic types
+    ///             variant = &quot;Hello world&quot;;
+    /// 
+    ///             // Check the type of the value currently inhabiting the variant
+    ///             if (variant.Is&lt;string&gt;())
+    ///             {
+    ///                 // Extract a string from the variant
+    ///                 Console.WriteLine($&quot;The string is: {variant.Get&lt;string&gt;()}&quot;);
+    ///             }
+    ///         }
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
     public sealed class Variant<T1> : VariantBase
     {
         private Variant(IVariantHolder item, byte index)
@@ -52,6 +90,44 @@ namespace Maki
     /// </summary>
     /// <typeparam name="T1">Represents the variant's first type.</typeparam>
     /// <typeparam name="T2">Represents the variant's second type.</typeparam>
+    /// <example>
+    /// The following example shows how to assign values of different types to a Variant and how to extract
+    /// values from it.
+    /// <code>
+    /// using Maki;
+    /// using System;
+    /// 
+    /// namespace Samples
+    /// {
+    ///     class Program
+    ///     {
+    ///         static void Main(string[] args)
+    ///         {
+    ///             // A variant can hold a value of any of its generic types
+    ///             Variant&lt;int, string, double&gt; variant = 42;
+    /// 
+    ///             // Depending on the type of the value currently inhabiting the variant,
+    ///             // the right Action gets executed
+    ///             variant.Apply(
+    ///                 i =&gt; Console.WriteLine(i * 2),
+    ///                 s =&gt; Console.WriteLine(s + &quot;!&quot;),
+    ///                 d =&gt; Console.WriteLine($&quot;Double: {d}&quot;)
+    ///             );
+    /// 
+    ///             // Can reassign variant with another of its generic types
+    ///             variant = &quot;Hello world&quot;;
+    /// 
+    ///             // Check the type of the value currently inhabiting the variant
+    ///             if (variant.Is&lt;string&gt;())
+    ///             {
+    ///                 // Extract a string from the variant
+    ///                 Console.WriteLine($&quot;The string is: {variant.Get&lt;string&gt;()}&quot;);
+    ///             }
+    ///         }
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
     public sealed class Variant<T1, T2> : VariantBase
     {
         private Variant(IVariantHolder item, byte index)
@@ -128,6 +204,44 @@ namespace Maki
     /// <typeparam name="T1">Represents the variant's first type.</typeparam>
     /// <typeparam name="T2">Represents the variant's second type.</typeparam>
     /// <typeparam name="T3">Represents the variant's third type.</typeparam>
+    /// <example>
+    /// The following example shows how to assign values of different types to a Variant and how to extract
+    /// values from it.
+    /// <code>
+    /// using Maki;
+    /// using System;
+    /// 
+    /// namespace Samples
+    /// {
+    ///     class Program
+    ///     {
+    ///         static void Main(string[] args)
+    ///         {
+    ///             // A variant can hold a value of any of its generic types
+    ///             Variant&lt;int, string, double&gt; variant = 42;
+    /// 
+    ///             // Depending on the type of the value currently inhabiting the variant,
+    ///             // the right Action gets executed
+    ///             variant.Apply(
+    ///                 i =&gt; Console.WriteLine(i * 2),
+    ///                 s =&gt; Console.WriteLine(s + &quot;!&quot;),
+    ///                 d =&gt; Console.WriteLine($&quot;Double: {d}&quot;)
+    ///             );
+    /// 
+    ///             // Can reassign variant with another of its generic types
+    ///             variant = &quot;Hello world&quot;;
+    /// 
+    ///             // Check the type of the value currently inhabiting the variant
+    ///             if (variant.Is&lt;string&gt;())
+    ///             {
+    ///                 // Extract a string from the variant
+    ///                 Console.WriteLine($&quot;The string is: {variant.Get&lt;string&gt;()}&quot;);
+    ///             }
+    ///         }
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
     public sealed class Variant<T1, T2, T3> : VariantBase
     {
         private Variant(IVariantHolder item, byte index)
@@ -236,6 +350,44 @@ namespace Maki
     /// <typeparam name="T2">Represents the variant's second type.</typeparam>
     /// <typeparam name="T3">Represents the variant's third type.</typeparam>
     /// <typeparam name="T4">Represents the variant's fourth type.</typeparam>
+    /// <example>
+    /// The following example shows how to assign values of different types to a Variant and how to extract
+    /// values from it.
+    /// <code>
+    /// using Maki;
+    /// using System;
+    /// 
+    /// namespace Samples
+    /// {
+    ///     class Program
+    ///     {
+    ///         static void Main(string[] args)
+    ///         {
+    ///             // A variant can hold a value of any of its generic types
+    ///             Variant&lt;int, string, double&gt; variant = 42;
+    /// 
+    ///             // Depending on the type of the value currently inhabiting the variant,
+    ///             // the right Action gets executed
+    ///             variant.Apply(
+    ///                 i =&gt; Console.WriteLine(i * 2),
+    ///                 s =&gt; Console.WriteLine(s + &quot;!&quot;),
+    ///                 d =&gt; Console.WriteLine($&quot;Double: {d}&quot;)
+    ///             );
+    /// 
+    ///             // Can reassign variant with another of its generic types
+    ///             variant = &quot;Hello world&quot;;
+    /// 
+    ///             // Check the type of the value currently inhabiting the variant
+    ///             if (variant.Is&lt;string&gt;())
+    ///             {
+    ///                 // Extract a string from the variant
+    ///                 Console.WriteLine($&quot;The string is: {variant.Get&lt;string&gt;()}&quot;);
+    ///             }
+    ///         }
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
     public sealed class Variant<T1, T2, T3, T4> : VariantBase
     {
         private Variant(IVariantHolder item, byte index)
@@ -376,6 +528,44 @@ namespace Maki
     /// <typeparam name="T3">Represents the variant's third type.</typeparam>
     /// <typeparam name="T4">Represents the variant's fourth type.</typeparam>
     /// <typeparam name="T5">Represents the variant's fifth type.</typeparam>
+    /// <example>
+    /// The following example shows how to assign values of different types to a Variant and how to extract
+    /// values from it.
+    /// <code>
+    /// using Maki;
+    /// using System;
+    /// 
+    /// namespace Samples
+    /// {
+    ///     class Program
+    ///     {
+    ///         static void Main(string[] args)
+    ///         {
+    ///             // A variant can hold a value of any of its generic types
+    ///             Variant&lt;int, string, double&gt; variant = 42;
+    /// 
+    ///             // Depending on the type of the value currently inhabiting the variant,
+    ///             // the right Action gets executed
+    ///             variant.Apply(
+    ///                 i =&gt; Console.WriteLine(i * 2),
+    ///                 s =&gt; Console.WriteLine(s + &quot;!&quot;),
+    ///                 d =&gt; Console.WriteLine($&quot;Double: {d}&quot;)
+    ///             );
+    /// 
+    ///             // Can reassign variant with another of its generic types
+    ///             variant = &quot;Hello world&quot;;
+    /// 
+    ///             // Check the type of the value currently inhabiting the variant
+    ///             if (variant.Is&lt;string&gt;())
+    ///             {
+    ///                 // Extract a string from the variant
+    ///                 Console.WriteLine($&quot;The string is: {variant.Get&lt;string&gt;()}&quot;);
+    ///             }
+    ///         }
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
     public sealed class Variant<T1, T2, T3, T4, T5> : VariantBase
     {
         private Variant(IVariantHolder item, byte index)
@@ -548,6 +738,44 @@ namespace Maki
     /// <typeparam name="T4">Represents the variant's fourth type.</typeparam>
     /// <typeparam name="T5">Represents the variant's fifth type.</typeparam>
     /// <typeparam name="T6">Represents the variant's sixth type.</typeparam>
+    /// <example>
+    /// The following example shows how to assign values of different types to a Variant and how to extract
+    /// values from it.
+    /// <code>
+    /// using Maki;
+    /// using System;
+    /// 
+    /// namespace Samples
+    /// {
+    ///     class Program
+    ///     {
+    ///         static void Main(string[] args)
+    ///         {
+    ///             // A variant can hold a value of any of its generic types
+    ///             Variant&lt;int, string, double&gt; variant = 42;
+    /// 
+    ///             // Depending on the type of the value currently inhabiting the variant,
+    ///             // the right Action gets executed
+    ///             variant.Apply(
+    ///                 i =&gt; Console.WriteLine(i * 2),
+    ///                 s =&gt; Console.WriteLine(s + &quot;!&quot;),
+    ///                 d =&gt; Console.WriteLine($&quot;Double: {d}&quot;)
+    ///             );
+    /// 
+    ///             // Can reassign variant with another of its generic types
+    ///             variant = &quot;Hello world&quot;;
+    /// 
+    ///             // Check the type of the value currently inhabiting the variant
+    ///             if (variant.Is&lt;string&gt;())
+    ///             {
+    ///                 // Extract a string from the variant
+    ///                 Console.WriteLine($&quot;The string is: {variant.Get&lt;string&gt;()}&quot;);
+    ///             }
+    ///         }
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
     public sealed class Variant<T1, T2, T3, T4, T5, T6> : VariantBase
     {
         private Variant(IVariantHolder item, byte index)
@@ -752,6 +980,44 @@ namespace Maki
     /// <typeparam name="T5">Represents the variant's fifth type.</typeparam>
     /// <typeparam name="T6">Represents the variant's sixth type.</typeparam>
     /// <typeparam name="T7">Represents the variant's seventh type.</typeparam>
+    /// <example>
+    /// The following example shows how to assign values of different types to a Variant and how to extract
+    /// values from it.
+    /// <code>
+    /// using Maki;
+    /// using System;
+    /// 
+    /// namespace Samples
+    /// {
+    ///     class Program
+    ///     {
+    ///         static void Main(string[] args)
+    ///         {
+    ///             // A variant can hold a value of any of its generic types
+    ///             Variant&lt;int, string, double&gt; variant = 42;
+    /// 
+    ///             // Depending on the type of the value currently inhabiting the variant,
+    ///             // the right Action gets executed
+    ///             variant.Apply(
+    ///                 i =&gt; Console.WriteLine(i * 2),
+    ///                 s =&gt; Console.WriteLine(s + &quot;!&quot;),
+    ///                 d =&gt; Console.WriteLine($&quot;Double: {d}&quot;)
+    ///             );
+    /// 
+    ///             // Can reassign variant with another of its generic types
+    ///             variant = &quot;Hello world&quot;;
+    /// 
+    ///             // Check the type of the value currently inhabiting the variant
+    ///             if (variant.Is&lt;string&gt;())
+    ///             {
+    ///                 // Extract a string from the variant
+    ///                 Console.WriteLine($&quot;The string is: {variant.Get&lt;string&gt;()}&quot;);
+    ///             }
+    ///         }
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
     public sealed class Variant<T1, T2, T3, T4, T5, T6, T7> : VariantBase
     {
         private Variant(IVariantHolder item, byte index)
@@ -988,6 +1254,44 @@ namespace Maki
     /// <typeparam name="T6">Represents the variant's sixth type.</typeparam>
     /// <typeparam name="T7">Represents the variant's seventh type.</typeparam>
     /// <typeparam name="T8">Represents the variant's eighth type.</typeparam>
+    /// <example>
+    /// The following example shows how to assign values of different types to a Variant and how to extract
+    /// values from it.
+    /// <code>
+    /// using Maki;
+    /// using System;
+    /// 
+    /// namespace Samples
+    /// {
+    ///     class Program
+    ///     {
+    ///         static void Main(string[] args)
+    ///         {
+    ///             // A variant can hold a value of any of its generic types
+    ///             Variant&lt;int, string, double&gt; variant = 42;
+    /// 
+    ///             // Depending on the type of the value currently inhabiting the variant,
+    ///             // the right Action gets executed
+    ///             variant.Apply(
+    ///                 i =&gt; Console.WriteLine(i * 2),
+    ///                 s =&gt; Console.WriteLine(s + &quot;!&quot;),
+    ///                 d =&gt; Console.WriteLine($&quot;Double: {d}&quot;)
+    ///             );
+    /// 
+    ///             // Can reassign variant with another of its generic types
+    ///             variant = &quot;Hello world&quot;;
+    /// 
+    ///             // Check the type of the value currently inhabiting the variant
+    ///             if (variant.Is&lt;string&gt;())
+    ///             {
+    ///                 // Extract a string from the variant
+    ///                 Console.WriteLine($&quot;The string is: {variant.Get&lt;string&gt;()}&quot;);
+    ///             }
+    ///         }
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
     public sealed class Variant<T1, T2, T3, T4, T5, T6, T7, T8> : VariantBase
     {
         private Variant(IVariantHolder item, byte index)
