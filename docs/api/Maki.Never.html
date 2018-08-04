@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace Maki.Details
+    <title>Enum Never
    | Maki </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace Maki.Details
+    <meta name="title" content="Enum Never
    | Maki ">
     <meta name="generator" content="docfx 2.36.2.0">
     
@@ -78,19 +78,62 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Maki.Details">
+            <article class="content wrap" id="_content" data-uid="Maki.Never">
   
-  <h1 id="Maki_Details" data-uid="Maki.Details" class="text-break">Namespace Maki.Details
+  
+  <h1 id="Maki_Never" data-uid="Maki.Never" class="text-break">Enum Never
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary">
+Represents an uninhabitable type.
+</div>
   <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
-  </h3>
-      <h4><a class="xref" href="Maki.Details.VariantBase.html">VariantBase</a></h4>
-      <section>
-Used internally to implement Variant types.
-</section>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Maki.html">Maki</a></h6>
+  <h6><strong>Assembly</strong>: Maki.dll</h6>
+  <h5 id="Maki_Never_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum Never</code></pre>
+  </div>
+  <h5 id="Maki_Never_examples"><strong>Examples</strong></h5>
+  
+Never is impossible to instantiate, thus it can be use to denote absence of a value. The following
+example shows two use-cases of Never: explicitly showing a method does not return and as a generic
+type argument to remove the type option.
+<pre><code>using Maki;
+using System;
+
+namespace Samples
+{
+    class Program
+    {
+        // This function never returns
+        static Never Fail(string message)
+        {
+            throw new Exception(message);
+        }
+
+        // This function also never returns
+        static Never LoopForever()
+        {
+            while (true)
+            { }
+        }
+
+        // Assume a generic library method which expects an Either&lt;T, U>
+        static void NeedsGenericEither&lt;T, U>(Either&lt;T, U> either)
+        {
+            // ...
+        }
+
+        static void Main(string[] args)
+        {
+            // We can remove a type from Either by providing Never
+            Either&lt;int, Never> either = 42;
+
+            NeedsGenericEither(either);
+        }
+    }
+}</code></pre>
+
 </article>
           </div>
           
@@ -98,6 +141,12 @@ Used internally to implement Variant types.
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Never.md&amp;value=---%0Auid%3A%20Maki.Never%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/vladris/Maki/blob/master/Maki/Never.cs/#L48" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

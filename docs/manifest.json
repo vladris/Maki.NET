@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Details.VariantBase.html",
-          "hash": "HUE6DwEKSNJQY4MrweZp4w=="
+          "hash": "zOd1FK8LA1xmh4Lwpdj5IA=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Details.html",
-          "hash": "M64TOm0Ad7USMQ/wuVrDMw=="
+          "hash": "4aIAIbMkXacUWWx870YY1g=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Either-2.html",
-          "hash": "PZIqpvv7qRdt8HWkmdX3yA=="
+          "hash": "c/eOPIAW1xpdSuN63We//g=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Error-1.html",
-          "hash": "Qc2mqyHdgGRM/mHsrtz2wg=="
+          "hash": "/xG9GLYIoAWpp65Vqln5Pg=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Error.html",
-          "hash": "frus6BCpyoG9lkT+ZZBhyA=="
+          "hash": "3p3byW9Y4gA2TkyZkYR1nA=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.ErrorExtensions.html",
-          "hash": "tYzvPmW80VbCkceEmJd8rg=="
+          "hash": "xYh1qUBfC9iwaCS1hQFt2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Never.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Never.html",
+          "hash": "3tf0sHBp/66kvjC/vx/I2A=="
         }
       },
       "is_incremental": false,
@@ -90,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.NotNull-1.html",
-          "hash": "g6JsBEfwbSpDLPhKeI6ZVg=="
+          "hash": "ROD6+yDL1fSAC0M1X44Ltw=="
         }
       },
       "is_incremental": false,
@@ -102,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.NotNull.html",
-          "hash": "f+0YbhqPIsrLiex/0g9W2w=="
+          "hash": "9epyCzxRcDiZ86dskNqG2A=="
         }
       },
       "is_incremental": false,
@@ -114,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.NotNullExtensions.html",
-          "hash": "bX8pPP8rMNppoUSRdEnL7g=="
+          "hash": "860+oszux+AaxiN4mmwMQw=="
         }
       },
       "is_incremental": false,
@@ -126,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Optional-1.html",
-          "hash": "2ZPtjvguXKNeL5dHklVjFw=="
+          "hash": "ryPUXxoWZZ14rJIoODJG0w=="
         }
       },
       "is_incremental": false,
@@ -138,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Optional.html",
-          "hash": "okZWO0aTEdYsIRfy5MBPLA=="
+          "hash": "Dmw3AbT0wXuq+wDuHrBWsw=="
         }
       },
       "is_incremental": false,
@@ -150,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.OptionalExtensions.html",
-          "hash": "cj32rSJhfJm0vx9BwifxIw=="
+          "hash": "FdxOCSbz2tn+Gmt4XVvegA=="
         }
       },
       "is_incremental": false,
@@ -162,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Unit.html",
-          "hash": "Xx4+CQe6ADouV6BDlZhcGA=="
+          "hash": "gjoWvzh9JKvWarL8bEOgNA=="
         }
       },
       "is_incremental": false,
@@ -174,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Variant-1.html",
-          "hash": "ah1m8E3b3rJvmEcw/nT2KQ=="
+          "hash": "mt8gPU5kba2FjMK93ARCTQ=="
         }
       },
       "is_incremental": false,
@@ -186,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Variant-2.html",
-          "hash": "4sQ0bFnP5jUnzK9kchF2pA=="
+          "hash": "+8K9Am//XCPez2Hrf8JOYw=="
         }
       },
       "is_incremental": false,
@@ -198,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Variant-3.html",
-          "hash": "MIqpbQ7bAehZHejJD+odUA=="
+          "hash": "x1juLfTzkmRW2V3VvGIMug=="
         }
       },
       "is_incremental": false,
@@ -210,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Variant-4.html",
-          "hash": "FvuJO4pGfDq5qSqMVmcj8A=="
+          "hash": "Q2clENYnp2BNYra2aFWKEg=="
         }
       },
       "is_incremental": false,
@@ -222,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Variant-5.html",
-          "hash": "TQ+F6Z+Ah9IyfVMyzu7FAw=="
+          "hash": "676brevLP8mp//sKaMmJGA=="
         }
       },
       "is_incremental": false,
@@ -234,7 +246,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Variant-6.html",
-          "hash": "mKf9h8gjX77LntuRKOzr/A=="
+          "hash": "RClbYNF7Nv0yUBNQH7jZYQ=="
         }
       },
       "is_incremental": false,
@@ -246,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Variant-7.html",
-          "hash": "Vh8pGWbtB563zy1yAaSylQ=="
+          "hash": "Kl0IxdmFfCbjRJiC/y+9Dg=="
         }
       },
       "is_incremental": false,
@@ -258,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Variant-8.html",
-          "hash": "BMjK45Ix3E7HSkU2B+pEMw=="
+          "hash": "d2bQbhjY1uIhBzxW8PFgEQ=="
         }
       },
       "is_incremental": false,
@@ -270,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.VariantExtensions.html",
-          "hash": "VSAXOdN5w2KhwGP15TX9QA=="
+          "hash": "OzaFgylKzsV9DyDJIf3nGQ=="
         }
       },
       "is_incremental": false,
@@ -282,7 +294,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.html",
-          "hash": "e6UbcB26yZUcBdxtJ4txgg=="
+          "hash": "bE+wMQlR49Tp963zQ2ipEg=="
         }
       },
       "is_incremental": false,
@@ -294,7 +306,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "H3dSYXzoqTJPKHZ+0zVdUg=="
+          "hash": "+lyar5g1WTABlnbw10p2Aw=="
         }
       },
       "is_incremental": false,
@@ -304,7 +316,8 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
         "incrementalPhase": "build"
       },
       "processors": {
@@ -314,7 +327,7 @@
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build"
         }
       }

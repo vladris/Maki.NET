@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct NotNull&lt;T&gt;
    | Maki ">
-    <meta name="generator" content="docfx 2.37.1.0">
+    <meta name="generator" content="docfx 2.36.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -123,6 +123,43 @@ Represents an object that cannot be null.
       </tr>
     </tbody>
   </table>
+  <h5 id="Maki_NotNull_1_examples"><strong>Examples</strong></h5>
+  
+The following example shows how to unpack a potentially null value into a NotNull. Once wrapped
+in a NotNull, code does not need to perform any additional null checks.
+<pre><code>using Maki;
+using System;
+
+namespace Samples
+{
+    class Program
+    {
+        // No need to check argument before using it, it can never be null
+        static void UseValue(NotNull&lt;string> value)
+        {
+            Console.WriteLine(value.Item);
+        }
+
+        static void Main(string[] args)
+        {
+            // An instance that could be null
+            string valueOrNull = null;
+            if (DateTime.Today.DayOfWeek == DayOfWeek.Friday)
+                valueOrNull = &quot;It&apos;s Friday!&quot;;
+
+            // Perform a null check before assigning to NotNull&lt;>
+            if (valueOrNull == null)
+                return;
+
+            // value is guaranteed to be non-null
+            NotNull&lt;string> value = valueOrNull;
+
+            // No need to null check from here on
+            UseValue(value);
+        }
+    }
+}</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
@@ -130,7 +167,7 @@ Represents an object that cannot be null.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_NotNull_1__ctor__0_.md&amp;value=---%0Auid%3A%20Maki.NotNull%601.%23ctor(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L46">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L120">View Source</a>
   </span>
   <a id="Maki_NotNull_1__ctor_" data-uid="Maki.NotNull`1.#ctor*"></a>
   <h4 id="Maki_NotNull_1__ctor__0_" data-uid="Maki.NotNull`1.#ctor(`0)">NotNull(T)</h4>
@@ -181,7 +218,7 @@ Creates a new NotNull from the given object.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_NotNull_1_Item.md&amp;value=---%0Auid%3A%20Maki.NotNull%601.Item%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L39">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L113">View Source</a>
   </span>
   <a id="Maki_NotNull_1_Item_" data-uid="Maki.NotNull`1.Item*"></a>
   <h4 id="Maki_NotNull_1_Item" data-uid="Maki.NotNull`1.Item">Item</h4>
@@ -215,7 +252,7 @@ Gets the object.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_NotNull_1_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Maki.NotNull%601.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L83">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L157">View Source</a>
   </span>
   <a id="Maki_NotNull_1_Equals_" data-uid="Maki.NotNull`1.Equals*"></a>
   <h4 id="Maki_NotNull_1_Equals_System_Object_" data-uid="Maki.NotNull`1.Equals(System.Object)">Equals(Object)</h4>
@@ -266,7 +303,7 @@ Determines whether the specified object is equal to the current object.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_NotNull_1_GetHashCode.md&amp;value=---%0Auid%3A%20Maki.NotNull%601.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L89">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L163">View Source</a>
   </span>
   <a id="Maki_NotNull_1_GetHashCode_" data-uid="Maki.NotNull`1.GetHashCode*"></a>
   <h4 id="Maki_NotNull_1_GetHashCode" data-uid="Maki.NotNull`1.GetHashCode">GetHashCode()</h4>
@@ -300,7 +337,7 @@ Returns the hash code for this instance.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_NotNull_1_MakeOptional__0_.md&amp;value=---%0Auid%3A%20Maki.NotNull%601.MakeOptional(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L74">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L148">View Source</a>
   </span>
   <a id="Maki_NotNull_1_MakeOptional_" data-uid="Maki.NotNull`1.MakeOptional*"></a>
   <h4 id="Maki_NotNull_1_MakeOptional__0_" data-uid="Maki.NotNull`1.MakeOptional(`0)">MakeOptional(T)</h4>
@@ -352,7 +389,7 @@ object is null or NotNull if the object is not null.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_NotNull_1_op_Implicit__0__Maki_NotNull__0_.md&amp;value=---%0Auid%3A%20Maki.NotNull%601.op_Implicit(%600)~Maki.NotNull%7B%600%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L66">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L140">View Source</a>
   </span>
   <a id="Maki_NotNull_1_op_Implicit_" data-uid="Maki.NotNull`1.op_Implicit*"></a>
   <h4 id="Maki_NotNull_1_op_Implicit__0__Maki_NotNull__0_" data-uid="Maki.NotNull`1.op_Implicit(`0)~Maki.NotNull{`0}">Implicit(T to NotNull&lt;T&gt;)</h4>
@@ -401,7 +438,7 @@ Creates a new NotNull from the given object.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_NotNull_1_op_Implicit_Maki_NotNull__0____0.md&amp;value=---%0Auid%3A%20Maki.NotNull%601.op_Implicit(Maki.NotNull%7B%600%7D)~%600%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L60">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L134">View Source</a>
   </span>
   <a id="Maki_NotNull_1_op_Implicit_" data-uid="Maki.NotNull`1.op_Implicit*"></a>
   <h4 id="Maki_NotNull_1_op_Implicit_Maki_NotNull__0____0" data-uid="Maki.NotNull`1.op_Implicit(Maki.NotNull{`0})~`0">Implicit(NotNull&lt;T&gt; to T)</h4>
@@ -463,7 +500,7 @@ Implicit conversion to contained type.
                     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_NotNull_1.md&amp;value=---%0Auid%3A%20Maki.NotNull%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L34" class="contribution-link">View Source</a>
+                    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L108" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

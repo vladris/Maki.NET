@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Variant&lt;T1, T2, T3, T4, T5&gt;
    | Maki ">
-    <meta name="generator" content="docfx 2.37.1.0">
+    <meta name="generator" content="docfx 2.36.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -166,6 +166,43 @@ Represents a 5-type discriminate union.
       </tr>
     </tbody>
   </table>
+  <h5 id="Maki_Variant_5_examples"><strong>Examples</strong></h5>
+  
+The following example shows how to assign values of different types to a Variant and how to extract
+values from it.
+<pre><code>using Maki;
+using System;
+
+namespace Samples
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // A variant can hold a value of any of its generic types
+            Variant&lt;int, string, double> variant = 42;
+
+            // Depending on the type of the value currently inhabiting the variant,
+            // the right Action gets executed
+            variant.Apply(
+                i => Console.WriteLine(i * 2),
+                s => Console.WriteLine(s + &quot;!&quot;),
+                d => Console.WriteLine($&quot;Double: {d}&quot;)
+            );
+
+            // Can reassign variant with another of its generic types
+            variant = &quot;Hello world&quot;;
+
+            // Check the type of the value currently inhabiting the variant
+            if (variant.Is&lt;string>())
+            {
+                // Extract a string from the variant
+                Console.WriteLine($&quot;The string is: {variant.Get&lt;string>()}&quot;);
+            }
+        }
+    }
+}</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
@@ -173,7 +210,7 @@ Represents a 5-type discriminate union.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5__ctor__0_.md&amp;value=---%0Auid%3A%20Maki.Variant%605.%23ctor(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L389">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L579">View Source</a>
   </span>
   <a id="Maki_Variant_5__ctor_" data-uid="Maki.Variant`5.#ctor*"></a>
   <h4 id="Maki_Variant_5__ctor__0_" data-uid="Maki.Variant`5.#ctor(`0)">Variant(T1)</h4>
@@ -207,7 +244,7 @@ Creates a new Variant instance from an item of type <code data-dev-comment-type=
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5__ctor__1_.md&amp;value=---%0Auid%3A%20Maki.Variant%605.%23ctor(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L420">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L610">View Source</a>
   </span>
   <a id="Maki_Variant_5__ctor_" data-uid="Maki.Variant`5.#ctor*"></a>
   <h4 id="Maki_Variant_5__ctor__1_" data-uid="Maki.Variant`5.#ctor(`1)">Variant(T2)</h4>
@@ -241,7 +278,7 @@ Creates a new Variant instance from an item of type <code data-dev-comment-type=
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5__ctor__2_.md&amp;value=---%0Auid%3A%20Maki.Variant%605.%23ctor(%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L451">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L641">View Source</a>
   </span>
   <a id="Maki_Variant_5__ctor_" data-uid="Maki.Variant`5.#ctor*"></a>
   <h4 id="Maki_Variant_5__ctor__2_" data-uid="Maki.Variant`5.#ctor(`2)">Variant(T3)</h4>
@@ -275,7 +312,7 @@ Creates a new Variant instance from an item of type <code data-dev-comment-type=
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5__ctor__3_.md&amp;value=---%0Auid%3A%20Maki.Variant%605.%23ctor(%603)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L482">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L672">View Source</a>
   </span>
   <a id="Maki_Variant_5__ctor_" data-uid="Maki.Variant`5.#ctor*"></a>
   <h4 id="Maki_Variant_5__ctor__3_" data-uid="Maki.Variant`5.#ctor(`3)">Variant(T4)</h4>
@@ -309,7 +346,7 @@ Creates a new Variant instance from an item of type <code data-dev-comment-type=
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5__ctor__4_.md&amp;value=---%0Auid%3A%20Maki.Variant%605.%23ctor(%604)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L513">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L703">View Source</a>
   </span>
   <a id="Maki_Variant_5__ctor_" data-uid="Maki.Variant`5.#ctor*"></a>
   <h4 id="Maki_Variant_5__ctor__4_" data-uid="Maki.Variant`5.#ctor(`4)">Variant(T5)</h4>
@@ -345,7 +382,7 @@ Creates a new Variant instance from an item of type <code data-dev-comment-type=
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5_Make1__0_.md&amp;value=---%0Auid%3A%20Maki.Variant%605.Make1(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L401">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L591">View Source</a>
   </span>
   <a id="Maki_Variant_5_Make1_" data-uid="Maki.Variant`5.Make1*"></a>
   <h4 id="Maki_Variant_5_Make1__0_" data-uid="Maki.Variant`5.Make1(`0)">Make1(T1)</h4>
@@ -398,7 +435,7 @@ allows explicit placing of the item.</div>
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5_Make2__1_.md&amp;value=---%0Auid%3A%20Maki.Variant%605.Make2(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L432">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L622">View Source</a>
   </span>
   <a id="Maki_Variant_5_Make2_" data-uid="Maki.Variant`5.Make2*"></a>
   <h4 id="Maki_Variant_5_Make2__1_" data-uid="Maki.Variant`5.Make2(`1)">Make2(T2)</h4>
@@ -451,7 +488,7 @@ allows explicit placing of the item.</div>
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5_Make3__2_.md&amp;value=---%0Auid%3A%20Maki.Variant%605.Make3(%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L463">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L653">View Source</a>
   </span>
   <a id="Maki_Variant_5_Make3_" data-uid="Maki.Variant`5.Make3*"></a>
   <h4 id="Maki_Variant_5_Make3__2_" data-uid="Maki.Variant`5.Make3(`2)">Make3(T3)</h4>
@@ -504,7 +541,7 @@ allows explicit placing of the item.</div>
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5_Make4__3_.md&amp;value=---%0Auid%3A%20Maki.Variant%605.Make4(%603)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L494">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L684">View Source</a>
   </span>
   <a id="Maki_Variant_5_Make4_" data-uid="Maki.Variant`5.Make4*"></a>
   <h4 id="Maki_Variant_5_Make4__3_" data-uid="Maki.Variant`5.Make4(`3)">Make4(T4)</h4>
@@ -557,7 +594,7 @@ allows explicit placing of the item.</div>
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5_Make5__4_.md&amp;value=---%0Auid%3A%20Maki.Variant%605.Make5(%604)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L525">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L715">View Source</a>
   </span>
   <a id="Maki_Variant_5_Make5_" data-uid="Maki.Variant`5.Make5*"></a>
   <h4 id="Maki_Variant_5_Make5__4_" data-uid="Maki.Variant`5.Make5(`4)">Make5(T5)</h4>
@@ -612,7 +649,7 @@ allows explicit placing of the item.</div>
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5_op_Explicit_Maki_Variant__0__1__2__3__4____0.md&amp;value=---%0Auid%3A%20Maki.Variant%605.op_Explicit(Maki.Variant%7B%600%2C%601%2C%602%2C%603%2C%604%7D)~%600%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L415">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L605">View Source</a>
   </span>
   <a id="Maki_Variant_5_op_Explicit_" data-uid="Maki.Variant`5.op_Explicit*"></a>
   <h4 id="Maki_Variant_5_op_Explicit_Maki_Variant__0__1__2__3__4____0" data-uid="Maki.Variant`5.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4})~`0">Explicit(Variant&lt;T1, T2, T3, T4, T5&gt; to T1)</h4>
@@ -676,7 +713,7 @@ Explicitly casts from variant to <code data-dev-comment-type="typeparamref" clas
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5_op_Explicit_Maki_Variant__0__1__2__3__4____1.md&amp;value=---%0Auid%3A%20Maki.Variant%605.op_Explicit(Maki.Variant%7B%600%2C%601%2C%602%2C%603%2C%604%7D)~%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L446">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L636">View Source</a>
   </span>
   <a id="Maki_Variant_5_op_Explicit_" data-uid="Maki.Variant`5.op_Explicit*"></a>
   <h4 id="Maki_Variant_5_op_Explicit_Maki_Variant__0__1__2__3__4____1" data-uid="Maki.Variant`5.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4})~`1">Explicit(Variant&lt;T1, T2, T3, T4, T5&gt; to T2)</h4>
@@ -740,7 +777,7 @@ Explicitly casts from variant to <code data-dev-comment-type="typeparamref" clas
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5_op_Explicit_Maki_Variant__0__1__2__3__4____2.md&amp;value=---%0Auid%3A%20Maki.Variant%605.op_Explicit(Maki.Variant%7B%600%2C%601%2C%602%2C%603%2C%604%7D)~%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L477">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L667">View Source</a>
   </span>
   <a id="Maki_Variant_5_op_Explicit_" data-uid="Maki.Variant`5.op_Explicit*"></a>
   <h4 id="Maki_Variant_5_op_Explicit_Maki_Variant__0__1__2__3__4____2" data-uid="Maki.Variant`5.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4})~`2">Explicit(Variant&lt;T1, T2, T3, T4, T5&gt; to T3)</h4>
@@ -804,7 +841,7 @@ Explicitly casts from variant to <code data-dev-comment-type="typeparamref" clas
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5_op_Explicit_Maki_Variant__0__1__2__3__4____3.md&amp;value=---%0Auid%3A%20Maki.Variant%605.op_Explicit(Maki.Variant%7B%600%2C%601%2C%602%2C%603%2C%604%7D)~%603%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L508">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L698">View Source</a>
   </span>
   <a id="Maki_Variant_5_op_Explicit_" data-uid="Maki.Variant`5.op_Explicit*"></a>
   <h4 id="Maki_Variant_5_op_Explicit_Maki_Variant__0__1__2__3__4____3" data-uid="Maki.Variant`5.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4})~`3">Explicit(Variant&lt;T1, T2, T3, T4, T5&gt; to T4)</h4>
@@ -868,7 +905,7 @@ Explicitly casts from variant to <code data-dev-comment-type="typeparamref" clas
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5_op_Explicit_Maki_Variant__0__1__2__3__4____4.md&amp;value=---%0Auid%3A%20Maki.Variant%605.op_Explicit(Maki.Variant%7B%600%2C%601%2C%602%2C%603%2C%604%7D)~%604%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L539">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L729">View Source</a>
   </span>
   <a id="Maki_Variant_5_op_Explicit_" data-uid="Maki.Variant`5.op_Explicit*"></a>
   <h4 id="Maki_Variant_5_op_Explicit_Maki_Variant__0__1__2__3__4____4" data-uid="Maki.Variant`5.op_Explicit(Maki.Variant{`0,`1,`2,`3,`4})~`4">Explicit(Variant&lt;T1, T2, T3, T4, T5&gt; to T5)</h4>
@@ -932,7 +969,7 @@ Explicitly casts from variant to <code data-dev-comment-type="typeparamref" clas
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5_op_Implicit__0__Maki_Variant__0__1__2__3__4_.md&amp;value=---%0Auid%3A%20Maki.Variant%605.op_Implicit(%600)~Maki.Variant%7B%600%2C%601%2C%602%2C%603%2C%604%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L408">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L598">View Source</a>
   </span>
   <a id="Maki_Variant_5_op_Implicit_" data-uid="Maki.Variant`5.op_Implicit*"></a>
   <h4 id="Maki_Variant_5_op_Implicit__0__Maki_Variant__0__1__2__3__4_" data-uid="Maki.Variant`5.op_Implicit(`0)~Maki.Variant{`0,`1,`2,`3,`4}">Implicit(T1 to Variant&lt;T1, T2, T3, T4, T5&gt;)</h4>
@@ -982,7 +1019,7 @@ inhabited by the given item.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5_op_Implicit__1__Maki_Variant__0__1__2__3__4_.md&amp;value=---%0Auid%3A%20Maki.Variant%605.op_Implicit(%601)~Maki.Variant%7B%600%2C%601%2C%602%2C%603%2C%604%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L439">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L629">View Source</a>
   </span>
   <a id="Maki_Variant_5_op_Implicit_" data-uid="Maki.Variant`5.op_Implicit*"></a>
   <h4 id="Maki_Variant_5_op_Implicit__1__Maki_Variant__0__1__2__3__4_" data-uid="Maki.Variant`5.op_Implicit(`1)~Maki.Variant{`0,`1,`2,`3,`4}">Implicit(T2 to Variant&lt;T1, T2, T3, T4, T5&gt;)</h4>
@@ -1032,7 +1069,7 @@ inhabited by the given item.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5_op_Implicit__2__Maki_Variant__0__1__2__3__4_.md&amp;value=---%0Auid%3A%20Maki.Variant%605.op_Implicit(%602)~Maki.Variant%7B%600%2C%601%2C%602%2C%603%2C%604%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L470">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L660">View Source</a>
   </span>
   <a id="Maki_Variant_5_op_Implicit_" data-uid="Maki.Variant`5.op_Implicit*"></a>
   <h4 id="Maki_Variant_5_op_Implicit__2__Maki_Variant__0__1__2__3__4_" data-uid="Maki.Variant`5.op_Implicit(`2)~Maki.Variant{`0,`1,`2,`3,`4}">Implicit(T3 to Variant&lt;T1, T2, T3, T4, T5&gt;)</h4>
@@ -1082,7 +1119,7 @@ inhabited by the given item.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5_op_Implicit__3__Maki_Variant__0__1__2__3__4_.md&amp;value=---%0Auid%3A%20Maki.Variant%605.op_Implicit(%603)~Maki.Variant%7B%600%2C%601%2C%602%2C%603%2C%604%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L501">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L691">View Source</a>
   </span>
   <a id="Maki_Variant_5_op_Implicit_" data-uid="Maki.Variant`5.op_Implicit*"></a>
   <h4 id="Maki_Variant_5_op_Implicit__3__Maki_Variant__0__1__2__3__4_" data-uid="Maki.Variant`5.op_Implicit(`3)~Maki.Variant{`0,`1,`2,`3,`4}">Implicit(T4 to Variant&lt;T1, T2, T3, T4, T5&gt;)</h4>
@@ -1132,7 +1169,7 @@ inhabited by the given item.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5_op_Implicit__4__Maki_Variant__0__1__2__3__4_.md&amp;value=---%0Auid%3A%20Maki.Variant%605.op_Implicit(%604)~Maki.Variant%7B%600%2C%601%2C%602%2C%603%2C%604%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L532">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L722">View Source</a>
   </span>
   <a id="Maki_Variant_5_op_Implicit_" data-uid="Maki.Variant`5.op_Implicit*"></a>
   <h4 id="Maki_Variant_5_op_Implicit__4__Maki_Variant__0__1__2__3__4_" data-uid="Maki.Variant`5.op_Implicit(`4)~Maki.Variant{`0,`1,`2,`3,`4}">Implicit(T5 to Variant&lt;T1, T2, T3, T4, T5&gt;)</h4>
@@ -1198,7 +1235,7 @@ inhabited by the given item.
                     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Variant_5.md&amp;value=---%0Auid%3A%20Maki.Variant%605%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L379" class="contribution-link">View Source</a>
+                    <a href="https://github.com/vladris/Maki/blob/master/Maki/Variant.cs/#L569" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

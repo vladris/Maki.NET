@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class NotNull
    | Maki ">
-    <meta name="generator" content="docfx 2.37.1.0">
+    <meta name="generator" content="docfx 2.36.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -122,6 +122,43 @@ Provides static utilities for NotNull.
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static class NotNull</code></pre>
   </div>
+  <h5 id="Maki_NotNull_examples"><strong>Examples</strong></h5>
+  
+The following example shows how to use NotNull.MakeOptional to convert a potentially null value
+into an Optional that either contains Nothing or a NotNull value.
+<pre><code>using System;
+using Maki;
+
+namespace Samples
+{
+    class Program
+    {
+        // No need to check argument before using it, it can never be null
+        static void UseValue(NotNull&lt;string> value)
+        {
+            Console.WriteLine(value.Item);
+        }
+
+        static void Main(string[] args)
+        {
+            // An instance that could be null
+            string valueOrNull = null;
+            if (DateTime.Today.DayOfWeek == DayOfWeek.Friday)
+                valueOrNull = &quot;It&apos;s Friday!&quot;;
+
+            // Converts a potentially null value into an Optional
+            Optional&lt;NotNull&lt;string>> optionalValue = NotNull.MakeOptional(valueOrNull);
+
+            // Check that the Optional contains a value
+            if (optionalValue.HasValue)
+            {
+                // Get NonNull from Optional
+                UseValue(optionalValue.Get());
+            }
+        }
+    }
+}</code></pre>
+
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -129,7 +166,7 @@ Provides static utilities for NotNull.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_NotNull_Make__1___0_.md&amp;value=---%0Auid%3A%20Maki.NotNull.Make%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L18">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L54">View Source</a>
   </span>
   <a id="Maki_NotNull_Make_" data-uid="Maki.NotNull.Make*"></a>
   <h4 id="Maki_NotNull_Make__1___0_" data-uid="Maki.NotNull.Make``1(``0)">Make&lt;T&gt;(T)</h4>
@@ -208,7 +245,7 @@ Creates a new NotNull from the given object.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_NotNull_MakeOptional__1___0_.md&amp;value=---%0Auid%3A%20Maki.NotNull.MakeOptional%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L27">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L63">View Source</a>
   </span>
   <a id="Maki_NotNull_MakeOptional_" data-uid="Maki.NotNull.MakeOptional*"></a>
   <h4 id="Maki_NotNull_MakeOptional__1___0_" data-uid="Maki.NotNull.MakeOptional``1(``0)">MakeOptional&lt;T&gt;(T)</h4>
@@ -279,7 +316,7 @@ object is null or NotNull if the object is not null.
                     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_NotNull.md&amp;value=---%0Auid%3A%20Maki.NotNull%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/vladris/Maki/blob/master/Maki/NotNull.cs/#L46" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

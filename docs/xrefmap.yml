@@ -665,6 +665,12 @@ references:
   fullName.vb: Maki.ErrorExtensions.Map(Of T, U)(Maki.Error(Of T), System.Func(Of T, U))
   nameWithType: ErrorExtensions.Map<T, U>(Error<T>, Func<T, U>)
   nameWithType.vb: ErrorExtensions.Map(Of T, U)(Error(Of T), Func(Of T, U))
+- uid: Maki.Never
+  name: Never
+  href: api/Maki.Never.html
+  commentId: T:Maki.Never
+  fullName: Maki.Never
+  nameWithType: Never
 - uid: Maki.NotNull
   name: NotNull
   href: api/Maki.NotNull.html
@@ -1101,12 +1107,12 @@ references:
   commentId: T:Maki.Unit
   fullName: Maki.Unit
   nameWithType: Unit
-- uid: Maki.Unit.Value
-  name: Value
-  href: api/Maki.Unit.html#Maki_Unit_Value
-  commentId: F:Maki.Unit.Value
-  fullName: Maki.Unit.Value
-  nameWithType: Unit.Value
+- uid: Maki.Unit.Singleton
+  name: Singleton
+  href: api/Maki.Unit.html#Maki_Unit_Singleton
+  commentId: F:Maki.Unit.Singleton
+  fullName: Maki.Unit.Singleton
+  nameWithType: Unit.Singleton
 - uid: Maki.Variant`1
   name: Variant<T1>
   href: api/Maki.Variant-1.html

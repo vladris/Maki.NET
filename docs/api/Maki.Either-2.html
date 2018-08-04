@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Either&lt;TLeft, TRight&gt;
    | Maki ">
-    <meta name="generator" content="docfx 2.37.1.0">
+    <meta name="generator" content="docfx 2.36.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -135,6 +135,47 @@ Represents a 2-type discriminate union with Left and Right components.
       </tr>
     </tbody>
   </table>
+  <h5 id="Maki_Either_2_examples"><strong>Examples</strong></h5>
+  
+The following example assigns values to and extracts them from an Either&lt;int, string>.
+<pre><code>using Maki;
+using System;
+
+namespace Samples
+{
+    class Program
+    {
+        static void PrintEither(Either&lt;int, string> either)
+        {
+            // If either contains the left type (int)
+            if (either.IsLeft)
+            {
+                // Output the left (int) value to the console
+                Console.WriteLine(either.GetLeft());
+            }
+            else // either.IsRight
+            {
+                // Output the right (string) value to the console
+                Console.WriteLine(either.GetRight());
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            // Assign an int
+            Either&lt;int, string> either = 42;
+
+            // Will print &quot;42&quot;
+            PrintEither(either);
+
+            either = &quot;Hello world!&quot;;
+
+            // Will print &quot;Hello world!&quot;
+            PrintEither(either);
+        }
+    }
+}</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
@@ -142,7 +183,7 @@ Represents a 2-type discriminate union with Left and Right components.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2__ctor__0_.md&amp;value=---%0Auid%3A%20Maki.Either%602.%23ctor(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L32">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L72">View Source</a>
   </span>
   <a id="Maki_Either_2__ctor_" data-uid="Maki.Either`2.#ctor*"></a>
   <h4 id="Maki_Either_2__ctor__0_" data-uid="Maki.Either`2.#ctor(`0)">Either(TLeft)</h4>
@@ -176,7 +217,7 @@ Creates a new instance of Either from an item of type <code data-dev-comment-typ
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2__ctor__1_.md&amp;value=---%0Auid%3A%20Maki.Either%602.%23ctor(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L40">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L80">View Source</a>
   </span>
   <a id="Maki_Either_2__ctor_" data-uid="Maki.Either`2.#ctor*"></a>
   <h4 id="Maki_Either_2__ctor__1_" data-uid="Maki.Either`2.#ctor(`1)">Either(TRight)</h4>
@@ -212,7 +253,7 @@ Creates a new instance of Either from an item of type <code data-dev-comment-typ
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_IsLeft.md&amp;value=---%0Auid%3A%20Maki.Either%602.IsLeft%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L19">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L59">View Source</a>
   </span>
   <a id="Maki_Either_2_IsLeft_" data-uid="Maki.Either`2.IsLeft*"></a>
   <h4 id="Maki_Either_2_IsLeft" data-uid="Maki.Either`2.IsLeft">IsLeft</h4>
@@ -244,7 +285,7 @@ True if Left is inhabited.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_IsRight.md&amp;value=---%0Auid%3A%20Maki.Either%602.IsRight%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L24">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L64">View Source</a>
   </span>
   <a id="Maki_Either_2_IsRight_" data-uid="Maki.Either`2.IsRight*"></a>
   <h4 id="Maki_Either_2_IsRight" data-uid="Maki.Either`2.IsRight">IsRight</h4>
@@ -278,7 +319,7 @@ True if Right is inhabited.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Maki.Either%602.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L89">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L129">View Source</a>
   </span>
   <a id="Maki_Either_2_Equals_" data-uid="Maki.Either`2.Equals*"></a>
   <h4 id="Maki_Either_2_Equals_System_Object_" data-uid="Maki.Either`2.Equals(System.Object)">Equals(Object)</h4>
@@ -329,7 +370,7 @@ Determines whether the specified object is equal to the current object.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_GetHashCode.md&amp;value=---%0Auid%3A%20Maki.Either%602.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L98">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L138">View Source</a>
   </span>
   <a id="Maki_Either_2_GetHashCode_" data-uid="Maki.Either`2.GetHashCode*"></a>
   <h4 id="Maki_Either_2_GetHashCode" data-uid="Maki.Either`2.GetHashCode">GetHashCode()</h4>
@@ -363,7 +404,7 @@ Returns the hash code for this instance.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_GetLeft.md&amp;value=---%0Auid%3A%20Maki.Either%602.GetLeft%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L48">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L88">View Source</a>
   </span>
   <a id="Maki_Either_2_GetLeft_" data-uid="Maki.Either`2.GetLeft*"></a>
   <h4 id="Maki_Either_2_GetLeft" data-uid="Maki.Either`2.GetLeft">GetLeft()</h4>
@@ -410,7 +451,7 @@ Gets the Left component.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_GetRight.md&amp;value=---%0Auid%3A%20Maki.Either%602.GetRight%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L54">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L94">View Source</a>
   </span>
   <a id="Maki_Either_2_GetRight_" data-uid="Maki.Either`2.GetRight*"></a>
   <h4 id="Maki_Either_2_GetRight" data-uid="Maki.Either`2.GetRight">GetRight()</h4>
@@ -457,7 +498,7 @@ Gets the Right component.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_MakeLeft__0_.md&amp;value=---%0Auid%3A%20Maki.Either%602.MakeLeft(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L135">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L175">View Source</a>
   </span>
   <a id="Maki_Either_2_MakeLeft_" data-uid="Maki.Either`2.MakeLeft*"></a>
   <h4 id="Maki_Either_2_MakeLeft__0_" data-uid="Maki.Either`2.MakeLeft(`0)">MakeLeft(TLeft)</h4>
@@ -508,7 +549,7 @@ Creates a new Either explicitly placing the item in the Left component.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_MakeRight__1_.md&amp;value=---%0Auid%3A%20Maki.Either%602.MakeRight(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L143">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L183">View Source</a>
   </span>
   <a id="Maki_Either_2_MakeRight_" data-uid="Maki.Either`2.MakeRight*"></a>
   <h4 id="Maki_Either_2_MakeRight__1_" data-uid="Maki.Either`2.MakeRight(`1)">MakeRight(TRight)</h4>
@@ -559,7 +600,7 @@ Creates a new Either explicitly placing the item in the Right component.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_Set__0_.md&amp;value=---%0Auid%3A%20Maki.Either%602.Set(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L60">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L100">View Source</a>
   </span>
   <a id="Maki_Either_2_Set_" data-uid="Maki.Either`2.Set*"></a>
   <h4 id="Maki_Either_2_Set__0_" data-uid="Maki.Either`2.Set(`0)">Set(TLeft)</h4>
@@ -593,7 +634,7 @@ Sets the Left component.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_Set__1_.md&amp;value=---%0Auid%3A%20Maki.Either%602.Set(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L66">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L106">View Source</a>
   </span>
   <a id="Maki_Either_2_Set_" data-uid="Maki.Either`2.Set*"></a>
   <h4 id="Maki_Either_2_Set__1_" data-uid="Maki.Either`2.Set(`1)">Set(TRight)</h4>
@@ -627,7 +668,7 @@ Sets the Right component.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_SetLeft__0_.md&amp;value=---%0Auid%3A%20Maki.Either%602.SetLeft(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L74">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L114">View Source</a>
   </span>
   <a id="Maki_Either_2_SetLeft_" data-uid="Maki.Either`2.SetLeft*"></a>
   <h4 id="Maki_Either_2_SetLeft__0_" data-uid="Maki.Either`2.SetLeft(`0)">SetLeft(TLeft)</h4>
@@ -664,7 +705,7 @@ the same type.</div>
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_SetRight__1_.md&amp;value=---%0Auid%3A%20Maki.Either%602.SetRight(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L82">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L122">View Source</a>
   </span>
   <a id="Maki_Either_2_SetRight_" data-uid="Maki.Either`2.SetRight*"></a>
   <h4 id="Maki_Either_2_SetRight__1_" data-uid="Maki.Either`2.SetRight(`1)">SetRight(TRight)</h4>
@@ -703,7 +744,7 @@ the same type.</div>
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_op_Explicit_Maki_Either__0__1____0.md&amp;value=---%0Auid%3A%20Maki.Either%602.op_Explicit(Maki.Either%7B%600%2C%601%7D)~%600%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L120">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L160">View Source</a>
   </span>
   <a id="Maki_Either_2_op_Explicit_" data-uid="Maki.Either`2.op_Explicit*"></a>
   <h4 id="Maki_Either_2_op_Explicit_Maki_Either__0__1____0" data-uid="Maki.Either`2.op_Explicit(Maki.Either{`0,`1})~`0">Explicit(Either&lt;TLeft, TRight&gt; to TLeft)</h4>
@@ -767,7 +808,7 @@ Explicit cast from Either to <code data-dev-comment-type="typeparamref" class="t
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_op_Explicit_Maki_Either__0__1____1.md&amp;value=---%0Auid%3A%20Maki.Either%602.op_Explicit(Maki.Either%7B%600%2C%601%7D)~%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L127">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L167">View Source</a>
   </span>
   <a id="Maki_Either_2_op_Explicit_" data-uid="Maki.Either`2.op_Explicit*"></a>
   <h4 id="Maki_Either_2_op_Explicit_Maki_Either__0__1____1" data-uid="Maki.Either`2.op_Explicit(Maki.Either{`0,`1})~`1">Explicit(Either&lt;TLeft, TRight&gt; to TRight)</h4>
@@ -831,7 +872,7 @@ Explicit cast from Either to <code data-dev-comment-type="typeparamref" class="t
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_op_Implicit__0__Maki_Either__0__1_.md&amp;value=---%0Auid%3A%20Maki.Either%602.op_Implicit(%600)~Maki.Either%7B%600%2C%601%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L107">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L147">View Source</a>
   </span>
   <a id="Maki_Either_2_op_Implicit_" data-uid="Maki.Either`2.op_Implicit*"></a>
   <h4 id="Maki_Either_2_op_Implicit__0__Maki_Either__0__1_" data-uid="Maki.Either`2.op_Implicit(`0)~Maki.Either{`0,`1}">Implicit(TLeft to Either&lt;TLeft, TRight&gt;)</h4>
@@ -880,7 +921,7 @@ Implicit cast from <code data-dev-comment-type="typeparamref" class="typeparamre
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2_op_Implicit__1__Maki_Either__0__1_.md&amp;value=---%0Auid%3A%20Maki.Either%602.op_Implicit(%601)~Maki.Either%7B%600%2C%601%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L113">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L153">View Source</a>
   </span>
   <a id="Maki_Either_2_op_Implicit_" data-uid="Maki.Either`2.op_Implicit*"></a>
   <h4 id="Maki_Either_2_op_Implicit__1__Maki_Either__0__1_" data-uid="Maki.Either`2.op_Implicit(`1)~Maki.Either{`0,`1}">Implicit(TRight to Either&lt;TLeft, TRight&gt;)</h4>
@@ -935,7 +976,7 @@ Implicit cast from <code data-dev-comment-type="typeparamref" class="typeparamre
                     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Either_2.md&amp;value=---%0Auid%3A%20Maki.Either%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/vladris/Maki/blob/master/Maki/Either.cs/#L52" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

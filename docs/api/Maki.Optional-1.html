@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Optional&lt;T&gt;
    | Maki ">
-    <meta name="generator" content="docfx 2.37.1.0">
+    <meta name="generator" content="docfx 2.36.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -131,6 +131,43 @@ Represents an optional item of type <code data-dev-comment-type="typeparamref" c
       </tr>
     </tbody>
   </table>
+  <h5 id="Maki_Optional_1_examples"><strong>Examples</strong></h5>
+  
+The following example shows how to use an Optional object to represent a value or absence
+of a value.
+<pre><code>using Maki;
+using System;
+
+namespace Samples
+{
+
+    class Program
+    {
+        // Return a value only if a condition is met, otherwise Nothing
+        static Optional&lt;int> TryGet()
+        {
+            var value = new Random().Next(100);
+            return value &lt; 50 ? Optional.Make(value) : Optional.Nothing;
+        }
+
+        static void Main(string[] args)
+        {
+            var maybeInt = TryGet();
+
+            // HasValue checks for presence of the value
+            if (maybeInt.HasValue)
+            {
+                // Get() returns the value from the Optional
+                Console.WriteLine(maybeInt.Get());
+            }
+            else
+            {
+                Console.WriteLine(&quot;maybeInt is empty&quot;);
+            }
+        }
+    }
+}</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
@@ -138,7 +175,7 @@ Represents an optional item of type <code data-dev-comment-type="typeparamref" c
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Optional_1__ctor.md&amp;value=---%0Auid%3A%20Maki.Optional%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L45">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L94">View Source</a>
   </span>
   <a id="Maki_Optional_1__ctor_" data-uid="Maki.Optional`1.#ctor*"></a>
   <h4 id="Maki_Optional_1__ctor" data-uid="Maki.Optional`1.#ctor">Optional()</h4>
@@ -155,7 +192,7 @@ Creates an empty Optional.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Optional_1__ctor__0_.md&amp;value=---%0Auid%3A%20Maki.Optional%601.%23ctor(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L51">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L100">View Source</a>
   </span>
   <a id="Maki_Optional_1__ctor_" data-uid="Maki.Optional`1.#ctor*"></a>
   <h4 id="Maki_Optional_1__ctor__0_" data-uid="Maki.Optional`1.#ctor(`0)">Optional(T)</h4>
@@ -191,7 +228,7 @@ Creates an Optional holding the given item.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Optional_1_HasValue.md&amp;value=---%0Auid%3A%20Maki.Optional%601.HasValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L35">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L84">View Source</a>
   </span>
   <a id="Maki_Optional_1_HasValue_" data-uid="Maki.Optional`1.HasValue*"></a>
   <h4 id="Maki_Optional_1_HasValue" data-uid="Maki.Optional`1.HasValue">HasValue</h4>
@@ -223,7 +260,7 @@ True if the optional holds an item.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Optional_1_Nothing.md&amp;value=---%0Auid%3A%20Maki.Optional%601.Nothing%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L40">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L89">View Source</a>
   </span>
   <a id="Maki_Optional_1_Nothing_" data-uid="Maki.Optional`1.Nothing*"></a>
   <h4 id="Maki_Optional_1_Nothing" data-uid="Maki.Optional`1.Nothing">Nothing</h4>
@@ -257,7 +294,7 @@ Represtens an empty Optional of the given type <code data-dev-comment-type="type
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Optional_1_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Maki.Optional%601.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L84">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L133">View Source</a>
   </span>
   <a id="Maki_Optional_1_Equals_" data-uid="Maki.Optional`1.Equals*"></a>
   <h4 id="Maki_Optional_1_Equals_System_Object_" data-uid="Maki.Optional`1.Equals(System.Object)">Equals(Object)</h4>
@@ -308,7 +345,7 @@ Determines whether the specified object is equal to the current object.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Optional_1_Get.md&amp;value=---%0Auid%3A%20Maki.Optional%601.Get%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L58">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L107">View Source</a>
   </span>
   <a id="Maki_Optional_1_Get_" data-uid="Maki.Optional`1.Get*"></a>
   <h4 id="Maki_Optional_1_Get" data-uid="Maki.Optional`1.Get">Get()</h4>
@@ -355,7 +392,7 @@ Gets the item held by this Optional.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Optional_1_GetHashCode.md&amp;value=---%0Auid%3A%20Maki.Optional%601.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L101">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L150">View Source</a>
   </span>
   <a id="Maki_Optional_1_GetHashCode_" data-uid="Maki.Optional`1.GetHashCode*"></a>
   <h4 id="Maki_Optional_1_GetHashCode" data-uid="Maki.Optional`1.GetHashCode">GetHashCode()</h4>
@@ -391,7 +428,7 @@ Returns the hash code for this instance.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Optional_1_op_Explicit_Maki_Optional__0____0.md&amp;value=---%0Auid%3A%20Maki.Optional%601.op_Explicit(Maki.Optional%7B%600%7D)~%600%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L77">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L126">View Source</a>
   </span>
   <a id="Maki_Optional_1_op_Explicit_" data-uid="Maki.Optional`1.op_Explicit*"></a>
   <h4 id="Maki_Optional_1_op_Explicit_Maki_Optional__0____0" data-uid="Maki.Optional`1.op_Explicit(Maki.Optional{`0})~`0">Explicit(Optional&lt;T&gt; to T)</h4>
@@ -440,7 +477,7 @@ Explicitly casts from the given Optional to the held item type.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Optional_1_op_Implicit__0__Maki_Optional__0_.md&amp;value=---%0Auid%3A%20Maki.Optional%601.op_Implicit(%600)~Maki.Optional%7B%600%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L70">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L119">View Source</a>
   </span>
   <a id="Maki_Optional_1_op_Implicit_" data-uid="Maki.Optional`1.op_Implicit*"></a>
   <h4 id="Maki_Optional_1_op_Implicit__0__Maki_Optional__0_" data-uid="Maki.Optional`1.op_Implicit(`0)~Maki.Optional{`0}">Implicit(T to Optional&lt;T&gt;)</h4>
@@ -489,7 +526,7 @@ Implicitly casts from the given item to an Optional holding the item.
     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Optional_1_op_Implicit_Maki_Unit__Maki_Optional__0_.md&amp;value=---%0Auid%3A%20Maki.Optional%601.op_Implicit(Maki.Unit)~Maki.Optional%7B%600%7D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L64">View Source</a>
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L113">View Source</a>
   </span>
   <a id="Maki_Optional_1_op_Implicit_" data-uid="Maki.Optional`1.op_Implicit*"></a>
   <h4 id="Maki_Optional_1_op_Implicit_Maki_Unit__Maki_Optional__0_" data-uid="Maki.Optional`1.op_Implicit(Maki.Unit)~Maki.Optional{`0}">Implicit(Unit to Optional&lt;T&gt;)</h4>
@@ -551,7 +588,7 @@ Creates a new empty Optional.
                     <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Optional_1.md&amp;value=---%0Auid%3A%20Maki.Optional%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L28" class="contribution-link">View Source</a>
+                    <a href="https://github.com/vladris/Maki/blob/master/Maki/Optional.cs/#L77" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
