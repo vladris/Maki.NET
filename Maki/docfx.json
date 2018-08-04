@@ -30,6 +30,6 @@
       "_appTitle": "Maki",
       "_enableSearch": true
     },
-    "dest": "../website/docs"
+    "dest": "../website"
   }
 }
