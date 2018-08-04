@@ -2,7 +2,7 @@
 
 A .NET type library providing discriminate union types ``Variant<...>`` and ``Either<TLeft, TRight>``, a ``NotNull`` container, ``Optional`` and ``Error`` monads, primitive types ``Unit`` and ``Never``.
 
-Get it from NuGet (*link TBA*)
+[Get it from NuGet](https://www.nuget.org/packages/Maki/1.0.0)
 
 [Online documentation](api/Maki.html)
 
