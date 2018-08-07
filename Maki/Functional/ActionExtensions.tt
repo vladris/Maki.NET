@@ -9,15 +9,32 @@ using System;
 
 namespace Maki.Functional
 {
+    /// <summary>
+    /// Provides Action extension methods for converting any Action to an equivalent Func
+    /// which returns a Unit. With such a conversion, Action and Func can be treated uniformly.
+    /// </summary>
     public static class ActionExtensions
     {
 <#
 for (int types = 1; types <= 16; types++)
 {
 #>
+        /// <summary>
+        /// Converts an Action to an equivalent Func returning a Unit.
+        /// </summary>
+<#
+	for (int i = 1; i <= types; i++)
+	{
+#>
+        /// <typeparam name="T<#= i #>">Action generic type <#= i #>.</typeparam>
+<#
+	}
+#>
+        /// <param name="act">Action to convert to Func.</param>
+        /// <returns>Func returning a Unit.</returns>
         public static Func<<#= JoinWithPrefix(1, types, "T") #>, Unit>
             ToFunc<<#= JoinWithPrefix(1, types, "T") #>>(
-                Action<<#= JoinWithPrefix(1, types, "T") #>> act
+                this Action<<#= JoinWithPrefix(1, types, "T") #>> act
             )
             => (<#= JoinWithPrefix(1, types, "arg") #>)
                 =>
