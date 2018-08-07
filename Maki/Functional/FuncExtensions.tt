@@ -9,12 +9,31 @@ using System;
 
 namespace Maki.Functional
 {
+    /// <summary>
+    /// Provides Func extension methods to enable currying and partial application.
+    /// </summary>
     public static class FuncExtensions
     {
 <#
 for (int types = 2; types <= 16; types++)
 {
 #>
+        /// <summary>
+        /// Applies the first argument to the given Func and returns a new Func
+        /// derived from the partial application.
+        /// </summary>
+<#
+	for (int i = 1; i <= types; i++)
+	{
+#>
+        /// <typeparam name="T<#= i #>">Func type argument <#= i #>.</typeparam>
+<#
+	}
+#>
+        /// <typeparam name="TResult">Func return type.</typeparam>
+        /// <param name="func">Function on which to perform partial application.</param>
+        /// <param name="arg1">First argument of function.</param>
+        /// <returns>Func derived from given Func by partial application of first argument.</returns>
         public static Func<<#= JoinWithPrefix(2, types - 1, "T") #>, TResult> 
             Curry<<#= JoinWithPrefix(types, "T") #>, TResult>(
                 this Func<<#= JoinWithPrefix(types, "T") #>, TResult> func,
@@ -23,6 +42,21 @@ for (int types = 2; types <= 16; types++)
             => (<#= JoinWithPrefix(2, types - 1, "arg") #>)
                 => func(<#= JoinWithPrefix(types, "arg") #>);
 
+        /// <summary>
+        /// Curries the given Func returning an equivalent set of functions each taking
+        /// a single argument and returning the next function in the set.
+        /// </summary>
+<#
+	for (int i = 1; i <= types; i++)
+	{
+#>
+        /// <typeparam name="T<#= i #>">Func type argument <#= i #>.</typeparam>
+<#
+	}
+#>
+        /// <typeparam name="TResult">Func return type.</typeparam>
+        /// <param name="func">Function to curry.</param>
+        /// <returns>Curried function.</returns>
         public static <#= JoinWithPrefix(types, "Func<T") #>, TResult<#= String.Concat(Enumerable.Repeat(">", types)) #>
             Curry<<#= JoinWithPrefix(types, "T") #>, TResult>(
                 this Func<<#= JoinWithPrefix(types, "T") #>, TResult> func

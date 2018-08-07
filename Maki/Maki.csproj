@@ -18,6 +18,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="Functional\ActionExtensions.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ActionExtensions.tt</DependentUpon>
+    </None>
     <None Include="Functional\FuncExtensions.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -42,6 +47,10 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>VariantExtensions.cs</LastGenOutput>
     </None>
+    <None Update="Functional\ActionExtensions.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ActionExtensions.cs</LastGenOutput>
+    </None>
     <None Update="Functional\FuncExtensions.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>FuncExtensions.cs</LastGenOutput>
@@ -64,6 +73,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>VariantExtensions.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Functional\ActionExtensions.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ActionExtensions.tt</DependentUpon>
     </Compile>
     <Compile Update="Functional\FuncExtensions.cs">
       <DesignTime>True</DesignTime>
