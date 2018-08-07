@@ -1,0 +1,36 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ include file="..\Templates\Common.t4" #>
+<#@ output extension=".cs" #>
+using System;
+
+namespace Maki.Functional
+{
+    public static class FuncExtensions
+    {
+<#
+for (int types = 2; types <= 16; types++)
+{
+#>
+        public static Func<<#= JoinWithPrefix(2, types - 1, "T") #>, TResult> 
+            Curry<<#= JoinWithPrefix(types, "T") #>, TResult>(
+                this Func<<#= JoinWithPrefix(types, "T") #>, TResult> func,
+                T1 arg1
+            )
+            => (<#= JoinWithPrefix(2, types - 1, "arg") #>)
+                => func(<#= JoinWithPrefix(types, "arg") #>);
+
+        public static <#= JoinWithPrefix(types, "Func<T") #>, TResult<#= String.Concat(Enumerable.Repeat(">", types)) #>
+            Curry<<#= JoinWithPrefix(types, "T") #>, TResult>(
+                this Func<<#= JoinWithPrefix(types, "T") #>, TResult> func
+            )
+           <#= String.Concat(RangeWithPrefix(types, " => arg")) #> => func(<#= JoinWithPrefix(types, "arg") #>);
+
+<#
+}
+#>
+    }
+}
