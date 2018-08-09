@@ -12,6 +12,40 @@ namespace Maki.Functional
     /// <summary>
     /// Provides Func extension methods to enable currying and partial application.
     /// </summary>
+    /// <example>
+    /// The following example shows how the Curry extension method can be used either with one argument
+    /// for partial application or with no arguments to expand the given function into a set of unary
+    /// functions.
+    /// <code>
+    /// using Maki.Functional;
+    /// using System;
+    /// 
+    /// namespace Samples
+    /// {
+    ///     class Program
+    ///     {
+    ///         static void Main(string[] args)
+    ///         {
+    ///             // A function which takes two arguments
+    ///             Func&lt;int, int, int&gt; add = (x, y) =&gt; x + y;
+    /// 
+    ///             // add10 is a function which takes a single argument
+    ///             Func&lt;int, int&gt; add10 = add.Curry(10);
+    /// 
+    ///             // Prints 15
+    ///             Console.WriteLine(add10(5));
+    /// 
+    ///             // Curry() with no arguments expands the function into a set of unary functions
+    ///             // curried has type Func&lt;int, Func&lt;int, int&gt;&gt;
+    ///             var curried = add.Curry();
+    /// 
+    ///             // Prints 15
+    ///             Console.WriteLine(curried(10)(5));
+    ///         }
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
     public static class FuncExtensions
     {
 <#
