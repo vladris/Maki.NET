@@ -6,6 +6,38 @@ namespace Maki.Functional
     /// Provides Action extension methods for converting any Action to an equivalent Func
     /// which returns a Unit. With such a conversion, Action and Func can be treated uniformly.
     /// </summary>
+    /// <example>
+    /// The following example shows how ToFunc() adapter can be use to get a Func&lt;Unit&gt; 
+    /// from an Action.
+    /// <code>
+    /// using Maki.Functional;
+    /// using System;
+    /// 
+    /// namespace Samples
+    /// {
+    ///     class Program
+    ///     {
+    ///         // Generic method expects a Func argument
+    ///         public static T Invoke&lt;T&gt;(Func&lt;T&gt; func)
+    ///         {
+    ///             return func();
+    ///         }
+    /// 
+    ///         static void Main(string[] args)
+    ///         {
+    ///             // An action does not return a value
+    ///             Action act = () =&gt; 
+    ///             {
+    ///                 Console.WriteLine(&quot;Hello world!&quot;);
+    ///             };
+    /// 
+    ///             // ToFunc adapter converts an Action to a Func&lt;Unit&gt;
+    ///             Invoke(act.ToFunc());
+    ///         }
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
     public static class ActionExtensions
     {
         /// <summary>
