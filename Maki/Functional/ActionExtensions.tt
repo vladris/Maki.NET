@@ -15,6 +15,19 @@ namespace Maki.Functional
     /// </summary>
     public static class ActionExtensions
     {
+        /// <summary>
+        /// Converts an Action to an equivalent Func returning a Unit.
+        /// </summary>
+        /// <param name="act">Action to convert to Func.</param>
+        /// <returns>Func returning a Unit.</returns>
+        public static Func<Unit> ToFunc(this Action act)
+            => ()
+                =>
+                {
+                    act();
+                    return Unit.Singleton;
+                };
+
 <#
 for (int types = 1; types <= 16; types++)
 {

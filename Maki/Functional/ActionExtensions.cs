@@ -11,6 +11,19 @@ namespace Maki.Functional
         /// <summary>
         /// Converts an Action to an equivalent Func returning a Unit.
         /// </summary>
+        /// <param name="act">Action to convert to Func.</param>
+        /// <returns>Func returning a Unit.</returns>
+        public static Func<Unit> ToFunc(this Action act)
+            => ()
+                =>
+                {
+                    act();
+                    return Unit.Singleton;
+                };
+
+        /// <summary>
+        /// Converts an Action to an equivalent Func returning a Unit.
+        /// </summary>
         /// <typeparam name="T1">Action generic type 1.</typeparam>
         /// <param name="act">Action to convert to Func.</param>
         /// <returns>Func returning a Unit.</returns>
