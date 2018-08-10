@@ -29,6 +29,18 @@ for (int types = 2; types <= 16; types++)
             Assert.AreEqual(<#= types * (types + 1) / 2 #>, sum);
         }
 
+        [TestMethod]
+        public void Func<#= types #>CurryApplyTest()
+        {
+            Func<<#= JoinWithSelector(0, types, _ => "int") #>, int> func =
+                (<#= JoinWithPrefix(types, "i") #>) 
+                    => <#= JoinWithPrefix(1, types, "i", " + ") #>;
+
+            int sum = func.Curry(<#= JoinWithPrefix(1, types - 1, "", ").Curry(") #>)(<#= types #>);
+
+            Assert.AreEqual(<#= types * (types + 1) / 2 #>, sum);
+        }
+
 <#
 }
 #>
