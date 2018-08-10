@@ -1,15 +1,27 @@
 ﻿<#+
-	IEnumerable<string> RangeWithPrefix(int from, int count, string prefix)
-		=> Enumerable.Range(from, count).Select(i => prefix + i);
-
 	IEnumerable<string> RangeWithPrefix(int count, string prefix)
 		=> RangeWithPrefix(1, count, prefix);
+
+	IEnumerable<string> RangeWithPrefix(int from, int count, string prefix)
+		=> RangeWithSelector(from, count, i => prefix + i);
+
+	IEnumerable<string> RangeWithSelector(int from, int count, Func<int, string> selector)
+		=> Enumerable.Range(from, count).Select(selector);
 
 	string JoinWithPrefix(int count, string prefix)
 		=> JoinWithPrefix(1, count, prefix);
 
 	string JoinWithPrefix(int from, int count, string prefix)
-		=> String.Join(", ", RangeWithPrefix(from, count, prefix));
+		=> JoinWithPrefix(from, count, prefix, ", ");
+
+	string JoinWithPrefix(int from, int count, string prefix, string separator)
+		=> String.Join(separator, RangeWithPrefix(from, count, prefix));
+
+	string JoinWithSelector(int from, int count, Func<int, string> selector)
+		=> JoinWithSelector(from, count, selector, ", ");
+
+	string JoinWithSelector(int from, int count, Func<int, string> selector, string separator)
+		=> String.Join(separator, RangeWithSelector(from, count, selector));
 
 	string[] Ordinals = new string[] { "", "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth" };
 #>

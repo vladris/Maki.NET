@@ -20,11 +20,11 @@ for (int types = 2; types <= 16; types++)
         [TestMethod]
         public void Func<#= types #>CurryTransformTest()
         {
-            Func<<#= String.Join(", ", Enumerable.Range(0, types).Select(_ => "int")) #>, int> func =
+            Func<<#= JoinWithSelector(0, types, _ => "int") #>, int> func =
                 (<#= JoinWithPrefix(types, "i") #>) 
-                    => <#= String.Join(" + ", Enumerable.Range(1, types).Select(i => "i" + i)) #>;
+                    => <#= JoinWithPrefix(1, types, "i", " + ") #>;
 
-            int sum = func.Curry()(<#= String.Join(")(", Enumerable.Range(1, types)) #>);
+            int sum = func.Curry()(<#= JoinWithPrefix(1, types, "", ")(") #>);
 
             Assert.AreEqual(<#= types * (types + 1) / 2 #>, sum);
         }

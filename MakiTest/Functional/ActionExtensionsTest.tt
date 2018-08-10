@@ -33,7 +33,7 @@ for (int types = 1; types <= 16; types++)
         public void Action<#= types #>ToFuncTest()
         {
             bool called = false;
-            Action<<#= String.Join(", ", Enumerable.Range(0, types).Select(_ => "int")) #>> act =
+            Action<<#= JoinWithSelector(0, types, _ => "int") #>> act =
                 (<#= JoinWithPrefix(types, "_") #>) => { called = true; };
 
             var func = act.ToFunc();
