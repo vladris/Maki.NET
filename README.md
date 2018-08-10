@@ -1,8 +1,18 @@
 # Maki
 
-Experimental C# type library providing discriminate union types ``Variant<...>`` and ``Either``, ``NotNull`` container, ``Optional`` and ``Error`` monads.
+## Types
+
+``Maki`` provides discriminate union types ``Variant<...>`` and ``Either<TLeft, TRight>``, a ``NotNull`` container, ``Optional`` and ``Error`` monads, primitive types ``Unit`` and ``Never``.
+
+## Functional Extensions
+
+``Maki.Functional`` provides extension methods to convert ``Action<...>`` to an equivalent ``Func<..., Unit>`` and extension methods for ``Func<...>`` to enable currying.
 
 [![Build status](https://vladris.visualstudio.com/Maki/_apis/build/status/Maki-.NET%20Desktop-CI)](https://vladris.visualstudio.com/Maki/_build/latest?definitionId=5)
+
+[Get it from NuGet](https://www.nuget.org/packages/Maki/1.0.0)
+
+[Online documentation](https://vladris.com/Maki/api/Maki.html)
 
 ## Samples
 
@@ -11,6 +21,8 @@ Experimental C# type library providing discriminate union types ``Variant<...>``
 * [NotNull](#notnull)
 * [Optional](#optional)
 * [Error](#error)
+* [Never](#never)
+* [Curry](#curry)
 
 ### Variant
 
@@ -109,4 +121,36 @@ if (error.HasValue)
     Console.WriteLine(error.Get());
 else
     Console.WriteLine($"Exception was thrown: {error.Exception()}");
+```
+
+### Never
+
+Using ``Never`` as a return type explicitly shows the function cannot return.
+
+```c#
+public Never LoopsForever()
+{
+    while (true)
+    {
+    }
+}
+
+public Never AlwaysThrows() => throw new Exception();
+```
+
+### Curry
+
+The ``Curry`` extension method enables partial application and currying for ``Func<...>``.
+
+```c#
+Func<int, int, int, int> func = (a, b, c) => a + b + c;
+
+// Partial application
+Func<int, int, int> func1 = func.Curry(10);
+Func<int, int> func2 = func1.Curry(20);
+int partialApplicationResult = func2(30); // partialApplicationResult is 60
+
+// Expansion to unary functions
+Func<int, Func<int, Func<int, int>>> curried = func.Curry();
+int curriedResult = curried(10)(20)(30); // curriedResult is 60
 ```
