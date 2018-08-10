@@ -8,8 +8,6 @@
 
 ``Maki.Functional`` provides extension methods to convert ``Action<...>`` to an equivalent ``Func<..., Unit>`` and extension methods for ``Func<...>`` to enable currying.
 
-[![Build status](https://vladris.visualstudio.com/Maki/_apis/build/status/Maki-.NET%20Desktop-CI)](https://vladris.visualstudio.com/Maki/_build/latest?definitionId=5)
-
 [Get it from NuGet](https://www.nuget.org/packages/Maki/1.0.0)
 
 [Online documentation](https://vladris.com/Maki/api/Maki.html)
