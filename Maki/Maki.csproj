@@ -6,11 +6,16 @@
     <Authors>Vlad Riscutia</Authors>
     <Company />
     <Product />
-    <Description>A .NET type library providing discriminate union types Variant&lt;...&gt; and Either&lt;TLeft, TRight&gt;, a NotNull container, Optional and Error monads, primitive types Unit and Never.</Description>
+    <Description>A .NET type library.
+
+Maki provides discriminate union types Variant&lt;...&gt; and Either&lt;TLeft, TRight&gt;, a NotNull container, Optional and Error monads, primitive types Unit and Never.
+
+Maki.Functional provides extension methods to convert Action&lt;...&gt; to an equivalent Func&lt;..., Unit&gt; and extension methods for Func&lt;...&gt; to enable currying.</Description>
     <PackageLicenseUrl>https://github.com/vladris/Maki/blob/master/LICENSE</PackageLicenseUrl>
     <Copyright>2018 Vlad Riscutia</Copyright>
     <PackageProjectUrl>https://vladris.com/Maki/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/vladris/Maki/</RepositoryUrl>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
