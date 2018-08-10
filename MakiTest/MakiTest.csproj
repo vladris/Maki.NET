@@ -57,6 +57,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VariantExtensionsTest.tt</DependentUpon>
     </Compile>
+    <Compile Include="Functional\ActionExtensionsTest.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ActionExtensionsTest.tt</DependentUpon>
+    </Compile>
     <Compile Include="OptionalTest.cs" />
     <Compile Include="NotNullTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +78,10 @@
     <Content Include="Extensions\VariantExtensionsTest.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>VariantExtensionsTest.cs</LastGenOutput>
+    </Content>
+    <Content Include="Functional\ActionExtensionsTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ActionExtensionsTest.cs</LastGenOutput>
     </Content>
     <Content Include="VariantTest.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

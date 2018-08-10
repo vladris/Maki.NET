@@ -1,0 +1,49 @@
+﻿<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ include file="..\..\Maki\Templates\Common.t4" #>
+<#@ output extension=".cs" #>
+using Maki.Functional;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+
+namespace MakiTest
+{
+    [TestClass]
+    public class ActionExtensionsTest
+    {
+        [TestMethod]
+        public void ActionToFuncTest()
+        {
+            bool called = false;
+            Action act = () => { called = true; };
+
+            var func = act.ToFunc();
+            func();
+
+            Assert.IsTrue(called);
+        }
+
+<#
+for (int types = 1; types <= 16; types++)
+{
+#>
+        [TestMethod]
+        public void Action<#= types #>ToFuncTest()
+        {
+            bool called = false;
+            Action<<#= String.Join(", ", Enumerable.Range(0, types).Select(_ => "int")) #>> act =
+                (<#= JoinWithPrefix(types, "_") #>) => { called = true; };
+
+            var func = act.ToFunc();
+            func(<#= JoinWithPrefix(types, "") #>);
+
+            Assert.IsTrue(called);
+        }
+
+<#
+}
+#>
+    }
+}
