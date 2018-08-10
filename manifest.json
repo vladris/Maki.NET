@@ -86,6 +86,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Functional.ActionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Functional.ActionExtensions.html",
+          "hash": "m6KEksTG8E0MkdfgznZvIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Functional.FuncExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Functional.FuncExtensions.html",
+          "hash": "0MY+Ypw//7IhVzS3g7ymPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Maki.Functional.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Maki.Functional.html",
+          "hash": "sR7fjItFPCaC1K8Ano5fVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/Maki.Never.yml",
       "output": {
         ".html": {
@@ -306,7 +342,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "+lyar5g1WTABlnbw10p2Aw=="
+          "hash": "YlsWULNQ4q8TwYZpAwmdWw=="
         }
       },
       "is_incremental": false,

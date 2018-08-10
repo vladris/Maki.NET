@@ -1,0 +1,1753 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ActionExtensions
+   | Maki </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ActionExtensions
+   | Maki ">
+    <meta name="generator" content="docfx 2.36.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Maki.Functional.ActionExtensions">
+  
+  
+  <h1 id="Maki_Functional_ActionExtensions" data-uid="Maki.Functional.ActionExtensions" class="text-break">Class ActionExtensions
+  </h1>
+  <div class="markdown level0 summary">
+Provides Action extension methods for converting any Action to an equivalent Func
+which returns a Unit. With such a conversion, Action and Func can be treated uniformly.
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ActionExtensions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Maki.Functional.html">Maki.Functional</a></h6>
+  <h6><strong>Assembly</strong>: Maki.dll</h6>
+  <h5 id="Maki_Functional_ActionExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ActionExtensions</code></pre>
+  </div>
+  <h5 id="Maki_Functional_ActionExtensions_examples"><strong>Examples</strong></h5>
+  
+The following example shows how ToFunc() adapter can be use to get a Func&lt;Unit> 
+from an Action.
+<pre><code>using Maki.Functional;
+using System;
+
+namespace Samples
+{
+    class Program
+    {
+        // Generic method expects a Func argument
+        public static T Invoke&lt;T>(Func&lt;T> func)
+        {
+            return func();
+        }
+
+        static void Main(string[] args)
+        {
+            // An action does not return a value
+            Action act = () => 
+            {
+                Console.WriteLine(&quot;Hello world!&quot;);
+            };
+
+            // ToFunc adapter converts an Action to a Func&lt;Unit>
+            Invoke(act.ToFunc());
+        }
+    }
+}</code></pre>
+
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions_ToFunc_System_Action_.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions.ToFunc(System.Action)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L48">View Source</a>
+  </span>
+  <a id="Maki_Functional_ActionExtensions_ToFunc_" data-uid="Maki.Functional.ActionExtensions.ToFunc*"></a>
+  <h4 id="Maki_Functional_ActionExtensions_ToFunc_System_Action_" data-uid="Maki.Functional.ActionExtensions.ToFunc(System.Action)">ToFunc(Action)</h4>
+  <div class="markdown level1 summary">
+Converts an Action to an equivalent Func returning a Unit.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;Unit&gt; ToFunc(this Action act)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td><span class="parametername">act</span></td>
+        <td>Action to convert to Func.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="Maki.Unit.html">Unit</a>&gt;</td>
+        <td>Func returning a Unit.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions_ToFunc__1_System_Action___0__.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions.ToFunc%60%601(System.Action%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L62">View Source</a>
+  </span>
+  <a id="Maki_Functional_ActionExtensions_ToFunc_" data-uid="Maki.Functional.ActionExtensions.ToFunc*"></a>
+  <h4 id="Maki_Functional_ActionExtensions_ToFunc__1_System_Action___0__" data-uid="Maki.Functional.ActionExtensions.ToFunc``1(System.Action{``0})">ToFunc&lt;T1&gt;(Action&lt;T1&gt;)</h4>
+  <div class="markdown level1 summary">
+Converts an Action to an equivalent Func returning a Unit.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, Unit&gt; ToFunc&lt;T1&gt;(this Action&lt;T1&gt; act)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T1&gt;</td>
+        <td><span class="parametername">act</span></td>
+        <td>Action to convert to Func.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, <a class="xref" href="Maki.Unit.html">Unit</a>&gt;</td>
+        <td>Func returning a Unit.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Action generic type 1.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions_ToFunc__10_System_Action___0___1___2___3___4___5___6___7___8___9__.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions.ToFunc%60%6010(System.Action%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L260">View Source</a>
+  </span>
+  <a id="Maki_Functional_ActionExtensions_ToFunc_" data-uid="Maki.Functional.ActionExtensions.ToFunc*"></a>
+  <h4 id="Maki_Functional_ActionExtensions_ToFunc__10_System_Action___0___1___2___3___4___5___6___7___8___9__" data-uid="Maki.Functional.ActionExtensions.ToFunc``10(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9})">ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10&gt;(Action&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10&gt;)</h4>
+  <div class="markdown level1 summary">
+Converts an Action to an equivalent Func returning a Unit.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, Unit&gt; ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10&gt;(this Action&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10&gt; act)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10&gt;</td>
+        <td><span class="parametername">act</span></td>
+        <td>Action to convert to Func.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, <a class="xref" href="Maki.Unit.html">Unit</a>&gt;</td>
+        <td>Func returning a Unit.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Action generic type 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Action generic type 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Action generic type 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Action generic type 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Action generic type 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Action generic type 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Action generic type 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Action generic type 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Action generic type 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Action generic type 10.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions_ToFunc__11_System_Action___0___1___2___3___4___5___6___7___8___9___10__.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions.ToFunc%60%6011(System.Action%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L287">View Source</a>
+  </span>
+  <a id="Maki_Functional_ActionExtensions_ToFunc_" data-uid="Maki.Functional.ActionExtensions.ToFunc*"></a>
+  <h4 id="Maki_Functional_ActionExtensions_ToFunc__11_System_Action___0___1___2___3___4___5___6___7___8___9___10__" data-uid="Maki.Functional.ActionExtensions.ToFunc``11(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10})">ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11&gt;(Action&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11&gt;)</h4>
+  <div class="markdown level1 summary">
+Converts an Action to an equivalent Func returning a Unit.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, Unit&gt; ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11&gt;(this Action&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11&gt; act)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11&gt;</td>
+        <td><span class="parametername">act</span></td>
+        <td>Action to convert to Func.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, <a class="xref" href="Maki.Unit.html">Unit</a>&gt;</td>
+        <td>Func returning a Unit.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Action generic type 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Action generic type 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Action generic type 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Action generic type 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Action generic type 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Action generic type 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Action generic type 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Action generic type 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Action generic type 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Action generic type 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Action generic type 11.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions_ToFunc__12_System_Action___0___1___2___3___4___5___6___7___8___9___10___11__.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions.ToFunc%60%6012(System.Action%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L315">View Source</a>
+  </span>
+  <a id="Maki_Functional_ActionExtensions_ToFunc_" data-uid="Maki.Functional.ActionExtensions.ToFunc*"></a>
+  <h4 id="Maki_Functional_ActionExtensions_ToFunc__12_System_Action___0___1___2___3___4___5___6___7___8___9___10___11__" data-uid="Maki.Functional.ActionExtensions.ToFunc``12(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11})">ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12&gt;(Action&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12&gt;)</h4>
+  <div class="markdown level1 summary">
+Converts an Action to an equivalent Func returning a Unit.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, Unit&gt; ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12&gt;(this Action&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12&gt; act)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12&gt;</td>
+        <td><span class="parametername">act</span></td>
+        <td>Action to convert to Func.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, <a class="xref" href="Maki.Unit.html">Unit</a>&gt;</td>
+        <td>Func returning a Unit.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Action generic type 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Action generic type 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Action generic type 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Action generic type 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Action generic type 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Action generic type 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Action generic type 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Action generic type 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Action generic type 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Action generic type 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Action generic type 11.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td>Action generic type 12.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions_ToFunc__13_System_Action___0___1___2___3___4___5___6___7___8___9___10___11___12__.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions.ToFunc%60%6013(System.Action%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L344">View Source</a>
+  </span>
+  <a id="Maki_Functional_ActionExtensions_ToFunc_" data-uid="Maki.Functional.ActionExtensions.ToFunc*"></a>
+  <h4 id="Maki_Functional_ActionExtensions_ToFunc__13_System_Action___0___1___2___3___4___5___6___7___8___9___10___11___12__" data-uid="Maki.Functional.ActionExtensions.ToFunc``13(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12})">ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13&gt;(Action&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13&gt;)</h4>
+  <div class="markdown level1 summary">
+Converts an Action to an equivalent Func returning a Unit.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, Unit&gt; ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13&gt;(this Action&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13&gt; act)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13&gt;</td>
+        <td><span class="parametername">act</span></td>
+        <td>Action to convert to Func.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, <a class="xref" href="Maki.Unit.html">Unit</a>&gt;</td>
+        <td>Func returning a Unit.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Action generic type 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Action generic type 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Action generic type 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Action generic type 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Action generic type 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Action generic type 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Action generic type 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Action generic type 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Action generic type 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Action generic type 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Action generic type 11.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td>Action generic type 12.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td>Action generic type 13.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions_ToFunc__14_System_Action___0___1___2___3___4___5___6___7___8___9___10___11___12___13__.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions.ToFunc%60%6014(System.Action%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%60%6013%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L374">View Source</a>
+  </span>
+  <a id="Maki_Functional_ActionExtensions_ToFunc_" data-uid="Maki.Functional.ActionExtensions.ToFunc*"></a>
+  <h4 id="Maki_Functional_ActionExtensions_ToFunc__14_System_Action___0___1___2___3___4___5___6___7___8___9___10___11___12___13__" data-uid="Maki.Functional.ActionExtensions.ToFunc``14(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13})">ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14&gt;(Action&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14&gt;)</h4>
+  <div class="markdown level1 summary">
+Converts an Action to an equivalent Func returning a Unit.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, Unit&gt; ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14&gt;(this Action&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14&gt; act)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14&gt;</td>
+        <td><span class="parametername">act</span></td>
+        <td>Action to convert to Func.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, <a class="xref" href="Maki.Unit.html">Unit</a>&gt;</td>
+        <td>Func returning a Unit.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Action generic type 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Action generic type 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Action generic type 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Action generic type 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Action generic type 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Action generic type 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Action generic type 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Action generic type 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Action generic type 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Action generic type 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Action generic type 11.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td>Action generic type 12.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td>Action generic type 13.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T14</span></td>
+        <td>Action generic type 14.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions_ToFunc__15_System_Action___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14__.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions.ToFunc%60%6015(System.Action%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%60%6013%2C%60%6014%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L405">View Source</a>
+  </span>
+  <a id="Maki_Functional_ActionExtensions_ToFunc_" data-uid="Maki.Functional.ActionExtensions.ToFunc*"></a>
+  <h4 id="Maki_Functional_ActionExtensions_ToFunc__15_System_Action___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14__" data-uid="Maki.Functional.ActionExtensions.ToFunc``15(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14})">ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15&gt;(Action&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15&gt;)</h4>
+  <div class="markdown level1 summary">
+Converts an Action to an equivalent Func returning a Unit.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, Unit&gt; ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15&gt;(this Action&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15&gt; act)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15&gt;</td>
+        <td><span class="parametername">act</span></td>
+        <td>Action to convert to Func.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, <a class="xref" href="Maki.Unit.html">Unit</a>&gt;</td>
+        <td>Func returning a Unit.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Action generic type 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Action generic type 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Action generic type 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Action generic type 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Action generic type 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Action generic type 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Action generic type 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Action generic type 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Action generic type 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Action generic type 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Action generic type 11.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td>Action generic type 12.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td>Action generic type 13.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T14</span></td>
+        <td>Action generic type 14.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T15</span></td>
+        <td>Action generic type 15.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions_ToFunc__16_System_Action___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14___15__.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions.ToFunc%60%6016(System.Action%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%60%6013%2C%60%6014%2C%60%6015%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L437">View Source</a>
+  </span>
+  <a id="Maki_Functional_ActionExtensions_ToFunc_" data-uid="Maki.Functional.ActionExtensions.ToFunc*"></a>
+  <h4 id="Maki_Functional_ActionExtensions_ToFunc__16_System_Action___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14___15__" data-uid="Maki.Functional.ActionExtensions.ToFunc``16(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15})">ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16&gt;(Action&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16&gt;)</h4>
+  <div class="markdown level1 summary">
+Converts an Action to an equivalent Func returning a Unit.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, Unit&gt; ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16&gt;(this Action&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16&gt; act)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16&gt;</td>
+        <td><span class="parametername">act</span></td>
+        <td>Action to convert to Func.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, <a class="xref" href="Maki.Unit.html">Unit</a>&gt;</td>
+        <td>Func returning a Unit.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Action generic type 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Action generic type 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Action generic type 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Action generic type 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Action generic type 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Action generic type 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Action generic type 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Action generic type 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Action generic type 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Action generic type 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Action generic type 11.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td>Action generic type 12.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td>Action generic type 13.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T14</span></td>
+        <td>Action generic type 14.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T15</span></td>
+        <td>Action generic type 15.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T16</span></td>
+        <td>Action generic type 16.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions_ToFunc__2_System_Action___0___1__.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions.ToFunc%60%602(System.Action%7B%60%600%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L80">View Source</a>
+  </span>
+  <a id="Maki_Functional_ActionExtensions_ToFunc_" data-uid="Maki.Functional.ActionExtensions.ToFunc*"></a>
+  <h4 id="Maki_Functional_ActionExtensions_ToFunc__2_System_Action___0___1__" data-uid="Maki.Functional.ActionExtensions.ToFunc``2(System.Action{``0,``1})">ToFunc&lt;T1, T2&gt;(Action&lt;T1, T2&gt;)</h4>
+  <div class="markdown level1 summary">
+Converts an Action to an equivalent Func returning a Unit.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, T2, Unit&gt; ToFunc&lt;T1, T2&gt;(this Action&lt;T1, T2&gt; act)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T1, T2&gt;</td>
+        <td><span class="parametername">act</span></td>
+        <td>Action to convert to Func.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, <a class="xref" href="Maki.Unit.html">Unit</a>&gt;</td>
+        <td>Func returning a Unit.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Action generic type 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Action generic type 2.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions_ToFunc__3_System_Action___0___1___2__.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions.ToFunc%60%603(System.Action%7B%60%600%2C%60%601%2C%60%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L99">View Source</a>
+  </span>
+  <a id="Maki_Functional_ActionExtensions_ToFunc_" data-uid="Maki.Functional.ActionExtensions.ToFunc*"></a>
+  <h4 id="Maki_Functional_ActionExtensions_ToFunc__3_System_Action___0___1___2__" data-uid="Maki.Functional.ActionExtensions.ToFunc``3(System.Action{``0,``1,``2})">ToFunc&lt;T1, T2, T3&gt;(Action&lt;T1, T2, T3&gt;)</h4>
+  <div class="markdown level1 summary">
+Converts an Action to an equivalent Func returning a Unit.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, T2, T3, Unit&gt; ToFunc&lt;T1, T2, T3&gt;(this Action&lt;T1, T2, T3&gt; act)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T1, T2, T3&gt;</td>
+        <td><span class="parametername">act</span></td>
+        <td>Action to convert to Func.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, <a class="xref" href="Maki.Unit.html">Unit</a>&gt;</td>
+        <td>Func returning a Unit.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Action generic type 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Action generic type 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Action generic type 3.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions_ToFunc__4_System_Action___0___1___2___3__.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions.ToFunc%60%604(System.Action%7B%60%600%2C%60%601%2C%60%602%2C%60%603%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L119">View Source</a>
+  </span>
+  <a id="Maki_Functional_ActionExtensions_ToFunc_" data-uid="Maki.Functional.ActionExtensions.ToFunc*"></a>
+  <h4 id="Maki_Functional_ActionExtensions_ToFunc__4_System_Action___0___1___2___3__" data-uid="Maki.Functional.ActionExtensions.ToFunc``4(System.Action{``0,``1,``2,``3})">ToFunc&lt;T1, T2, T3, T4&gt;(Action&lt;T1, T2, T3, T4&gt;)</h4>
+  <div class="markdown level1 summary">
+Converts an Action to an equivalent Func returning a Unit.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, T2, T3, T4, Unit&gt; ToFunc&lt;T1, T2, T3, T4&gt;(this Action&lt;T1, T2, T3, T4&gt; act)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T1, T2, T3, T4&gt;</td>
+        <td><span class="parametername">act</span></td>
+        <td>Action to convert to Func.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, <a class="xref" href="Maki.Unit.html">Unit</a>&gt;</td>
+        <td>Func returning a Unit.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Action generic type 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Action generic type 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Action generic type 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Action generic type 4.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions_ToFunc__5_System_Action___0___1___2___3___4__.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions.ToFunc%60%605(System.Action%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L140">View Source</a>
+  </span>
+  <a id="Maki_Functional_ActionExtensions_ToFunc_" data-uid="Maki.Functional.ActionExtensions.ToFunc*"></a>
+  <h4 id="Maki_Functional_ActionExtensions_ToFunc__5_System_Action___0___1___2___3___4__" data-uid="Maki.Functional.ActionExtensions.ToFunc``5(System.Action{``0,``1,``2,``3,``4})">ToFunc&lt;T1, T2, T3, T4, T5&gt;(Action&lt;T1, T2, T3, T4, T5&gt;)</h4>
+  <div class="markdown level1 summary">
+Converts an Action to an equivalent Func returning a Unit.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, T2, T3, T4, T5, Unit&gt; ToFunc&lt;T1, T2, T3, T4, T5&gt;(this Action&lt;T1, T2, T3, T4, T5&gt; act)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T1, T2, T3, T4, T5&gt;</td>
+        <td><span class="parametername">act</span></td>
+        <td>Action to convert to Func.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, <a class="xref" href="Maki.Unit.html">Unit</a>&gt;</td>
+        <td>Func returning a Unit.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Action generic type 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Action generic type 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Action generic type 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Action generic type 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Action generic type 5.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions_ToFunc__6_System_Action___0___1___2___3___4___5__.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions.ToFunc%60%606(System.Action%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L162">View Source</a>
+  </span>
+  <a id="Maki_Functional_ActionExtensions_ToFunc_" data-uid="Maki.Functional.ActionExtensions.ToFunc*"></a>
+  <h4 id="Maki_Functional_ActionExtensions_ToFunc__6_System_Action___0___1___2___3___4___5__" data-uid="Maki.Functional.ActionExtensions.ToFunc``6(System.Action{``0,``1,``2,``3,``4,``5})">ToFunc&lt;T1, T2, T3, T4, T5, T6&gt;(Action&lt;T1, T2, T3, T4, T5, T6&gt;)</h4>
+  <div class="markdown level1 summary">
+Converts an Action to an equivalent Func returning a Unit.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, T2, T3, T4, T5, T6, Unit&gt; ToFunc&lt;T1, T2, T3, T4, T5, T6&gt;(this Action&lt;T1, T2, T3, T4, T5, T6&gt; act)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T1, T2, T3, T4, T5, T6&gt;</td>
+        <td><span class="parametername">act</span></td>
+        <td>Action to convert to Func.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, <a class="xref" href="Maki.Unit.html">Unit</a>&gt;</td>
+        <td>Func returning a Unit.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Action generic type 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Action generic type 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Action generic type 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Action generic type 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Action generic type 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Action generic type 6.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions_ToFunc__7_System_Action___0___1___2___3___4___5___6__.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions.ToFunc%60%607(System.Action%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L185">View Source</a>
+  </span>
+  <a id="Maki_Functional_ActionExtensions_ToFunc_" data-uid="Maki.Functional.ActionExtensions.ToFunc*"></a>
+  <h4 id="Maki_Functional_ActionExtensions_ToFunc__7_System_Action___0___1___2___3___4___5___6__" data-uid="Maki.Functional.ActionExtensions.ToFunc``7(System.Action{``0,``1,``2,``3,``4,``5,``6})">ToFunc&lt;T1, T2, T3, T4, T5, T6, T7&gt;(Action&lt;T1, T2, T3, T4, T5, T6, T7&gt;)</h4>
+  <div class="markdown level1 summary">
+Converts an Action to an equivalent Func returning a Unit.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, T2, T3, T4, T5, T6, T7, Unit&gt; ToFunc&lt;T1, T2, T3, T4, T5, T6, T7&gt;(this Action&lt;T1, T2, T3, T4, T5, T6, T7&gt; act)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T1, T2, T3, T4, T5, T6, T7&gt;</td>
+        <td><span class="parametername">act</span></td>
+        <td>Action to convert to Func.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, <a class="xref" href="Maki.Unit.html">Unit</a>&gt;</td>
+        <td>Func returning a Unit.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Action generic type 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Action generic type 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Action generic type 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Action generic type 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Action generic type 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Action generic type 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Action generic type 7.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions_ToFunc__8_System_Action___0___1___2___3___4___5___6___7__.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions.ToFunc%60%608(System.Action%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L209">View Source</a>
+  </span>
+  <a id="Maki_Functional_ActionExtensions_ToFunc_" data-uid="Maki.Functional.ActionExtensions.ToFunc*"></a>
+  <h4 id="Maki_Functional_ActionExtensions_ToFunc__8_System_Action___0___1___2___3___4___5___6___7__" data-uid="Maki.Functional.ActionExtensions.ToFunc``8(System.Action{``0,``1,``2,``3,``4,``5,``6,``7})">ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;(Action&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;)</h4>
+  <div class="markdown level1 summary">
+Converts an Action to an equivalent Func returning a Unit.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, Unit&gt; ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;(this Action&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt; act)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;</td>
+        <td><span class="parametername">act</span></td>
+        <td>Action to convert to Func.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, <a class="xref" href="Maki.Unit.html">Unit</a>&gt;</td>
+        <td>Func returning a Unit.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Action generic type 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Action generic type 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Action generic type 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Action generic type 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Action generic type 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Action generic type 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Action generic type 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Action generic type 8.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions_ToFunc__9_System_Action___0___1___2___3___4___5___6___7___8__.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions.ToFunc%60%609(System.Action%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L234">View Source</a>
+  </span>
+  <a id="Maki_Functional_ActionExtensions_ToFunc_" data-uid="Maki.Functional.ActionExtensions.ToFunc*"></a>
+  <h4 id="Maki_Functional_ActionExtensions_ToFunc__9_System_Action___0___1___2___3___4___5___6___7___8__" data-uid="Maki.Functional.ActionExtensions.ToFunc``9(System.Action{``0,``1,``2,``3,``4,``5,``6,``7,``8})">ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9&gt;(Action&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9&gt;)</h4>
+  <div class="markdown level1 summary">
+Converts an Action to an equivalent Func returning a Unit.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, Unit&gt; ToFunc&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9&gt;(this Action&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9&gt; act)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9&gt;</td>
+        <td><span class="parametername">act</span></td>
+        <td>Action to convert to Func.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, <a class="xref" href="Maki.Unit.html">Unit</a>&gt;</td>
+        <td>Func returning a Unit.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Action generic type 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Action generic type 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Action generic type 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Action generic type 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Action generic type 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Action generic type 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Action generic type 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Action generic type 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Action generic type 9.</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_ActionExtensions.md&amp;value=---%0Auid%3A%20Maki.Functional.ActionExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/ActionExtensions.cs/#L41" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

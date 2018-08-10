@@ -1,0 +1,3306 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FuncExtensions
+   | Maki </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FuncExtensions
+   | Maki ">
+    <meta name="generator" content="docfx 2.36.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Maki.Functional.FuncExtensions">
+  
+  
+  <h1 id="Maki_Functional_FuncExtensions" data-uid="Maki.Functional.FuncExtensions" class="text-break">Class FuncExtensions
+  </h1>
+  <div class="markdown level0 summary">
+Provides Func extension methods to enable currying and partial application.
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">FuncExtensions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Maki.Functional.html">Maki.Functional</a></h6>
+  <h6><strong>Assembly</strong>: Maki.dll</h6>
+  <h5 id="Maki_Functional_FuncExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class FuncExtensions</code></pre>
+  </div>
+  <h5 id="Maki_Functional_FuncExtensions_examples"><strong>Examples</strong></h5>
+  
+The following example shows how the Curry extension method can be used either with one argument
+for partial application or with no arguments to expand the given function into a set of unary
+functions.
+<pre><code>using Maki.Functional;
+using System;
+
+namespace Samples
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // A function which takes two arguments
+            Func&lt;int, int, int> add = (x, y) => x + y;
+
+            // add10 is a function which takes a single argument
+            Func&lt;int, int> add10 = add.Curry(10);
+
+            // Prints 15
+            Console.WriteLine(add10(5));
+
+            // Curry() with no arguments expands the function into a set of unary functions
+            // curried has type Func&lt;int, Func&lt;int, int>>
+            var curried = add.Curry();
+
+            // Prints 15
+            Console.WriteLine(curried(10)(5));
+        }
+    }
+}</code></pre>
+
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__10_System_Func___0___1___2___3___4___5___6___7___8___9__.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%6010(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L358">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__10_System_Func___0___1___2___3___4___5___6___7___8___9__" data-uid="Maki.Functional.FuncExtensions.Curry``10(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9})">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult&gt;)</h4>
+  <div class="markdown level1 summary">
+Curries the given Func returning an equivalent set of functions each taking
+a single argument and returning the next function in the set.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, Func&lt;T2, Func&lt;T3, Func&lt;T4, Func&lt;T5, Func&lt;T6, Func&lt;T7, Func&lt;T8, Func&lt;T9, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function to curry.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Func</span>&lt;T2, <span class="xref">System.Func</span>&lt;T3, <span class="xref">System.Func</span>&lt;T4, <span class="xref">System.Func</span>&lt;T5, <span class="xref">System.Func</span>&lt;T6, <span class="xref">System.Func</span>&lt;T7, <span class="xref">System.Func</span>&lt;T8, <span class="xref">System.Func</span>&lt;T9, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</td>
+        <td>Curried function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Func type argument 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__10_System_Func___0___1___2___3___4___5___6___7___8___9____0_.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%6010(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L334">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__10_System_Func___0___1___2___3___4___5___6___7___8___9____0_" data-uid="Maki.Functional.FuncExtensions.Curry``10(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9},``0)">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult&gt;, T1)</h4>
+  <div class="markdown level1 summary">
+Applies the first argument to the given Func and returns a new Func
+derived from the partial application.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T2, T3, T4, T5, T6, T7, T8, T9, TResult&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult&gt; func, T1 arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function on which to perform partial application.</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td>First argument of function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T2, T3, T4, T5, T6, T7, T8, T9, TResult&gt;</td>
+        <td>Func derived from given Func by partial application of first argument.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Func type argument 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__11_System_Func___0___1___2___3___4___5___6___7___8___9___10__.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%6011(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L407">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__11_System_Func___0___1___2___3___4___5___6___7___8___9___10__" data-uid="Maki.Functional.FuncExtensions.Curry``11(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10})">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult&gt;)</h4>
+  <div class="markdown level1 summary">
+Curries the given Func returning an equivalent set of functions each taking
+a single argument and returning the next function in the set.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, Func&lt;T2, Func&lt;T3, Func&lt;T4, Func&lt;T5, Func&lt;T6, Func&lt;T7, Func&lt;T8, Func&lt;T9, Func&lt;T10, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function to curry.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Func</span>&lt;T2, <span class="xref">System.Func</span>&lt;T3, <span class="xref">System.Func</span>&lt;T4, <span class="xref">System.Func</span>&lt;T5, <span class="xref">System.Func</span>&lt;T6, <span class="xref">System.Func</span>&lt;T7, <span class="xref">System.Func</span>&lt;T8, <span class="xref">System.Func</span>&lt;T9, <span class="xref">System.Func</span>&lt;T10, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</td>
+        <td>Curried function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Func type argument 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Func type argument 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__11_System_Func___0___1___2___3___4___5___6___7___8___9___10____0_.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%6011(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L382">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__11_System_Func___0___1___2___3___4___5___6___7___8___9___10____0_" data-uid="Maki.Functional.FuncExtensions.Curry``11(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10},``0)">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult&gt;, T1)</h4>
+  <div class="markdown level1 summary">
+Applies the first argument to the given Func and returns a new Func
+derived from the partial application.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult&gt; func, T1 arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function on which to perform partial application.</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td>First argument of function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T2, T3, T4, T5, T6, T7, T8, T9, T10, TResult&gt;</td>
+        <td>Func derived from given Func by partial application of first argument.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Func type argument 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Func type argument 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__12_System_Func___0___1___2___3___4___5___6___7___8___9___10___11__.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%6012(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L458">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__12_System_Func___0___1___2___3___4___5___6___7___8___9___10___11__" data-uid="Maki.Functional.FuncExtensions.Curry``12(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11})">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult&gt;)</h4>
+  <div class="markdown level1 summary">
+Curries the given Func returning an equivalent set of functions each taking
+a single argument and returning the next function in the set.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, Func&lt;T2, Func&lt;T3, Func&lt;T4, Func&lt;T5, Func&lt;T6, Func&lt;T7, Func&lt;T8, Func&lt;T9, Func&lt;T10, Func&lt;T11, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function to curry.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Func</span>&lt;T2, <span class="xref">System.Func</span>&lt;T3, <span class="xref">System.Func</span>&lt;T4, <span class="xref">System.Func</span>&lt;T5, <span class="xref">System.Func</span>&lt;T6, <span class="xref">System.Func</span>&lt;T7, <span class="xref">System.Func</span>&lt;T8, <span class="xref">System.Func</span>&lt;T9, <span class="xref">System.Func</span>&lt;T10, <span class="xref">System.Func</span>&lt;T11, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</td>
+        <td>Curried function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Func type argument 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Func type argument 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Func type argument 11.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__12_System_Func___0___1___2___3___4___5___6___7___8___9___10___11____0_.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%6012(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L432">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__12_System_Func___0___1___2___3___4___5___6___7___8___9___10___11____0_" data-uid="Maki.Functional.FuncExtensions.Curry``12(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11},``0)">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult&gt;, T1)</h4>
+  <div class="markdown level1 summary">
+Applies the first argument to the given Func and returns a new Func
+derived from the partial application.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult&gt; func, T1 arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function on which to perform partial application.</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td>First argument of function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, TResult&gt;</td>
+        <td>Func derived from given Func by partial application of first argument.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Func type argument 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Func type argument 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Func type argument 11.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__13_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12__.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%6013(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L511">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__13_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12__" data-uid="Maki.Functional.FuncExtensions.Curry``13(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12})">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult&gt;)</h4>
+  <div class="markdown level1 summary">
+Curries the given Func returning an equivalent set of functions each taking
+a single argument and returning the next function in the set.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, Func&lt;T2, Func&lt;T3, Func&lt;T4, Func&lt;T5, Func&lt;T6, Func&lt;T7, Func&lt;T8, Func&lt;T9, Func&lt;T10, Func&lt;T11, Func&lt;T12, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function to curry.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Func</span>&lt;T2, <span class="xref">System.Func</span>&lt;T3, <span class="xref">System.Func</span>&lt;T4, <span class="xref">System.Func</span>&lt;T5, <span class="xref">System.Func</span>&lt;T6, <span class="xref">System.Func</span>&lt;T7, <span class="xref">System.Func</span>&lt;T8, <span class="xref">System.Func</span>&lt;T9, <span class="xref">System.Func</span>&lt;T10, <span class="xref">System.Func</span>&lt;T11, <span class="xref">System.Func</span>&lt;T12, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</td>
+        <td>Curried function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Func type argument 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Func type argument 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Func type argument 11.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td>Func type argument 12.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__13_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12____0_.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%6013(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L484">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__13_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12____0_" data-uid="Maki.Functional.FuncExtensions.Curry``13(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12},``0)">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult&gt;, T1)</h4>
+  <div class="markdown level1 summary">
+Applies the first argument to the given Func and returns a new Func
+derived from the partial application.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult&gt; func, T1 arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function on which to perform partial application.</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td>First argument of function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, TResult&gt;</td>
+        <td>Func derived from given Func by partial application of first argument.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Func type argument 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Func type argument 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Func type argument 11.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td>Func type argument 12.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__14_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12___13__.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%6014(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%60%6013%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L566">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__14_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12___13__" data-uid="Maki.Functional.FuncExtensions.Curry``14(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13})">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult&gt;)</h4>
+  <div class="markdown level1 summary">
+Curries the given Func returning an equivalent set of functions each taking
+a single argument and returning the next function in the set.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, Func&lt;T2, Func&lt;T3, Func&lt;T4, Func&lt;T5, Func&lt;T6, Func&lt;T7, Func&lt;T8, Func&lt;T9, Func&lt;T10, Func&lt;T11, Func&lt;T12, Func&lt;T13, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function to curry.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Func</span>&lt;T2, <span class="xref">System.Func</span>&lt;T3, <span class="xref">System.Func</span>&lt;T4, <span class="xref">System.Func</span>&lt;T5, <span class="xref">System.Func</span>&lt;T6, <span class="xref">System.Func</span>&lt;T7, <span class="xref">System.Func</span>&lt;T8, <span class="xref">System.Func</span>&lt;T9, <span class="xref">System.Func</span>&lt;T10, <span class="xref">System.Func</span>&lt;T11, <span class="xref">System.Func</span>&lt;T12, <span class="xref">System.Func</span>&lt;T13, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</td>
+        <td>Curried function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Func type argument 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Func type argument 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Func type argument 11.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td>Func type argument 12.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td>Func type argument 13.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__14_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12___13____0_.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%6014(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%60%6013%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L538">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__14_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12___13____0_" data-uid="Maki.Functional.FuncExtensions.Curry``14(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13},``0)">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult&gt;, T1)</h4>
+  <div class="markdown level1 summary">
+Applies the first argument to the given Func and returns a new Func
+derived from the partial application.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult&gt; func, T1 arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function on which to perform partial application.</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td>First argument of function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, TResult&gt;</td>
+        <td>Func derived from given Func by partial application of first argument.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Func type argument 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Func type argument 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Func type argument 11.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td>Func type argument 12.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td>Func type argument 13.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__15_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14__.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%6015(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%60%6013%2C%60%6014%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L623">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__15_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14__" data-uid="Maki.Functional.FuncExtensions.Curry``15(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14})">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult&gt;)</h4>
+  <div class="markdown level1 summary">
+Curries the given Func returning an equivalent set of functions each taking
+a single argument and returning the next function in the set.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, Func&lt;T2, Func&lt;T3, Func&lt;T4, Func&lt;T5, Func&lt;T6, Func&lt;T7, Func&lt;T8, Func&lt;T9, Func&lt;T10, Func&lt;T11, Func&lt;T12, Func&lt;T13, Func&lt;T14, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function to curry.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Func</span>&lt;T2, <span class="xref">System.Func</span>&lt;T3, <span class="xref">System.Func</span>&lt;T4, <span class="xref">System.Func</span>&lt;T5, <span class="xref">System.Func</span>&lt;T6, <span class="xref">System.Func</span>&lt;T7, <span class="xref">System.Func</span>&lt;T8, <span class="xref">System.Func</span>&lt;T9, <span class="xref">System.Func</span>&lt;T10, <span class="xref">System.Func</span>&lt;T11, <span class="xref">System.Func</span>&lt;T12, <span class="xref">System.Func</span>&lt;T13, <span class="xref">System.Func</span>&lt;T14, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</td>
+        <td>Curried function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Func type argument 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Func type argument 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Func type argument 11.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td>Func type argument 12.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td>Func type argument 13.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T14</span></td>
+        <td>Func type argument 14.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__15_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14____0_.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%6015(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%60%6013%2C%60%6014%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L594">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__15_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14____0_" data-uid="Maki.Functional.FuncExtensions.Curry``15(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14},``0)">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult&gt;, T1)</h4>
+  <div class="markdown level1 summary">
+Applies the first argument to the given Func and returns a new Func
+derived from the partial application.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult&gt; func, T1 arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function on which to perform partial application.</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td>First argument of function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, TResult&gt;</td>
+        <td>Func derived from given Func by partial application of first argument.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Func type argument 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Func type argument 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Func type argument 11.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td>Func type argument 12.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td>Func type argument 13.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T14</span></td>
+        <td>Func type argument 14.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__16_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14___15__.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%6016(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%60%6013%2C%60%6014%2C%60%6015%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L682">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__16_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14___15__" data-uid="Maki.Functional.FuncExtensions.Curry``16(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15})">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult&gt;)</h4>
+  <div class="markdown level1 summary">
+Curries the given Func returning an equivalent set of functions each taking
+a single argument and returning the next function in the set.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, Func&lt;T2, Func&lt;T3, Func&lt;T4, Func&lt;T5, Func&lt;T6, Func&lt;T7, Func&lt;T8, Func&lt;T9, Func&lt;T10, Func&lt;T11, Func&lt;T12, Func&lt;T13, Func&lt;T14, Func&lt;T15, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function to curry.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Func</span>&lt;T2, <span class="xref">System.Func</span>&lt;T3, <span class="xref">System.Func</span>&lt;T4, <span class="xref">System.Func</span>&lt;T5, <span class="xref">System.Func</span>&lt;T6, <span class="xref">System.Func</span>&lt;T7, <span class="xref">System.Func</span>&lt;T8, <span class="xref">System.Func</span>&lt;T9, <span class="xref">System.Func</span>&lt;T10, <span class="xref">System.Func</span>&lt;T11, <span class="xref">System.Func</span>&lt;T12, <span class="xref">System.Func</span>&lt;T13, <span class="xref">System.Func</span>&lt;T14, <span class="xref">System.Func</span>&lt;T15, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</td>
+        <td>Curried function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Func type argument 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Func type argument 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Func type argument 11.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td>Func type argument 12.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td>Func type argument 13.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T14</span></td>
+        <td>Func type argument 14.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T15</span></td>
+        <td>Func type argument 15.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__16_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14___15____0_.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%6016(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%60%6013%2C%60%6014%2C%60%6015%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L652">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__16_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14___15____0_" data-uid="Maki.Functional.FuncExtensions.Curry``16(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15},``0)">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult&gt;, T1)</h4>
+  <div class="markdown level1 summary">
+Applies the first argument to the given Func and returns a new Func
+derived from the partial application.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult&gt; func, T1 arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function on which to perform partial application.</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td>First argument of function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, TResult&gt;</td>
+        <td>Func derived from given Func by partial application of first argument.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Func type argument 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Func type argument 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Func type argument 11.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td>Func type argument 12.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td>Func type argument 13.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T14</span></td>
+        <td>Func type argument 14.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T15</span></td>
+        <td>Func type argument 15.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__17_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14___15___16__.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%6017(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%60%6013%2C%60%6014%2C%60%6015%2C%60%6016%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L743">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__17_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14___15___16__" data-uid="Maki.Functional.FuncExtensions.Curry``17(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15,``16})">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, TResult&gt;)</h4>
+  <div class="markdown level1 summary">
+Curries the given Func returning an equivalent set of functions each taking
+a single argument and returning the next function in the set.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, Func&lt;T2, Func&lt;T3, Func&lt;T4, Func&lt;T5, Func&lt;T6, Func&lt;T7, Func&lt;T8, Func&lt;T9, Func&lt;T10, Func&lt;T11, Func&lt;T12, Func&lt;T13, Func&lt;T14, Func&lt;T15, Func&lt;T16, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, TResult&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function to curry.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Func</span>&lt;T2, <span class="xref">System.Func</span>&lt;T3, <span class="xref">System.Func</span>&lt;T4, <span class="xref">System.Func</span>&lt;T5, <span class="xref">System.Func</span>&lt;T6, <span class="xref">System.Func</span>&lt;T7, <span class="xref">System.Func</span>&lt;T8, <span class="xref">System.Func</span>&lt;T9, <span class="xref">System.Func</span>&lt;T10, <span class="xref">System.Func</span>&lt;T11, <span class="xref">System.Func</span>&lt;T12, <span class="xref">System.Func</span>&lt;T13, <span class="xref">System.Func</span>&lt;T14, <span class="xref">System.Func</span>&lt;T15, <span class="xref">System.Func</span>&lt;T16, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</td>
+        <td>Curried function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Func type argument 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Func type argument 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Func type argument 11.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td>Func type argument 12.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td>Func type argument 13.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T14</span></td>
+        <td>Func type argument 14.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T15</span></td>
+        <td>Func type argument 15.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T16</span></td>
+        <td>Func type argument 16.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__17_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14___15___16____0_.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%6017(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%2C%60%609%2C%60%6010%2C%60%6011%2C%60%6012%2C%60%6013%2C%60%6014%2C%60%6015%2C%60%6016%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L712">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__17_System_Func___0___1___2___3___4___5___6___7___8___9___10___11___12___13___14___15___16____0_" data-uid="Maki.Functional.FuncExtensions.Curry``17(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8,``9,``10,``11,``12,``13,``14,``15,``16},``0)">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, TResult&gt;, T1)</h4>
+  <div class="markdown level1 summary">
+Applies the first argument to the given Func and returns a new Func
+derived from the partial application.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, TResult&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, TResult&gt; func, T1 arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function on which to perform partial application.</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td>First argument of function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, TResult&gt;</td>
+        <td>Func derived from given Func by partial application of first argument.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td>Func type argument 9.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td>Func type argument 10.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td>Func type argument 11.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td>Func type argument 12.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td>Func type argument 13.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T14</span></td>
+        <td>Func type argument 14.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T15</span></td>
+        <td>Func type argument 15.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T16</span></td>
+        <td>Func type argument 16.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__3_System_Func___0___1___2__.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%603(System.Func%7B%60%600%2C%60%601%2C%60%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L71">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__3_System_Func___0___1___2__" data-uid="Maki.Functional.FuncExtensions.Curry``3(System.Func{``0,``1,``2})">Curry&lt;T1, T2, TResult&gt;(Func&lt;T1, T2, TResult&gt;)</h4>
+  <div class="markdown level1 summary">
+Curries the given Func returning an equivalent set of functions each taking
+a single argument and returning the next function in the set.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, Func&lt;T2, TResult&gt;&gt; Curry&lt;T1, T2, TResult&gt;(this Func&lt;T1, T2, TResult&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function to curry.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Func</span>&lt;T2, TResult&gt;&gt;</td>
+        <td>Curried function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__3_System_Func___0___1___2____0_.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%603(System.Func%7B%60%600%2C%60%601%2C%60%602%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L54">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__3_System_Func___0___1___2____0_" data-uid="Maki.Functional.FuncExtensions.Curry``3(System.Func{``0,``1,``2},``0)">Curry&lt;T1, T2, TResult&gt;(Func&lt;T1, T2, TResult&gt;, T1)</h4>
+  <div class="markdown level1 summary">
+Applies the first argument to the given Func and returns a new Func
+derived from the partial application.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T2, TResult&gt; Curry&lt;T1, T2, TResult&gt;(this Func&lt;T1, T2, TResult&gt; func, T1 arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function on which to perform partial application.</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td>First argument of function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T2, TResult&gt;</td>
+        <td>Func derived from given Func by partial application of first argument.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__4_System_Func___0___1___2___3__.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%604(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L106">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__4_System_Func___0___1___2___3__" data-uid="Maki.Functional.FuncExtensions.Curry``4(System.Func{``0,``1,``2,``3})">Curry&lt;T1, T2, T3, TResult&gt;(Func&lt;T1, T2, T3, TResult&gt;)</h4>
+  <div class="markdown level1 summary">
+Curries the given Func returning an equivalent set of functions each taking
+a single argument and returning the next function in the set.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, Func&lt;T2, Func&lt;T3, TResult&gt;&gt;&gt; Curry&lt;T1, T2, T3, TResult&gt;(this Func&lt;T1, T2, T3, TResult&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function to curry.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Func</span>&lt;T2, <span class="xref">System.Func</span>&lt;T3, TResult&gt;&gt;&gt;</td>
+        <td>Curried function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__4_System_Func___0___1___2___3____0_.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%604(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L88">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__4_System_Func___0___1___2___3____0_" data-uid="Maki.Functional.FuncExtensions.Curry``4(System.Func{``0,``1,``2,``3},``0)">Curry&lt;T1, T2, T3, TResult&gt;(Func&lt;T1, T2, T3, TResult&gt;, T1)</h4>
+  <div class="markdown level1 summary">
+Applies the first argument to the given Func and returns a new Func
+derived from the partial application.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T2, T3, TResult&gt; Curry&lt;T1, T2, T3, TResult&gt;(this Func&lt;T1, T2, T3, TResult&gt; func, T1 arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function on which to perform partial application.</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td>First argument of function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T2, T3, TResult&gt;</td>
+        <td>Func derived from given Func by partial application of first argument.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__5_System_Func___0___1___2___3___4__.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%605(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L143">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__5_System_Func___0___1___2___3___4__" data-uid="Maki.Functional.FuncExtensions.Curry``5(System.Func{``0,``1,``2,``3,``4})">Curry&lt;T1, T2, T3, T4, TResult&gt;(Func&lt;T1, T2, T3, T4, TResult&gt;)</h4>
+  <div class="markdown level1 summary">
+Curries the given Func returning an equivalent set of functions each taking
+a single argument and returning the next function in the set.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, Func&lt;T2, Func&lt;T3, Func&lt;T4, TResult&gt;&gt;&gt;&gt; Curry&lt;T1, T2, T3, T4, TResult&gt;(this Func&lt;T1, T2, T3, T4, TResult&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function to curry.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Func</span>&lt;T2, <span class="xref">System.Func</span>&lt;T3, <span class="xref">System.Func</span>&lt;T4, TResult&gt;&gt;&gt;&gt;</td>
+        <td>Curried function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__5_System_Func___0___1___2___3___4____0_.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%605(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L124">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__5_System_Func___0___1___2___3___4____0_" data-uid="Maki.Functional.FuncExtensions.Curry``5(System.Func{``0,``1,``2,``3,``4},``0)">Curry&lt;T1, T2, T3, T4, TResult&gt;(Func&lt;T1, T2, T3, T4, TResult&gt;, T1)</h4>
+  <div class="markdown level1 summary">
+Applies the first argument to the given Func and returns a new Func
+derived from the partial application.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T2, T3, T4, TResult&gt; Curry&lt;T1, T2, T3, T4, TResult&gt;(this Func&lt;T1, T2, T3, T4, TResult&gt; func, T1 arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function on which to perform partial application.</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td>First argument of function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T2, T3, T4, TResult&gt;</td>
+        <td>Func derived from given Func by partial application of first argument.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__6_System_Func___0___1___2___3___4___5__.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%606(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L182">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__6_System_Func___0___1___2___3___4___5__" data-uid="Maki.Functional.FuncExtensions.Curry``6(System.Func{``0,``1,``2,``3,``4,``5})">Curry&lt;T1, T2, T3, T4, T5, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, TResult&gt;)</h4>
+  <div class="markdown level1 summary">
+Curries the given Func returning an equivalent set of functions each taking
+a single argument and returning the next function in the set.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, Func&lt;T2, Func&lt;T3, Func&lt;T4, Func&lt;T5, TResult&gt;&gt;&gt;&gt;&gt; Curry&lt;T1, T2, T3, T4, T5, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, TResult&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function to curry.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Func</span>&lt;T2, <span class="xref">System.Func</span>&lt;T3, <span class="xref">System.Func</span>&lt;T4, <span class="xref">System.Func</span>&lt;T5, TResult&gt;&gt;&gt;&gt;&gt;</td>
+        <td>Curried function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__6_System_Func___0___1___2___3___4___5____0_.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%606(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L162">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__6_System_Func___0___1___2___3___4___5____0_" data-uid="Maki.Functional.FuncExtensions.Curry``6(System.Func{``0,``1,``2,``3,``4,``5},``0)">Curry&lt;T1, T2, T3, T4, T5, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, TResult&gt;, T1)</h4>
+  <div class="markdown level1 summary">
+Applies the first argument to the given Func and returns a new Func
+derived from the partial application.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T2, T3, T4, T5, TResult&gt; Curry&lt;T1, T2, T3, T4, T5, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, TResult&gt; func, T1 arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function on which to perform partial application.</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td>First argument of function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T2, T3, T4, T5, TResult&gt;</td>
+        <td>Func derived from given Func by partial application of first argument.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__7_System_Func___0___1___2___3___4___5___6__.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%607(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L223">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__7_System_Func___0___1___2___3___4___5___6__" data-uid="Maki.Functional.FuncExtensions.Curry``7(System.Func{``0,``1,``2,``3,``4,``5,``6})">Curry&lt;T1, T2, T3, T4, T5, T6, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, TResult&gt;)</h4>
+  <div class="markdown level1 summary">
+Curries the given Func returning an equivalent set of functions each taking
+a single argument and returning the next function in the set.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, Func&lt;T2, Func&lt;T3, Func&lt;T4, Func&lt;T5, Func&lt;T6, TResult&gt;&gt;&gt;&gt;&gt;&gt; Curry&lt;T1, T2, T3, T4, T5, T6, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, TResult&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function to curry.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Func</span>&lt;T2, <span class="xref">System.Func</span>&lt;T3, <span class="xref">System.Func</span>&lt;T4, <span class="xref">System.Func</span>&lt;T5, <span class="xref">System.Func</span>&lt;T6, TResult&gt;&gt;&gt;&gt;&gt;&gt;</td>
+        <td>Curried function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__7_System_Func___0___1___2___3___4___5___6____0_.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%607(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L202">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__7_System_Func___0___1___2___3___4___5___6____0_" data-uid="Maki.Functional.FuncExtensions.Curry``7(System.Func{``0,``1,``2,``3,``4,``5,``6},``0)">Curry&lt;T1, T2, T3, T4, T5, T6, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, TResult&gt;, T1)</h4>
+  <div class="markdown level1 summary">
+Applies the first argument to the given Func and returns a new Func
+derived from the partial application.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T2, T3, T4, T5, T6, TResult&gt; Curry&lt;T1, T2, T3, T4, T5, T6, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, TResult&gt; func, T1 arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function on which to perform partial application.</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td>First argument of function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T2, T3, T4, T5, T6, TResult&gt;</td>
+        <td>Func derived from given Func by partial application of first argument.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__8_System_Func___0___1___2___3___4___5___6___7__.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%608(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L266">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__8_System_Func___0___1___2___3___4___5___6___7__" data-uid="Maki.Functional.FuncExtensions.Curry``8(System.Func{``0,``1,``2,``3,``4,``5,``6,``7})">Curry&lt;T1, T2, T3, T4, T5, T6, T7, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, TResult&gt;)</h4>
+  <div class="markdown level1 summary">
+Curries the given Func returning an equivalent set of functions each taking
+a single argument and returning the next function in the set.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, Func&lt;T2, Func&lt;T3, Func&lt;T4, Func&lt;T5, Func&lt;T6, Func&lt;T7, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, TResult&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function to curry.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Func</span>&lt;T2, <span class="xref">System.Func</span>&lt;T3, <span class="xref">System.Func</span>&lt;T4, <span class="xref">System.Func</span>&lt;T5, <span class="xref">System.Func</span>&lt;T6, <span class="xref">System.Func</span>&lt;T7, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;</td>
+        <td>Curried function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__8_System_Func___0___1___2___3___4___5___6___7____0_.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%608(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L244">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__8_System_Func___0___1___2___3___4___5___6___7____0_" data-uid="Maki.Functional.FuncExtensions.Curry``8(System.Func{``0,``1,``2,``3,``4,``5,``6,``7},``0)">Curry&lt;T1, T2, T3, T4, T5, T6, T7, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, TResult&gt;, T1)</h4>
+  <div class="markdown level1 summary">
+Applies the first argument to the given Func and returns a new Func
+derived from the partial application.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T2, T3, T4, T5, T6, T7, TResult&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, TResult&gt; func, T1 arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function on which to perform partial application.</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td>First argument of function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T2, T3, T4, T5, T6, T7, TResult&gt;</td>
+        <td>Func derived from given Func by partial application of first argument.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__9_System_Func___0___1___2___3___4___5___6___7___8__.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%609(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L311">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__9_System_Func___0___1___2___3___4___5___6___7___8__" data-uid="Maki.Functional.FuncExtensions.Curry``9(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8})">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, TResult&gt;)</h4>
+  <div class="markdown level1 summary">
+Curries the given Func returning an equivalent set of functions each taking
+a single argument and returning the next function in the set.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T1, Func&lt;T2, Func&lt;T3, Func&lt;T4, Func&lt;T5, Func&lt;T6, Func&lt;T7, Func&lt;T8, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, TResult&gt; func)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function to curry.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, <span class="xref">System.Func</span>&lt;T2, <span class="xref">System.Func</span>&lt;T3, <span class="xref">System.Func</span>&lt;T4, <span class="xref">System.Func</span>&lt;T5, <span class="xref">System.Func</span>&lt;T6, <span class="xref">System.Func</span>&lt;T7, <span class="xref">System.Func</span>&lt;T8, TResult&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</td>
+        <td>Curried function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions_Curry__9_System_Func___0___1___2___3___4___5___6___7___8____0_.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions.Curry%60%609(System.Func%7B%60%600%2C%60%601%2C%60%602%2C%60%603%2C%60%604%2C%60%605%2C%60%606%2C%60%607%2C%60%608%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L288">View Source</a>
+  </span>
+  <a id="Maki_Functional_FuncExtensions_Curry_" data-uid="Maki.Functional.FuncExtensions.Curry*"></a>
+  <h4 id="Maki_Functional_FuncExtensions_Curry__9_System_Func___0___1___2___3___4___5___6___7___8____0_" data-uid="Maki.Functional.FuncExtensions.Curry``9(System.Func{``0,``1,``2,``3,``4,``5,``6,``7,``8},``0)">Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, TResult&gt;(Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, TResult&gt;, T1)</h4>
+  <div class="markdown level1 summary">
+Applies the first argument to the given Func and returns a new Func
+derived from the partial application.
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Func&lt;T2, T3, T4, T5, T6, T7, T8, TResult&gt; Curry&lt;T1, T2, T3, T4, T5, T6, T7, T8, TResult&gt;(this Func&lt;T1, T2, T3, T4, T5, T6, T7, T8, TResult&gt; func, T1 arg1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, T4, T5, T6, T7, T8, TResult&gt;</td>
+        <td><span class="parametername">func</span></td>
+        <td>Function on which to perform partial application.</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">arg1</span></td>
+        <td>First argument of function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T2, T3, T4, T5, T6, T7, T8, TResult&gt;</td>
+        <td>Func derived from given Func by partial application of first argument.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td>Func type argument 1.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td>Func type argument 2.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td>Func type argument 3.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td>Func type argument 4.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td>Func type argument 5.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td>Func type argument 6.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td>Func type argument 7.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td>Func type argument 8.</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td>Func return type.</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/vladris/Maki/new/master/apiSpec/new?filename=Maki_Functional_FuncExtensions.md&amp;value=---%0Auid%3A%20Maki.Functional.FuncExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/vladris/Maki/blob/master/Maki/Functional/FuncExtensions.cs/#L42" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
