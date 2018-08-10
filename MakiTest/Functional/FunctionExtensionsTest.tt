@@ -1,0 +1,36 @@
+﻿<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ include file="..\..\Maki\Templates\Common.t4" #>
+<#@ output extension=".cs" #>
+using Maki.Functional;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+
+namespace MakiTest
+{
+    [TestClass]
+    public class FunctionExtensionsTest
+    {
+<#
+for (int types = 2; types <= 16; types++)
+{
+#>
+        [TestMethod]
+        public void Func<#= types #>CurryTransformTest()
+        {
+            Func<<#= String.Join(", ", Enumerable.Range(0, types).Select(_ => "int")) #>, int> func =
+                (<#= JoinWithPrefix(types, "i") #>) 
+                    => <#= String.Join(" + ", Enumerable.Range(1, types).Select(i => "i" + i)) #>;
+
+            int sum = func.Curry()(<#= String.Join(")(", Enumerable.Range(1, types)) #>);
+
+            Assert.AreEqual(<#= types * (types + 1) / 2 #>, sum);
+        }
+
+<#
+}
+#>
+    }
+}
