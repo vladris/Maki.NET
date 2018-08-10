@@ -1,6 +1,12 @@
 # Maki
 
-A .NET type library providing discriminate union types ``Variant<...>`` and ``Either<TLeft, TRight>``, a ``NotNull`` container, ``Optional`` and ``Error`` monads, primitive types ``Unit`` and ``Never``.
+## Types
+
+``Maki`` provides discriminate union types ``Variant<...>`` and ``Either<TLeft, TRight>``, a ``NotNull`` container, ``Optional`` and ``Error`` monads, primitive types ``Unit`` and ``Never``.
+
+## Functional Extensions
+
+``Maki.Functional`` provides extension methods to convert ``Action<...>`` to an equivalent ``Func<..., Unit>`` and extension methods for ``Func<...>`` to enable currying.
 
 [![Build status](https://vladris.visualstudio.com/Maki/_apis/build/status/Maki-.NET%20Desktop-CI)](https://vladris.visualstudio.com/Maki/_build/latest?definitionId=5)
 
@@ -16,6 +22,7 @@ A .NET type library providing discriminate union types ``Variant<...>`` and ``Ei
 * [Optional](#optional)
 * [Error](#error)
 * [Never](#never)
+* [Curry](#curry)
 
 ### Variant
 
@@ -129,4 +136,21 @@ public Never LoopsForever()
 }
 
 public Never AlwaysThrows() => throw new Exception();
+```
+
+### Curry
+
+The ``Curry`` extension method enables partial application and currying for ``Func<...>``.
+
+```c#
+Func<int, int, int, int> func = (a, b, c) => a + b + c;
+
+// Partial application
+Func<int, int, int> func1 = func.Curry(10);
+Func<int, int> func2 = func1.Curry(20);
+int partialApplicationResult = func2(30); // partialApplicationResult is 60
+
+// Expansion to unary functions
+Func<int, Func<int, Func<int, int>>> curried = func.Curry();
+int curriedResult = curried(10)(20)(30); // curriedResult is 60
 ```
