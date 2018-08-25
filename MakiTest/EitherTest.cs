@@ -83,5 +83,24 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => either.GetLeft());
             Assert.AreEqual(item, either.GetRight());
         }
+
+        [TestMethod]
+        public void EitherEquals()
+        {
+            var item = new T1();
+            Either<T1, T2> either1 = item;
+            Either<T1, T2> either2 = item;
+
+            Assert.IsTrue(either1.Equals(either2));
+            Assert.IsTrue(either2.Equals(either1));
+
+            Assert.IsFalse(item.Equals(either1));
+            Assert.IsFalse(either1.Equals(item));
+
+            either2 = new T2();
+
+            Assert.IsFalse(either1.Equals(either2));
+            Assert.IsFalse(either2.Equals(either1));
+        }
     }
 }

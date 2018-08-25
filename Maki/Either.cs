@@ -128,7 +128,11 @@ namespace Maki
         /// <returns>True if the objects are equal.</returns>
         public override bool Equals(object obj)
         {
-            return variant.Equals(obj);
+            if (obj == null || !(obj is Either<TLeft, TRight>)) return false;
+
+            var other = (Either<TLeft, TRight>)obj;
+
+            return variant.Equals(other.variant);
         }
 
         /// <summary>
