@@ -74,5 +74,47 @@ namespace MakiTest
             Assert.ThrowsException<InvalidCastException>(() => (Exception)error);
             Assert.AreEqual(item, (T1)error);
         }
+
+        [TestMethod]
+        public void ErrorTestEqualsItem()
+        {
+            var item = new T1();
+            Error<T1> error1 = item;
+            Error<T1> error2 = item;
+
+            Assert.IsTrue(error1.Equals(error2));
+            Assert.IsTrue(error2.Equals(error1));
+
+            // item.Equals(error1) is false for non Error<T1> types so 
+            // error1.Equals(item) should also return false in that case
+            Assert.IsFalse(error1.Equals(item));
+            Assert.IsFalse(item.Equals(error1));
+
+            error2 = new T1();
+
+            Assert.IsFalse(error1.Equals(error2));
+            Assert.IsFalse(error2.Equals(error1));
+        }
+
+        [TestMethod]
+        public void ErrorTestEqualsException()
+        {
+            var exception = new Exception();
+            Error<T1> error1 = exception;
+            Error<T1> error2 = exception;
+
+            Assert.IsTrue(error1.Equals(error2));
+            Assert.IsTrue(error2.Equals(error1));
+
+            // exception.Equals(error1) is false for non Error<T1> types so 
+            // error1.Equals(exception) should also return false in that case
+            Assert.IsFalse(error1.Equals(exception));
+            Assert.IsFalse(exception.Equals(error1));
+
+            error2 = new T1();
+
+            Assert.IsFalse(error1.Equals(error2));
+            Assert.IsFalse(error2.Equals(error1));
+        }
     }
 }

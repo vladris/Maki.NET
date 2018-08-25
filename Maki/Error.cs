@@ -132,6 +132,29 @@ namespace Maki
         public Exception Exception() => either.GetLeft();
 
         /// <summary>
+        /// Determines whether the specified object is equal to the current object.
+        /// </summary>
+        /// <param name="obj">The object to compare with the current object.</param>
+        /// <returns>True if the objects are equal.</returns>
+        public override bool Equals(object obj)
+        {
+            if (obj == null || !(obj is Error<T>)) return false;
+
+            var other = (Error<T>)obj;
+
+            return either.Equals(other.either);
+        }
+
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns>Hash code.</returns>
+        public override int GetHashCode()
+        {
+            return either.GetHashCode();
+        }
+
+        /// <summary>
         /// Creates a new Error containing an exception.
         /// </summary>
         /// <param name="e">Exception to hold in the new Error.</param>
