@@ -15,7 +15,7 @@ Maki.Functional provides extension methods to convert Action&lt;...&gt; to an eq
     <Copyright>2018 Vlad Riscutia</Copyright>
     <PackageProjectUrl>https://vladris.com/Maki/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/vladris/Maki/</RepositoryUrl>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
