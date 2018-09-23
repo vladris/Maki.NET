@@ -469,6 +469,23 @@ references:
   fullName.vb: Maki.Error(Of T).Error
   nameWithType: Error<T>.Error
   nameWithType.vb: Error(Of T).Error
+- uid: Maki.Error`1.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Maki.Error-1.html#Maki_Error_1_Equals_System_Object_
+  commentId: M:Maki.Error`1.Equals(System.Object)
+  fullName: Maki.Error<T>.Equals(System.Object)
+  fullName.vb: Maki.Error(Of T).Equals(System.Object)
+  nameWithType: Error<T>.Equals(Object)
+  nameWithType.vb: Error(Of T).Equals(Object)
+- uid: Maki.Error`1.Equals*
+  name: Equals
+  href: api/Maki.Error-1.html#Maki_Error_1_Equals_
+  commentId: Overload:Maki.Error`1.Equals
+  isSpec: "True"
+  fullName: Maki.Error<T>.Equals
+  fullName.vb: Maki.Error(Of T).Equals
+  nameWithType: Error<T>.Equals
+  nameWithType.vb: Error(Of T).Equals
 - uid: Maki.Error`1.Exception
   name: Exception()
   href: api/Maki.Error-1.html#Maki_Error_1_Exception
@@ -503,6 +520,23 @@ references:
   fullName.vb: Maki.Error(Of T).Get
   nameWithType: Error<T>.Get
   nameWithType.vb: Error(Of T).Get
+- uid: Maki.Error`1.GetHashCode
+  name: GetHashCode()
+  href: api/Maki.Error-1.html#Maki_Error_1_GetHashCode
+  commentId: M:Maki.Error`1.GetHashCode
+  fullName: Maki.Error<T>.GetHashCode()
+  fullName.vb: Maki.Error(Of T).GetHashCode()
+  nameWithType: Error<T>.GetHashCode()
+  nameWithType.vb: Error(Of T).GetHashCode()
+- uid: Maki.Error`1.GetHashCode*
+  name: GetHashCode
+  href: api/Maki.Error-1.html#Maki_Error_1_GetHashCode_
+  commentId: Overload:Maki.Error`1.GetHashCode
+  isSpec: "True"
+  fullName: Maki.Error<T>.GetHashCode
+  fullName.vb: Maki.Error(Of T).GetHashCode
+  nameWithType: Error<T>.GetHashCode
+  nameWithType.vb: Error(Of T).GetHashCode
 - uid: Maki.Error`1.HasValue
   name: HasValue
   href: api/Maki.Error-1.html#Maki_Error_1_HasValue

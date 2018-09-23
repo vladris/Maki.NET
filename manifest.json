@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Either-2.html",
-          "hash": "c/eOPIAW1xpdSuN63We//g=="
+          "hash": "8DfujYn/HyFEoDEYElYzcw=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Maki.Error-1.html",
-          "hash": "/xG9GLYIoAWpp65Vqln5Pg=="
+          "hash": "xZCFdsYbvHp0l3emKljoGw=="
         }
       },
       "is_incremental": false,
@@ -352,18 +352,17 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Disable incremental build by force rebuild option.",
+        "can_incremental": true,
         "incrementalPhase": "build"
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build"
         }
       }
