@@ -1,4 +1,4 @@
-# Maki
+# Maki.NET
 
 ## Types
 
