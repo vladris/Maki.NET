@@ -12,7 +12,7 @@
 
 [Get it from NuGet](https://www.nuget.org/packages/Maki)
 
-[Online documentation](https://vladris.com/Maki/api/Maki.html)
+[Online documentation](https://vladris.com/Maki.NET/api/Maki.html)
 
 ## Samples
 
